@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+
+<class name="GISAServer.Hibernate.Objects.SFRDDatasProducaoEntity, GISAServer.Hibernate" table="SFRDDatasProducao" >
+
+<id name="Id" column="IDFRDBase" type="System.Int64" unsaved-value="null"><generator class="assigned"/></id>
+
+<property name="FimAno" column="FimAno" access="field.pascalcase-underscore" not-null="false" type="System.String"  length="4" insert="true" update="true"/>
+<property name="FimAtribuida" column="FimAtribuida" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="FimDia" column="FimDia" access="field.pascalcase-underscore" not-null="false" type="System.String"  length="2" insert="true" update="true"/>
+<property name="FimMes" column="FimMes" access="field.pascalcase-underscore" not-null="false" type="System.String"  length="2" insert="true" update="true"/>
+<property name="FimTexto" column="FimTexto" access="field.pascalcase-underscore" not-null="false" type="System.String"  length="50" insert="true" update="true"/>
+<property name="InicioAno" column="InicioAno" access="field.pascalcase-underscore" not-null="false" type="System.String"  length="4" insert="true" update="true"/>
+<property name="InicioAtribuida" column="InicioAtribuida" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="InicioDia" column="InicioDia" access="field.pascalcase-underscore" not-null="false" type="System.String"  length="2" insert="true" update="true"/>
+<property name="InicioMes" column="InicioMes" access="field.pascalcase-underscore" not-null="false" type="System.String"  length="2" insert="true" update="true"/>
+<property name="InicioTexto" column="InicioTexto" access="field.pascalcase-underscore" not-null="false" type="System.String"  length="50" insert="true" update="true"/>
+<property name="IsDeleted" column="isDeleted" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="Versao" column="Versao" access="field.pascalcase-underscore" not-null="true" type="System.Byte[]"  insert="false" update="false"/>
+<many-to-one name="FRDBase"  access="field.pascalcase-underscore" not-null="true" outer-join="auto" insert="false" update="false">
+	<column name="IDFRDBase"/>
+</many-to-one>
+
+
+</class>
+</hibernate-mapping>

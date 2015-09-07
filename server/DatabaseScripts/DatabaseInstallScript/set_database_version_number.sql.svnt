@@ -1,0 +1,5 @@
+
+-- Actualizar número de versão da base de dados
+UPDATE DatabaseVersion SET DBVersion = '$WCREV$'
+GO
+

@@ -1,0 +1,3844 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="GISADataset" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="GISADataset" msdata:IsDataSet="true" msdata:CaseSensitive="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FRDBase">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="IDNivel" type="xs:long" />
+              <xs:element name="IDTipoFRDBase" type="xs:long" />
+              <xs:element name="NotaDoArquivista" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RegrasOuConvencoes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="NivelDocumentoSimples">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:long" />
+              <xs:element name="GUIOrder" type="xs:long" default="1" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoFRDBase">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="BuiltInName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Designacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DocumentosMovimentados">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDMovimento" type="xs:long" />
+              <xs:element name="IDNivel" type="xs:long" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoFormaSuporteAcond">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Designacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ControloAutRel">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDControloAut" type="xs:long" />
+              <xs:element name="IDControloAutAlias" type="xs:long" />
+              <xs:element name="IDTipoRel" type="xs:long" />
+              <xs:element name="Descricao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InicioAno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InicioMes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InicioDia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FimAno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FimMes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FimDia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoEstadoDeConservacao">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Designacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ObjetoDigitalTitulo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Titulo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ControloAutEntidadeProdutora">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDControloAut" type="xs:long" />
+              <xs:element name="IDTipoEntidadeProdutora" type="xs:long" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoEstadoConservacao">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Designacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ObjetoDigital">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="pid">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Titulo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Publicado" type="xs:boolean" />
+              <xs:element name="GUIOrder" type="xs:long" default="1" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ControloAutDicionario">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDControloAut" type="xs:long" />
+              <xs:element name="IDDicionario" type="xs:long" />
+              <xs:element name="IDTipoControloAutForma" type="xs:long" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoEntrega">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Designacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ControloAutDatasExistencia">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDControloAut" type="xs:long" />
+              <xs:element name="DescDatasExistencia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InicioAno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InicioMes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InicioDia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InicioAtribuida" type="xs:boolean" />
+              <xs:element name="FimAno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FimMes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FimDia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FimAtribuida" type="xs:boolean" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoEntidadeProdutora">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Designacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ObjetoDigitalRelacaoHierarquica">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:long" />
+              <xs:element name="IDUpper" type="xs:long" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ControloAutDataDeDescricao">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDControloAut" type="xs:long" />
+              <xs:element name="IDTrusteeOperator" type="xs:long" />
+              <xs:element name="IDTrusteeAuthority" type="xs:long" minOccurs="0" />
+              <xs:element name="DataEdicao" type="xs:dateTime" />
+              <xs:element name="DataAutoria" type="xs:dateTime" />
+              <xs:element name="IDTipoNoticiaAut" type="xs:long" />
+              <xs:element name="Importacao" type="xs:boolean" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoDensidade">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Designacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FunctionOperation">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDTipoFunctionGroup" type="xs:unsignedByte" />
+              <xs:element name="IdxTipoFunction" type="xs:unsignedByte" />
+              <xs:element name="IDTipoOperation" type="xs:unsignedByte" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoControloAutRel">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Designacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DesignacaoInversa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Thesaurus" type="xs:boolean" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Integ_EntidadeExterna">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="IDSistema" type="xs:int" />
+              <xs:element name="IDTipoEntidade" type="xs:int" />
+              <xs:element name="IDExterno">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SFRDImagemObjetoDigital">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="idx" type="xs:long" />
+              <xs:element name="IDObjetoDigital" type="xs:long" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoControloAutForma">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Designacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Integ_Config">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:long" />
+              <xs:element name="LastTimeStamp" type="xs:dateTime" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoAcondicionamento">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Designacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TrusteeNivelPrivilege">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDTrustee" type="xs:long" />
+              <xs:element name="IDNivel" type="xs:long" />
+              <xs:element name="Criar" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="Ler" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="Escrever" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="Apagar" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="Expandir" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ObjetoDigitalTipoOperation">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDTipoOperation" type="xs:unsignedByte" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="UserGroups">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDUser" type="xs:long" />
+              <xs:element name="IDGroup" type="xs:long" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoServer">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BuiltInName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TrusteePrivilege">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDTrustee" type="xs:long" />
+              <xs:element name="IDTipoFunctionGroup" type="xs:unsignedByte" />
+              <xs:element name="IdxTipoFunction" type="xs:unsignedByte" />
+              <xs:element name="IDTipoOperation" type="xs:unsignedByte" />
+              <xs:element name="IsGrant" type="xs:boolean" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoPertinencia">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Designacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ponderacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TrusteeObjetoDigitalPrivilege">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDTrustee" type="xs:long" />
+              <xs:element name="IDObjetoDigital" type="xs:long" />
+              <xs:element name="IDTipoOperation" type="xs:unsignedByte" />
+              <xs:element name="IsGrant" type="xs:boolean" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Integ_RelacaoExternaNivel">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDNivel" type="xs:long" />
+              <xs:element name="IDEntidadeExterna" type="xs:long" />
+              <xs:element name="Data" type="xs:dateTime" />
+              <xs:element name="DataIntegracao" type="xs:dateTime" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoOrdenacao">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Designacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Integ_RelacaoExternaControloAut">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDControloAut" type="xs:long" />
+              <xs:element name="IDEntidadeExterna" type="xs:long" />
+              <xs:element name="Data" type="xs:dateTime" />
+              <xs:element name="DataIntegracao" type="xs:dateTime" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoOperation">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:unsignedByte" />
+              <xs:element name="Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodeName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="IndexFRDCA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="IDControloAut" type="xs:long" />
+              <xs:element name="Selector" type="xs:int" minOccurs="0" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoNoticiaAut">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Designacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Conteudo" type="xs:boolean" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="NivelImagemIlustracao">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:long" />
+              <xs:element name="Imagem" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="Modificacao" type="xs:dateTime" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FRDBaseDataDeDescricao">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="IDTrusteeOperator" type="xs:long" />
+              <xs:element name="IDTrusteeAuthority" type="xs:long" minOccurs="0" />
+              <xs:element name="DataEdicao" type="xs:dateTime" />
+              <xs:element name="DataAutoria" type="xs:dateTime" />
+              <xs:element name="IDTipoNivelRelacionado" type="xs:long" />
+              <xs:element name="Importacao" type="xs:boolean" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoNivel">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="BuiltInName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsStructure" type="xs:boolean" />
+              <xs:element name="IsDocument" type="xs:boolean" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SFRDUnidadeFisica">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="IDNivel" type="xs:long" />
+              <xs:element name="Cota" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoMedida">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Designacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LocalConsulta">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Designacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="NivelUnidadeFisica">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:long" />
+              <xs:element name="GuiaIncorporacao" default="" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodigoBarras" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+              <xs:element name="Eliminado" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IDTipoEntrega" type="xs:long" minOccurs="0" />
+              <xs:element name="IDLocalConsulta" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoMaterialDeSuporte">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Designacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SFRDDocumentacaoAssociada">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="ExistenciaDeOriginais" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ExistenciaDeCopias" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UnidadesRelacionadas" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NotaDePublicacao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ConfigAlfabeto">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDGlobalConfig" type="xs:long" />
+              <xs:element name="IDIso15924" type="xs:long" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoMaterial">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Designacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SFRDDimensaoSuporte">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="Nota" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SFRDDatasProducao">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="InicioTexto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InicioAno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InicioMes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InicioDia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InicioAtribuida" type="xs:boolean" />
+              <xs:element name="FimTexto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FimAno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FimMes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FimDia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FimAtribuida" type="xs:boolean" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoFunctionGroup">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:unsignedByte" />
+              <xs:element name="Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GUIOrder" type="xs:unsignedByte" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ConfigLingua">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDGlobalConfig" type="xs:long" />
+              <xs:element name="IDIso639" type="xs:long" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SFRDContexto">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="HistoriaAdministrativa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HistoriaCustodial" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FonteImediataDeAquisicao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SerieAberta" type="xs:boolean" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Dicionario">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Termo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="444" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CatCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SFRDConteudoEEstrutura">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="ConteudoInformacional" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Incorporacao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ClientLicense">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SequenceNumber" type="xs:int" />
+              <xs:element name="GrantDate" type="xs:dateTime" />
+              <xs:element name="SerialNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="19" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FloatingLicensesCount" type="xs:short" />
+              <xs:element name="GranterName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AssemblyVersion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SFRDCondicaoDeAcesso">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="EstatutoLegal" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CondicaoDeAcesso" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CondicaoDeReproducao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AuxiliarDePesquisa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ObjetoDigitalStatus">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="pid">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="quality">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="state">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="stateDescription">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="date" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AutoEliminacao">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Designacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="400" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+              <xs:element name="NotasEliminacao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SFRDImagem">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="idx" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="GUIOrder" type="xs:long" />
+              <xs:element name="Tipo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Descricao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDSFDImagemVolume" type="xs:long" minOccurs="0" />
+              <xs:element name="Identificador">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SFRDOrdenacao">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="IDTipoOrdenacao" type="xs:long" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GlobalConfig">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:long" />
+              <xs:element name="NiveisOrganicos" type="xs:boolean" />
+              <xs:element name="GestaoIntegrada" type="xs:boolean" />
+              <xs:element name="MaxNumResultados" type="xs:int" />
+              <xs:element name="MaxNumDocumentos" type="xs:int" />
+              <xs:element name="URLBase" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="URLBaseActivo" type="xs:boolean" />
+              <xs:element name="MetrosLinearesTotais" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FedoraServerUrl" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FedoraUsername" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FedoraPassword" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UrlGisaInternet" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QualidadeImagem" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ApplyDefaultValues" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CondicaoDeAcesso" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CondicaoDeReproducao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SFRDNotaGeral">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="NotaGeral" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Iso639">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="LanguageNameEnglish">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BibliographicCodeAlpha3">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TerminologyCodeAlpha3">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SFRDAvaliacao">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="IDPertinencia" type="xs:long" minOccurs="0" />
+              <xs:element name="IDDensidade" type="xs:long" minOccurs="0" />
+              <xs:element name="IDSubdensidade" type="xs:long" minOccurs="0" />
+              <xs:element name="IDAutoEliminacao" type="xs:long" minOccurs="0" />
+              <xs:element name="IDModeloAvaliacao" type="xs:long" minOccurs="0" />
+              <xs:element name="Frequencia" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Preservar" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PrazoConservacao" type="xs:short" minOccurs="0" />
+              <xs:element name="Publicar" type="xs:boolean" />
+              <xs:element name="RefTabelaAvaliacao" type="xs:int" minOccurs="0" />
+              <xs:element name="Observacoes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AvaliacaoTabela" type="xs:boolean" default="false" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Iso3166">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="CountryNameEnglish">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodeAlpha2">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SFRDUFAutoEliminacao">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="IDAutoEliminacao" type="xs:long" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Iso15924">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="ScriptNameEnglish">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodeAlpha2">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodeAlpha3">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CodeNumeric" type="xs:decimal" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SFRDTradicaoDocumental">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="IDTipoTradicaoDocumental" type="xs:long" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Integ_Sistema">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+              <xs:element name="Designacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SFRDUFDescricaoFisica">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="IDTipoAcondicionamento" type="xs:long" />
+              <xs:element name="MedidaLargura" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MedidaAltura" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MedidaProfundidade" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IDTipoMedida" type="xs:long" minOccurs="0" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ListaModelosAvaliacao">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Designacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="768" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DataInicio" type="xs:dateTime" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SFRDUFCota">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="Cota" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Movimento">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="CatCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDEntidade" type="xs:long" />
+              <xs:element name="Data" type="xs:dateTime" />
+              <xs:element name="Notas" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SFRDUFComponente">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="IDNivelUA" type="xs:long" minOccurs="0" />
+              <xs:element name="Quantidade" type="xs:decimal" />
+              <xs:element name="IDTipoSuporte" type="xs:long" />
+              <xs:element name="MedidaLargura" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MedidaAltura" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MedidaProfundidade" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IDTipoMedida" type="xs:long" minOccurs="0" />
+              <xs:element name="IDTipoEstadoConservacao" type="xs:long" minOccurs="0" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MovimentoEntidade">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Codigo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Entidade">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="444" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Activo" type="xs:boolean" default="true" />
+              <xs:element name="OutrosDados" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SFRDTecnicasDeRegisto">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="IDTipoTecnicasDeRegisto" type="xs:long" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SFRDAlfabeto">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="IDIso15924" type="xs:long" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Modules">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:long" />
+              <xs:element name="Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BuiltInName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SFRDMaterialDeSuporte">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="IDTipoMaterialDeSuporte" type="xs:long" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="WebClientActivity">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ClientGUID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LastSearch" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SFRDLingua">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="IDIso639" type="xs:long" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Trustee">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CatCode" default="USR">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BuiltInTrustee" type="xs:boolean" />
+              <xs:element name="IsActive" type="xs:boolean" default="true" />
+              <xs:element name="IsVisibleObject" type="xs:boolean" default="true" />
+              <xs:element name="IsVisibleFunction" type="xs:boolean" default="true" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SFRDFormaSuporteAcond">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="IDTipoFormaSuporteAcond" type="xs:long" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoTradicaoDocumental">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Designacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SFRDEstadoDeConservacao">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="IDTipoEstadoDeConservacao" type="xs:long" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoTecnicasDeRegisto">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Designacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SFRDAvaliacaoRel">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="IDNivel" type="xs:long" />
+              <xs:element name="Densidade" type="xs:long" />
+              <xs:element name="SubDensidade" type="xs:long" />
+              <xs:element name="Ponderacao" type="xs:decimal" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoTecnicaRegisto">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Designacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SFRDUFTecnicasRegComponente">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDComponente" type="xs:long" />
+              <xs:element name="IDTecnicaRegisto" type="xs:long" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoSuporte">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Designacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SFRDUFMateriaisComponente">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDComponente" type="xs:long" />
+              <xs:element name="IDMaterial" type="xs:long" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Codigo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="Codigo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoSubDensidade">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Designacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDTipoDensidade" type="xs:long" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LicencaObra">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="TipoObra">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PropriedadeHorizontal" type="xs:boolean" />
+              <xs:element name="PHTexto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TrusteeUser">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:long" />
+              <xs:element name="Password" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FullName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsAuthority" type="xs:boolean" default="false" />
+              <xs:element name="IDTrusteeUserDefaultAuthority" type="xs:long" minOccurs="0" />
+              <xs:element name="IsLDAPUser" type="xs:boolean" default="false" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoNivelRelacionado">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="IDTipoNivel" type="xs:long" />
+              <xs:element name="Codigo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Designacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Recursivo" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GUIOrder" type="xs:decimal" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LicencaObraAtestadoHabitabilidade">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="Codigo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TrusteeGroup">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:long" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DatabaseVersion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DBVersion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Nivel">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="IDTipoNivel" type="xs:long" />
+              <xs:element name="Codigo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CatCode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LicencaObraDataLicencaConstrucao">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="Ano" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Mes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Dia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ModelosAvaliacao">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="IDListaModelosAvaliacao" type="xs:long" />
+              <xs:element name="Designacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="768" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PrazoConservacao" type="xs:short" minOccurs="0" />
+              <xs:element name="Preservar" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LicenseModules">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SequenceNumber" type="xs:int" />
+              <xs:element name="GrantDate" type="xs:dateTime" />
+              <xs:element name="IDModule" type="xs:long" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LicencaObraLocalizacaoObraActual">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="IDControloAut" type="xs:long" />
+              <xs:element name="NumPolicia">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Integ_TipoEntidade">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:int" />
+              <xs:element name="Designacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoTipologias">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="BuiltInName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="768" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Designacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="768" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LicencaObraLocalizacaoObraAntiga">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="NomeLocal">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NumPolicia">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ControloAut">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Autorizado" type="xs:boolean" />
+              <xs:element name="Completo" type="xs:boolean" />
+              <xs:element name="IDTipoNoticiaAut" type="xs:long" />
+              <xs:element name="NotaExplicativa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDIso639p2" type="xs:long" minOccurs="0" />
+              <xs:element name="IDIso15924" type="xs:long" minOccurs="0" />
+              <xs:element name="ChaveColectividade" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ChaveRegisto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RegrasConvencoes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Observacoes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DescHistoria" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DescZonaGeografica" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DescEstatutoLegal" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DescOcupacoesActividades" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DescEnquadramentoLegal" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DescEstruturaInterna" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DescContextoGeral" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DescOutraInformacaoRelevante" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDTipoTipologia" type="xs:long" minOccurs="0" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LicencaObraRequerentes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="Tipo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nome">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ClientActivity">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SequenceNumber" type="xs:int" />
+              <xs:element name="GrantDate" type="xs:dateTime" />
+              <xs:element name="ClientGUID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SessionGUID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LoginDate" type="xs:dateTime" />
+              <xs:element name="AccessDate" type="xs:dateTime" />
+              <xs:element name="LogoutDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoFunction">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDTipoFunctionGroup" type="xs:unsignedByte" />
+              <xs:element name="idx" type="xs:unsignedByte" />
+              <xs:element name="Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ModuleName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ClassName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GUIOrder" type="xs:unsignedByte" />
+              <xs:element name="IDTipoFunctionGroupContext" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="IdxTipoFunctionGroupContext" type="xs:unsignedByte" minOccurs="0" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LicencaObraTecnicoObra">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="IDControloAut" type="xs:long" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoNoticiaATipoControloAForma">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDTipoNoticiaAut" type="xs:long" />
+              <xs:element name="IDTipoControloAutForma" type="xs:long" />
+              <xs:element name="GUIOrder" type="xs:unsignedByte" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="NivelTipoOperation">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDTipoOperation" type="xs:unsignedByte" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DepositoTipoOperation">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDTipoOperation" type="xs:unsignedByte" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SFRDAutor">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="IDControloAut" type="xs:long" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="NivelDesignado">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:long" />
+              <xs:element name="Designacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="768" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Deposito">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Designacao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MetrosLineares" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="NivelControloAut">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:long" />
+              <xs:element name="IDControloAut" type="xs:long" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TrusteeDepositoPrivilege">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDTrustee" type="xs:long" />
+              <xs:element name="IDDeposito" type="xs:long" />
+              <xs:element name="IDTipoOperation" type="xs:unsignedByte" />
+              <xs:element name="IsGrant" type="xs:boolean" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RelacaoTipoNivelRelacionado">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:long" />
+              <xs:element name="IDUpper" type="xs:long" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="NivelUnidadeFisicaDeposito">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDNivelUnidadeFisica" type="xs:long" />
+              <xs:element name="IDDeposito" type="xs:long" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RelacaoHierarquica">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:long" />
+              <xs:element name="IDUpper" type="xs:long" />
+              <xs:element name="IDTipoNivelRelacionado" type="xs:long" />
+              <xs:element name="Descricao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InicioAno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InicioMes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InicioDia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FimAno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FimMes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FimDia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ProductFunction">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDTipoServer" type="xs:long" />
+              <xs:element name="IDModule" type="xs:long" />
+              <xs:element name="IDTipoFunctionGroup" type="xs:unsignedByte" />
+              <xs:element name="IdxTipoFunction" type="xs:unsignedByte" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="NivelUnidadeFisicaCodigo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:long" />
+              <xs:element name="Ano" type="xs:decimal" />
+              <xs:element name="Contador" type="xs:decimal" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SFRDImagemVolume">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" type="xs:long" />
+              <xs:element name="Mount">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1073741823" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SFRDAgrupador">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="Agrupador" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TipoNivelRelacionadoCodigo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IDTipoNivelRelacionado" type="xs:long" />
+              <xs:element name="Contador" type="xs:decimal" />
+              <xs:element name="Versao" msdata:ReadOnly="true" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="isDeleted" type="xs:unsignedByte" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SearchCacheWeb">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ClientGUID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDFRDBase" type="xs:long" />
+              <xs:element name="OrderNumber" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//FRDBase" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="FRDBase_Constraint3">
+      <xs:selector xpath=".//FRDBase" />
+      <xs:field xpath="IDNivel" />
+      <xs:field xpath="IDTipoFRDBase" />
+    </xs:unique>
+    <xs:unique name="NivelDocumentoSimples_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//NivelDocumentoSimples" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="TipoFRDBase_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TipoFRDBase" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="DocumentosMovimentados_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//DocumentosMovimentados" />
+      <xs:field xpath="IDMovimento" />
+      <xs:field xpath="IDNivel" />
+    </xs:unique>
+    <xs:unique name="TipoFormaSuporteAcond_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TipoFormaSuporteAcond" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="ControloAutRel_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//ControloAutRel" />
+      <xs:field xpath="IDControloAut" />
+      <xs:field xpath="IDControloAutAlias" />
+      <xs:field xpath="IDTipoRel" />
+    </xs:unique>
+    <xs:unique name="TipoEstadoDeConservacao_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TipoEstadoDeConservacao" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="ObjetoDigitalTitulo_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//ObjetoDigitalTitulo" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="ControloAutEntidadeProdutora_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//ControloAutEntidadeProdutora" />
+      <xs:field xpath="IDControloAut" />
+    </xs:unique>
+    <xs:unique name="TipoEstadoConservacao_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TipoEstadoConservacao" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="Constraint2">
+      <xs:selector xpath=".//TipoEstadoConservacao" />
+      <xs:field xpath="Designacao" />
+    </xs:unique>
+    <xs:unique name="ObjetoDigital_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//ObjetoDigital" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="ControloAutDicionario_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//ControloAutDicionario" />
+      <xs:field xpath="IDControloAut" />
+      <xs:field xpath="IDDicionario" />
+      <xs:field xpath="IDTipoControloAutForma" />
+    </xs:unique>
+    <xs:unique name="TipoEntrega_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TipoEntrega" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="ControloAutDatasExistencia_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//ControloAutDatasExistencia" />
+      <xs:field xpath="IDControloAut" />
+    </xs:unique>
+    <xs:unique name="TipoEntidadeProdutora_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TipoEntidadeProdutora" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="ObjetoDigitalRelacaoHierarquica_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//ObjetoDigitalRelacaoHierarquica" />
+      <xs:field xpath="ID" />
+      <xs:field xpath="IDUpper" />
+    </xs:unique>
+    <xs:unique name="ControloAutDataDeDescricao_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//ControloAutDataDeDescricao" />
+      <xs:field xpath="IDControloAut" />
+      <xs:field xpath="IDTrusteeOperator" />
+      <xs:field xpath="DataEdicao" />
+      <xs:field xpath="IDTipoNoticiaAut" />
+    </xs:unique>
+    <xs:unique name="TipoDensidade_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TipoDensidade" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="FunctionOperation_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//FunctionOperation" />
+      <xs:field xpath="IDTipoFunctionGroup" />
+      <xs:field xpath="IdxTipoFunction" />
+      <xs:field xpath="IDTipoOperation" />
+    </xs:unique>
+    <xs:unique name="TipoControloAutRel_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TipoControloAutRel" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="Integ_EntidadeExterna_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Integ_EntidadeExterna" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="SFRDImagemObjetoDigital_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//SFRDImagemObjetoDigital" />
+      <xs:field xpath="IDFRDBase" />
+      <xs:field xpath="idx" />
+    </xs:unique>
+    <xs:unique name="TipoControloAutForma_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TipoControloAutForma" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="Integ_Config_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Integ_Config" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="TipoAcondicionamento_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TipoAcondicionamento" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="TipoAcondicionamento_Constraint2" msdata:ConstraintName="Constraint2">
+      <xs:selector xpath=".//TipoAcondicionamento" />
+      <xs:field xpath="Designacao" />
+    </xs:unique>
+    <xs:unique name="TrusteeNivelPrivilege_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TrusteeNivelPrivilege" />
+      <xs:field xpath="IDTrustee" />
+      <xs:field xpath="IDNivel" />
+    </xs:unique>
+    <xs:unique name="ObjetoDigitalTipoOperation_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//ObjetoDigitalTipoOperation" />
+      <xs:field xpath="IDTipoOperation" />
+    </xs:unique>
+    <xs:unique name="UserGroups_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//UserGroups" />
+      <xs:field xpath="IDUser" />
+      <xs:field xpath="IDGroup" />
+    </xs:unique>
+    <xs:unique name="TipoServer_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TipoServer" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="TrusteePrivilege_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TrusteePrivilege" />
+      <xs:field xpath="IDTrustee" />
+      <xs:field xpath="IDTipoFunctionGroup" />
+      <xs:field xpath="IdxTipoFunction" />
+      <xs:field xpath="IDTipoOperation" />
+    </xs:unique>
+    <xs:unique name="TipoPertinencia_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TipoPertinencia" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="TrusteeObjetoDigitalPrivilege_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TrusteeObjetoDigitalPrivilege" />
+      <xs:field xpath="IDTrustee" />
+      <xs:field xpath="IDObjetoDigital" />
+      <xs:field xpath="IDTipoOperation" />
+    </xs:unique>
+    <xs:unique name="Integ_RelacaoExternaNivel_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Integ_RelacaoExternaNivel" />
+      <xs:field xpath="IDNivel" />
+      <xs:field xpath="IDEntidadeExterna" />
+      <xs:field xpath="Data" />
+      <xs:field xpath="DataIntegracao" />
+    </xs:unique>
+    <xs:unique name="TipoOrdenacao_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TipoOrdenacao" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="Integ_RelacaoExternaControloAut_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Integ_RelacaoExternaControloAut" />
+      <xs:field xpath="IDControloAut" />
+      <xs:field xpath="IDEntidadeExterna" />
+      <xs:field xpath="Data" />
+      <xs:field xpath="DataIntegracao" />
+    </xs:unique>
+    <xs:unique name="TipoOperation_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TipoOperation" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="IndexFRDCA_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//IndexFRDCA" />
+      <xs:field xpath="IDFRDBase" />
+      <xs:field xpath="IDControloAut" />
+    </xs:unique>
+    <xs:unique name="TipoNoticiaAut_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TipoNoticiaAut" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="NivelImagemIlustracao_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//NivelImagemIlustracao" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="FRDBaseDataDeDescricao_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//FRDBaseDataDeDescricao" />
+      <xs:field xpath="IDFRDBase" />
+      <xs:field xpath="IDTrusteeOperator" />
+      <xs:field xpath="DataEdicao" />
+      <xs:field xpath="IDTipoNivelRelacionado" />
+    </xs:unique>
+    <xs:unique name="TipoNivel_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TipoNivel" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="SFRDUnidadeFisica_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//SFRDUnidadeFisica" />
+      <xs:field xpath="IDFRDBase" />
+      <xs:field xpath="IDNivel" />
+    </xs:unique>
+    <xs:unique name="TipoMedida_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TipoMedida" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="TipoMedida_Constraint2" msdata:ConstraintName="Constraint2">
+      <xs:selector xpath=".//TipoMedida" />
+      <xs:field xpath="Designacao" />
+    </xs:unique>
+    <xs:unique name="LocalConsulta_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//LocalConsulta" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="NivelUnidadeFisica_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//NivelUnidadeFisica" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="TipoMaterialDeSuporte_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TipoMaterialDeSuporte" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="SFRDDocumentacaoAssociada_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//SFRDDocumentacaoAssociada" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:unique>
+    <xs:unique name="ConfigAlfabeto_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//ConfigAlfabeto" />
+      <xs:field xpath="IDGlobalConfig" />
+      <xs:field xpath="IDIso15924" />
+    </xs:unique>
+    <xs:unique name="TipoMaterial_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TipoMaterial" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="TipoMaterial_Constraint2" msdata:ConstraintName="Constraint2">
+      <xs:selector xpath=".//TipoMaterial" />
+      <xs:field xpath="Designacao" />
+    </xs:unique>
+    <xs:unique name="SFRDDimensaoSuporte_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//SFRDDimensaoSuporte" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:unique>
+    <xs:unique name="SFRDDatasProducao_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//SFRDDatasProducao" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:unique>
+    <xs:unique name="TipoFunctionGroup_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TipoFunctionGroup" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="ConfigLingua_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//ConfigLingua" />
+      <xs:field xpath="IDGlobalConfig" />
+      <xs:field xpath="IDIso639" />
+    </xs:unique>
+    <xs:unique name="SFRDContexto_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//SFRDContexto" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:unique>
+    <xs:unique name="Dicionario_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Dicionario" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="Dicionario_Dicionario_Constraint1" msdata:ConstraintName="Dicionario_Constraint1">
+      <xs:selector xpath=".//Dicionario" />
+      <xs:field xpath="Termo" />
+      <xs:field xpath="CatCode" />
+    </xs:unique>
+    <xs:unique name="SFRDConteudoEEstrutura_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//SFRDConteudoEEstrutura" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:unique>
+    <xs:unique name="ClientLicense_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//ClientLicense" />
+      <xs:field xpath="SequenceNumber" />
+      <xs:field xpath="GrantDate" />
+    </xs:unique>
+    <xs:unique name="SFRDCondicaoDeAcesso_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//SFRDCondicaoDeAcesso" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:unique>
+    <xs:unique name="AutoEliminacao_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//AutoEliminacao" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="AutoEliminacao_Constraint2" msdata:ConstraintName="Constraint2">
+      <xs:selector xpath=".//AutoEliminacao" />
+      <xs:field xpath="Designacao" />
+    </xs:unique>
+    <xs:unique name="SFRDImagem_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//SFRDImagem" />
+      <xs:field xpath="IDFRDBase" />
+      <xs:field xpath="idx" />
+    </xs:unique>
+    <xs:unique name="SFRDOrdenacao_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//SFRDOrdenacao" />
+      <xs:field xpath="IDFRDBase" />
+      <xs:field xpath="IDTipoOrdenacao" />
+    </xs:unique>
+    <xs:unique name="GlobalConfig_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//GlobalConfig" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="SFRDNotaGeral_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//SFRDNotaGeral" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:unique>
+    <xs:unique name="Iso639_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Iso639" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="SFRDAvaliacao_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//SFRDAvaliacao" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:unique>
+    <xs:unique name="Iso3166_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Iso3166" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="SFRDUFAutoEliminacao_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//SFRDUFAutoEliminacao" />
+      <xs:field xpath="IDFRDBase" />
+      <xs:field xpath="IDAutoEliminacao" />
+    </xs:unique>
+    <xs:unique name="Iso15924_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Iso15924" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="SFRDTradicaoDocumental_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//SFRDTradicaoDocumental" />
+      <xs:field xpath="IDFRDBase" />
+      <xs:field xpath="IDTipoTradicaoDocumental" />
+    </xs:unique>
+    <xs:unique name="Integ_Sistema_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Integ_Sistema" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="SFRDUFDescricaoFisica_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//SFRDUFDescricaoFisica" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:unique>
+    <xs:unique name="ListaModelosAvaliacao_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//ListaModelosAvaliacao" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="SFRDUFCota_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//SFRDUFCota" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:unique>
+    <xs:unique name="Movimento_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Movimento" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="SFRDUFComponente_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//SFRDUFComponente" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="MovimentoEntidade_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//MovimentoEntidade" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="SFRDTecnicasDeRegisto_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//SFRDTecnicasDeRegisto" />
+      <xs:field xpath="IDFRDBase" />
+      <xs:field xpath="IDTipoTecnicasDeRegisto" />
+    </xs:unique>
+    <xs:unique name="SFRDAlfabeto_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//SFRDAlfabeto" />
+      <xs:field xpath="IDFRDBase" />
+      <xs:field xpath="IDIso15924" />
+    </xs:unique>
+    <xs:unique name="Modules_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Modules" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="SFRDMaterialDeSuporte_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//SFRDMaterialDeSuporte" />
+      <xs:field xpath="IDFRDBase" />
+      <xs:field xpath="IDTipoMaterialDeSuporte" />
+    </xs:unique>
+    <xs:unique name="WebClientActivity_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//WebClientActivity" />
+      <xs:field xpath="ClientGUID" />
+    </xs:unique>
+    <xs:unique name="SFRDLingua_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//SFRDLingua" />
+      <xs:field xpath="IDFRDBase" />
+      <xs:field xpath="IDIso639" />
+    </xs:unique>
+    <xs:unique name="Trustee_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Trustee" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="SFRDFormaSuporteAcond_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//SFRDFormaSuporteAcond" />
+      <xs:field xpath="IDFRDBase" />
+      <xs:field xpath="IDTipoFormaSuporteAcond" />
+    </xs:unique>
+    <xs:unique name="TipoTradicaoDocumental_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TipoTradicaoDocumental" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="SFRDEstadoDeConservacao_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//SFRDEstadoDeConservacao" />
+      <xs:field xpath="IDFRDBase" />
+      <xs:field xpath="IDTipoEstadoDeConservacao" />
+    </xs:unique>
+    <xs:unique name="TipoTecnicasDeRegisto_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TipoTecnicasDeRegisto" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="SFRDAvaliacaoRel_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//SFRDAvaliacaoRel" />
+      <xs:field xpath="IDFRDBase" />
+      <xs:field xpath="IDNivel" />
+    </xs:unique>
+    <xs:unique name="TipoTecnicaRegisto_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TipoTecnicaRegisto" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="TipoTecnicaRegisto_Constraint2" msdata:ConstraintName="Constraint2">
+      <xs:selector xpath=".//TipoTecnicaRegisto" />
+      <xs:field xpath="Designacao" />
+    </xs:unique>
+    <xs:unique name="SFRDUFTecnicasRegComponente_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//SFRDUFTecnicasRegComponente" />
+      <xs:field xpath="IDComponente" />
+      <xs:field xpath="IDTecnicaRegisto" />
+    </xs:unique>
+    <xs:unique name="TipoSuporte_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TipoSuporte" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="TipoSuporte_Constraint2" msdata:ConstraintName="Constraint2">
+      <xs:selector xpath=".//TipoSuporte" />
+      <xs:field xpath="Designacao" />
+    </xs:unique>
+    <xs:unique name="SFRDUFMateriaisComponente_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//SFRDUFMateriaisComponente" />
+      <xs:field xpath="IDComponente" />
+      <xs:field xpath="IDMaterial" />
+    </xs:unique>
+    <xs:unique name="Codigo_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Codigo" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="TipoSubDensidade_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TipoSubDensidade" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="LicencaObra_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//LicencaObra" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:unique>
+    <xs:unique name="TrusteeUser_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TrusteeUser" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="TipoNivelRelacionado_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TipoNivelRelacionado" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="LicencaObraAtestadoHabitabilidade_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//LicencaObraAtestadoHabitabilidade" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="TrusteeGroup_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TrusteeGroup" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="Nivel_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Nivel" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="LicencaObraDataLicencaConstrucao_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//LicencaObraDataLicencaConstrucao" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="ModelosAvaliacao_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//ModelosAvaliacao" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="LicenseModules_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//LicenseModules" />
+      <xs:field xpath="SequenceNumber" />
+      <xs:field xpath="GrantDate" />
+      <xs:field xpath="IDModule" />
+    </xs:unique>
+    <xs:unique name="LicencaObraLocalizacaoObraActual_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//LicencaObraLocalizacaoObraActual" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="Integ_TipoEntidade_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Integ_TipoEntidade" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="TipoTipologias_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TipoTipologias" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="LicencaObraLocalizacaoObraAntiga_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//LicencaObraLocalizacaoObraAntiga" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="ControloAut_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//ControloAut" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="LicencaObraRequerentes_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//LicencaObraRequerentes" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="ClientActivity_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//ClientActivity" />
+      <xs:field xpath="SequenceNumber" />
+      <xs:field xpath="GrantDate" />
+      <xs:field xpath="ClientGUID" />
+      <xs:field xpath="SessionGUID" />
+      <xs:field xpath="LoginDate" />
+    </xs:unique>
+    <xs:unique name="TipoFunction_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TipoFunction" />
+      <xs:field xpath="IDTipoFunctionGroup" />
+      <xs:field xpath="idx" />
+    </xs:unique>
+    <xs:unique name="LicencaObraTecnicoObra_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//LicencaObraTecnicoObra" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="TipoNoticiaATipoControloAForma_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TipoNoticiaATipoControloAForma" />
+      <xs:field xpath="IDTipoNoticiaAut" />
+      <xs:field xpath="IDTipoControloAutForma" />
+    </xs:unique>
+    <xs:unique name="NivelTipoOperation_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//NivelTipoOperation" />
+      <xs:field xpath="IDTipoOperation" />
+    </xs:unique>
+    <xs:unique name="DepositoTipoOperation_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//DepositoTipoOperation" />
+      <xs:field xpath="IDTipoOperation" />
+    </xs:unique>
+    <xs:unique name="SFRDAutor_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//SFRDAutor" />
+      <xs:field xpath="IDFRDBase" />
+      <xs:field xpath="IDControloAut" />
+    </xs:unique>
+    <xs:unique name="NivelDesignado_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//NivelDesignado" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="Deposito_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Deposito" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="NivelControloAut_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//NivelControloAut" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="TrusteeDepositoPrivilege_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TrusteeDepositoPrivilege" />
+      <xs:field xpath="IDTrustee" />
+      <xs:field xpath="IDDeposito" />
+      <xs:field xpath="IDTipoOperation" />
+    </xs:unique>
+    <xs:unique name="RelacaoTipoNivelRelacionado_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//RelacaoTipoNivelRelacionado" />
+      <xs:field xpath="ID" />
+      <xs:field xpath="IDUpper" />
+    </xs:unique>
+    <xs:unique name="NivelUnidadeFisicaDeposito_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//NivelUnidadeFisicaDeposito" />
+      <xs:field xpath="IDNivelUnidadeFisica" />
+      <xs:field xpath="IDDeposito" />
+    </xs:unique>
+    <xs:unique name="RelacaoHierarquica_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//RelacaoHierarquica" />
+      <xs:field xpath="ID" />
+      <xs:field xpath="IDUpper" />
+    </xs:unique>
+    <xs:unique name="ProductFunction_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//ProductFunction" />
+      <xs:field xpath="IDTipoServer" />
+      <xs:field xpath="IDModule" />
+      <xs:field xpath="IDTipoFunctionGroup" />
+      <xs:field xpath="IdxTipoFunction" />
+    </xs:unique>
+    <xs:unique name="NivelUnidadeFisicaCodigo_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//NivelUnidadeFisicaCodigo" />
+      <xs:field xpath="ID" />
+      <xs:field xpath="Ano" />
+    </xs:unique>
+    <xs:unique name="SFRDImagemVolume_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//SFRDImagemVolume" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="SFRDAgrupador_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//SFRDAgrupador" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:unique>
+    <xs:unique name="TipoNivelRelacionadoCodigo_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//TipoNivelRelacionadoCodigo" />
+      <xs:field xpath="IDTipoNivelRelacionado" />
+    </xs:unique>
+    <xs:unique name="SearchCacheWeb_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//SearchCacheWeb" />
+      <xs:field xpath="ClientGUID" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:unique>
+    <xs:keyref name="TipoNivelRelacionadoTipoNivelRelacionadoCodigo" refer="TipoNivelRelacionado_Constraint1">
+      <xs:selector xpath=".//TipoNivelRelacionadoCodigo" />
+      <xs:field xpath="IDTipoNivelRelacionado" />
+    </xs:keyref>
+    <xs:keyref name="FRDBaseSFRDAgrupador" refer="Constraint1">
+      <xs:selector xpath=".//SFRDAgrupador" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="NivelNivelUnidadeFisicaCodigo" refer="Nivel_Constraint1">
+      <xs:selector xpath=".//NivelUnidadeFisicaCodigo" />
+      <xs:field xpath="ID" />
+    </xs:keyref>
+    <xs:keyref name="TipoServerProductFunction" refer="TipoServer_Constraint1">
+      <xs:selector xpath=".//ProductFunction" />
+      <xs:field xpath="IDTipoServer" />
+    </xs:keyref>
+    <xs:keyref name="TipoFunctionProductFunction" refer="TipoFunction_Constraint1">
+      <xs:selector xpath=".//ProductFunction" />
+      <xs:field xpath="IDTipoFunctionGroup" />
+      <xs:field xpath="IdxTipoFunction" />
+    </xs:keyref>
+    <xs:keyref name="ModulesProductFunction" refer="Modules_Constraint1">
+      <xs:selector xpath=".//ProductFunction" />
+      <xs:field xpath="IDModule" />
+    </xs:keyref>
+    <xs:keyref name="TipoNivelRelacionadoRelacaoHierarquica" refer="TipoNivelRelacionado_Constraint1">
+      <xs:selector xpath=".//RelacaoHierarquica" />
+      <xs:field xpath="IDTipoNivelRelacionado" />
+    </xs:keyref>
+    <xs:keyref name="NivelRelacaoHierarquicaUpper" refer="Nivel_Constraint1">
+      <xs:selector xpath=".//RelacaoHierarquica" />
+      <xs:field xpath="IDUpper" />
+    </xs:keyref>
+    <xs:keyref name="NivelRelacaoHierarquica" refer="Nivel_Constraint1">
+      <xs:selector xpath=".//RelacaoHierarquica" />
+      <xs:field xpath="ID" />
+    </xs:keyref>
+    <xs:keyref name="NivelUnidadeFisicaNivelUnidadeFisicaDeposito" refer="NivelUnidadeFisica_Constraint1">
+      <xs:selector xpath=".//NivelUnidadeFisicaDeposito" />
+      <xs:field xpath="IDNivelUnidadeFisica" />
+    </xs:keyref>
+    <xs:keyref name="DepositoNivelUnidadeFisicaDeposito" refer="Deposito_Constraint1">
+      <xs:selector xpath=".//NivelUnidadeFisicaDeposito" />
+      <xs:field xpath="IDDeposito" />
+    </xs:keyref>
+    <xs:keyref name="TipoNivelRelacionadoRelacaoTipoNivelRelacionadoUpper" refer="TipoNivelRelacionado_Constraint1">
+      <xs:selector xpath=".//RelacaoTipoNivelRelacionado" />
+      <xs:field xpath="IDUpper" />
+    </xs:keyref>
+    <xs:keyref name="TipoNivelRelacionadoRelacaoTipoNivelRelacionado" refer="TipoNivelRelacionado_Constraint1">
+      <xs:selector xpath=".//RelacaoTipoNivelRelacionado" />
+      <xs:field xpath="ID" />
+    </xs:keyref>
+    <xs:keyref name="DepositoTipoOperationTrusteeDepositoPrivilege" refer="DepositoTipoOperation_Constraint1">
+      <xs:selector xpath=".//TrusteeDepositoPrivilege" />
+      <xs:field xpath="IDTipoOperation" />
+    </xs:keyref>
+    <xs:keyref name="TrusteeTrusteeDepositoPrivilege" refer="Trustee_Constraint1">
+      <xs:selector xpath=".//TrusteeDepositoPrivilege" />
+      <xs:field xpath="IDTrustee" />
+    </xs:keyref>
+    <xs:keyref name="DepositoTrusteeDepositoPrivilege" refer="Deposito_Constraint1">
+      <xs:selector xpath=".//TrusteeDepositoPrivilege" />
+      <xs:field xpath="IDDeposito" />
+    </xs:keyref>
+    <xs:keyref name="NivelNivelControloAut" refer="Nivel_Constraint1">
+      <xs:selector xpath=".//NivelControloAut" />
+      <xs:field xpath="ID" />
+    </xs:keyref>
+    <xs:keyref name="ControloAutNivelControloAut" refer="ControloAut_Constraint1">
+      <xs:selector xpath=".//NivelControloAut" />
+      <xs:field xpath="IDControloAut" />
+    </xs:keyref>
+    <xs:keyref name="NivelNivelDesignado" refer="Nivel_Constraint1">
+      <xs:selector xpath=".//NivelDesignado" />
+      <xs:field xpath="ID" />
+    </xs:keyref>
+    <xs:keyref name="ControloAutSFRDAutor" refer="ControloAut_Constraint1">
+      <xs:selector xpath=".//SFRDAutor" />
+      <xs:field xpath="IDControloAut" />
+    </xs:keyref>
+    <xs:keyref name="FRDBaseSFRDAutor" refer="Constraint1">
+      <xs:selector xpath=".//SFRDAutor" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="TipoOperationDepositoTipoOperation" refer="TipoOperation_Constraint1">
+      <xs:selector xpath=".//DepositoTipoOperation" />
+      <xs:field xpath="IDTipoOperation" />
+    </xs:keyref>
+    <xs:keyref name="TipoOperationNivelTipoOperation" refer="TipoOperation_Constraint1">
+      <xs:selector xpath=".//NivelTipoOperation" />
+      <xs:field xpath="IDTipoOperation" />
+    </xs:keyref>
+    <xs:keyref name="TipoNoticiaAutTipoNoticiaATipoControloAForma" refer="TipoNoticiaAut_Constraint1">
+      <xs:selector xpath=".//TipoNoticiaATipoControloAForma" />
+      <xs:field xpath="IDTipoNoticiaAut" />
+    </xs:keyref>
+    <xs:keyref name="TipoControloAutFormaTipoNoticiaATipoControloAForma" refer="TipoControloAutForma_Constraint1">
+      <xs:selector xpath=".//TipoNoticiaATipoControloAForma" />
+      <xs:field xpath="IDTipoControloAutForma" />
+    </xs:keyref>
+    <xs:keyref name="LicencaObraLicencaObraTecnicoObra" refer="LicencaObra_Constraint1">
+      <xs:selector xpath=".//LicencaObraTecnicoObra" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="ControloAutLicencaObraTecnicoObra" refer="ControloAut_Constraint1">
+      <xs:selector xpath=".//LicencaObraTecnicoObra" />
+      <xs:field xpath="IDControloAut" />
+    </xs:keyref>
+    <xs:keyref name="TipoFunctionTipoFunction" refer="TipoFunction_Constraint1">
+      <xs:selector xpath=".//TipoFunction" />
+      <xs:field xpath="IDTipoFunctionGroupContext" />
+      <xs:field xpath="IdxTipoFunctionGroupContext" />
+    </xs:keyref>
+    <xs:keyref name="TipoFunctionGroupTipoFunction" refer="TipoFunctionGroup_Constraint1">
+      <xs:selector xpath=".//TipoFunction" />
+      <xs:field xpath="IDTipoFunctionGroup" />
+    </xs:keyref>
+    <xs:keyref name="ClientLicenseClientActivity" refer="ClientLicense_Constraint1">
+      <xs:selector xpath=".//ClientActivity" />
+      <xs:field xpath="SequenceNumber" />
+      <xs:field xpath="GrantDate" />
+    </xs:keyref>
+    <xs:keyref name="LicencaObraLicencaObraRequerentes" refer="LicencaObra_Constraint1">
+      <xs:selector xpath=".//LicencaObraRequerentes" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="TipoTipologiasControloAut" refer="TipoTipologias_Constraint1">
+      <xs:selector xpath=".//ControloAut" />
+      <xs:field xpath="IDTipoTipologia" />
+    </xs:keyref>
+    <xs:keyref name="TipoNoticiaAutControloAut" refer="TipoNoticiaAut_Constraint1">
+      <xs:selector xpath=".//ControloAut" />
+      <xs:field xpath="IDTipoNoticiaAut" />
+    </xs:keyref>
+    <xs:keyref name="Iso639ControloAut" refer="Iso639_Constraint1">
+      <xs:selector xpath=".//ControloAut" />
+      <xs:field xpath="IDIso639p2" />
+    </xs:keyref>
+    <xs:keyref name="Iso15924ControloAut" refer="Iso15924_Constraint1">
+      <xs:selector xpath=".//ControloAut" />
+      <xs:field xpath="IDIso15924" />
+    </xs:keyref>
+    <xs:keyref name="LicencaObraLicencaObraLocalizacaoObraAntiga" refer="LicencaObra_Constraint1">
+      <xs:selector xpath=".//LicencaObraLocalizacaoObraAntiga" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="LicencaObraLicencaObraLocalizacaoObraActual" refer="LicencaObra_Constraint1">
+      <xs:selector xpath=".//LicencaObraLocalizacaoObraActual" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="ControloAutLicencaObraLocalizacaoObraActual" refer="ControloAut_Constraint1">
+      <xs:selector xpath=".//LicencaObraLocalizacaoObraActual" />
+      <xs:field xpath="IDControloAut" />
+    </xs:keyref>
+    <xs:keyref name="ModulesLicenseModules" refer="Modules_Constraint1">
+      <xs:selector xpath=".//LicenseModules" />
+      <xs:field xpath="IDModule" />
+    </xs:keyref>
+    <xs:keyref name="ClientLicenseLicenseModules" refer="ClientLicense_Constraint1">
+      <xs:selector xpath=".//LicenseModules" />
+      <xs:field xpath="SequenceNumber" />
+      <xs:field xpath="GrantDate" />
+    </xs:keyref>
+    <xs:keyref name="ListaModelosAvaliacaoModelosAvaliacao" refer="ListaModelosAvaliacao_Constraint1">
+      <xs:selector xpath=".//ModelosAvaliacao" />
+      <xs:field xpath="IDListaModelosAvaliacao" />
+    </xs:keyref>
+    <xs:keyref name="LicencaObraLicencaObraDataLicencaConstrucao" refer="LicencaObra_Constraint1">
+      <xs:selector xpath=".//LicencaObraDataLicencaConstrucao" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="TipoNivelNivel" refer="TipoNivel_Constraint1">
+      <xs:selector xpath=".//Nivel" />
+      <xs:field xpath="IDTipoNivel" />
+    </xs:keyref>
+    <xs:keyref name="TrusteeTrusteeGroup" refer="Trustee_Constraint1">
+      <xs:selector xpath=".//TrusteeGroup" />
+      <xs:field xpath="ID" />
+    </xs:keyref>
+    <xs:keyref name="LicencaObraLicencaObraAtestadoHabitabilidade" refer="LicencaObra_Constraint1">
+      <xs:selector xpath=".//LicencaObraAtestadoHabitabilidade" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="TipoNivelTipoNivelRelacionado" refer="TipoNivel_Constraint1">
+      <xs:selector xpath=".//TipoNivelRelacionado" />
+      <xs:field xpath="IDTipoNivel" />
+    </xs:keyref>
+    <xs:keyref name="TrusteeTrusteeUser" refer="Trustee_Constraint1">
+      <xs:selector xpath=".//TrusteeUser" />
+      <xs:field xpath="ID" />
+    </xs:keyref>
+    <xs:keyref name="TrusteeUserTrusteeUserAuthority" refer="TrusteeUser_Constraint1">
+      <xs:selector xpath=".//TrusteeUser" />
+      <xs:field xpath="IDTrusteeUserDefaultAuthority" />
+    </xs:keyref>
+    <xs:keyref name="FRDBaseLicencaObra" refer="Constraint1">
+      <xs:selector xpath=".//LicencaObra" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="TipoDensidadeTipoSubDensidade" refer="TipoDensidade_Constraint1">
+      <xs:selector xpath=".//TipoSubDensidade" />
+      <xs:field xpath="IDTipoDensidade" />
+    </xs:keyref>
+    <xs:keyref name="FRDBaseCodigo" refer="Constraint1">
+      <xs:selector xpath=".//Codigo" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="TipoMaterialSFRDUFMateriaisComponente" refer="TipoMaterial_Constraint1">
+      <xs:selector xpath=".//SFRDUFMateriaisComponente" />
+      <xs:field xpath="IDMaterial" />
+    </xs:keyref>
+    <xs:keyref name="SFRDUFComponenteSFRDUFMateriaisComponente" refer="SFRDUFComponente_Constraint1">
+      <xs:selector xpath=".//SFRDUFMateriaisComponente" />
+      <xs:field xpath="IDComponente" />
+    </xs:keyref>
+    <xs:keyref name="TipoTecnicaRegistoSFRDUFTecnicasRegComponente" refer="TipoTecnicaRegisto_Constraint1">
+      <xs:selector xpath=".//SFRDUFTecnicasRegComponente" />
+      <xs:field xpath="IDTecnicaRegisto" />
+    </xs:keyref>
+    <xs:keyref name="SFRDUFComponenteSFRDUFTecnicasRegComponente" refer="SFRDUFComponente_Constraint1">
+      <xs:selector xpath=".//SFRDUFTecnicasRegComponente" />
+      <xs:field xpath="IDComponente" />
+    </xs:keyref>
+    <xs:keyref name="TipoSubDensidadeSFRDAvaliacaoRel" refer="TipoSubDensidade_Constraint1">
+      <xs:selector xpath=".//SFRDAvaliacaoRel" />
+      <xs:field xpath="SubDensidade" />
+    </xs:keyref>
+    <xs:keyref name="TipoDensidadeSFRDAvaliacaoRel" refer="TipoDensidade_Constraint1">
+      <xs:selector xpath=".//SFRDAvaliacaoRel" />
+      <xs:field xpath="Densidade" />
+    </xs:keyref>
+    <xs:keyref name="SFRDAvaliacaoSFRDAvaliacaoRel" refer="SFRDAvaliacao_Constraint1">
+      <xs:selector xpath=".//SFRDAvaliacaoRel" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="NivelSFRDAvaliacaoRel" refer="Nivel_Constraint1">
+      <xs:selector xpath=".//SFRDAvaliacaoRel" />
+      <xs:field xpath="IDNivel" />
+    </xs:keyref>
+    <xs:keyref name="TipoEstadoDeConservacaoSFRDEstadoDeConservacao" refer="TipoEstadoDeConservacao_Constraint1">
+      <xs:selector xpath=".//SFRDEstadoDeConservacao" />
+      <xs:field xpath="IDTipoEstadoDeConservacao" />
+    </xs:keyref>
+    <xs:keyref name="SFRDCondicaoDeAcessoSFRDEstadoDeConservacao" refer="SFRDCondicaoDeAcesso_Constraint1">
+      <xs:selector xpath=".//SFRDEstadoDeConservacao" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="TipoFormaSuporteAcondSFRDFormaSuporteAcond" refer="TipoFormaSuporteAcond_Constraint1">
+      <xs:selector xpath=".//SFRDFormaSuporteAcond" />
+      <xs:field xpath="IDTipoFormaSuporteAcond" />
+    </xs:keyref>
+    <xs:keyref name="SFRDCondicaoDeAcessoSFRDFormaSuporteAcond" refer="SFRDCondicaoDeAcesso_Constraint1">
+      <xs:selector xpath=".//SFRDFormaSuporteAcond" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="SFRDCondicaoDeAcessoSFRDLingua" refer="SFRDCondicaoDeAcesso_Constraint1">
+      <xs:selector xpath=".//SFRDLingua" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="Iso639SFRDLingua" refer="Iso639_Constraint1">
+      <xs:selector xpath=".//SFRDLingua" />
+      <xs:field xpath="IDIso639" />
+    </xs:keyref>
+    <xs:keyref name="TipoMaterialDeSuporteSFRDMaterialDeSuporte" refer="TipoMaterialDeSuporte_Constraint1">
+      <xs:selector xpath=".//SFRDMaterialDeSuporte" />
+      <xs:field xpath="IDTipoMaterialDeSuporte" />
+    </xs:keyref>
+    <xs:keyref name="SFRDCondicaoDeAcessoSFRDMaterialDeSuporte" refer="SFRDCondicaoDeAcesso_Constraint1">
+      <xs:selector xpath=".//SFRDMaterialDeSuporte" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="SFRDCondicaoDeAcessoSFRDAlfabeto" refer="SFRDCondicaoDeAcesso_Constraint1">
+      <xs:selector xpath=".//SFRDAlfabeto" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="Iso15924SFRDAlfabeto" refer="Iso15924_Constraint1">
+      <xs:selector xpath=".//SFRDAlfabeto" />
+      <xs:field xpath="IDIso15924" />
+    </xs:keyref>
+    <xs:keyref name="TipoTecnicasDeRegistoSFRDTecnicasDeRegisto" refer="TipoTecnicasDeRegisto_Constraint1">
+      <xs:selector xpath=".//SFRDTecnicasDeRegisto" />
+      <xs:field xpath="IDTipoTecnicasDeRegisto" />
+    </xs:keyref>
+    <xs:keyref name="SFRDCondicaoDeAcessoSFRDTecnicasDeRegisto" refer="SFRDCondicaoDeAcesso_Constraint1">
+      <xs:selector xpath=".//SFRDTecnicasDeRegisto" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="TipoMedidaSFRDUFComponente" refer="TipoMedida_Constraint1">
+      <xs:selector xpath=".//SFRDUFComponente" />
+      <xs:field xpath="IDTipoMedida" />
+    </xs:keyref>
+    <xs:keyref name="TipoEstadoConservacaoSFRDUFComponente" refer="TipoEstadoConservacao_Constraint1">
+      <xs:selector xpath=".//SFRDUFComponente" />
+      <xs:field xpath="IDTipoEstadoConservacao" />
+    </xs:keyref>
+    <xs:keyref name="SFRDUnidadeFisicaSFRDUFComponente" refer="SFRDUnidadeFisica_Constraint1">
+      <xs:selector xpath=".//SFRDUFComponente" />
+      <xs:field xpath="IDFRDBase" />
+      <xs:field xpath="IDNivelUA" />
+    </xs:keyref>
+    <xs:keyref name="SFRDUFDescricaoFisicaSFRDUFComponente" refer="SFRDUFDescricaoFisica_Constraint1">
+      <xs:selector xpath=".//SFRDUFComponente" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="TipoSuporteSFRDUFComponente" refer="TipoSuporte_Constraint1">
+      <xs:selector xpath=".//SFRDUFComponente" />
+      <xs:field xpath="IDTipoSuporte" />
+    </xs:keyref>
+    <xs:keyref name="MovimentoEntidadeMovimento" refer="MovimentoEntidade_Constraint1">
+      <xs:selector xpath=".//Movimento" />
+      <xs:field xpath="IDEntidade" />
+    </xs:keyref>
+    <xs:keyref name="FRDBaseSFRDUFCota" refer="Constraint1">
+      <xs:selector xpath=".//SFRDUFCota" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="TipoMedidaSFRDUFDescricaoFisica" refer="TipoMedida_Constraint1">
+      <xs:selector xpath=".//SFRDUFDescricaoFisica" />
+      <xs:field xpath="IDTipoMedida" />
+    </xs:keyref>
+    <xs:keyref name="TipoAcondicionamentoSFRDUFDescricaoFisica" refer="TipoAcondicionamento_Constraint1">
+      <xs:selector xpath=".//SFRDUFDescricaoFisica" />
+      <xs:field xpath="IDTipoAcondicionamento" />
+    </xs:keyref>
+    <xs:keyref name="FRDBaseSFRDUFDescricaoFisica" refer="Constraint1">
+      <xs:selector xpath=".//SFRDUFDescricaoFisica" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="TipoTradicaoDocumentalSFRDTradicaoDocumental" refer="TipoTradicaoDocumental_Constraint1">
+      <xs:selector xpath=".//SFRDTradicaoDocumental" />
+      <xs:field xpath="IDTipoTradicaoDocumental" />
+    </xs:keyref>
+    <xs:keyref name="FRDBaseSFRDTradicaoDocumental" refer="Constraint1">
+      <xs:selector xpath=".//SFRDTradicaoDocumental" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="FRDBaseSFRDUFAutoEliminacao" refer="Constraint1">
+      <xs:selector xpath=".//SFRDUFAutoEliminacao" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="AutoEliminacaoSFRDUFAutoEliminacao" refer="AutoEliminacao_Constraint1">
+      <xs:selector xpath=".//SFRDUFAutoEliminacao" />
+      <xs:field xpath="IDAutoEliminacao" />
+    </xs:keyref>
+    <xs:keyref name="TipoSubDensidadeSFRDAvaliacao" refer="TipoSubDensidade_Constraint1">
+      <xs:selector xpath=".//SFRDAvaliacao" />
+      <xs:field xpath="IDSubdensidade" />
+    </xs:keyref>
+    <xs:keyref name="TipoPertinenciaSFRDAvaliacao" refer="TipoPertinencia_Constraint1">
+      <xs:selector xpath=".//SFRDAvaliacao" />
+      <xs:field xpath="IDPertinencia" />
+    </xs:keyref>
+    <xs:keyref name="TipoDensidadeSFRDAvaliacao" refer="TipoDensidade_Constraint1">
+      <xs:selector xpath=".//SFRDAvaliacao" />
+      <xs:field xpath="IDDensidade" />
+    </xs:keyref>
+    <xs:keyref name="ModelosAvaliacaoSFRDAvaliacao" refer="ModelosAvaliacao_Constraint1">
+      <xs:selector xpath=".//SFRDAvaliacao" />
+      <xs:field xpath="IDModeloAvaliacao" />
+    </xs:keyref>
+    <xs:keyref name="FRDBaseSFRDAvaliacao" refer="Constraint1">
+      <xs:selector xpath=".//SFRDAvaliacao" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="AutoEliminacaoSFRDAvaliacao" refer="AutoEliminacao_Constraint1">
+      <xs:selector xpath=".//SFRDAvaliacao" />
+      <xs:field xpath="IDAutoEliminacao" />
+    </xs:keyref>
+    <xs:keyref name="FRDBaseSFRDNotaGeral" refer="Constraint1">
+      <xs:selector xpath=".//SFRDNotaGeral" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="TipoOrdenacaoSFRDOrdenacao" refer="TipoOrdenacao_Constraint1">
+      <xs:selector xpath=".//SFRDOrdenacao" />
+      <xs:field xpath="IDTipoOrdenacao" />
+    </xs:keyref>
+    <xs:keyref name="FRDBaseSFRDOrdenacao" refer="Constraint1">
+      <xs:selector xpath=".//SFRDOrdenacao" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="SFRDImagemVolumeSFRDImagem" refer="SFRDImagemVolume_Constraint1">
+      <xs:selector xpath=".//SFRDImagem" />
+      <xs:field xpath="IDSFDImagemVolume" />
+    </xs:keyref>
+    <xs:keyref name="FRDBaseSFRDImagem" refer="Constraint1">
+      <xs:selector xpath=".//SFRDImagem" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="FRDBaseSFRDCondicaoDeAcesso" refer="Constraint1">
+      <xs:selector xpath=".//SFRDCondicaoDeAcesso" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="FRDBaseSFRDConteudoEEstrutura" refer="Constraint1">
+      <xs:selector xpath=".//SFRDConteudoEEstrutura" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="FRDBaseSFRDContexto" refer="Constraint1">
+      <xs:selector xpath=".//SFRDContexto" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="GlobalConfigConfigLingua" refer="GlobalConfig_Constraint1">
+      <xs:selector xpath=".//ConfigLingua" />
+      <xs:field xpath="IDGlobalConfig" />
+    </xs:keyref>
+    <xs:keyref name="Iso639ConfigLingua" refer="Iso639_Constraint1">
+      <xs:selector xpath=".//ConfigLingua" />
+      <xs:field xpath="IDIso639" />
+    </xs:keyref>
+    <xs:keyref name="FRDBaseSFRDDatasProducao" refer="Constraint1">
+      <xs:selector xpath=".//SFRDDatasProducao" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="FRDBaseSFRDDimensaoSuporte" refer="Constraint1">
+      <xs:selector xpath=".//SFRDDimensaoSuporte" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="GlobalConfigConfigAlfabeto" refer="GlobalConfig_Constraint1">
+      <xs:selector xpath=".//ConfigAlfabeto" />
+      <xs:field xpath="IDGlobalConfig" />
+    </xs:keyref>
+    <xs:keyref name="Iso15924ConfigAlfabeto" refer="Iso15924_Constraint1">
+      <xs:selector xpath=".//ConfigAlfabeto" />
+      <xs:field xpath="IDIso15924" />
+    </xs:keyref>
+    <xs:keyref name="FRDBaseSFRDDocumentacaoAssociada" refer="Constraint1">
+      <xs:selector xpath=".//SFRDDocumentacaoAssociada" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="LocalConsultaNivelUnidadeFisica" refer="LocalConsulta_Constraint1">
+      <xs:selector xpath=".//NivelUnidadeFisica" />
+      <xs:field xpath="IDLocalConsulta" />
+    </xs:keyref>
+    <xs:keyref name="TipoEntregaNivelUnidadeFisica" refer="TipoEntrega_Constraint1">
+      <xs:selector xpath=".//NivelUnidadeFisica" />
+      <xs:field xpath="IDTipoEntrega" />
+    </xs:keyref>
+    <xs:keyref name="NivelDesignadoNivelUnidadeFisica" refer="NivelDesignado_Constraint1">
+      <xs:selector xpath=".//NivelUnidadeFisica" />
+      <xs:field xpath="ID" />
+    </xs:keyref>
+    <xs:keyref name="NivelSFRDUnidadeFisica" refer="Nivel_Constraint1">
+      <xs:selector xpath=".//SFRDUnidadeFisica" />
+      <xs:field xpath="IDNivel" />
+    </xs:keyref>
+    <xs:keyref name="FRDBaseSFRDUnidadeFisica" refer="Constraint1">
+      <xs:selector xpath=".//SFRDUnidadeFisica" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="TrusteeUserFRDBaseDataDeDescricao" refer="TrusteeUser_Constraint1">
+      <xs:selector xpath=".//FRDBaseDataDeDescricao" />
+      <xs:field xpath="IDTrusteeOperator" />
+    </xs:keyref>
+    <xs:keyref name="TrusteeUserFRDBaseDataDeDescricaoAuthority" refer="TrusteeUser_Constraint1">
+      <xs:selector xpath=".//FRDBaseDataDeDescricao" />
+      <xs:field xpath="IDTrusteeAuthority" />
+    </xs:keyref>
+    <xs:keyref name="TipoNivelRelacionadoFRDBaseDataDeDescricao" refer="TipoNivelRelacionado_Constraint1">
+      <xs:selector xpath=".//FRDBaseDataDeDescricao" />
+      <xs:field xpath="IDTipoNivelRelacionado" />
+    </xs:keyref>
+    <xs:keyref name="NivelNivelImagemIlustracao" refer="Nivel_Constraint1">
+      <xs:selector xpath=".//NivelImagemIlustracao" />
+      <xs:field xpath="ID" />
+    </xs:keyref>
+    <xs:keyref name="FRDBaseIndexFRDCA" refer="Constraint1">
+      <xs:selector xpath=".//IndexFRDCA" />
+      <xs:field xpath="IDFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="ControloAutIndexFRDCA" refer="ControloAut_Constraint1">
+      <xs:selector xpath=".//IndexFRDCA" />
+      <xs:field xpath="IDControloAut" />
+    </xs:keyref>
+    <xs:keyref name="ControloAutInteg_RelacaoExternaControloAut" refer="ControloAut_Constraint1">
+      <xs:selector xpath=".//Integ_RelacaoExternaControloAut" />
+      <xs:field xpath="IDControloAut" />
+    </xs:keyref>
+    <xs:keyref name="Integ_EntidadeExternaInteg_RelacaoExternaControloAut" refer="Integ_EntidadeExterna_Constraint1">
+      <xs:selector xpath=".//Integ_RelacaoExternaControloAut" />
+      <xs:field xpath="IDEntidadeExterna" />
+    </xs:keyref>
+    <xs:keyref name="NivelInteg_RelacaoExternaNivel" refer="Nivel_Constraint1">
+      <xs:selector xpath=".//Integ_RelacaoExternaNivel" />
+      <xs:field xpath="IDNivel" />
+    </xs:keyref>
+    <xs:keyref name="Integ_EntidadeExternaInteg_RelacaoExternaNivel" refer="Integ_EntidadeExterna_Constraint1">
+      <xs:selector xpath=".//Integ_RelacaoExternaNivel" />
+      <xs:field xpath="IDEntidadeExterna" />
+    </xs:keyref>
+    <xs:keyref name="ObjetoDigitalTipoOperationTrusteeObjetoDigitalPrivilege" refer="ObjetoDigitalTipoOperation_Constraint1">
+      <xs:selector xpath=".//TrusteeObjetoDigitalPrivilege" />
+      <xs:field xpath="IDTipoOperation" />
+    </xs:keyref>
+    <xs:keyref name="TrusteeTrusteeObjetoDigitalPrivilege" refer="Trustee_Constraint1">
+      <xs:selector xpath=".//TrusteeObjetoDigitalPrivilege" />
+      <xs:field xpath="IDTrustee" />
+    </xs:keyref>
+    <xs:keyref name="ObjetoDigitalTrusteeObjetoDigitalPrivilege" refer="ObjetoDigital_Constraint1">
+      <xs:selector xpath=".//TrusteeObjetoDigitalPrivilege" />
+      <xs:field xpath="IDObjetoDigital" />
+    </xs:keyref>
+    <xs:keyref name="TrusteeTrusteePrivilege" refer="Trustee_Constraint1">
+      <xs:selector xpath=".//TrusteePrivilege" />
+      <xs:field xpath="IDTrustee" />
+    </xs:keyref>
+    <xs:keyref name="FunctionOperationTrusteePrivilege" refer="FunctionOperation_Constraint1">
+      <xs:selector xpath=".//TrusteePrivilege" />
+      <xs:field xpath="IDTipoFunctionGroup" />
+      <xs:field xpath="IdxTipoFunction" />
+      <xs:field xpath="IDTipoOperation" />
+    </xs:keyref>
+    <xs:keyref name="TrusteeUserUserGroups" refer="TrusteeUser_Constraint1">
+      <xs:selector xpath=".//UserGroups" />
+      <xs:field xpath="IDUser" />
+    </xs:keyref>
+    <xs:keyref name="TrusteeGroupUserGroups" refer="TrusteeGroup_Constraint1">
+      <xs:selector xpath=".//UserGroups" />
+      <xs:field xpath="IDGroup" />
+    </xs:keyref>
+    <xs:keyref name="TipoOperationObjetoDigitalTipoOperation" refer="TipoOperation_Constraint1">
+      <xs:selector xpath=".//ObjetoDigitalTipoOperation" />
+      <xs:field xpath="IDTipoOperation" />
+    </xs:keyref>
+    <xs:keyref name="TrusteeTrusteeNivelPrivilege" refer="Trustee_Constraint1">
+      <xs:selector xpath=".//TrusteeNivelPrivilege" />
+      <xs:field xpath="IDTrustee" />
+    </xs:keyref>
+    <xs:keyref name="NivelTrusteeNivelPrivilege" refer="Nivel_Constraint1">
+      <xs:selector xpath=".//TrusteeNivelPrivilege" />
+      <xs:field xpath="IDNivel" />
+    </xs:keyref>
+    <xs:keyref name="ObjetoDigitalSFRDImagemObjetoDigital" refer="ObjetoDigital_Constraint1">
+      <xs:selector xpath=".//SFRDImagemObjetoDigital" />
+      <xs:field xpath="IDObjetoDigital" />
+    </xs:keyref>
+    <xs:keyref name="SFRDImagemSFRDImagemObjetoDigital" refer="SFRDImagem_Constraint1">
+      <xs:selector xpath=".//SFRDImagemObjetoDigital" />
+      <xs:field xpath="IDFRDBase" />
+      <xs:field xpath="idx" />
+    </xs:keyref>
+    <xs:keyref name="Integ_SistemaInteg_EntidadeExterna" refer="Integ_Sistema_Constraint1">
+      <xs:selector xpath=".//Integ_EntidadeExterna" />
+      <xs:field xpath="IDSistema" />
+    </xs:keyref>
+    <xs:keyref name="Integ_TipoEntidadeInteg_EntidadeExterna" refer="Integ_TipoEntidade_Constraint1">
+      <xs:selector xpath=".//Integ_EntidadeExterna" />
+      <xs:field xpath="IDTipoEntidade" />
+    </xs:keyref>
+    <xs:keyref name="TipoOperationFunctionOperation" refer="TipoOperation_Constraint1">
+      <xs:selector xpath=".//FunctionOperation" />
+      <xs:field xpath="IDTipoOperation" />
+    </xs:keyref>
+    <xs:keyref name="TipoFunctionFunctionOperation" refer="TipoFunction_Constraint1">
+      <xs:selector xpath=".//FunctionOperation" />
+      <xs:field xpath="IDTipoFunctionGroup" />
+      <xs:field xpath="IdxTipoFunction" />
+    </xs:keyref>
+    <xs:keyref name="TrusteeUserControloAutDataDeDescricao" refer="TrusteeUser_Constraint1">
+      <xs:selector xpath=".//ControloAutDataDeDescricao" />
+      <xs:field xpath="IDTrusteeOperator" />
+    </xs:keyref>
+    <xs:keyref name="TrusteeUserControloAutDataDeDescricaoAuthority" refer="TrusteeUser_Constraint1">
+      <xs:selector xpath=".//ControloAutDataDeDescricao" />
+      <xs:field xpath="IDTrusteeAuthority" />
+    </xs:keyref>
+    <xs:keyref name="TipoNoticiaAutControloAutDataDeDescricao" refer="TipoNoticiaAut_Constraint1">
+      <xs:selector xpath=".//ControloAutDataDeDescricao" />
+      <xs:field xpath="IDTipoNoticiaAut" />
+    </xs:keyref>
+    <xs:keyref name="ObjetoDigitalObjetoDigitalRelacaoHierarquicaUpper" refer="ObjetoDigital_Constraint1">
+      <xs:selector xpath=".//ObjetoDigitalRelacaoHierarquica" />
+      <xs:field xpath="IDUpper" />
+    </xs:keyref>
+    <xs:keyref name="ObjetoDigitalObjetoDigitalRelacaoHierarquica" refer="ObjetoDigital_Constraint1">
+      <xs:selector xpath=".//ObjetoDigitalRelacaoHierarquica" />
+      <xs:field xpath="ID" />
+    </xs:keyref>
+    <xs:keyref name="ControloAutControloAutDatasExistencia" refer="ControloAut_Constraint1">
+      <xs:selector xpath=".//ControloAutDatasExistencia" />
+      <xs:field xpath="IDControloAut" />
+    </xs:keyref>
+    <xs:keyref name="DicionarioControloAutDicionario" refer="Dicionario_Constraint1">
+      <xs:selector xpath=".//ControloAutDicionario" />
+      <xs:field xpath="IDDicionario" />
+    </xs:keyref>
+    <xs:keyref name="TipoControloAutFormaControloAutDicionario" refer="TipoControloAutForma_Constraint1">
+      <xs:selector xpath=".//ControloAutDicionario" />
+      <xs:field xpath="IDTipoControloAutForma" />
+    </xs:keyref>
+    <xs:keyref name="ControloAutControloAutDicionario" refer="ControloAut_Constraint1">
+      <xs:selector xpath=".//ControloAutDicionario" />
+      <xs:field xpath="IDControloAut" />
+    </xs:keyref>
+    <xs:keyref name="TipoEntidadeProdutoraControloAutEntidadeProdutora" refer="TipoEntidadeProdutora_Constraint1">
+      <xs:selector xpath=".//ControloAutEntidadeProdutora" />
+      <xs:field xpath="IDTipoEntidadeProdutora" />
+    </xs:keyref>
+    <xs:keyref name="ControloAutControloAutEntidadeProdutora" refer="ControloAut_Constraint1">
+      <xs:selector xpath=".//ControloAutEntidadeProdutora" />
+      <xs:field xpath="IDControloAut" />
+    </xs:keyref>
+    <xs:keyref name="TipoControloAutRelControloAutRel" refer="TipoControloAutRel_Constraint1">
+      <xs:selector xpath=".//ControloAutRel" />
+      <xs:field xpath="IDTipoRel" />
+    </xs:keyref>
+    <xs:keyref name="ControloAutControloAutRelAlias" refer="ControloAut_Constraint1">
+      <xs:selector xpath=".//ControloAutRel" />
+      <xs:field xpath="IDControloAutAlias" />
+    </xs:keyref>
+    <xs:keyref name="ControloAutControloAutRel" refer="ControloAut_Constraint1">
+      <xs:selector xpath=".//ControloAutRel" />
+      <xs:field xpath="IDControloAut" />
+    </xs:keyref>
+    <xs:keyref name="NivelDocumentosMovimentados" refer="Nivel_Constraint1">
+      <xs:selector xpath=".//DocumentosMovimentados" />
+      <xs:field xpath="IDNivel" />
+    </xs:keyref>
+    <xs:keyref name="MovimentoDocumentosMovimentados" refer="Movimento_Constraint1">
+      <xs:selector xpath=".//DocumentosMovimentados" />
+      <xs:field xpath="IDMovimento" />
+    </xs:keyref>
+    <xs:keyref name="NivelDesignadoNivelDocumentoSimples" refer="NivelDesignado_Constraint1">
+      <xs:selector xpath=".//NivelDocumentoSimples" />
+      <xs:field xpath="ID" />
+    </xs:keyref>
+    <xs:keyref name="TipoFRDBaseFRDBase" refer="TipoFRDBase_Constraint1">
+      <xs:selector xpath=".//FRDBase" />
+      <xs:field xpath="IDTipoFRDBase" />
+    </xs:keyref>
+    <xs:keyref name="NivelFRDBase" refer="Nivel_Constraint1">
+      <xs:selector xpath=".//FRDBase" />
+      <xs:field xpath="IDNivel" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

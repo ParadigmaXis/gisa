@@ -1,0 +1,1631 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3AA63FE6-1EDF-4DB9-8717-A2FDE9E184DB}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>GISA.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>GISA</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>On</OptionStrict>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GISA</RootNamespace>
+    <StartupObject>GISA.frmLogin</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <SignAssembly>false</SignAssembly>
+    <ApplicationManifest></ApplicationManifest>
+    <ManifestCertificateThumbprint></ManifestCertificateThumbprint>
+    <ManifestKeyFile></ManifestKeyFile>
+    <GenerateManifests>false</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://fedora10/gisa/</InstallUrl>
+    <SupportUrl>http://gisa.paradigmaxis.pt</SupportUrl>
+    <TargetCulture>en</TargetCulture>
+    <ProductName>GISA</ProductName>
+    <PublisherName>ParadigmaXis</PublisherName>
+    <MinimumRequiredVersion>2.0.0.2263</MinimumRequiredVersion>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <AutorunEnabled>true</AutorunEnabled>
+    <TrustUrlParameters>true</TrustUrlParameters>
+    <ApplicationRevision>2265</ApplicationRevision>
+    <ApplicationVersion>2.0.0.2265</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG;TESTING;IGNORELICENSE</DefineConstants>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <WarningLevel>1</WarningLevel>
+    <DebugType>full</DebugType>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <WarningLevel>1</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;TESTING;IGNORELICENSE</DefineConstants>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalDependencies\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net, Version=2.0.0.4, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\server\GISAServer\Lib\Lucene.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install">
+      <Name>System.Configuration.Install</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.ServiceProcess">
+      <Name>System.ServiceProcess</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="ZedGraph, Version=5.1.5.28844, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalDependencies\ZedGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="ZedGraph.Web, Version=5.1.5.29221, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalDependencies\ZedGraph.Web.dll</HintPath>
+    </Reference>
+    <ProjectReference Include="..\GISA.Controls\GISA.Controls.PxDataGridView\GISA.Controls.PxDataGridView.csproj">
+      <Project>{33B6E76F-8345-4AA1-9B7F-DFA9CBB476E9}</Project>
+      <Name>GISA.Controls.PxDataGridView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Fedora\Handler\FedoraHandler.csproj">
+      <Project>{21F1AD66-1C1E-454B-9264-914655338ABF}</Project>
+      <Name>FedoraHandler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Reports\GISA.Reports.csproj">
+      <Name>GISA.Reports</Name>
+      <Project>{7ECF5505-FF21-45C5-8517-6E815B4C9A0E}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Utils\GISA.Utils.csproj">
+      <Name>GISA.Utils</Name>
+      <Project>{FA9FD233-78AD-42EA-B104-953264998A28}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+    <ProjectReference Include="..\GISA.Controls\DropDownTreeView\DropDownTreeView.csproj">
+      <Project>{1584E999-76E5-4F93-BE3D-C2ED622C92FF}</Project>
+      <Name>DropDownTreeView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Controls\GISA.Controls.ControloAut\GISA.Controls.ControloAut.csproj">
+      <Project>{70A59663-0E7E-47FD-96FF-3A605E195966}</Project>
+      <Name>GISA.Controls.ControloAut</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Controls\GISA.Controls.Nivel\GISA.Controls.Nivel.csproj">
+      <Project>{5176195E-C1B0-4B24-AFFB-9BA6291F9A25}</Project>
+      <Name>GISA.Controls.Nivel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Controls\Localizacao\GISA.Controls.Localizacao.csproj">
+      <Project>{C56A5802-874B-4F6F-9F43-978545849A78}</Project>
+      <Name>GISA.Controls.Localizacao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Controls\OutlookBar\LS_UI\LumiSoft.UI.csproj">
+      <Project>{F4D46B69-C677-4465-9C41-A6235063EDD7}</Project>
+      <Name>LumiSoft.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Controls\PxBreadCrumbsPath\GISA.Controls.PxBreadCrumbsPath.csproj">
+      <Project>{A03DEE4B-BA32-4210-B823-5C960F59B32C}</Project>
+      <Name>GISA.Controls.PxBreadCrumbsPath</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Controls\PxComboBox\GISA.Controls.PxComboBox.csproj">
+      <Project>{A97E6388-1209-49F4-8B05-2B472D082809}</Project>
+      <Name>GISA.Controls.PxComboBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Controls\PxDateBox\GISA.Controls.PxDateBox.csproj">
+      <Project>{58AD7224-ACCB-476A-A0FD-3EA277AD35CC}</Project>
+      <Name>GISA.Controls.PxDateBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Controls\PxListView\GISA.Controls.PxListView.csproj">
+      <Project>{AFEBABBD-BA58-43DC-8AF4-CBCB5C645686}</Project>
+      <Name>GISA.Controls.PxListView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Controls\PxNumericBox\GISA.Controls.PxNumericBox.csproj">
+      <Project>{62D16596-88DF-494B-8C5E-9413B50C3EE7}</Project>
+      <Name>GISA.Controls.PxNumericBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.DBAccess\DBAbstractDataLayer\DBAbstractDataLayer.csproj">
+      <Project>{1AED060D-26D9-4C73-BFFB-F73989BDD373}</Project>
+      <Name>DBAbstractDataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.EADGen\GISA.EADGen.csproj">
+      <Project>{E2220D42-4184-48E9-AE97-E49C6FCBCBDA}</Project>
+      <Name>GISA.EADGen</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.GUIHelper\GISA.GUIHelper.csproj">
+      <Project>{93248ED8-9C8F-4477-8B6F-1D5161FFE37B}</Project>
+      <Name>GISA.GUIHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Import\GISA.Import.csproj">
+      <Project>{71F2B044-CDED-494F-9857-F3D55454B1ED}</Project>
+      <Name>GISA.Import</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.IntGestDoc\GISA.IntGestDoc.csproj">
+      <Project>{F5551557-CF9F-4DF6-B64D-E88165877C34}</Project>
+      <Name>GISA.IntGestDoc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Model\GISA.Model.csproj">
+      <Project>{32444116-C646-4A6B-A177-74C4E410B1D1}</Project>
+      <Name>GISA.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Search\GISA.Search.csproj">
+      <Project>{092BC027-F24B-4A5F-9CDA-2969CEF4F722}</Project>
+      <Name>GISA.Search</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.SharedResources\GISA.SharedResources.csproj">
+      <Project>{FF599116-AB19-40CB-A5FE-9314646B212E}</Project>
+      <Name>GISA.SharedResources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Webservices\GISA.Webservices.csproj">
+      <Project>{38063153-1424-4921-9296-A92645E198DE}</Project>
+      <Name>GISA.Webservices</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\AssemblyInfosShared\AssemblyInfoShared.cs">
+      <Link>AssemblyInfoShared.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AddUrlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddUrlForm.Designer.cs">
+      <DependentUpon>AddUrlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttributableDate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AutoEliminacaoList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AutoEliminacaoList.Designer.cs">
+      <DependentUpon>AutoEliminacaoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContInfLicencaObras.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContInfLicencaObras.Designer.cs">
+      <DependentUpon>ContInfLicencaObras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContInfLicencaObrasSD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContInfLicencaObrasSD.Designer.cs">
+      <DependentUpon>ContInfLicencaObrasSD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlAutoEliminacao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlFedoraEstatisticas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlFedoraEstatisticas.Designer.cs">
+      <DependentUpon>ControlFedoraEstatisticas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlLocalConsulta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlLocalConsulta.Designer.cs">
+      <DependentUpon>ControlLocalConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControloAutAutorDragDrop.cs" />
+    <Compile Include="ControloAutDragDrop.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ControloAutores.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlObjectoDigitalVersao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlObjectoDigitalVersao.Designer.cs">
+      <DependentUpon>ControlObjectoDigitalVersao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControloDateValidation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ControloRevisoes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterPanelStatusObjDigital.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterPanelStatusObjDigital.Designer.cs">
+      <DependentUpon>MasterPanelStatusObjDigital.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PesquisaUFDataGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PesquisaUFDataGrid.Designer.cs">
+      <DependentUpon>PesquisaUFDataGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CryptographyHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DepositosList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DepositosList.Designer.cs">
+      <DependentUpon>DepositosList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DimensoesSuporte.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DocumentoSimplesOrderManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DocumentoSimplesOrderManager.Designer.cs">
+      <DependentUpon>DocumentoSimplesOrderManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DomainValueListBoxController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EntidadeList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EntidadeList.Designer.cs">
+      <DependentUpon>EntidadeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlFedoraPdfViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlFedoraPdfViewer.Designer.cs">
+      <DependentUpon>ControlFedoraPdfViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FicheirosOrderManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FicheirosOrderManager.Designer.cs">
+      <DependentUpon>FicheirosOrderManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLocalConsultaEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLocalConsultaEditor.Designer.cs">
+      <DependentUpon>FormLocalConsultaEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormObjetoDigitalSimples.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormObjetoDigitalSimples.Designer.cs">
+      <DependentUpon>FormObjetoDigitalSimples.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdUtilizadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutoEliminacaoEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutoEliminacaoPicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChangePermissions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChangePermissions.Designer.cs">
+      <DependentUpon>FormChangePermissions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormComparacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConflitoDatas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormControloAutRel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateDiplomaModelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateTrustee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCustomizableReports.Designer.cs">
+      <DependentUpon>FormCustomizableReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCustomizableReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDeleteSeleccaoAutoEliminacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDimensoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDomainValueEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFullScreenPdf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFullScreenPdf.Designer.cs">
+      <DependentUpon>FormFullScreenPdf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGISAAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHandleDeposito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHandleDeposito.Designer.cs">
+      <DependentUpon>FormHandleDeposito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormImagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImageViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLeituraLocalizacaoNumPolicia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLeituraLocalizacaoNumPolicia.Designer.cs">
+      <DependentUpon>FormLeituraLocalizacaoNumPolicia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLeituraPxDateBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLeituraPxDateBox.Designer.cs">
+      <DependentUpon>FormLeituraPxDateBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLeitura_Designacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLeitura_Designacao.Designer.cs">
+      <DependentUpon>FormLeitura_Designacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListaModelosAvaliacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageAutoresDescricao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMateriaisEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModelosAvaliacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMovimentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMovimentos.Designer.cs">
+      <DependentUpon>FormMovimentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormObjDigitalChangePermissions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormObjDigitalChangePermissions.Designer.cs">
+      <DependentUpon>FormObjDigitalChangePermissions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormObjetoDigitalTitulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormObjetoDigitalTitulo.Designer.cs">
+      <DependentUpon>FormObjetoDigitalTitulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPickDiplomaModelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPickISOs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPickTítulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPickTítulo.Designer.cs">
+      <DependentUpon>FormPickTítulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPickUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPickUser.Designer.cs">
+      <DependentUpon>FormPickUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRelacaoHierarquica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRelatorioInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSwitchAuthor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTermo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTextDisplayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUserGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRDCA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FRDCAConteudo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FRDCAEntidadeProdutora.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FRDCATipologiaInformacional.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FRDDepositos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FRDDepositos.Designer.cs">
+      <DependentUpon>FRDDepositos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRDOI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FRDOIRecolha.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FRDUnidadeFisica.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenericDragDrop.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GISAControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GISAPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GISAPanelScroller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ImageViewerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LDAPHandler.cs" />
+    <Compile Include="ListViewOrderManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListViewOrderManager.Designer.cs">
+      <DependentUpon>ListViewOrderManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterPanelAdminGlobal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterPanelControloAut.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterPanelDepositos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterPanelDepositos.Designer.cs">
+      <DependentUpon>MasterPanelDepositos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPanelDepositos2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterPanelDepositos2.Designer.cs">
+      <DependentUpon>MasterPanelDepositos2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPanelDevolucoes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterPanelDevolucoes.Designer.cs">
+      <DependentUpon>MasterPanelDevolucoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPanelDocInPorto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterPanelDocInPorto.Designer.cs">
+      <DependentUpon>MasterPanelDocInPorto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPanelDocumentosRequisitados.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterPanelDocumentosRequisitados.designer.cs">
+      <DependentUpon>MasterPanelDocumentosRequisitados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPanelEstatisticas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterPanelEstatisticas.Designer.cs">
+      <DependentUpon>MasterPanelEstatisticas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPanelFedora.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterPanelFedora.Designer.cs">
+      <DependentUpon>MasterPanelFedora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPanelMovimentos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterPanelMovimentos.Designer.cs">
+      <DependentUpon>MasterPanelMovimentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPanelNiveis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterPanelNivelImagensIlustracao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterPanelNivelImagensIlustracao.Designer.cs">
+      <DependentUpon>MasterPanelNivelImagensIlustracao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPanelPermissoesDesposito.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterPanelPermissoesDesposito.Designer.cs">
+      <DependentUpon>MasterPanelPermissoesDesposito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPanelPermissoesModulos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterPanelPermissoesObjDigital.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterPanelPermissoesObjDigital.Designer.cs">
+      <DependentUpon>MasterPanelPermissoesObjDigital.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPanelPermissoesPlanoClassificacao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterPanelPermissoesPlanoClassificacao.Designer.cs">
+      <DependentUpon>MasterPanelPermissoesPlanoClassificacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPanelPesquisa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterPanelPesquisaUF.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterPanelRequisicoes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterPanelRequisicoes.Designer.cs">
+      <DependentUpon>MasterPanelRequisicoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPanelSeries.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterPanelTrustee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterPanelTrusteeGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterPanelTrusteeUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterPanelUnidadesFisicas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MovimentoList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MovimentoList.Designer.cs">
+      <DependentUpon>MovimentoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiPanelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlObjetoDigital.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlObjetoDigital.Designer.cs">
+      <DependentUpon>ControlObjetoDigital.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelInfoSDocs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelInfoSDocs.Designer.cs">
+      <DependentUpon>PanelInfoSDocs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelObjetoDigitalFedora.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelObjetoDigitalFedora.Designer.cs">
+      <DependentUpon>PanelObjetoDigitalFedora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PermissoesObjetoDigitalList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PermissoesObjetoDigitalList.Designer.cs">
+      <DependentUpon>PermissoesObjetoDigitalList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelConteudoInformacional.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelConteudoInformacional.Designer.cs">
+      <DependentUpon>PanelConteudoInformacional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelDepIdentificacao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelDepIdentificacao.Designer.cs">
+      <DependentUpon>PanelDepIdentificacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelDepUFEliminadas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelDepUFEliminadas.Designer.cs">
+      <DependentUpon>PanelDepUFEliminadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanelInfoEPs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelInfoEPs.Designer.cs">
+      <DependentUpon>PanelInfoEPs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NivelDragDrop.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NivelOrganicoDragDrop.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NivelUnidadeFisicaSorter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PanelAmbitoConteudo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelAvaliacaoDocumentosUnidadesFisicas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelAvaliacaoSeleccaoEliminacao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelAVCondicoesAcesso.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelCAControlo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelCADescricao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelCAIdentificacao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelCARelacoes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelCondicoesAcesso.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelContexto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelDocumentacaoAssociada.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelIdentificacao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelIncorporacoes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelIndexacao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelIndiceDocumento.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelMensagem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelNotas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelOIControloDescricao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelOIDimensoesSuporte.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelOrganizacaoOrdenacao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelSeleccaoUnidadesFisicas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelTrusteeDetailsGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelTrusteeDetailsUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelTrusteePermissions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelUFConteudoEstrutura.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelUFControloDescricao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelUFIdentificacao2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PanelUFUnidadesDescricao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PermissoesNivelList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PesqContInfLicencaObras.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PesqContInfLicencaObras.Designer.cs">
+      <DependentUpon>PesqContInfLicencaObras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PesquisaDataGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PesquisaDataGrid.Designer.cs">
+      <DependentUpon>PesquisaDataGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PesquisaList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PesquisaUFList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Relacao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RelacaoControloAut.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigatorHelper.cs" />
+    <Compile Include="RelacaoNivel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ResizeMiddle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SinglePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SlavePanelDepositos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SlavePanelDepositos.Designer.cs">
+      <DependentUpon>SlavePanelDepositos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SlavePanelDevolucoes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SlavePanelDevolucoes.Designer.cs">
+      <DependentUpon>SlavePanelDevolucoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SlavePanelFedora.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SlavePanelFedora.Designer.cs">
+      <DependentUpon>SlavePanelFedora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SlavePanelMovimentos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SlavePanelMovimentos.Designer.cs">
+      <DependentUpon>SlavePanelMovimentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SlavePanelNivelImagensIlustracao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SlavePanelNivelImagensIlustracao.Designer.cs">
+      <DependentUpon>SlavePanelNivelImagensIlustracao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SlavePanelPermissoesDesposito.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SlavePanelPermissoesDesposito.Designer.cs">
+      <DependentUpon>SlavePanelPermissoesDesposito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SlavePanelPermissoesModulos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SlavePanelPermissoesObjDigital.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SlavePanelPermissoesObjDigital.Designer.cs">
+      <DependentUpon>SlavePanelPermissoesObjDigital.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SlavePanelPermissoesPlanoClassificacao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SlavePanelPesquisa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SlavePanelPesquisaUF.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SlavePanelRequisicoes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SlavePanelRequisicoes.Designer.cs">
+      <DependentUpon>SlavePanelRequisicoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SlavePanelTrustee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SlavePanelTrusteeGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SlavePanelTrusteeUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UnidadeFisicaList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <EmbeddedResource Include="AddUrlForm.resx">
+      <DependentUpon>AddUrlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttributableDate.resx">
+      <DependentUpon>AttributableDate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AutoEliminacaoList.resx">
+      <DependentUpon>AutoEliminacaoList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContInfLicencaObras.resx">
+      <DependentUpon>ContInfLicencaObras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContInfLicencaObrasSD.resx">
+      <DependentUpon>ContInfLicencaObrasSD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlAutoEliminacao.resx">
+      <DependentUpon>ControlAutoEliminacao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlFedoraEstatisticas.resx">
+      <DependentUpon>ControlFedoraEstatisticas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlLocalConsulta.resx">
+      <DependentUpon>ControlLocalConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControloAutores.resx">
+      <DependentUpon>ControloAutores.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlObjectoDigitalVersao.resx">
+      <DependentUpon>ControlObjectoDigitalVersao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlObjetoDigital.resx">
+      <DependentUpon>ControlObjetoDigital.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControloRevisoes.resx">
+      <DependentUpon>ControloRevisoes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPanelStatusObjDigital.resx">
+      <DependentUpon>MasterPanelStatusObjDigital.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelCADescricao.resx">
+      <DependentUpon>PanelCADescricao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PesquisaUFDataGrid.resx">
+      <DependentUpon>PesquisaUFDataGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepositosList.resx">
+      <DependentUpon>DepositosList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DimensoesSuporte.resx">
+      <DependentUpon>DimensoesSuporte.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocumentosAjuda\AjudaPesquisaDocumentos.rtf" />
+    <EmbeddedResource Include="DocumentosAjuda\AjudaPesquisaUnidadesFisicas.rtf" />
+    <EmbeddedResource Include="DocumentosAjuda\NotaPaginaWebImagens.rtf" />
+    <EmbeddedResource Include="DocumentoSimplesOrderManager.resx">
+      <DependentUpon>DocumentoSimplesOrderManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EntidadeList.resx">
+      <DependentUpon>EntidadeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlFedoraPdfViewer.resx">
+      <DependentUpon>ControlFedoraPdfViewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FicheirosOrderManager.resx">
+      <DependentUpon>FicheirosOrderManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormObjetoDigitalSimples.resx">
+      <DependentUpon>FormObjetoDigitalSimples.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdUtilizadores.resx">
+      <DependentUpon>FormAdUtilizadores.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAutoEliminacaoEditor.resx">
+      <DependentUpon>FormAutoEliminacaoEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAutoEliminacaoPicker.resx">
+      <DependentUpon>FormAutoEliminacaoPicker.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChangePassword.resx">
+      <DependentUpon>FormChangePassword.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChangePermissions.resx">
+      <DependentUpon>FormChangePermissions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormComparacao.resx">
+      <DependentUpon>FormComparacao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConflitoDatas.resx">
+      <DependentUpon>FormConflitoDatas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormControloAutRel.resx">
+      <DependentUpon>FormControloAutRel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateDiplomaModelo.resx">
+      <DependentUpon>FormCreateDiplomaModelo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateTrustee.resx">
+      <DependentUpon>FormCreateTrustee.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCustomizableReports.resx">
+      <DependentUpon>FormCustomizableReports.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDeleteSeleccaoAutoEliminacao.resx">
+      <DependentUpon>FormDeleteSeleccaoAutoEliminacao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDimensoes.resx">
+      <DependentUpon>FormDimensoes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDomainValueEditor.resx">
+      <DependentUpon>FormDomainValueEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFullScreenPdf.resx">
+      <DependentUpon>FormFullScreenPdf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGISAAbout.resx">
+      <DependentUpon>FormGISAAbout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHandleDeposito.resx">
+      <DependentUpon>FormHandleDeposito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImagem.resx">
+      <DependentUpon>FormImagem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImageViewer.resx">
+      <DependentUpon>FormImageViewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLeituraLocalizacaoNumPolicia.resx">
+      <DependentUpon>FormLeituraLocalizacaoNumPolicia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLeituraPxDateBox.resx">
+      <DependentUpon>FormLeituraPxDateBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLeitura_Designacao.resx">
+      <DependentUpon>FormLeitura_Designacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListaModelosAvaliacao.resx">
+      <DependentUpon>FormListaModelosAvaliacao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageAutoresDescricao.resx">
+      <DependentUpon>FormManageAutoresDescricao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMateriaisEditor.resx">
+      <DependentUpon>FormMateriaisEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModelosAvaliacao.resx">
+      <DependentUpon>FormModelosAvaliacao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMovimentos.resx">
+      <DependentUpon>FormMovimentos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormObjDigitalChangePermissions.resx">
+      <DependentUpon>FormObjDigitalChangePermissions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormObjetoDigitalTitulo.resx">
+      <DependentUpon>FormObjetoDigitalTitulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPickDiplomaModelo.resx">
+      <DependentUpon>FormPickDiplomaModelo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPickISOs.resx">
+      <DependentUpon>FormPickISOs.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPickTítulo.resx">
+      <DependentUpon>FormPickTítulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPickUser.resx">
+      <DependentUpon>FormPickUser.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRelacaoHierarquica.resx">
+      <DependentUpon>FormRelacaoHierarquica.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRelatorioInput.resx">
+      <DependentUpon>FormRelatorioInput.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSwitchAuthor.resx">
+      <DependentUpon>FormSwitchAuthor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTermo.resx">
+      <DependentUpon>FormTermo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTextDisplayer.resx">
+      <DependentUpon>FormTextDisplayer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUserGroups.resx">
+      <DependentUpon>FormUserGroups.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRDCAConteudo.resx">
+      <DependentUpon>FRDCAConteudo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRDCAEntidadeProdutora.resx">
+      <DependentUpon>FRDCAEntidadeProdutora.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRDCATipologiaInformacional.resx">
+      <DependentUpon>FRDCATipologiaInformacional.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRDOIRecolha.resx">
+      <DependentUpon>FRDOIRecolha.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRDUnidadeFisica.resx">
+      <DependentUpon>FRDUnidadeFisica.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GISAControl.resx">
+      <DependentUpon>GISAControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GISAPanel.resx">
+      <DependentUpon>GISAPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GISAPanelScroller.resx">
+      <DependentUpon>GISAPanelScroller.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageViewerControl.resx">
+      <DependentUpon>ImageViewerControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListViewOrderManager.resx">
+      <DependentUpon>ListViewOrderManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPanel.resx">
+      <DependentUpon>MasterPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPanelAdminGlobal.resx">
+      <DependentUpon>MasterPanelAdminGlobal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPanelControloAut.resx">
+      <DependentUpon>MasterPanelControloAut.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPanelDepositos.resx">
+      <DependentUpon>MasterPanelDepositos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPanelDepositos2.resx">
+      <DependentUpon>MasterPanelDepositos2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPanelDevolucoes.resx">
+      <DependentUpon>MasterPanelDevolucoes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPanelDocInPorto.resx">
+      <DependentUpon>MasterPanelDocInPorto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPanelDocumentosRequisitados.resx">
+      <DependentUpon>MasterPanelDocumentosRequisitados.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPanelEstatisticas.resx">
+      <DependentUpon>MasterPanelEstatisticas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPanelMovimentos.resx">
+      <DependentUpon>MasterPanelMovimentos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPanelNiveis.resx">
+      <DependentUpon>MasterPanelNiveis.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPanelNivelImagensIlustracao.resx">
+      <DependentUpon>MasterPanelNivelImagensIlustracao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPanelPermissoesModulos.resx">
+      <DependentUpon>MasterPanelPermissoesModulos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPanelPermissoesPlanoClassificacao.resx">
+      <DependentUpon>MasterPanelPermissoesPlanoClassificacao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPanelPesquisa.resx">
+      <DependentUpon>MasterPanelPesquisa.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPanelPesquisaUF.resx">
+      <DependentUpon>MasterPanelPesquisaUF.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPanelRequisicoes.resx">
+      <DependentUpon>MasterPanelRequisicoes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPanelSeries.resx">
+      <DependentUpon>MasterPanelSeries.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPanelTrustee.resx">
+      <DependentUpon>MasterPanelTrustee.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPanelTrusteeGroup.resx">
+      <DependentUpon>MasterPanelTrusteeGroup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPanelTrusteeUser.resx">
+      <DependentUpon>MasterPanelTrusteeUser.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterPanelUnidadesFisicas.resx">
+      <DependentUpon>MasterPanelUnidadesFisicas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MovimentoList.resx">
+      <DependentUpon>MovimentoList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiPanelControl.resx">
+      <DependentUpon>MultiPanelControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelInfoSDocs.resx">
+      <DependentUpon>PanelInfoSDocs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelObjetoDigitalFedora.resx">
+      <DependentUpon>PanelObjetoDigitalFedora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PermissoesObjetoDigitalList.resx">
+      <DependentUpon>PermissoesObjetoDigitalList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelAmbitoConteudo.resx">
+      <DependentUpon>PanelAmbitoConteudo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelAvaliacaoDocumentosUnidadesFisicas.resx">
+      <DependentUpon>PanelAvaliacaoDocumentosUnidadesFisicas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelAvaliacaoSeleccaoEliminacao.resx">
+      <DependentUpon>PanelAvaliacaoSeleccaoEliminacao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelAVCondicoesAcesso.resx">
+      <DependentUpon>PanelAVCondicoesAcesso.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelCAControlo.resx">
+      <DependentUpon>PanelCAControlo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelCAIdentificacao.resx">
+      <DependentUpon>PanelCAIdentificacao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelCARelacoes.resx">
+      <DependentUpon>PanelCARelacoes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelCondicoesAcesso.resx">
+      <DependentUpon>PanelCondicoesAcesso.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelConteudoInformacional.resx">
+      <DependentUpon>PanelConteudoInformacional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelContexto.resx">
+      <DependentUpon>PanelContexto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelDepIdentificacao.resx">
+      <DependentUpon>PanelDepIdentificacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelDepUFEliminadas.resx">
+      <DependentUpon>PanelDepUFEliminadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelDocumentacaoAssociada.resx">
+      <DependentUpon>PanelDocumentacaoAssociada.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelIdentificacao.resx">
+      <DependentUpon>PanelIdentificacao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelIncorporacoes.resx">
+      <DependentUpon>PanelIncorporacoes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelIndexacao.resx">
+      <DependentUpon>PanelIndexacao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelIndiceDocumento.resx">
+      <DependentUpon>PanelIndiceDocumento.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelInfoEPs.resx">
+      <DependentUpon>PanelInfoEPs.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelMensagem.resx">
+      <DependentUpon>PanelMensagem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelNotas.resx">
+      <DependentUpon>PanelNotas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelOIControloDescricao.resx">
+      <DependentUpon>PanelOIControloDescricao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelOIDimensoesSuporte.resx">
+      <DependentUpon>PanelOIDimensoesSuporte.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelOrganizacaoOrdenacao.resx">
+      <DependentUpon>PanelOrganizacaoOrdenacao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelSeleccaoUnidadesFisicas.resx">
+      <DependentUpon>PanelSeleccaoUnidadesFisicas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelTrusteeDetailsGroup.resx">
+      <DependentUpon>PanelTrusteeDetailsGroup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelTrusteeDetailsUser.resx">
+      <DependentUpon>PanelTrusteeDetailsUser.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelTrusteePermissions.resx">
+      <DependentUpon>PanelTrusteePermissions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelUFConteudoEstrutura.resx">
+      <DependentUpon>PanelUFConteudoEstrutura.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelUFControloDescricao.resx">
+      <DependentUpon>PanelUFControloDescricao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelUFIdentificacao2.resx">
+      <DependentUpon>PanelUFIdentificacao2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanelUFUnidadesDescricao.resx">
+      <DependentUpon>PanelUFUnidadesDescricao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PermissoesNivelList.resx">
+      <DependentUpon>PermissoesNivelList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PesqContInfLicencaObras.resx">
+      <DependentUpon>PesqContInfLicencaObras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PesquisaDataGrid.resx">
+      <DependentUpon>PesquisaDataGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PesquisaList.resx">
+      <DependentUpon>PesquisaList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PesquisaUFList.resx">
+      <DependentUpon>PesquisaUFList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relacao.resx">
+      <DependentUpon>Relacao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RelacaoControloAut.resx">
+      <DependentUpon>RelacaoControloAut.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RelacaoNivel.resx">
+      <DependentUpon>RelacaoNivel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SinglePanel.resx">
+      <DependentUpon>SinglePanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlavePanelDepositos.resx">
+      <DependentUpon>SlavePanelDepositos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlavePanelDevolucoes.resx">
+      <DependentUpon>SlavePanelDevolucoes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlavePanelFedora.resx">
+      <DependentUpon>SlavePanelFedora.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlavePanelMovimentos.resx">
+      <DependentUpon>SlavePanelMovimentos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlavePanelNivelImagensIlustracao.resx">
+      <DependentUpon>SlavePanelNivelImagensIlustracao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlavePanelPermissoesDesposito.resx">
+      <DependentUpon>SlavePanelPermissoesDesposito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlavePanelPermissoesModulos.resx">
+      <DependentUpon>SlavePanelPermissoesModulos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlavePanelPermissoesObjDigital.resx">
+      <DependentUpon>SlavePanelPermissoesObjDigital.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlavePanelPermissoesPlanoClassificacao.resx">
+      <DependentUpon>SlavePanelPermissoesPlanoClassificacao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlavePanelPesquisa.resx">
+      <DependentUpon>SlavePanelPesquisa.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlavePanelPesquisaUF.resx">
+      <DependentUpon>SlavePanelPesquisaUF.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlavePanelRequisicoes.resx">
+      <DependentUpon>SlavePanelRequisicoes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlavePanelTrustee.resx">
+      <DependentUpon>SlavePanelTrustee.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlavePanelTrusteeGroup.resx">
+      <DependentUpon>SlavePanelTrusteeGroup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlavePanelTrusteeUser.resx">
+      <DependentUpon>SlavePanelTrusteeUser.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnidadeFisicaList.resx">
+      <DependentUpon>UnidadeFisicaList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="License\v1\AllKeyData.xml" />
+    <None Include="License\v1\PublicKeyData.xml" />
+    <None Include="License\v2\AllKeyData.xml" />
+    <EmbeddedResource Include="License\v2\PublicKeyData.xml" />
+    <None Include="GISA.ico" />
+    <None Include="GISA_TemporaryKey.pfx" />
+    <None Include="log4net.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="GISA.Webservices.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="GISA_Webservices_DocInPortoWebservice_ServicoDocumentos" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.10.0.131/CMPWSDocumentos/ServicoDocumentos.asmx</Value>
+    </Setting>
+    <Setting Name="GISA_Webservices_Pre_ToponimiaWS_ToponimiaWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.10.11.25:1500/cmpwstoponimia/toponimia.asmx</Value>
+    </Setting>
+    <Setting Name="GISA_Webservices_ToponimiaWS_ToponimiaWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://servicoscmp.cm-porto.net/cmpwstoponimia/toponimia.asmx</Value>
+    </Setting>
+    <Setting Name="GISA_Webservices_ProdDocInPortoWebService_ServicoDocumentos" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://docinporto.cm-porto.net/CMPWSDocumentos/ServicoDocumentos.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

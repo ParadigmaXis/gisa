@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project DefaultTargets="GatherReleaseDeployable" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<PropertyGroup>
+		<Release_CD>.\deployable\release\CD</Release_CD>
+		<Release_CD_Documentacao>$(Release_CD)\Documentacao</Release_CD_Documentacao>
+		<Release_CD_Gisa>$(Release_CD)\Gisa</Release_CD_Gisa>
+		<Release_CD_GisaServer>$(Release_CD)\GisaServer</Release_CD_GisaServer>
+		
+		<Release_CD_NET_Framework>$(Release_CD)\Microsoft .NET Framework</Release_CD_NET_Framework>
+		<Release_CD_SQLServer>$(Release_CD)\Microsoft SQL Server</Release_CD_SQLServer>
+		<Release_CD_SQLServer_PreRequisites>$(Release_CD_SQLServer)\PreRequisites</Release_CD_SQLServer_PreRequisites>
+		<Release_CD_Importacao>$(Release_CD)\Importacao</Release_CD_Importacao>
+
+		<Source_NET_Framework>\\qnap\pub\win\microsoft\dotnet\35\sp1\dotnetfx35.exe</Source_NET_Framework>    
+		<Source_SQLServer_x86>\\qnap\pub\win\microsoft\sqlserver2008\express\r2\SQLEXPRWT_x86_ENU.exe</Source_SQLServer_x86>
+		<Source_PowerShell>.\installer\SQLServer2008_Prerequisites\PowerShell 1.0</Source_PowerShell>
+		<Source_WindowsInstaller>.\installer\SQLServer2008_Prerequisites\Windows Installer 4.5</Source_WindowsInstaller>
+		<Source_Importacao>.\client\GISA.Import\ModeloImportacao\importacao excel_Modelo.xls</Source_Importacao>
+		
+		<Installer_Gisa>.\installer</Installer_Gisa>
+		<Installer_Gisa_extra>.\installer\Resources</Installer_Gisa_extra>
+		<InstallerResources>.\deployable\Resources</InstallerResources>
+
+		<DBOutDir>.\server\DatabaseScripts\DatabaseInstallScript</DBOutDir>
+		<DBOutFile>$(DBOutDir)\DBInstallScript.sql</DBOutFile>
+		
+		<SetACLDir>.\installer\Tools</SetACLDir>
+	</PropertyGroup>
+
+	<Target Name="UpdateVersionNumber">
+		<Message Text="A executar o UpadteVersionNumber..." />
+		<Exec Command="updateVersionNumber.bat"/>
+		<Message Text="Finalizou UpadteVersionNumber..." />
+	</Target>
+
+		
+	<Target Name="GisaClient">
+		<Message Text="A gerar o cliente Gisa..." />
+		<MSBuild
+			Projects=".\client\GISA.sln"
+			Properties="Configuration=release;
+						Platform=x86;
+						OutputPath=bin\Release;">
+		</MSBuild>
+    </Target>
+
+	<Target Name="GisaServer">
+		<Message Text="A gerar o Gisa server..." />
+		<MSBuild
+			Projects=".\server\GISAServer\GISA Server.sln"
+			Properties="Configuration=release;
+            Platform=Any CPU;">
+		</MSBuild>
+	</Target>
+
+	<Target Name="NewDatabaseScript">    
+		<Exec Command='CatSql.exe "$(DBOutDir)" "$(DBOutFile)"'/>
+	</Target>
+	
+	<Target Name="GenerateGetGisaExeVersion" >
+		<Message Text="A gerar GetGisaExeVersion..." />
+		<MakeDir Directories=".\installer\Bin"/>
+		<Exec Command="makensis /V2 .\installer\Source\GetGisaExeVersion"/>
+	</Target>
+  
+	<!-- O installer do cliente Gisa necessita de ficheiros gerados pelo Gisa server (GISAService.exe.config) -->
+	<Target Name="Install_GisaClient" DependsOnTargets="GisaClient; GisaServer; GenerateGetGisaExeVersion">
+		<Message Text="A gerar installer do cliente Gisa..." />
+		<Exec Command="makensis /V2 .\installer\Source\Gisa"/>
+	</Target>
+	
+	<Target Name="Clean_Release_CD">
+		<RemoveDir Directories="$(Release_CD)"/>
+	</Target>
+	
+	<Target Name="SetACLx64">
+		<RemoveDir Directories="$(SetACLx64)"/>
+	</Target>
+	
+	<Target Name="SetACLx86">
+		<RemoveDir Directories="$(SetACLx86)"/>
+	</Target>
+	
+	<ItemGroup>    
+		<Installer_extra_SourceFiles Include="$(InstallerResources)\AUTORUN.INF; $(Installer_Gisa_extra)\license.rtf; $(Installer_Gisa_extra)\readme.txt"/>
+		<SQLServerConfigFile Include="$(Installer_Gisa_extra)\ConfigurationFile.ini"/>
+		<SetACLFiles Include="$(SetACLDir)\SetACLx64.exe; $(SetACLDir)\SetACLx86.exe" />
+		<SQLServerPreRequisites Include="$(Source_PowerShell)\Windows6.0-KB928439-x64.msu; 
+											$(Source_PowerShell)\Windows6.0-KB928439-x86.msu; 
+											$(Source_PowerShell)\WindowsServer2003.WindowsXP-KB926139-v2-x64-ENU.exe; 
+											$(Source_PowerShell)\WindowsXP-KB926139-v2-x86-ENU.exe; 
+											$(Source_WindowsInstaller)\WindowsXP-KB942288-v3-x86.exe; 
+											$(Source_WindowsInstaller)\WindowsServer2003-KB942288-v4-x64.exe; 
+											$(Source_WindowsInstaller)\Windows6.0-KB942288-v2-x86.msu; 
+											$(Source_WindowsInstaller)\Windows6.0-KB942288-v2-x64.msu" />
+	</ItemGroup>
+	
+	<Target Name="GetSetACLFiles">
+        <FindUnderPath
+            Files="@(SetACLFiles)"
+            Path="$(SetACLDir)">
+            <Output
+                TaskParameter="InPath"
+                ItemName="FilesFoundInPath" />
+        </FindUnderPath>
+    </Target>
+	
+	<Target Name = "GatherReleaseDeployable" DependsOnTargets="UpdateVersionNumber; Clean_Release_CD; GisaClient; NewDatabaseScript; GisaServer; GenerateGetGisaExeVersion; Install_GisaClient; GetSetACLFiles;">
+		<MakeDir Directories="$(Release_CD)"/>
+		<Copy SourceFiles="@(Installer_extra_SourceFiles)" DestinationFolder="$(Release_CD)" />
+		<Copy SourceFiles="$(Installer_Gisa)\Bin\setup.exe" DestinationFolder="$(Release_CD)" />
+		
+		<MakeDir Directories="$(Release_CD_Documentacao)"/>
+		
+		<MakeDir Directories="$(Release_CD_Importacao)"/>
+		<Copy SourceFiles="$(Source_Importacao)" DestinationFolder="$(Release_CD_Importacao)" />
+	</Target>
+	
+</Project>

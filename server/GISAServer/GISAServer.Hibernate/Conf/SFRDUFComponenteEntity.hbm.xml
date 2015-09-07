@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+
+<class name="GISAServer.Hibernate.Objects.SFRDUFComponenteEntity, GISAServer.Hibernate" table="SFRDUFComponente" >
+
+<id name="Id" column="ID" type="System.Int64" unsaved-value="null"><generator class="native"/></id>
+
+<property name="IDNivelUA" column="IDNivelUA" access="field.pascalcase-underscore" not-null="false" type="System.Int64"  insert="true" update="true"/>
+<property name="IsDeleted" column="isDeleted" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="MedidaAltura" column="MedidaAltura" access="field.pascalcase-underscore" not-null="false" type="System.Decimal"  insert="true" update="true"/>
+<property name="MedidaLargura" column="MedidaLargura" access="field.pascalcase-underscore" not-null="false" type="System.Decimal"  insert="true" update="true"/>
+<property name="MedidaProfundidade" column="MedidaProfundidade" access="field.pascalcase-underscore" not-null="false" type="System.Decimal"  insert="true" update="true"/>
+<property name="Quantidade" column="Quantidade" access="field.pascalcase-underscore" not-null="true" type="System.Decimal"  insert="true" update="true"/>
+<property name="Versao" column="Versao" access="field.pascalcase-underscore" not-null="true" type="System.Byte[]"  insert="false" update="false"/>
+<many-to-one name="FRDBase"  access="field.pascalcase-underscore" not-null="true" outer-join="auto" insert="true" update="true">
+	<column name="IDFRDBase"/>
+</many-to-one>
+<many-to-one name="TipoEstadoConservacao"  access="field.pascalcase-underscore" not-null="false" outer-join="auto" insert="true" update="true">
+	<column name="IDTipoEstadoConservacao"/>
+</many-to-one>
+<many-to-one name="TipoMedida"  access="field.pascalcase-underscore" not-null="false" outer-join="auto" insert="true" update="true">
+	<column name="IDTipoMedida"/>
+</many-to-one>
+<many-to-one name="TipoSuporte"  access="field.pascalcase-underscore" not-null="true" outer-join="auto" insert="true" update="true">
+	<column name="IDTipoSuporte"/>
+</many-to-one>
+
+
+</class>
+</hibernate-mapping>

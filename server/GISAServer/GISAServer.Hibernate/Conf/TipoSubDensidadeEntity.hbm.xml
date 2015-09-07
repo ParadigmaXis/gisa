@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+
+<class name="GISAServer.Hibernate.Objects.TipoSubDensidadeEntity, GISAServer.Hibernate" table="TipoSubDensidade" >
+
+<id name="Id" column="ID" type="System.Int64" unsaved-value="null"><generator class="native"/></id>
+
+<property name="Designacao" column="Designacao" access="field.pascalcase-underscore" not-null="true" type="System.String"  length="50" insert="true" update="true"/>
+<property name="IsDeleted" column="isDeleted" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="Versao" column="Versao" access="field.pascalcase-underscore" not-null="true" type="System.Byte[]"  insert="false" update="false"/>
+<many-to-one name="TipoDensidade"  access="field.pascalcase-underscore" not-null="true" outer-join="auto" insert="true" update="true">
+	<column name="IDTipoDensidade"/>
+</many-to-one>
+
+<set name="FKSFRDAvaliacaoRelTipoSubDensidade" cascade="none" inverse="true" lazy="true" access="field.pascalcase-underscore">
+	<key>
+		<column name="SubDensidade"/>
+	</key>
+	<one-to-many class="GISAServer.Hibernate.Objects.SFRDAvaliacaoRelEntity, GISAServer.Hibernate"/>
+</set>
+<set name="FKSFRDAvaliacaoTipoSubDensidade" cascade="none" inverse="true" lazy="true" access="field.pascalcase-underscore">
+	<key>
+		<column name="IDSubdensidade"/>
+	</key>
+	<one-to-many class="GISAServer.Hibernate.Objects.SFRDAvaliacaoEntity, GISAServer.Hibernate"/>
+</set>
+
+</class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+
+  <class name="GISAServer.Hibernate.Objects.LicencaObraTecnicoObraEntity, GISAServer.Hibernate" table="LicencaObraTecnicoObra" >
+
+    <id name="Id" column="ID" type="System.Int64" unsaved-value="null">
+      <generator class="native"/>
+    </id>
+
+    <property name="Versao" column="Versao" access="field.pascalcase-underscore" not-null="true" type="System.Byte[]"  insert="false" update="false"/>
+    <property name="IsDeleted" column="isDeleted" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+
+    <many-to-one name="FRDBase"  access="field.pascalcase-underscore" not-null="true" outer-join="auto" insert="false" update="false">
+      <column name="IDFRDBase"/>
+    </many-to-one>
+    <many-to-one name="ControloAut"  access="field.pascalcase-underscore" not-null="true" outer-join="auto" insert="false" update="false">
+      <column name="IDControloAut"/>
+    </many-to-one>
+
+  </class>
+</hibernate-mapping>

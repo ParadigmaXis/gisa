@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{93248ED8-9C8F-4477-8B6F-1D5161FFE37B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GISA.GUIHelper</RootNamespace>
+    <AssemblyName>GISA.GUIHelper</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>false</SignAssembly>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\AssemblyInfosShared\AssemblyInfoShared.cs">
+      <Link>AssemblyInfoShared.cs</Link>
+    </Compile>
+    <Compile Include="FormDeletionReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportErrorReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportErrorReport.Designer.cs">
+      <DependentUpon>FormImportErrorReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReport.Designer.cs">
+      <DependentUpon>FormReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUIHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormDeletionReport.resx">
+      <DependentUpon>FormDeletionReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportErrorReport.resx">
+      <DependentUpon>FormImportErrorReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReport.resx">
+      <DependentUpon>FormReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GISA.Controls\PxDateBox\GISA.Controls.PxDateBox.csproj">
+      <Project>{58AD7224-ACCB-476A-A0FD-3EA277AD35CC}</Project>
+      <Name>GISA.Controls.PxDateBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Controls\PxNumericBox\GISA.Controls.PxNumericBox.csproj">
+      <Project>{62D16596-88DF-494B-8C5E-9413B50C3EE7}</Project>
+      <Name>GISA.Controls.PxNumericBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.DBAccess\DBAbstractDataLayer\DBAbstractDataLayer.csproj">
+      <Project>{1AED060D-26D9-4C73-BFFB-F73989BDD373}</Project>
+      <Name>DBAbstractDataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Model\GISA.Model.csproj">
+      <Project>{32444116-C646-4A6B-A177-74C4E410B1D1}</Project>
+      <Name>GISA.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.SharedResources\GISA.SharedResources.csproj">
+      <Project>{FF599116-AB19-40CB-A5FE-9314646B212E}</Project>
+      <Name>GISA.SharedResources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Utils\GISA.Utils.csproj">
+      <Project>{FA9FD233-78AD-42EA-B104-953264998A28}</Project>
+      <Name>GISA.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Webservices\GISA.Webservices.csproj">
+      <Project>{38063153-1424-4921-9296-A92645E198DE}</Project>
+      <Name>GISA.Webservices</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

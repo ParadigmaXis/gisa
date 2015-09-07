@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+
+<class name="GISAServer.Hibernate.Objects.RelacaoTipoNivelRelacionadoEntity, GISAServer.Hibernate" table="RelacaoTipoNivelRelacionado" >
+
+<composite-id name="Id" class="GISAServer.Hibernate.Utils.PairIdComponent, GISAServer.Hibernate">
+	<key-property name="Key2" column="ID" type="System.Int64"/>
+	<key-property name="Key1" column="IDUpper" type="System.Int64"/>
+</composite-id>
+
+<property name="IsDeleted" column="isDeleted" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="Versao" column="Versao" access="field.pascalcase-underscore" not-null="true" type="System.Byte[]"  insert="false" update="false"/>
+<many-to-one name="ID" column="ID" access="field.pascalcase-underscore" not-null="true" outer-join="auto" insert="false" update="false"></many-to-one>
+<many-to-one name="Upper" column="IDUpper" access="field.pascalcase-underscore" not-null="true" outer-join="auto" insert="false" update="false"></many-to-one>
+
+
+</class>
+</hibernate-mapping>

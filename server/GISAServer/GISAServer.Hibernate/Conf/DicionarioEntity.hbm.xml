@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+
+<class name="GISAServer.Hibernate.Objects.DicionarioEntity, GISAServer.Hibernate" table="Dicionario" >
+
+<id name="Id" column="ID" type="System.Int64" unsaved-value="null"><generator class="native"/></id>
+
+<property name="CatCode" column="CatCode" access="field.pascalcase-underscore" not-null="true" type="System.String"  length="6" insert="true" update="true"/>
+<property name="IsDeleted" column="isDeleted" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="Termo" column="Termo" access="field.pascalcase-underscore" not-null="true" type="System.String"  length="444" insert="true" update="true"/>
+<property name="Versao" column="Versao" access="field.pascalcase-underscore" not-null="true" type="System.Byte[]"  insert="false" update="false"/>
+
+
+</class>
+</hibernate-mapping>

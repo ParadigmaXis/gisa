@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+
+<class name="GISAServer.Hibernate.Objects.SFRDAvaliacaoRelEntity, GISAServer.Hibernate" table="SFRDAvaliacaoRel" >
+
+<composite-id name="Id" class="GISAServer.Hibernate.Utils.PairIdComponent, GISAServer.Hibernate">
+	<key-property name="Key2" column="IDNivel" type="System.Int64"/>
+	<key-property name="Key1" column="IDFRDBase" type="System.Int64"/>
+</composite-id>
+
+<property name="IsDeleted" column="isDeleted" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="Ponderacao" column="Ponderacao" access="field.pascalcase-underscore" not-null="true" type="System.Decimal"  insert="true" update="true"/>
+<property name="Versao" column="Versao" access="field.pascalcase-underscore" not-null="true" type="System.Byte[]"  insert="false" update="false"/>
+<many-to-one name="Densidade"  access="field.pascalcase-underscore" not-null="true" outer-join="auto" insert="true" update="true">
+	<column name="Densidade"/>
+</many-to-one>
+<many-to-one name="SubDensidade"  access="field.pascalcase-underscore" not-null="true" outer-join="auto" insert="true" update="true">
+	<column name="SubDensidade"/>
+</many-to-one>
+<many-to-one name="FRDBase" column="IDFRDBase" access="field.pascalcase-underscore" not-null="true" outer-join="auto" insert="false" update="false"></many-to-one>
+<many-to-one name="Nivel" column="IDNivel" access="field.pascalcase-underscore" not-null="true" outer-join="auto" insert="false" update="false"></many-to-one>
+
+
+</class>
+</hibernate-mapping>

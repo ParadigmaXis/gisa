@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+
+<class name="GISAServer.Hibernate.Objects.NivelTipoOperationEntity, GISAServer.Hibernate" table="NivelTipoOperation" >
+
+<id name="Id" column="IDTipoOperation" type="System.Byte"><generator class="assigned"/></id>
+
+<property name="IsDeleted" column="isDeleted" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="Versao" column="Versao" access="field.pascalcase-underscore" not-null="true" type="System.Byte[]"  insert="false" update="false"/>
+<many-to-one name="TipoOperation"  access="field.pascalcase-underscore" not-null="true" outer-join="auto" insert="false" update="false">
+	<column name="IDTipoOperation"/>
+</many-to-one>
+
+
+</class>
+</hibernate-mapping>

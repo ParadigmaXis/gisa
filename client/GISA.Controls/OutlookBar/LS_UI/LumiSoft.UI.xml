@@ -1,0 +1,571 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LumiSoft.UI</name>
+    </assembly>
+    <members>
+        <member name="T:LumiSoft.UI.Controls.WButton">
+            <summary>
+            Summary description for WButton.
+            </summary>
+        </member>
+        <member name="T:LumiSoft.UI.Controls.WControlBase">
+            <summary>
+            Summary description for WControlBase.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WControlBase.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="F:LumiSoft.UI.Controls.WButton.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WButton.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WButton.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WButton.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LumiSoft.UI.Controls.ButtonPressedEventHandler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:LumiSoft.UI.Controls.WButtonEdit">
+            <summary>
+            Summary description for WButtonEdit.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WButtonEdit.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WButtonEdit.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WButtonEdit.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.Controls.WButtonEdit.ForeColor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.Controls.WButtonEdit.BackColor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.Controls.WButtonEdit.Size">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.Controls.WButtonEdit.ButtonWidth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.Controls.WButtonEdit.ButtonIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.Controls.WButtonEdit.IsModified">
+            <summary>
+            True, if value is modified.
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.Controls.WButtonEdit.AcceptsPlussKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.Controls.WButtonEdit.ReadOnly">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.Controls.WButtonEdit.MaxLength">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.Controls.WButtonEdit.Text">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:LumiSoft.UI.Controls.WCheckBox.WCheckBox">
+            <summary>
+            Summary description for WCheckBox.
+            </summary>
+        </member>
+        <member name="F:LumiSoft.UI.Controls.WCheckBox.WCheckBox.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WCheckBox.WCheckBox.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WCheckBox.WCheckBox.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WCheckBox.WCheckBox.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LumiSoft.UI.Controls.WComboBox">
+            <summary>
+            Summary description for WComboBox.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WComboBox.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WComboBox.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WComboBox.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LumiSoft.UI.Controls.WComboItem">
+            <summary>
+            Summary description for WComboItem.
+            </summary>
+        </member>
+        <member name="T:LumiSoft.UI.Controls.WComboListBox">
+            <summary>
+            Summary description for UserControl1.
+            </summary>
+        </member>
+        <member name="F:LumiSoft.UI.Controls.WComboListBox.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WComboListBox.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WComboListBox.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LumiSoft.UI.Controls.SelectionChangedHandler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:LumiSoft.UI.Controls.WPopUpFormBase">
+            <summary>
+            Summary description for Form6.
+            </summary>
+        </member>
+        <member name="F:LumiSoft.UI.Controls.WPopUpFormBase.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WPopUpFormBase.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WPopUpFormBase.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WComboPopUp.#ctor(System.Windows.Forms.Control,LumiSoft.UI.ViewStyle,System.Object[],System.Int32,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="parent"></param>
+            <param name="viewStyle"></param>
+            <param name="listBoxItems"></param>
+            <param name="visibleItems"></param>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WComboPopUp.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WComboPopUp.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LumiSoft.UI.Controls.WEditBox">
+            <summary>
+            Summary description for WEditBox.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WEditBox.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WEditBox.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WEditBox.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.Controls.WEditBox.BackColor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.Controls.WEditBox.ForeColor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.Controls.WEditBox.Mask">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.Controls.WEditBox.DecimalPlaces">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.Controls.WEditBox.MaxLength">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.Controls.WEditBox.PasswordChar">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.Controls.WEditBox.TextAlign">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.Controls.WEditBox.Multiline">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.Controls.WEditBox.Height">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.Controls.WEditBox.Size">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.Controls.WEditBox.ReadOnly">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.Controls.WEditBox.Text">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:LumiSoft.UI.Controls.WEditBox_Mask">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:LumiSoft.UI.Controls.WEditBox_Style">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:LumiSoft.UI.Controls.WFrame">
+            <summary>
+            Summary description for WFrame.
+            </summary>
+        </member>
+        <member name="F:LumiSoft.UI.Controls.WFrame.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WFrame.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WFrame.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WFrame.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WFrame.splitter1_SplitterMoved(System.Object,System.Windows.Forms.SplitterEventArgs)">
+            <summary>
+            Called after Splitter move, Set new ControlPane
+            </summary>
+            <param name="sender"> </param>
+            <param name="e"> </param>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WFrame.OnResize(System.EventArgs)">
+            <summary>
+            Resize panel control
+            </summary>
+            <param name="e"> </param>
+        </member>
+        <member name="T:LumiSoft.UI.Controls.WLabel">
+            <summary>
+            Summary description for WLabel.
+            </summary>
+        </member>
+        <member name="F:LumiSoft.UI.Controls.WLabel.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WLabel.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WLabel.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WLabel.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.Controls.WLabel.Text">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.Controls.WLabel.DrawHot">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:LumiSoft.UI.Controls.WPictureBox">
+            <summary>
+            Summary description for WPictureBox.
+            </summary>
+        </member>
+        <member name="F:LumiSoft.UI.Controls.WPictureBox.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WPictureBox.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WPictureBox.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:LumiSoft.UI.Controls.WSpinEdit">
+            <summary>
+            Summary description for WSpinEdit.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WSpinEdit.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WSpinEdit.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Controls.WSpinEdit.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.Controls.WSpinEdit.ForeColor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.Controls.WSpinEdit.BackColor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.Controls.WSpinEdit.ButtonsAlign">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.Controls.WSpinEdit.ReadOnly">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.Controls.WSpinEdit.Text">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:LumiSoft.UI.User32">
+            <summary>
+            Summary description for User32.
+            </summary>
+        </member>
+        <member name="T:LumiSoft.UI.Core">
+            <summary>
+            Summary description for Core.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.Core.ConvertToDeciaml(System.String)">
+            <summary>
+            Converts string value to decimal.
+            If convert fails, returns 0;
+            </summary>
+            <param name="val">String value to convert.</param>
+            <returns></returns>
+        </member>
+        <member name="T:LumiSoft.UI.WValidate_EventArgs">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.WValidate_EventArgs.#ctor(System.String,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="controlName"></param>
+            <param name="controlValue"></param>
+        </member>
+        <member name="P:LumiSoft.UI.WValidate_EventArgs.ControlName">
+            <summary>
+            Control name which raised event.
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.WValidate_EventArgs.Value">
+            <summary>
+            Controls value.
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.WValidate_EventArgs.IsValid">
+            <summary>
+            Set false if not validated successfully.
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.WValidate_EventArgs.AllowMoveFocus">
+            <summary>
+            If false, control doesn't allow to move focus to next contol if validation failed.
+            </summary>
+        </member>
+        <member name="P:LumiSoft.UI.WValidate_EventArgs.FlashControl">
+            <summary>
+            If true, bilnks control if validation failed.
+            </summary>
+        </member>
+        <member name="T:LumiSoft.UI.WValidate_EventHandler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:LumiSoft.UI.Painter">
+            <summary>
+            Summary description for Painter.
+            </summary>
+        </member>
+        <member name="T:LumiSoft.UI.ViewStyleChangedEventHandler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:LumiSoft.UI.ViewStyle">
+            <summary>
+            Summary description for ViewStyle.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.ViewStyle.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:LumiSoft.UI.ViewStyle.CopyTo(LumiSoft.UI.ViewStyle)">
+            <summary>
+            Copies instance viewStyle to destination vieStyle.
+            If destViewStyle is ReadOnly, values isn't copied !
+            </summary>
+            <param name="destView">ViewStyle where to copy.</param>
+        </member>
+        <member name="M:LumiSoft.UI.ViewStyle.CopyFrom(LumiSoft.UI.ViewStyle)">
+            <summary>
+            Copies ViewStyle from source ViewStyle.
+            Copies values even if, ViewStyle is ReadOnly !
+            </summary>
+            <param name="sourceViewStyle"></param>
+        </member>
+        <member name="P:LumiSoft.UI.ViewStyle.EditColor">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

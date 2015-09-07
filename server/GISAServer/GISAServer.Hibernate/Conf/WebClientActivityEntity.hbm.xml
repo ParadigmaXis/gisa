@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+
+<class name="GISAServer.Hibernate.Objects.WebClientActivityEntity, GISAServer.Hibernate" table="WebClientActivity" >
+
+<id name="Id" column="ClientGUID" type="System.String"><generator class="assigned"/></id>
+
+<property name="LastSearch" column="LastSearch" access="field.pascalcase-underscore" not-null="true" type="System.DateTime"  insert="true" update="true"/>
+
+
+</class>
+</hibernate-mapping>

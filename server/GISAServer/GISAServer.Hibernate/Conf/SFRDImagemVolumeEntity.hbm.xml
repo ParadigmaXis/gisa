@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+
+<class name="GISAServer.Hibernate.Objects.SFRDImagemVolumeEntity, GISAServer.Hibernate" table="SFRDImagemVolume" >
+
+<id name="Id" column="ID" type="System.Int64" unsaved-value="null"><generator class="native"/></id>
+
+<property name="IsDeleted" column="isDeleted" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="Mount" column="Mount" access="field.pascalcase-underscore" not-null="true" type="StringClob"  insert="true" update="true"/>
+<property name="Versao" column="Versao" access="field.pascalcase-underscore" not-null="true" type="System.Byte[]"  insert="false" update="false"/>
+
+<set name="FKSFRDImagemSFRDImagemVolume" cascade="none" inverse="true" lazy="true" access="field.pascalcase-underscore">
+	<key>
+		<column name="IDSFDImagemVolume"/>
+	</key>
+	<one-to-many class="GISAServer.Hibernate.Objects.SFRDImagemEntity, GISAServer.Hibernate"/>
+</set>
+
+</class>
+</hibernate-mapping>

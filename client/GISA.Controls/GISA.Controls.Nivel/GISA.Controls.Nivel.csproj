@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5176195E-C1B0-4B24-AFFB-9BA6291F9A25}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GISA.Controls.Nivel</RootNamespace>
+    <AssemblyName>GISA.Controls.Nivel</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>false</SignAssembly>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\AssemblyInfosShared\AssemblyInfoShared.cs">
+      <Link>AssemblyInfoShared.cs</Link>
+    </Compile>
+    <Compile Include="FormAddNivel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddNivel.Designer.cs">
+      <DependentUpon>FormAddNivel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNivelDocumentalFedora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNivelDocumentalFedora.Designer.cs">
+      <DependentUpon>FormNivelDocumentalFedora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCreateUF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNivelDocumental.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNivelEstrutural.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectNivel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectNivel.Designer.cs">
+      <DependentUpon>FormSelectNivel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NivelGrupoArquivosList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NivelGrupoArquivosList.Designer.cs">
+      <DependentUpon>NivelGrupoArquivosList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NivelDocumentalList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NivelDocumentalListNavigator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NivelDocumentalListNavigator.Designer.cs">
+      <DependentUpon>NivelDocumentalListNavigator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NivelEstruturalList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NivelEstruturalList.Designer.cs">
+      <DependentUpon>NivelEstruturalList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NivelNavigator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NivelNavigator.Designer.cs">
+      <DependentUpon>NivelNavigator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAddNivel.resx">
+      <DependentUpon>FormAddNivel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateUF.resx">
+      <DependentUpon>FormCreateUF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNivelDocumental.resx">
+      <DependentUpon>FormNivelDocumental.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNivelDocumentalFedora.resx">
+      <DependentUpon>FormNivelDocumentalFedora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNivelEstrutural.resx">
+      <DependentUpon>FormNivelEstrutural.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectNivel.resx">
+      <DependentUpon>FormSelectNivel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NivelGrupoArquivosList.resx">
+      <DependentUpon>NivelGrupoArquivosList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NivelDocumentalList.resx">
+      <DependentUpon>NivelDocumentalList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NivelDocumentalListNavigator.resx">
+      <DependentUpon>NivelDocumentalListNavigator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NivelEstruturalList.resx">
+      <DependentUpon>NivelEstruturalList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NivelNavigator.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\GISA.DBAccess\DBAbstractDataLayer\DBAbstractDataLayer.csproj">
+      <Project>{1AED060D-26D9-4C73-BFFB-F73989BDD373}</Project>
+      <Name>DBAbstractDataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GISA.GUIHelper\GISA.GUIHelper.csproj">
+      <Project>{93248ED8-9C8F-4477-8B6F-1D5161FFE37B}</Project>
+      <Name>GISA.GUIHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GISA.Model\GISA.Model.csproj">
+      <Project>{32444116-C646-4A6B-A177-74C4E410B1D1}</Project>
+      <Name>GISA.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GISA.SharedResources\GISA.SharedResources.csproj">
+      <Project>{FF599116-AB19-40CB-A5FE-9314646B212E}</Project>
+      <Name>GISA.SharedResources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GISA.Utils\GISA.Utils.csproj">
+      <Project>{FA9FD233-78AD-42EA-B104-953264998A28}</Project>
+      <Name>GISA.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Controls.ControloAut\GISA.Controls.ControloAut.csproj">
+      <Project>{70A59663-0E7E-47FD-96FF-3A605E195966}</Project>
+      <Name>GISA.Controls.ControloAut</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Localizacao\GISA.Controls.Localizacao.csproj">
+      <Project>{C56A5802-874B-4F6F-9F43-978545849A78}</Project>
+      <Name>GISA.Controls.Localizacao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OutlookBar\LS_UI\LumiSoft.UI.csproj">
+      <Project>{F4D46B69-C677-4465-9C41-A6235063EDD7}</Project>
+      <Name>LumiSoft.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PxBreadCrumbsPath\GISA.Controls.PxBreadCrumbsPath.csproj">
+      <Project>{A03DEE4B-BA32-4210-B823-5C960F59B32C}</Project>
+      <Name>GISA.Controls.PxBreadCrumbsPath</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PxListView\GISA.Controls.PxListView.csproj">
+      <Project>{AFEBABBD-BA58-43DC-8AF4-CBCB5C645686}</Project>
+      <Name>GISA.Controls.PxListView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PxNumericBox\GISA.Controls.PxNumericBox.csproj">
+      <Project>{62D16596-88DF-494B-8C5E-9413B50C3EE7}</Project>
+      <Name>GISA.Controls.PxNumericBox</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

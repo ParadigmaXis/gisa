@@ -1,0 +1,77 @@
+readme.txt                  ParadigmaXis,SA          $WCDATE$
+
+             Gisa - Gestão Integrada de Sistemas de Arquivo
+                            Versão $WCREV$
+------------------------------------------------------------------------
+
+
+ Requisitos de hardware
+ ----------------------
+
+ 1. Aconselha-se a instalação da aplicação num computador com as
+    seguintes características ou superiores:
+
+   a) Cliente-servidor
+
+    - Processador Pentium IV 1.6GHz ou equivalente
+    - 1GB de memória
+    - 170 MB de espaço disponível em disco
+    - CD-ROM
+
+   b) Monoposto
+
+    - Processador Pentium Core Duo 2.13GHz ou equivalente
+    - 2GB de memória RAM
+    - 170 MB de espaço disponível em disco
+    - CD-ROM
+
+
+ Requisitos de software
+ ----------------------
+
+ 1. A utilização do GISA requer a instalação de um dos seguintes
+    sistemas operativos:
+
+     - Windows XP, com o service pack 1a ou superior
+     - Windows Vista 
+
+ 2. A instalação e utilização do GISA requer a instalação separada do
+    seguinte componente:
+
+     - Microsoft .NET Framework 3.5 com o Service Pack 1
+     - Microsoft SQLServer 2008 (NOTA: somente para a versão MONOPOSTO)
+     	 * com os componentes adicionais:
+		+ Database Engine Services
+		+ Management Tools Basic
+		+ SQL Client Connectivity SDK
+         * com as configurações seguintes:
+         	+ nome da instância: GISA
+         	+ base de dados: Case Sensitive e Accent Sensitive
+		+ autenticação: Mixed mode
+
+   Importante: Para verificar que tem instalado o último service pack
+      e quaisquer actualizações críticas para o sistema operativo que
+      está a usar bem como para instalar a Microsoft .NET Framework
+      visite o sítio http://windowsupdate.microsoft.com na Web.
+
+
+ Instalação do GISA
+ ------------------
+
+    - Deve ser efectuada com privilégios de Administrador
+
+    - A instalação do software é iniciada automaticamente com a
+      introdução do CD. Se tal não acontecer, execute o programa
+      setup.exe existente no CD de instalação.
+
+    - Após concluída a instalação deverá requerer uma licença de 
+      utilização junto do seu fornecedor de software.
+
+
+ Outras informações
+ ------------------
+
+     Para informações adicionais por favor consulte o manual
+    distribuído com a aplicação ou consulte o sítio Web do Gisa em
+    http://gisa.paradigmaxis.pt/
+

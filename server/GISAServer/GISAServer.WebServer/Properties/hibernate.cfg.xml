@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <section name="hibernate-configuration" type="NHibernate.Cfg.ConfigurationSectionHandler, NHibernate" />
+    <!--section name="log4net" type="log4net.Config.Log4NetConfigurationSectionHandler,log4net" /-->
+  </configSections>
+
+    <hibernate-configuration xmlns="urn:nhibernate-configuration-2.2">
+    <bytecode-provider type="lcg"/>
+    <reflection-optimizer use="true"/>
+    <session-factory name="NHibernate.Nc">
+      <property name="connection.provider">NHibernate.Connection.DriverConnectionProvider</property>
+      <property name="cache.provider_class">NHibernate.Cache.HashtableCacheProvider, NHibernate</property>
+      <property name="cache.use_query_cache">true</property>
+      <property name="prepare_sql">false</property>
+      <property name="query.startup_check">false</property>
+      <!-- 
+				The valid strings for Isolation can be found in the documentation for the System.Data.IsolationLevel
+				Enumeration documentation.
+				Use the member names - not the values.
+			-->
+      <property name="connection.isolation">ReadCommitted</property>
+
+      <!-- This is the System.Data.dll provider for MSSQL Server -->
+      <!--property name="connection.driver_class">NHibernate.Driver.OracleClientDriver</property>
+      <property name="connection.connection_string">
+        Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=GISA)));User Id=GISA;Password=password;
+      </property-->
+      <property name="connection.driver_class">NHibernate.Driver.SqlClientDriver</property>
+      <property name="connection.connection_string">
+        Server=(local);initial catalog=GISA_CS4_svn;Integrated Security=false;Data Source=(local);User=sa;Password=password;Min Pool Size=10
+      </property>
+      <!--property name="show_sql">true</property-->
+      <property name="dialect">NHibernate.Dialect.MsSql2000Dialect</property>
+      <!--property name="dialect">NHibernate.Dialect.OracleDialect</property-->
+      
+      <!--property name="use_outer_join">true</property>
+      <property name="command_timeout">444</property>
+      <property name="query.substitutions">true 1, false 0, yes 'Y', no 'N'</property>
+      <property name="adonet.wrap_result_sets">false</property-->
+
+      <mapping assembly="GISAServer.Hibernate" />
+    </session-factory>
+  </hibernate-configuration>
+  
+  <!-- This section contains the  log4net configuration settings threshold="OFF"-->
+  <!--log4net debug="false">
+    <appender name="A1" type="log4net.Appender.ConsoleAppender,log4net" >
+      <layout type="log4net.Layout.PatternLayout,log4net">
+        <param name="ConversionPattern" value="[%X{CLIENT_SESSION_ID}] %d [%t] %-5p - %m%n" />
+      </layout>
+    </appender-->
+    <!-- Setup the root category, add the appenders and set the default priority -->
+  <!--root>
+      <level value="INFO" />
+      <appender-ref ref="A1" />
+    </root-->
+
+    <!-- Specify the priority for some specific categories 
+		
+		<category name="NHibernate"><priority value="DEBUG" /></category>
+		<category name="NHibernate.Cfg.Configuration"><priority value="DEBUG" /></category>
+		-->
+
+  <!--/log4net-->
+
+</configuration>

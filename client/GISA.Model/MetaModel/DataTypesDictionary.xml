@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<dicionario>
+	<tipo nome="stringVarXL" tipoBase="string" encoding="UNICODE" tamanho="1073741823" comp_variavel="True" oleDB="LongVarWChar" TransactSQL="NText" PLpgSQL="TEXT" PLSQL="NClob" />
+	<tipo nome="stringVarL" tipoBase="string" encoding="UNICODE" tamanho="ILIMITADO" comp_variavel="True" oleDB="LongVarWChar" PLpgSQL="TEXT" />
+	<tipo nome="stringM" tipoBase="string" encoding="UNICODE" tamanho="4000" comp_variavel="False" oleDB="WChar" TransactSQL="NChar" PLpgSQL="CHAR" PLSQL="NChar" />
+	<tipo nome="stringVarM" tipoBase="string" encoding="UNICODE" tamanho="4000" comp_variavel="True" oleDB="VarWChar" TransactSQL="NVarChar" PLpgSQL="VARCHAR" PLSQL="NClob" />
+	<tipo nome="stringVarS" tipoBase="string" encoding="UNICODE" tamanho="2000" comp_variavel="True" TransactSQL="NVarChar" PLpgSQL="VARCHAR" PLSQL="NVarchar2" />	
+	<tipo nome="integerXL" tipoBase="integer" tamanho="8B" oleDB="BigInt" TransactSQL="BigInt" PLpgSQL="INT8" PLSQL="Int64" />
+	<tipo nome="integerL" tipoBase="integer" tamanho="4B" oleDB="Integer" TransactSQL="Int" PLpgSQL="INT4" PLSQL="Int32" />
+	<tipo nome="integerM" tipoBase="integer" tamanho="2B" oleDB="SmallInt" TransactSQL="SmallInt" PLpgSQL="INT2" PLSQL="Int16" />
+	<tipo nome="integerS" tipoBase="integer" tamanho="1B" oleDB="TinyInt" TransactSQL="TinyInt" PLpgSQL="INT2" PLSQL="Byte" />
+	<tipo nome="bool" tipoBase="bit" oleDB="Boolean" TransactSQL="Bit" PLpgSQL="BOOLEAN" PLSQL="Byte" />
+	
+	<tipo nome="datetime" tipoBase="datetime" oleDB="DBTimeStamp" TransactSQL="DateTime" PLpgSQL="Timestamp" PLSQL="TimeStamp" />
+  <tipo nome="datetime2" tipoBase="datetime2" oleDB="DBTimeStamp" TransactSQL="DateTime2" PLpgSQL="Timestamp" PLSQL="TimeStamp" />
+	<tipo nome="decimal" tipoBase="numeric" oleDB="Numeric" TransactSQL="Decimal" PLpgSQL="NUMERIC" PLSQL="Decimal" />	
+	<tipo nome="timestamp" tipoBase="timestamp" oleDB="Binary" TransactSQL="Timestamp" PLpgSQL="" PLSQL="Raw" />
+  <tipo nome="image" tipoBase="image" oleDB="Binary" TransactSQL="Image" PLpgSQL="" PLSQL="Raw" />
+</dicionario>

@@ -1,0 +1,29 @@
+using System;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//Assembly Identity Attributes
+//[assembly: AssemblyCulture("")]
+//[assembly: AssemblyFlags(int)]
+//[assembly: AssemblyVersion("")]
+
+//Informational Attributes
+//[assembly: AssemblyProduct("")]
+//[assembly: AssemblyInformationalVersion("")]
+//[assembly: AssemblyCompany("")]
+//[assembly: AssemblyCopyright("")]
+//[assembly: AssemblyTrademark("")]
+//[assembly: AssemblyFileVersion("")]
+
+//Assembly Manifest Attributes
+[assembly: AssemblyTitle("PX.Controls.PxDecimalBox")]
+[assembly: AssemblyDescription("PX.Controls.PxDecimalBox")]
+//[assembly: AssemblyConfiguration("")]
+//[assembly: AssemblyDefaultAlias("")]
+
+//Strong Name Attributes
+//[assembly: AssemblyDelaySign(false)]
+//[assembly: AssemblyKeyName("ParadigmaXis")]
+//[assembly: AssemblyKeyFile("")]
+
+[assembly: CLSCompliant(true)]

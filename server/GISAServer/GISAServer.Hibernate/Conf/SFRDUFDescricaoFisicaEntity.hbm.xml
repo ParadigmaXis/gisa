@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+
+<class name="GISAServer.Hibernate.Objects.SFRDUFDescricaoFisicaEntity, GISAServer.Hibernate" table="SFRDUFDescricaoFisica" >
+
+<id name="Id" column="IDFRDBase" type="System.Int64" unsaved-value="null"><generator class="assigned"/></id>
+
+<property name="IsDeleted" column="isDeleted" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="MedidaAltura" column="MedidaAltura" access="field.pascalcase-underscore" not-null="false" type="System.Decimal"  insert="true" update="true"/>
+<property name="MedidaLargura" column="MedidaLargura" access="field.pascalcase-underscore" not-null="false" type="System.Decimal"  insert="true" update="true"/>
+<property name="MedidaProfundidade" column="MedidaProfundidade" access="field.pascalcase-underscore" not-null="false" type="System.Decimal"  insert="true" update="true"/>
+<property name="Versao" column="Versao" access="field.pascalcase-underscore" not-null="true" type="System.Byte[]"  insert="false" update="false"/>
+<many-to-one name="FRDBase"  access="field.pascalcase-underscore" not-null="true" outer-join="auto" insert="false" update="false">
+	<column name="IDFRDBase"/>
+</many-to-one>
+<many-to-one name="TipoAcondicionamento"  access="field.pascalcase-underscore" not-null="true" outer-join="auto" insert="true" update="true">
+	<column name="IDTipoAcondicionamento"/>
+</many-to-one>
+<many-to-one name="TipoMedida"  access="field.pascalcase-underscore" not-null="false" outer-join="auto" insert="true" update="true">
+	<column name="IDTipoMedida"/>
+</many-to-one>
+
+<set name="FKSFRDUFComponenteSFRDUFDescricaoFisica" cascade="none" inverse="true" lazy="true" access="field.pascalcase-underscore">
+	<key>
+		<column name="IDFRDBase"/>
+	</key>
+	<one-to-many class="GISAServer.Hibernate.Objects.SFRDUFComponenteEntity, GISAServer.Hibernate"/>
+</set>
+
+</class>
+</hibernate-mapping>

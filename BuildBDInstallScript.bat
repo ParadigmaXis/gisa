@@ -1,0 +1,1 @@
+CatSql.exe ".\server\DatabaseScripts\DatabaseInstallScript" ".\server\DatabaseScripts\DatabaseInstallScript\DBInstallScript.sql"

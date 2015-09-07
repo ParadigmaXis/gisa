@@ -1,0 +1,160 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033\deflangfe1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fmodern\fprq1\fcharset0 Courier New;}}
+{\*\generator Msftedit 5.41.15.1515;}\viewkind4\uc1\pard\lang2070\b\f0\fs24 Express\'f5es de pesquisa de unidades f\'edsicas:\par
+\b0\f1\fs20\par
+\par
+\f0 1 - Uma express\'e3o de pesquisa pode ser um termo simples. A pesquisa de qualquer termo n\'e3o \'e9 sens\'edvel a mai\'fasculas e diacr\'edticos e devolve resultados se encontrar alguma palavra igual ao termo pesquisado.\par
+\par
+\b Express\'e3o de pesquisa:\par
+\b0 actas\par
+\b Resultado:\par
+\b0 Livro de Actas de Assembleia\par
+\b Nota:\par
+\b0 Retorna toda e qualquer descri\'e7\'e3o arquiv\'edstica de unidades f\'edsicas, cujo campo de pesquisa inclui \b actas\b0 .\par
+\par
+\b Express\'e3o de pesquisa:\par
+\b0 comissoes\par
+\b Resultado:\par
+\b0 Livro de Actas das Comiss\'f5es Eleitorais\par
+\b Nota:\b0\f1\par
+\f0 Retorna toda e qualquer descri\'e7\'e3o arquiv\'edstica de unidades f\'edsicas, cujo campo de pesquisa tamb\'e9m inclui \b comiss\'f5es\b0 .\par
+\par
+\par
+2 - Uma express\'e3o de pesquisa pode ser um termo composto, ou seja, uma sequ\'eancia de termos simples entre aspas. Este tipo de express\'e3o obriga a uma pesquisa cujo resultado inclua exactamente a frase.\par
+\par
+\b Express\'e3o de pesquisa:\par
+\b0 "Actas de Assembleia"\par
+\b Resultado:\b0\f1\par
+\f0 Livro de Actas de Assembleia\par
+\b Nota:\par
+\b0 Retorna toda e qualquer descri\'e7\'e3o arquiv\'edstica de unidades f\'edsicas, cujo campo pesquisado inclua a express\'e3o de pesquisa.\par
+\par
+\par
+3 - Uma express\'e3o de pesquisa tamb\'e9m pode ser uma sequ\'eancia de termos unidos por um operador l\'f3gico \b AND, OR\b0  ou \b NOT\b0 . Quando n\'e3o \'e9 expl\'edcita a utiliza\'e7\'e3o de um dos operadores, os termos ser\'e3o unidos pelo operador \b AND\b0 . Quando os termos s\'e3o unidos pelo operador \b AND\b0 , cada resultado tem de satisfazer todos os termos. Quando os termos s\'e3o unidos pelo operador \b OR\b0 , cada resultado tem de satisfazer pelo menos um dos termos. O operador \b NOT\b0  exclui resultados que contenham o termo depois do \b NOT\b0 . O operador \b NOT\b0  n\'e3o pode ser usado s\'f3 com um termo. O operador \b AND\b0  pode ser substitu\'eddo por \b +\b0 , o operador \b OR\b0  pode ser substitu\'eddo por || e o operador \b NOT\b0  por - .\par
+\par
+\b Express\'f5es  de pesquisa:\par
+\b0 assembleia actas \par
+assembleia AND actas\par
++ assembleia + actas\par
+\b Resultados:\b0\f1\par
+\f0 Livro de Actas de Assembleia\par
+Foi decidido em Assembleia e escrito nas actas....\par
+\b Nota:\b0\f1\par
+\f0 Retorna toda e qualquer descri\'e7\'e3o arquiv\'edstica de unidades f\'edsicas, cujo campo de pesquisa inclui \b assembleia\b0  e \b acta\b0 .\par
+\b\f1\par
+\f0 Express\'f5es  de pesquisa:\par
+\b0 "Jo\'e3o da Costa Pereira" Porto\par
+"Jo\'e3o da Costa Pereira" AND Porto\par
++ "Jo\'e3o da Costa Pereira" + Porto\par
+\b Resultado:\b0\f1\par
+\f0 Jo\'e3o da Costa Pereira, residente em Porto de M\'f3s\par
+\b Nota:\par
+\b0 Para uma sequ\'eancia de termos sem operador considera-se, por omiss\'e3o, o operador \b AND\b0 . Para este exemplo, retorna toda e qualquer descri\'e7\'e3o arquiv\'edstica de unidades f\'edsicas, cujo campo de pesquisa inclua a express\'e3o exacta \b Jo\'e3o da Costa Pereira\b0  e a palavra \b Porto\b0 , por qualquer ordem.\par
+\b Express\'f5es  de pesquisa:\par
+\b0 assembleia OR actas\par
+assembleia || actas\par
+\b Resultados:\b0\f1\par
+\f0 Livros de Actas de Assembleia\par
+Foi decidido em Assembleia e escrito nas actas...\par
+Actas de 1970\par
+Or\'e7amento apresentado em Assembleia Geral\par
+Assembleia Geral Maio 2004\par
+\b Nota:\par
+\b0 Retorna toda e qualquer descri\'e7\'e3o arquiv\'edstica de unidades f\'edsicas, cujo campo de pesquisa inclui pelo menos uma das palavras.\par
+\par
+\b Express\'f5es  de pesquisa:\par
+\b0 assembleia NOT actas\par
+assembleia - actas\par
+\b Resultados:\b0\f1\par
+\f0 Or\'e7amento apresentado em Assembleia Geral\par
+Assembleia Geral Maio 2004\par
+\b Nota:\par
+\b0 Retorna toda e qualquer descri\'e7\'e3o arquiv\'edstica de unidades f\'edsicas, cujo campo de pesquisa inclui \b assembleia\b0  e n\'e3o inclui \b acta\b0 .\par
+   \b\f1\par
+\b0\f0 A ordem na sequ\'eancia de termos n\'e3o \'e9 relevante. Combinando mais que um operador, conv\'e9m utilizar par\'eantesis. Os par\'eantesis podem alterar a ordem de c\'e1lculo dos operadores l\'f3gicos.\par
+\par
+\b Express\'e3o de pesquisa:\par
+\lang1033\b0 fachada AND (((st\'ba OR sto OR santo) AND antonio) OR (("trinta e um" OR 31) AND janeiro))\par
+\lang2070\b Resultados:\b0\f1\par
+\f0 Localiza\'e7\'e3o da obra:  TRINTA E UM DE JANEIRO, Rua de... PR\'c9DIO. Substituir fachada.....\par
+Localiza\'e7\'e3o da obra: Santo Ant\'f3nio, Rua de, ... ESTABELECIMENTO. Modificar fachada e interior....\par
+\b Nota:\par
+\b0 Retorna toda e qualquer descri\'e7\'e3o arquiv\'edstica de unidades f\'edsicas, cujo campo de pesquisa inclui \b fachada\b0  e uma das diferentes formas de nome para a rua 31 de Janeiro.\par
+\b\f1\par
+\f0 Express\'e3o de pesquisa:\par
+\b0 jardim OR (parque NOT (estacionamento OR campismo))\par
+\b Resultados:\par
+\b0 Jardim do Morro \par
+Parque da Cidade\par
+campismo no jardim\par
+\b Nota:\par
+\b0 Retorna toda e qualquer descri\'e7\'e3o arquiv\'edstica de unidades f\'edsicas, cujo campo de pesquisa inclui pelo menos \b jardim\b0  ou ent\'e3o \b parque\b0  desde que n\'e3o inclua \b estacionamento\b0  nem \b campismo.\b0\f1\par
+\par
+\par
+\f0 4 - Os termos simples podem ser escritos utilizando os seguintes caracteres especiais, no meio ou no fim:\par
+\par
+    \b *\b0  que significa zero ou mais caracteres\par
+    \b ?\b0  que significa um qualquer caracter\par
+\par
+\b Express\'e3o de pesquisa:\par
+\b0 Lui?\par
+\b Resultados:\b0\f1\par
+\f0 Lu\'eds Morgado\par
+Luiz Sousa Guedes\par
+\b Nota:\par
+\b0 Retorna toda e qualquer descri\'e7\'e3o arquiv\'edstica de unidades f\'edsicas, cujo campo de pesquisa inclui uma palavra come\'e7ada por \b Lui\b0  e com mais um qualquer caracter no fim.\par
+\par
+\b Express\'e3o de pesquisa:\par
+\b0 proje*to\par
+\b Resultados:\par
+\b0 Projeto\par
+Projecto\par
+\b Nota:\par
+\b0 Retorna toda e qualquer descri\'e7\'e3o arquiv\'edstica de unidades f\'edsiacs, cujo campo de pesquisa inclui uma palavra que comece por \b proje\b0  e a seguir tenha zero ou mais caracteres e termine em \b to\b0 .\par
+ \par
+\b\f1\par
+\b0\f0 5\f1  - \f0 A pesquisa de c\'f3digos que incluem s\'edmbolos, ou seja, outros caracteres para al\'e9m de letras e de n\'fameros, deve ser feita colocando o termo entre aspas ou colocando o caracter \b\f1\\\b0\f0  antes de qualquer s\'edmbolo. Existe uma excep\'e7\'e3o com o s\'edmbolo barra( / ), dada a ampla utiliza\'e7\'e3o em documentos de arquivo.\par
+\par
+\b Express\'f5es de pesquisa:\par
+\b0 "A-P1-23:2"\par
+A\\-P1\\-23\\:2\par
+\b Resultado:\par
+\b0 A-P1-23:2\par
+\b Nota:\par
+\b0 Retornam toda e qualquer descri\'e7\'e3o arquiv\'edstica de unidades f\'edsicas, cujo campo de pesquisa inclui o c\'f3digo.\par
+\par
+\b Express\'f5es de pesquisa:\par
+\b0 157/1987\par
+\b Resultados:\par
+\b0 157/1987\par
+Licen\'e7a de obra n\'ba 157/1987\par
+\b Nota:\par
+\b0 Retornam toda e qualquer descri\'e7\'e3o arquiv\'edstica de unidades f\'edsicas, cujo campo de pesquisa inclui o c\'f3digo.\par
+\par
+\b Express\'e3o de pesquisa:\par
+\b0 157\\/*\par
+\b Resultados:\par
+\b0 Licen\'e7a de obra n\'ba 157/1987\line Licen\'e7a de obra n\'ba 157/1988 \line Licen\'e7a de obra n\'ba 157/1989\par
+\b Nota:\par
+\b0 Retorna toda e qualquer descri\'e7\'e3o arquiv\'edstica de unidades f\'edsicas, cujo campo de pesquisa inclui um c\'f3digo que inicie por \b\i 157/\b0\i0 .\par
+\par
+\b Express\'e3o de pesquisa:\par
+\b0 *\\/1987\par
+\b Resultados:\par
+\b0 Licen\'e7a de obra n\'ba 157/1987\line Licen\'e7a de obra n\'ba 158/1987 \line Licen\'e7a de obra n\'ba 159/1987\par
+\b Nota:\par
+\b0 Retorna toda e qualquer descri\'e7\'e3o arquiv\'edstica de unidades f\'edsicas, cujo campo de pesquisa inclui um c\'f3digo que finalize em \b\i */1987\b0\i0 .\par
+\b\f1\par
+\f0 Express\'f5es de pesquisa:\par
+\lang1033\b0 "ref. 54 - c/b/i/4"\par
+ref. 54 c/b/i/4\par
+\lang2070\b Resultado:\par
+\b0 ref. 54 - c/b/i/4\par
+\b Nota:\par
+\b0 Retornam toda e qualquer descri\'e7\'e3o arquiv\'edstica de unidades f\'edsicas, cujo campo de pesquisa inclui o c\'f3digo. Neste caso, se n\'e3o se colocam as aspas, ter-se-\'e1 de retirar o s\'edmbolo \b -\b0  pois tendo o mesmo significado do operador NOT, s\'f3 recuperaria resultados onde n\'e3o constasse o termo a seguir.\par
+\b     \b0\f1\par
+\f0 6 - N\'e3o \'e9 poss\'edvel pesquisar pelos seguintes caracteres:\par
+\par
+\b + - && || ! ( ) \{ \} [ ] ^ " ~ * ? : \\\b0\par
+\par
+}
+ 

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+
+<class name="GISAServer.Hibernate.Objects.ModelosAvaliacaoEntity, GISAServer.Hibernate" table="ModelosAvaliacao" >
+
+<id name="Id" column="ID" type="System.Int64" unsaved-value="null"><generator class="native"/></id>
+
+<property name="Designacao" column="Designacao" access="field.pascalcase-underscore" not-null="true" type="System.String"  length="768" insert="true" update="true"/>
+<property name="IsDeleted" column="isDeleted" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="PrazoConservacao" column="PrazoConservacao" access="field.pascalcase-underscore" not-null="false" type="System.Int16"  insert="true" update="true"/>
+<property name="Preservar" column="Preservar" access="field.pascalcase-underscore" not-null="false" type="System.Boolean"  insert="true" update="true"/>
+<property name="Versao" column="Versao" access="field.pascalcase-underscore" not-null="true" type="System.Byte[]"  insert="false" update="false"/>
+<many-to-one name="ListaModelosAvaliacao"  access="field.pascalcase-underscore" not-null="true" outer-join="auto" insert="true" update="true">
+	<column name="IDListaModelosAvaliacao"/>
+</many-to-one>
+
+<set name="FKSFRDAvaliacaoModelosAvaliacao" cascade="none" inverse="true" lazy="true" access="field.pascalcase-underscore">
+	<key>
+		<column name="IDModeloAvaliacao"/>
+	</key>
+	<one-to-many class="GISAServer.Hibernate.Objects.SFRDAvaliacaoEntity, GISAServer.Hibernate"/>
+</set>
+
+</class>
+</hibernate-mapping>

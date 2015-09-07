@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomCommandBuilder", "CustomCommandBuilder.csproj", "{96F3E2F5-CDD5-4064-BE01-EDAB9D643207}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{96F3E2F5-CDD5-4064-BE01-EDAB9D643207}.Debug.ActiveCfg = Debug|.NET
+		{96F3E2F5-CDD5-4064-BE01-EDAB9D643207}.Debug.Build.0 = Debug|.NET
+		{96F3E2F5-CDD5-4064-BE01-EDAB9D643207}.Release.ActiveCfg = Release|.NET
+		{96F3E2F5-CDD5-4064-BE01-EDAB9D643207}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

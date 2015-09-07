@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+
+<class name="GISAServer.Hibernate.Objects.GlobalConfigEntity, GISAServer.Hibernate" table="GlobalConfig" >
+
+<id name="Id" column="ID" type="System.Int64" unsaved-value="null"><generator class="assigned"/></id>
+
+<property name="GestaoIntegrada" column="GestaoIntegrada" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="IsDeleted" column="isDeleted" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="MaxNumResultados" column="MaxNumResultados" access="field.pascalcase-underscore" not-null="true" type="System.Int32"  insert="true" update="true"/>
+<property name="NiveisOrganicos" column="NiveisOrganicos" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="URLBase" column="URLBase" access="field.pascalcase-underscore" not-null="false" type="System.String"  length="250" insert="true" update="true"/>
+<property name="URLBaseActivo" column="URLBaseActivo" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="Versao" column="Versao" access="field.pascalcase-underscore" not-null="true" type="System.Byte[]"  insert="false" update="false"/>
+
+
+</class>
+</hibernate-mapping>

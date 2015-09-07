@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+
+  <class name="GISAServer.Hibernate.Objects.SPGetDocumentosComProdutores, GISAServer.Hibernate" mutable="false" check="none">
+    <id name="IDDocumento" type="System.Int64" />
+    <property name="TituloProdutor" type="string" />
+    <property name="TituloProdutorAutorizado" type="string" />
+  </class>
+  <sql-query name="sp_getDocumentosComProdutores">
+    <return class="GISAServer.Hibernate.Objects.SPGetDocumentosComProdutores, GISAServer.Hibernate" lock-mode="read">
+      <return-property name="IDDocumento" column="IDDocumento" />
+      <return-property name="TituloProdutor" column="TituloProdutor" />
+      <return-property name="TituloProdutorAutorizado" column="TituloProdutorAutorizado" />
+    </return>
+    exec sp_getDocumentosComProdutores :ProdutorId
+  </sql-query>
+</hibernate-mapping>

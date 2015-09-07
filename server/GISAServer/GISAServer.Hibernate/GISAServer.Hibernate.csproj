@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{616A8EB6-83A3-46B8-81D5-EAE9BC4C79A9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GISAServer.Hibernate</RootNamespace>
+    <AssemblyName>GISAServer.Hibernate</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SignAssembly>false</SignAssembly>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug NUnit|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug NUnit\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug NUnit|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug NUnit\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Iesi.Collections, Version=1.0.0.3, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=2.1.0.1001, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\client\AssemblyInfosShared\AssemblyInfoShared.cs">
+      <Link>AssemblyInfoShared.cs</Link>
+    </Compile>
+    <Compile Include="Assunto.cs" />
+    <Compile Include="NivelDocumentalComProdutores.cs" />
+    <Compile Include="NivelDocumentalInternet.cs" />
+    <Compile Include="Objects\CodigoEntity.cs" />
+    <Compile Include="Objects\LicencaObraAtestadoHabitabilidadeEntity.cs" />
+    <Compile Include="Objects\LicencaObraDataLicencaConstrucaoEntity.cs" />
+    <Compile Include="Objects\LicencaObraEntity.cs" />
+    <Compile Include="Objects\LicencaObraLocalizacaoObraActualEntity.cs" />
+    <Compile Include="Objects\LicencaObraLocalizacaoObraAntigaEntity.cs" />
+    <Compile Include="Objects\LicencaObraRequerentesEntity.cs" />
+    <Compile Include="Objects\LicencaObraTecnicoObraEntity.cs" />
+    <Compile Include="Objects\SFRDAgrupadorEntity.cs" />
+    <Compile Include="Objects\SFRDAutorEntity.cs" />
+    <Compile Include="Objects\SPGetDocumentosComProdutores.cs" />
+    <Compile Include="Tipologia.cs" />
+    <Compile Include="Exceptions\InvalidIdException.cs" />
+    <Compile Include="NivelDocumental.cs" />
+    <Compile Include="Produtor.cs" />
+    <Compile Include="UnidadeFisica.cs" />
+    <Compile Include="Utils\GISAUtils.cs" />
+    <Compile Include="Utils\PairIdComponent.cs" />
+    <Compile Include="Utils\QuadIdComponent.cs" />
+    <Compile Include="Utils\TripleIdComponent.cs" />
+    <Compile Include="Exceptions\BusinessException.cs" />
+    <Compile Include="Objects\AutoEliminacaoEntity.cs" />
+    <Compile Include="Objects\ClientLicenseEntity.cs" />
+    <Compile Include="Objects\ControloAutDataDeDescricaoEntity.cs" />
+    <Compile Include="Objects\ControloAutDatasExistenciaEntity.cs" />
+    <Compile Include="Objects\ControloAutDicionarioEntity.cs" />
+    <Compile Include="Objects\ControloAutEntidadeProdutoraEntity.cs" />
+    <Compile Include="Objects\ControloAutEntity.cs" />
+    <Compile Include="Objects\ControloAutRelEntity.cs" />
+    <Compile Include="Objects\DicionarioEntity.cs" />
+    <Compile Include="Objects\FRDBaseDataDeDescricaoEntity.cs" />
+    <Compile Include="Objects\FRDBaseEntity.cs" />
+    <Compile Include="Objects\GlobalConfigEntity.cs" />
+    <Compile Include="Objects\IndexFRDCAEntity.cs" />
+    <Compile Include="Objects\Iso15924Entity.cs" />
+    <Compile Include="Objects\Iso3166Entity.cs" />
+    <Compile Include="Objects\Iso639Entity.cs" />
+    <Compile Include="Objects\ListaModelosAvaliacaoEntity.cs" />
+    <Compile Include="Objects\ModelosAvaliacaoEntity.cs" />
+    <Compile Include="Objects\NivelControloAutEntity.cs" />
+    <Compile Include="Objects\NivelDesignadoEntity.cs" />
+    <Compile Include="Objects\NivelEntity.cs" />
+    <Compile Include="Objects\NivelTipoOperationEntity.cs" />
+    <Compile Include="Objects\NivelUnidadeFisicaCodigoEntity.cs" />
+    <Compile Include="Objects\NivelUnidadeFisicaEntity.cs" />
+    <Compile Include="Objects\RelacaoHierarquicaEntity.cs" />
+    <Compile Include="Objects\RelacaoTipoNivelRelacionadoEntity.cs" />
+    <Compile Include="Objects\SearchCacheWebEntity.cs" />
+    <Compile Include="Objects\ServerLicenseEntity.cs" />
+    <Compile Include="Objects\SFRDAlfabetoEntity.cs" />
+    <Compile Include="Objects\SFRDAvaliacaoEntity.cs" />
+    <Compile Include="Objects\SFRDAvaliacaoRelEntity.cs" />
+    <Compile Include="Objects\SFRDCondicaoDeAcessoEntity.cs" />
+    <Compile Include="Objects\SFRDConteudoEEstruturaEntity.cs" />
+    <Compile Include="Objects\SFRDContextoEntity.cs" />
+    <Compile Include="Objects\SFRDDatasProducaoEntity.cs" />
+    <Compile Include="Objects\SFRDDocumentacaoAssociadaEntity.cs" />
+    <Compile Include="Objects\SFRDEstadoDeConservacaoEntity.cs" />
+    <Compile Include="Objects\SFRDFormaSuporteAcondEntity.cs" />
+    <Compile Include="Objects\SFRDImagemEntity.cs" />
+    <Compile Include="Objects\SFRDImagemVolumeEntity.cs" />
+    <Compile Include="Objects\SFRDLinguaEntity.cs" />
+    <Compile Include="Objects\SFRDMaterialDeSuporteEntity.cs" />
+    <Compile Include="Objects\SFRDNotaGeralEntity.cs" />
+    <Compile Include="Objects\SFRDOrdenacaoEntity.cs" />
+    <Compile Include="Objects\SFRDTecnicasDeRegistoEntity.cs" />
+    <Compile Include="Objects\SFRDTradicaoDocumentalEntity.cs" />
+    <Compile Include="Objects\SFRDUFAutoEliminacaoEntity.cs" />
+    <Compile Include="Objects\SFRDUFComponenteEntity.cs" />
+    <Compile Include="Objects\SFRDUFCotaEntity.cs" />
+    <Compile Include="Objects\SFRDUFDescricaoFisicaEntity.cs" />
+    <Compile Include="Objects\SFRDUFMateriaisComponenteEntity.cs" />
+    <Compile Include="Objects\SFRDUFTecnicasRegComponenteEntity.cs" />
+    <Compile Include="Objects\SFRDUnidadeFisicaEntity.cs" />
+    <Compile Include="Objects\TipoAcondicionamentoEntity.cs" />
+    <Compile Include="Objects\TipoClientEntity.cs" />
+    <Compile Include="Objects\TipoControloAutFormaEntity.cs" />
+    <Compile Include="Objects\TipoControloAutRelEntity.cs" />
+    <Compile Include="Objects\TipoDensidadeEntity.cs" />
+    <Compile Include="Objects\TipoEntidadeProdutoraEntity.cs" />
+    <Compile Include="Objects\TipoEstadoConservacaoEntity.cs" />
+    <Compile Include="Objects\TipoEstadoDeConservacaoEntity.cs" />
+    <Compile Include="Objects\TipoFormaSuporteAcondEntity.cs" />
+    <Compile Include="Objects\TipoFRDBaseEntity.cs" />
+    <Compile Include="Objects\TipoFunctionEntity.cs" />
+    <Compile Include="Objects\TipoFunctionGroupEntity.cs" />
+    <Compile Include="Objects\TipoMaterialDeSuporteEntity.cs" />
+    <Compile Include="Objects\TipoMaterialEntity.cs" />
+    <Compile Include="Objects\TipoMedidaEntity.cs" />
+    <Compile Include="Objects\TipoNivelEntity.cs" />
+    <Compile Include="Objects\TipoNivelRelacionadoCodigoEntity.cs" />
+    <Compile Include="Objects\TipoNivelRelacionadoEntity.cs" />
+    <Compile Include="Objects\TipoNoticiaATipoControloAFormaEntity.cs" />
+    <Compile Include="Objects\TipoNoticiaAutEntity.cs" />
+    <Compile Include="Objects\TipoOperationEntity.cs" />
+    <Compile Include="Objects\TipoOrdenacaoEntity.cs" />
+    <Compile Include="Objects\TipoPertinenciaEntity.cs" />
+    <Compile Include="Objects\TipoServerEntity.cs" />
+    <Compile Include="Objects\TipoSubDensidadeEntity.cs" />
+    <Compile Include="Objects\TipoSuporteEntity.cs" />
+    <Compile Include="Objects\TipoTecnicaRegistoEntity.cs" />
+    <Compile Include="Objects\TipoTecnicasDeRegistoEntity.cs" />
+    <Compile Include="Objects\TipoTradicaoDocumentalEntity.cs" />
+    <Compile Include="Objects\TrusteeEntity.cs" />
+    <Compile Include="Objects\TrusteeGroupEntity.cs" />
+    <Compile Include="Objects\TrusteeNivelPrivilegeEntity.cs" />
+    <Compile Include="Objects\TrusteePrivilegeEntity.cs" />
+    <Compile Include="Objects\TrusteeUserEntity.cs" />
+    <Compile Include="Objects\UserGroupsEntity.cs" />
+    <Compile Include="Objects\WebClientActivityEntity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Conf\AutoEliminacaoEntity.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Conf\ClientLicenseEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\ControloAutDataDeDescricaoEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\ControloAutDatasExistenciaEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\ControloAutDicionarioEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\ControloAutEntidadeProdutoraEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\ControloAutEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\ControloAutRelEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\DicionarioEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\FRDBaseDataDeDescricaoEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\FRDBaseEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\GlobalConfigEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\IndexFRDCAEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\Iso15924Entity.hbm.xml" />
+    <EmbeddedResource Include="Conf\Iso3166Entity.hbm.xml" />
+    <EmbeddedResource Include="Conf\Iso639Entity.hbm.xml" />
+    <EmbeddedResource Include="Conf\ListaModelosAvaliacaoEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\ModelosAvaliacaoEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\NivelControloAutEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\NivelDesignadoEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\NivelEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\NivelTipoOperationEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\NivelUnidadeFisicaCodigoEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\NivelUnidadeFisicaEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\RelacaoHierarquicaEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\RelacaoTipoNivelRelacionadoEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\SearchCacheWebEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\ServerLicenseEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\SFRDAlfabetoEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\SFRDAvaliacaoEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\SFRDAvaliacaoRelEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\SFRDCondicaoDeAcessoEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\SFRDConteudoEEstruturaEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\SFRDContextoEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\SFRDDatasProducaoEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\SFRDDocumentacaoAssociadaEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\SFRDEstadoDeConservacaoEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\SFRDFormaSuporteAcondEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\SFRDImagemEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\SFRDImagemVolumeEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\SFRDLinguaEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\SFRDMaterialDeSuporteEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\SFRDNotaGeralEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\SFRDOrdenacaoEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\SFRDTecnicasDeRegistoEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\SFRDTradicaoDocumentalEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\SFRDUFAutoEliminacaoEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\SFRDUFComponenteEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\SFRDUFCotaEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\SFRDUFDescricaoFisicaEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\SFRDUFMateriaisComponenteEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\SFRDUFTecnicasRegComponenteEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\SFRDUnidadeFisicaEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TipoAcondicionamentoEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TipoClientEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TipoControloAutFormaEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TipoControloAutRelEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TipoDensidadeEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TipoEntidadeProdutoraEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TipoEstadoConservacaoEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TipoEstadoDeConservacaoEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TipoFormaSuporteAcondEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TipoFRDBaseEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TipoFunctionEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TipoFunctionGroupEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TipoMaterialDeSuporteEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TipoMaterialEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TipoMedidaEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TipoNivelEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TipoNivelRelacionadoCodigoEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TipoNivelRelacionadoEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TipoNoticiaATipoControloAFormaEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TipoNoticiaAutEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TipoOperationEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TipoOrdenacaoEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TipoPertinenciaEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TipoServerEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TipoSubDensidadeEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TipoSuporteEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TipoTecnicaRegistoEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TipoTecnicasDeRegistoEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TipoTradicaoDocumentalEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TrusteeEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TrusteeGroupEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TrusteeNivelPrivilegeEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TrusteePrivilegeEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\TrusteeUserEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\UserGroupsEntity.hbm.xml" />
+    <EmbeddedResource Include="Conf\WebClientActivityEntity.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Conf\LicencaObraEntity.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Conf\LicencaObraAtestadoHabitabilidade.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Conf\LicencaObraDataLicencaConstrucaoEntity.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Conf\LicencaObraLocalizacaoObraActualEntity.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Conf\LicencaObraLocalizacaoObraAntigaEntity.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Conf\LicencaObraRequerentesEntity.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Conf\LicencaObraTecnicoObra.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Conf\Codigo.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Conf\sp_GetDocumentosComProdutores.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Conf\SFRDAutorEntity.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Conf\SFRDAgrupadorEntity.hbm.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

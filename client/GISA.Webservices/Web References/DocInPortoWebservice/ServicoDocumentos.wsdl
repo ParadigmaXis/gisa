@@ -1,0 +1,2561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.cm-porto.pt/ServicoDocumentos" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.cm-porto.pt/ServicoDocumentos" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.cm-porto.pt/ServicoDocumentos">
+      <s:element name="ObterDespachoFormalAssinadoDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NUD" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterDespachoFormalAssinadoDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObterDespachoFormalAssinadoDocumentoResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CriarFichaDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="doc" type="tns:Documento" />
+            <s:element minOccurs="1" maxOccurs="1" name="EnviaEncAut" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="EncComProtocolo" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Documento">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID_DOCUMENTO" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DATAREGISTO" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="NUD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NUMEROLOCAL" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_HISTORICO" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIPOREGISTO" type="tns:TipoRegisto" />
+          <s:element minOccurs="0" maxOccurs="1" name="GESTORDOCUMENTO" type="tns:Identidade" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_TIPOGESTOR" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDENTIDADEREGISTO" type="tns:Identidade" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_DOCUMENTOAGREGADOPRINCIPAL" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="AGREGADOPRINCIPAL" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_DOCUMENTOASSOCIADOPRINCIPAL" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="ASSOCIADOPRINCIPAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ASSUNTO" type="tns:Assunto" />
+          <s:element minOccurs="0" maxOccurs="1" name="COMENTARIOS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ENTIDADE" type="tns:Entidade" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIPOENTRADA" type="tns:TipoEntrada" />
+          <s:element minOccurs="1" maxOccurs="1" name="DATADOCUMENTO" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="DOCUMENTOORIGINALREFERENCIA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DOCUMENTOORIGINALAPENSOS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DOCUMENTOORIGINALCTT" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="REQUERRESPOSTA" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="PRAZORESPOSTA" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="NUMEROWORD" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_TIPOCONFIDENCIALIDADE" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="LOCALOBRA" type="tns:Local" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_TECNICO" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_DIRECTORTECNICO" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="PLANOARQUIVO" type="tns:PlanoArquivo" />
+          <s:element minOccurs="0" maxOccurs="1" name="LOCALARQUIVO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESPACHOFINAL" type="tns:DespachoFinal" />
+          <s:element minOccurs="0" maxOccurs="1" name="DELIBERACAOFINAL" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DATA_DELIBERACAOFINAL" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="PROCESSOJURIDICO" type="tns:ProcessoJuridico" />
+          <s:element minOccurs="0" maxOccurs="1" name="MANDATARIO" type="tns:Entidade" />
+          <s:element minOccurs="0" maxOccurs="1" name="GESTORPROCESSO" type="tns:Identidade" />
+          <s:element minOccurs="1" maxOccurs="1" name="DATALOCK" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDENTIDADELOCK" type="tns:Identidade" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TipoRegisto">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ClasseAuxiliar" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ClasseAuxiliar">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESCRICAO" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PlanoArquivo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ClasseAuxiliar" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="TipoEntrada">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ClasseAuxiliar" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Identidade">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID_IDENTIDADE" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOMEMECANOGRAFICO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UNIDADEORGANICA" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="UNIDADEORGANICA_NOMEMECANOGRAFICO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="USERNAME" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_UTILIZADOR" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMAIL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CARGO" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Assunto">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID_ASSUNTO" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIPOLOGIAPROCESSO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ASSUNTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TEMNUMERACAOPROCESSO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UNIDADEORGANICA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TEM_PLANOENCAMINHAMENTO" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Entidade">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID_ENTIDADE" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MORADA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODIGOPOSTAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LOCALIDADE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TELEFONE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FAX" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMAIL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NIF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TELEMOVEL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NUM_POLICIA" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CONTACTO_PREF" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="IS_PME_LIDER" type="tns:enSimNao" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="enSimNao">
+        <s:restriction base="s:string">
+          <s:enumeration value="enSim" />
+          <s:enumeration value="enNao" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="Local">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CODIGOPOSTAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LOCALIDADE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOTAS" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NR_POLICIA" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="FRACCAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GIS1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GIS2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="REFPREDIAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODMORADA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MORADA" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DespachoFinal">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID_DESPACHOFINAL" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="INTRODUZIDOPOR" type="tns:Identidade" />
+          <s:element minOccurs="0" maxOccurs="1" name="AUTORDESPACHO" type="tns:Identidade" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESPACHOFINAL" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DATADESPACHOFINAL" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESPACHOANTERIOR" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DATADESPACHOANTERIOR" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProcessoJuridico">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NUMEROPROCESSO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_DOCUMENTOPROCESSO" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DATAACTIVACAO" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_ACCAOPROCESSO" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="ACCAOPROCESSO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_ESTADOPROCESSO" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="ESTADOPROCESSO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PRAZOPROCESSO" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CriarFichaDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CriarFichaDocumentoResult" type="tns:Documento" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CriarFichaDocumentoAgregado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NUD_DocCapa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="doc" type="tns:Documento" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CriarFichaDocumentoAgregadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CriarFichaDocumentoAgregadoResult" type="tns:Documento" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CriarFichaDocumentoAssociado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NUD_DocCapa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="doc" type="tns:Documento" />
+            <s:element minOccurs="1" maxOccurs="1" name="EnviaEncAut" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="EncComProtocolo" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CriarFichaDocumentoAssociadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CriarFichaDocumentoAssociadoResult" type="tns:Documento" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DetalheFichaDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NUD" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DetalheFichaDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DetalheFichaDocumentoResult" type="tns:Documento" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditarFichaDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NUD" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditarFichaDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EditarFichaDocumentoResult" type="tns:Documento" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuardarFichaDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="doc" type="tns:Documento" />
+            <s:element minOccurs="1" maxOccurs="1" name="EnviaEncAut" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="EncComProtocolo" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GuardarFichaDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GuardarFichaDocumentoResult" type="tns:Documento" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LibertaFichaDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NUD" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LibertaFichaDocumentoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ConsultarConteudoDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NUD" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarConteudoDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarConteudoDocumentoResult" type="tns:ConteudoInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ConteudoInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID_CONTEUDO" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_TIPOCONTEUDO" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOMEFICHEIRO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FORMATO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FICHEIRO" type="s:base64Binary" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RegistarConteudoDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NUD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Conteudo" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeFicheiro" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistarConteudoDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistarConteudoDocumentoResult" type="tns:ConteudoInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistarConteudoDocumentoXArq">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NUD" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistarConteudoDocumentoXArqResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RegistarConteudoDocumentoXArqResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArquivarDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Doc" type="tns:ArquivoDoc" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArquivoDoc">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NUD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LOCALARQUIVO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESPACHOFINAL" type="tns:DespachoFinal" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESPACHO" type="tns:Despacho" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Despacho">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TIPODESPACHO" type="tns:enTipoDespacho" />
+          <s:element minOccurs="0" maxOccurs="1" name="AUTORDESPACHO" type="tns:Identidade" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESPACHOTIPO" type="tns:TipoDespachoTexto" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESCRICAO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DATADESPACHO" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ASSINADO" type="tns:enSimNao" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="enTipoDespacho">
+        <s:restriction base="s:string">
+          <s:enumeration value="enFormal" />
+          <s:enumeration value="enInformal" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="TipoDespachoTexto">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ClasseAuxiliar" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ArquivarDocumentoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ConsultarAnexoDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NUD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeFicheiro" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarAnexoDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarAnexoDocumentoResult" type="tns:ConteudoInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistarAnexoDocumentoInterno">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NUD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Conteudo" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeFicheiro" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistarAnexoDocumentoInternoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistarAnexoDocumentoInternoResult" type="tns:ConteudoInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistarAnexoDocumentoEntrada">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NUD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Conteudo" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="NomeFicheiro" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Id_TIPOANEXO" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="Descricao" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Entregue" type="tns:enumSimNao" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="enumSimNao">
+        <s:restriction base="s:string">
+          <s:enumeration value="enSim" />
+          <s:enumeration value="enNao" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="RegistarAnexoDocumentoEntradaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistarAnexoDocumentoEntradaResult" type="tns:ConteudoInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PesquisaDocumentos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aFiltro" type="tns:ArrayOfFiltro" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfFiltro">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Filtro" nillable="true" type="tns:Filtro" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Filtro">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Valor" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OperadorLogico" type="tns:enLogicOperator" />
+          <s:element minOccurs="1" maxOccurs="1" name="OperadorComparacao" type="tns:enCompareOperator" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="enLogicOperator">
+        <s:restriction base="s:string">
+          <s:enumeration value="enAND" />
+          <s:enumeration value="enOR" />
+          <s:enumeration value="enNOT" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="enCompareOperator">
+        <s:restriction base="s:string">
+          <s:enumeration value="enBiggerThan" />
+          <s:enumeration value="enLessThan" />
+          <s:enumeration value="enEqual" />
+          <s:enumeration value="enLike" />
+          <s:enumeration value="enNotLike" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="PesquisaDocumentosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PesquisaDocumentosResult" type="tns:ArrayOfDocumentoInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDocumentoInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DocumentoInfo" nillable="true" type="tns:DocumentoInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DocumentoInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ID_DOCUMENTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VALIDADO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CONTEUDO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ESTADOAGREGACAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NUD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIPOREGISTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ASSUNTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GESTOR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DATAREGISTO" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SoapHeaderUser" type="tns:SoapHeaderUser" />
+      <s:complexType name="SoapHeaderUser">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ActiveDirectoryUser" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="PesquisaDocumentosV1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aFiltro" type="tns:ArrayOfFiltro" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PesquisaDocumentosV1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PesquisaDocumentosV1Result" type="tns:ArrayOfDocumentoInfoSOA" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDocumentoInfoSOA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DocumentoInfoSOA" nillable="true" type="tns:DocumentoInfoSOA" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DocumentoInfoSOA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ID_DOCUMENTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VALIDADO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CONTEUDO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ESTADOAGREGACAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NUD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIPOREGISTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ASSUNTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GESTOR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DATAREGISTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ID_IDENTIDADE_GESTOR_PROCESSO" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PesquisaDocumentosAgregadosCapa">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NUD_DocCapa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="aFiltro" type="tns:ArrayOfFiltro" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PesquisaDocumentosAgregadosCapaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PesquisaDocumentosAgregadosCapaResult" type="tns:ArrayOfDocumentoInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PesquisaDocumentosAssociadoCapa">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NUD_DocCapa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="aFiltro" type="tns:ArrayOfFiltro" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PesquisaDocumentosAssociadoCapaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PesquisaDocumentosAssociadoCapaResult" type="tns:ArrayOfDocumentoInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaEntidade">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aFiltro" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaEntidadeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListaEntidadeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaAssunto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aFiltro" type="tns:ArrayOfFiltro" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaAssuntoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListaAssuntoResult" type="tns:ArrayOfAssunto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAssunto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Assunto" nillable="true" type="tns:Assunto" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ListaIdentidade">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aFiltro" type="tns:ArrayOfFiltro" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaIdentidadeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListaIdentidadeResult" type="tns:ArrayOfIdentidade" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfIdentidade">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Identidade" nillable="true" type="tns:Identidade" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PesquisaEncaminhamentoDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NUD" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PesquisaEncaminhamentoDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PesquisaEncaminhamentoDocumentoResult" type="tns:ArrayOfEncaminhamento" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEncaminhamento">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Encaminhamento" nillable="true" type="tns:Encaminhamento" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Encaminhamento">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID_ENCAMINHAMENTO" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIPOENCAMINHAMENTO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_DOCUMENTO" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="NUMERODOCUMENTO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DATAMOVIMENTO" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMISSOR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESTINATARIOGESTAO" type="tns:Destinatario" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_TIPOEXPEDICAO" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIPOEXPEDICAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESTINATARIOSCOPIA" type="tns:ArrayOfDestinatario" />
+          <s:element minOccurs="1" maxOccurs="1" name="COMPROTOCOLO" type="tns:enSimNao" />
+          <s:element minOccurs="0" maxOccurs="1" name="NUMEROPROTOCOLO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="REQUERRESPOSTA" type="tns:enSimNao" />
+          <s:element minOccurs="1" maxOccurs="1" name="PRAZORESPOSTA" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="RESPONDIDOEM" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="PRIORIDADE" type="tns:enImportanciaEncaminhamento" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESPACHO" type="tns:Despacho" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Destinatario">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID_DESTINATARIO" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOME" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DATARECEPCAO" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="VALIDADOPOR" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDestinatario">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Destinatario" nillable="true" type="tns:Destinatario" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="enImportanciaEncaminhamento">
+        <s:restriction base="s:string">
+          <s:enumeration value="enBaixa" />
+          <s:enumeration value="enNormal" />
+          <s:enumeration value="enAlta" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="ListaPlanoArquivo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aFiltro" type="tns:ArrayOfFiltro" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaPlanoArquivoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListaPlanoArquivoResult" type="tns:ArrayOfPlanoArquivo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPlanoArquivo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PlanoArquivo" nillable="true" type="tns:PlanoArquivo" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ListaAnexosDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NUD" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaAnexosDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListaAnexosDocumentoResult" type="tns:ArrayOfAnexoInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAnexoInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AnexoInfo" nillable="true" type="tns:AnexoInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AnexoInfo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ConteudoInfo">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="TIPOANEXO" type="tns:TipoAnexo" />
+              <s:element minOccurs="0" maxOccurs="1" name="DESCRICAO" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ENTREGUE" type="tns:enSimNao" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="TipoAnexo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ClasseAuxiliar">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="FORMATO" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AUTORIA" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ASSINATURADIGITCERT" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="REQUESITOFX" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="NOTA" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ListaTipoRegisto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aFiltro" type="tns:ArrayOfFiltro" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaTipoRegistoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListaTipoRegistoResult" type="tns:ArrayOfTipoRegisto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTipoRegisto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TipoRegisto" nillable="true" type="tns:TipoRegisto" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ListaTipoEntrada">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aFiltro" type="tns:ArrayOfFiltro" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaTipoEntradaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListaTipoEntradaResult" type="tns:ArrayOfTipoEntrada" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTipoEntrada">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TipoEntrada" nillable="true" type="tns:TipoEntrada" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ListaDespachoFinal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aFiltro" type="tns:ArrayOfFiltro" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaDespachoFinalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListaDespachoFinalResult" type="tns:ArrayOfDespachoFinalInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDespachoFinalInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DespachoFinalInfo" nillable="true" type="tns:DespachoFinalInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DespachoFinalInfo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ClasseAuxiliar" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ListaTipoDespachoTexto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aFiltro" type="tns:ArrayOfFiltro" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaTipoDespachoTextoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListaTipoDespachoTextoResult" type="tns:ArrayOfTipoDespachoTexto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTipoDespachoTexto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TipoDespachoTexto" nillable="true" type="tns:TipoDespachoTexto" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ListaTipoAnexo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aFiltro" type="tns:ArrayOfFiltro" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaTipoAnexoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListaTipoAnexoResult" type="tns:ArrayOfTipoAnexo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTipoAnexo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TipoAnexo" nillable="true" type="tns:TipoAnexo" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ListaTecnico">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aFiltro" type="tns:ArrayOfFiltro" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaTecnicoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListaTecnicoResult" type="tns:ArrayOfEntidadeTecnico" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEntidadeTecnico">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EntidadeTecnico" nillable="true" type="tns:EntidadeTecnico" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EntidadeTecnico">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Entidade">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="ID_TECNICO" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="DIRECTORTECNICO" type="tns:enSimNao" />
+              <s:element minOccurs="0" maxOccurs="1" name="ORDEM" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="NR_INSCRICAOCMP" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="PesquisaDocumentosGM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aFiltro" type="tns:ArrayOfFiltro" />
+            <s:element minOccurs="1" maxOccurs="1" name="TipoPesquisa" type="tns:enTipoPesquisaDoc" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="enTipoPesquisaDoc">
+        <s:restriction base="s:string">
+          <s:enumeration value="enActivos" />
+          <s:enumeration value="enArquivados" />
+          <s:enumeration value="enTodos" />
+          <s:enumeration value="enHistorico" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="PesquisaDocumentosGMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PesquisaDocumentosGMResult" type="tns:ArrayOfDocumentoInfoGM" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDocumentoInfoGM">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DocumentoInfoGM" nillable="true" type="tns:DocumentoInfoGM" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DocumentoInfoGM">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ID_DOCUMENTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VALIDADO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DATAREGISTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NUD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NUMEROLOCAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ID_REQUERENTE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOMEREQUERENTE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ASSUNTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LOCAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NRPOLICIA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AGREGADOPRINCIPAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GESTORDOCUMENTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GESTORPROCESSO" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ObterURLSIG">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NUD" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterURLSIGResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObterURLSIGResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterValorJM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="aFiltro" type="tns:ArrayOfFiltro" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterValorJMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObterValorJMResult" type="tns:ArrayOfValorJM" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfValorJM">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ValorJM" nillable="true" type="tns:ValorJM" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ValorJM">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ID_SESSION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOMECAMPO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VALOR" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="EncaminharDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="doc" type="tns:EncaminhamentoDoc" />
+            <s:element minOccurs="0" maxOccurs="1" name="FicheiroDespachoAssinado" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EncaminhamentoDoc">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NUD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESTINATARIOGESTAO" type="tns:Identidade" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESTINATARIOCOPIA" type="tns:ArrayOfIdentidade" />
+          <s:element minOccurs="1" maxOccurs="1" name="REQUERRESPOSTA" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="DATALIMITETRATAMENTO" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="IMPORTANCIA" type="tns:enImportanciaEncaminhamento" />
+          <s:element minOccurs="1" maxOccurs="1" name="COMPROTOCOLO" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESPACHO" type="tns:Despacho" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="EncaminharDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EncaminharDocumentoResult" type="tns:Documento" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncaminharDocumentoV1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="doc" type="tns:EncaminhamentoDoc" />
+            <s:element minOccurs="0" maxOccurs="1" name="FicheiroDespachoAssinado" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="ValidarEncaminhamento" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncaminharDocumentoV1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EncaminharDocumentoV1Result" type="tns:Documento" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterListaNrPolicia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CODMORADA" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterListaNrPoliciaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObterListaNrPoliciaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CriarPreRegistoInterno">
+        <s:complexType />
+      </s:element>
+      <s:element name="CriarPreRegistoInternoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CriarPreRegistoInternoResult" type="tns:Documento" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConteudoDocumentoAssinado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NUD" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConteudoDocumentoAssinadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ConteudoDocumentoAssinadoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterListaAgregados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NUD" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterListaAgregadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObterListaAgregadosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterListaParaAgregacao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NUD" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterListaParaAgregacaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObterListaParaAgregacaoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregarDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NUD_Capa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NUD" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AgregarDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AgregarDocumentoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarEncaminhamentoDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NUD" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidarEncaminhamentoDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidarEncaminhamentoDocumentoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaDocumentosArquivoGeral">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DataArquivoGeral" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaDocumentosArquivoGeralResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListaDocumentosArquivoGeralResult" type="tns:ArrayOfDocumentoInfoArquivoGeral" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDocumentoInfoArquivoGeral">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DocumentoInfoArquivoGeral" nillable="true" type="tns:DocumentoInfoArquivoGeral" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DocumentoInfoArquivoGeral">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ID_DOCUMENTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NUD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NUMEROESP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NUP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DATA_ARQUIVOGERAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ID_TIPOREGISTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIPOREGISTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DATAREGISTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UNIDADEORGANICA_NOMEMECANOGRAFICO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ASSUNTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ENTIDADE_NOME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ENTIDADE_NIF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODIGOPOSTAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LOCALIDADE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOTAS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NR_POLICIA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FRACCAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GIS1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GIS2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="REFPREDIAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODMORADA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NUD_CAPA" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CONFIDENCIALIDADE" type="tns:enConfidencialidade" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIPODOCUMENTOENTRADA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TECNICO_NOME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TECNICO_NIF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ARRAYCONTEUDOS" type="tns:ArrayOfConteudoAuxInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="enConfidencialidade">
+        <s:restriction base="s:string">
+          <s:enumeration value="enTipoConfidencialidadePublico" />
+          <s:enumeration value="enTipoConfidencialidadeRestrito" />
+          <s:enumeration value="enTipoConfidencialidadeConfidencial" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfConteudoAuxInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ConteudoAuxInfo" nillable="true" type="tns:ConteudoAuxInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ConteudoAuxInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TIPO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESCRICAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOMEFICHEIRO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NUMEROANEXO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIPODESCRICAO" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ActualizaInicioProcesso">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NUD" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Estado" type="tns:enumEstadoInicioProcesso" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="enumEstadoInicioProcesso">
+        <s:restriction base="s:string">
+          <s:enumeration value="enEstadoInicial" />
+          <s:enumeration value="enEstadoStandby" />
+          <s:enumeration value="enEstadoIniciado" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="ActualizaInicioProcessoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizaInicioProcessoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ObterDespachoFormalAssinadoDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterDespachoFormalAssinadoDocumento" />
+  </wsdl:message>
+  <wsdl:message name="ObterDespachoFormalAssinadoDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterDespachoFormalAssinadoDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CriarFichaDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:CriarFichaDocumento" />
+  </wsdl:message>
+  <wsdl:message name="CriarFichaDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:CriarFichaDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CriarFichaDocumentoAgregadoSoapIn">
+    <wsdl:part name="parameters" element="tns:CriarFichaDocumentoAgregado" />
+  </wsdl:message>
+  <wsdl:message name="CriarFichaDocumentoAgregadoSoapOut">
+    <wsdl:part name="parameters" element="tns:CriarFichaDocumentoAgregadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="CriarFichaDocumentoAssociadoSoapIn">
+    <wsdl:part name="parameters" element="tns:CriarFichaDocumentoAssociado" />
+  </wsdl:message>
+  <wsdl:message name="CriarFichaDocumentoAssociadoSoapOut">
+    <wsdl:part name="parameters" element="tns:CriarFichaDocumentoAssociadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="DetalheFichaDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:DetalheFichaDocumento" />
+  </wsdl:message>
+  <wsdl:message name="DetalheFichaDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:DetalheFichaDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditarFichaDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:EditarFichaDocumento" />
+  </wsdl:message>
+  <wsdl:message name="EditarFichaDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:EditarFichaDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GuardarFichaDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:GuardarFichaDocumento" />
+  </wsdl:message>
+  <wsdl:message name="GuardarFichaDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:GuardarFichaDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="LibertaFichaDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:LibertaFichaDocumento" />
+  </wsdl:message>
+  <wsdl:message name="LibertaFichaDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:LibertaFichaDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarConteudoDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarConteudoDocumento" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarConteudoDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarConteudoDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistarConteudoDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistarConteudoDocumento" />
+  </wsdl:message>
+  <wsdl:message name="RegistarConteudoDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistarConteudoDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistarConteudoDocumentoXArqSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistarConteudoDocumentoXArq" />
+  </wsdl:message>
+  <wsdl:message name="RegistarConteudoDocumentoXArqSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistarConteudoDocumentoXArqResponse" />
+  </wsdl:message>
+  <wsdl:message name="ArquivarDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:ArquivarDocumento" />
+  </wsdl:message>
+  <wsdl:message name="ArquivarDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:ArquivarDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarAnexoDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarAnexoDocumento" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarAnexoDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarAnexoDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistarAnexoDocumentoInternoSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistarAnexoDocumentoInterno" />
+  </wsdl:message>
+  <wsdl:message name="RegistarAnexoDocumentoInternoSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistarAnexoDocumentoInternoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistarAnexoDocumentoEntradaSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistarAnexoDocumentoEntrada" />
+  </wsdl:message>
+  <wsdl:message name="RegistarAnexoDocumentoEntradaSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistarAnexoDocumentoEntradaResponse" />
+  </wsdl:message>
+  <wsdl:message name="PesquisaDocumentosSoapIn">
+    <wsdl:part name="parameters" element="tns:PesquisaDocumentos" />
+  </wsdl:message>
+  <wsdl:message name="PesquisaDocumentosSoapOut">
+    <wsdl:part name="parameters" element="tns:PesquisaDocumentosResponse" />
+  </wsdl:message>
+  <wsdl:message name="PesquisaDocumentosSoapHeaderUser">
+    <wsdl:part name="SoapHeaderUser" element="tns:SoapHeaderUser" />
+  </wsdl:message>
+  <wsdl:message name="PesquisaDocumentosV1SoapIn">
+    <wsdl:part name="parameters" element="tns:PesquisaDocumentosV1" />
+  </wsdl:message>
+  <wsdl:message name="PesquisaDocumentosV1SoapOut">
+    <wsdl:part name="parameters" element="tns:PesquisaDocumentosV1Response" />
+  </wsdl:message>
+  <wsdl:message name="PesquisaDocumentosV1SoapHeaderUser">
+    <wsdl:part name="SoapHeaderUser" element="tns:SoapHeaderUser" />
+  </wsdl:message>
+  <wsdl:message name="PesquisaDocumentosAgregadosCapaSoapIn">
+    <wsdl:part name="parameters" element="tns:PesquisaDocumentosAgregadosCapa" />
+  </wsdl:message>
+  <wsdl:message name="PesquisaDocumentosAgregadosCapaSoapOut">
+    <wsdl:part name="parameters" element="tns:PesquisaDocumentosAgregadosCapaResponse" />
+  </wsdl:message>
+  <wsdl:message name="PesquisaDocumentosAssociadoCapaSoapIn">
+    <wsdl:part name="parameters" element="tns:PesquisaDocumentosAssociadoCapa" />
+  </wsdl:message>
+  <wsdl:message name="PesquisaDocumentosAssociadoCapaSoapOut">
+    <wsdl:part name="parameters" element="tns:PesquisaDocumentosAssociadoCapaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListaEntidadeSoapIn">
+    <wsdl:part name="parameters" element="tns:ListaEntidade" />
+  </wsdl:message>
+  <wsdl:message name="ListaEntidadeSoapOut">
+    <wsdl:part name="parameters" element="tns:ListaEntidadeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListaAssuntoSoapIn">
+    <wsdl:part name="parameters" element="tns:ListaAssunto" />
+  </wsdl:message>
+  <wsdl:message name="ListaAssuntoSoapOut">
+    <wsdl:part name="parameters" element="tns:ListaAssuntoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListaIdentidadeSoapIn">
+    <wsdl:part name="parameters" element="tns:ListaIdentidade" />
+  </wsdl:message>
+  <wsdl:message name="ListaIdentidadeSoapOut">
+    <wsdl:part name="parameters" element="tns:ListaIdentidadeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListaIdentidadeSoapHeaderUser">
+    <wsdl:part name="SoapHeaderUser" element="tns:SoapHeaderUser" />
+  </wsdl:message>
+  <wsdl:message name="PesquisaEncaminhamentoDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:PesquisaEncaminhamentoDocumento" />
+  </wsdl:message>
+  <wsdl:message name="PesquisaEncaminhamentoDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:PesquisaEncaminhamentoDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListaPlanoArquivoSoapIn">
+    <wsdl:part name="parameters" element="tns:ListaPlanoArquivo" />
+  </wsdl:message>
+  <wsdl:message name="ListaPlanoArquivoSoapOut">
+    <wsdl:part name="parameters" element="tns:ListaPlanoArquivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListaAnexosDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:ListaAnexosDocumento" />
+  </wsdl:message>
+  <wsdl:message name="ListaAnexosDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:ListaAnexosDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListaTipoRegistoSoapIn">
+    <wsdl:part name="parameters" element="tns:ListaTipoRegisto" />
+  </wsdl:message>
+  <wsdl:message name="ListaTipoRegistoSoapOut">
+    <wsdl:part name="parameters" element="tns:ListaTipoRegistoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListaTipoEntradaSoapIn">
+    <wsdl:part name="parameters" element="tns:ListaTipoEntrada" />
+  </wsdl:message>
+  <wsdl:message name="ListaTipoEntradaSoapOut">
+    <wsdl:part name="parameters" element="tns:ListaTipoEntradaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListaDespachoFinalSoapIn">
+    <wsdl:part name="parameters" element="tns:ListaDespachoFinal" />
+  </wsdl:message>
+  <wsdl:message name="ListaDespachoFinalSoapOut">
+    <wsdl:part name="parameters" element="tns:ListaDespachoFinalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListaTipoDespachoTextoSoapIn">
+    <wsdl:part name="parameters" element="tns:ListaTipoDespachoTexto" />
+  </wsdl:message>
+  <wsdl:message name="ListaTipoDespachoTextoSoapOut">
+    <wsdl:part name="parameters" element="tns:ListaTipoDespachoTextoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListaTipoAnexoSoapIn">
+    <wsdl:part name="parameters" element="tns:ListaTipoAnexo" />
+  </wsdl:message>
+  <wsdl:message name="ListaTipoAnexoSoapOut">
+    <wsdl:part name="parameters" element="tns:ListaTipoAnexoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListaTecnicoSoapIn">
+    <wsdl:part name="parameters" element="tns:ListaTecnico" />
+  </wsdl:message>
+  <wsdl:message name="ListaTecnicoSoapOut">
+    <wsdl:part name="parameters" element="tns:ListaTecnicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="PesquisaDocumentosGMSoapIn">
+    <wsdl:part name="parameters" element="tns:PesquisaDocumentosGM" />
+  </wsdl:message>
+  <wsdl:message name="PesquisaDocumentosGMSoapOut">
+    <wsdl:part name="parameters" element="tns:PesquisaDocumentosGMResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObterURLSIGSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterURLSIG" />
+  </wsdl:message>
+  <wsdl:message name="ObterURLSIGSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterURLSIGResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObterValorJMSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterValorJM" />
+  </wsdl:message>
+  <wsdl:message name="ObterValorJMSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterValorJMResponse" />
+  </wsdl:message>
+  <wsdl:message name="EncaminharDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:EncaminharDocumento" />
+  </wsdl:message>
+  <wsdl:message name="EncaminharDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:EncaminharDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EncaminharDocumentoV1SoapIn">
+    <wsdl:part name="parameters" element="tns:EncaminharDocumentoV1" />
+  </wsdl:message>
+  <wsdl:message name="EncaminharDocumentoV1SoapOut">
+    <wsdl:part name="parameters" element="tns:EncaminharDocumentoV1Response" />
+  </wsdl:message>
+  <wsdl:message name="EncaminharDocumentoV1SoapHeaderUser">
+    <wsdl:part name="SoapHeaderUser" element="tns:SoapHeaderUser" />
+  </wsdl:message>
+  <wsdl:message name="ObterListaNrPoliciaSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterListaNrPolicia" />
+  </wsdl:message>
+  <wsdl:message name="ObterListaNrPoliciaSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterListaNrPoliciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="CriarPreRegistoInternoSoapIn">
+    <wsdl:part name="parameters" element="tns:CriarPreRegistoInterno" />
+  </wsdl:message>
+  <wsdl:message name="CriarPreRegistoInternoSoapOut">
+    <wsdl:part name="parameters" element="tns:CriarPreRegistoInternoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConteudoDocumentoAssinadoSoapIn">
+    <wsdl:part name="parameters" element="tns:ConteudoDocumentoAssinado" />
+  </wsdl:message>
+  <wsdl:message name="ConteudoDocumentoAssinadoSoapOut">
+    <wsdl:part name="parameters" element="tns:ConteudoDocumentoAssinadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConteudoDocumentoAssinadoSoapHeaderUser">
+    <wsdl:part name="SoapHeaderUser" element="tns:SoapHeaderUser" />
+  </wsdl:message>
+  <wsdl:message name="ObterListaAgregadosSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterListaAgregados" />
+  </wsdl:message>
+  <wsdl:message name="ObterListaAgregadosSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterListaAgregadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObterListaAgregadosSoapHeaderUser">
+    <wsdl:part name="SoapHeaderUser" element="tns:SoapHeaderUser" />
+  </wsdl:message>
+  <wsdl:message name="ObterListaParaAgregacaoSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterListaParaAgregacao" />
+  </wsdl:message>
+  <wsdl:message name="ObterListaParaAgregacaoSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterListaParaAgregacaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObterListaParaAgregacaoSoapHeaderUser">
+    <wsdl:part name="SoapHeaderUser" element="tns:SoapHeaderUser" />
+  </wsdl:message>
+  <wsdl:message name="AgregarDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:AgregarDocumento" />
+  </wsdl:message>
+  <wsdl:message name="AgregarDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:AgregarDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AgregarDocumentoSoapHeaderUser">
+    <wsdl:part name="SoapHeaderUser" element="tns:SoapHeaderUser" />
+  </wsdl:message>
+  <wsdl:message name="ValidarEncaminhamentoDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:ValidarEncaminhamentoDocumento" />
+  </wsdl:message>
+  <wsdl:message name="ValidarEncaminhamentoDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:ValidarEncaminhamentoDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidarEncaminhamentoDocumentoSoapHeaderUser">
+    <wsdl:part name="SoapHeaderUser" element="tns:SoapHeaderUser" />
+  </wsdl:message>
+  <wsdl:message name="ListaDocumentosArquivoGeralSoapIn">
+    <wsdl:part name="parameters" element="tns:ListaDocumentosArquivoGeral" />
+  </wsdl:message>
+  <wsdl:message name="ListaDocumentosArquivoGeralSoapOut">
+    <wsdl:part name="parameters" element="tns:ListaDocumentosArquivoGeralResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizaInicioProcessoSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizaInicioProcesso" />
+  </wsdl:message>
+  <wsdl:message name="ActualizaInicioProcessoSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizaInicioProcessoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizaInicioProcessoSoapHeaderUser">
+    <wsdl:part name="SoapHeaderUser" element="tns:SoapHeaderUser" />
+  </wsdl:message>
+  <wsdl:portType name="ServicoDocumentosSoap">
+    <wsdl:operation name="ObterDespachoFormalAssinadoDocumento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obter Ficheiro Despacho de um documento registado no DocInporto.</wsdl:documentation>
+      <wsdl:input message="tns:ObterDespachoFormalAssinadoDocumentoSoapIn" />
+      <wsdl:output message="tns:ObterDespachoFormalAssinadoDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CriarFichaDocumento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Cria uma nova ficha de documento no DocInporto.</wsdl:documentation>
+      <wsdl:input message="tns:CriarFichaDocumentoSoapIn" />
+      <wsdl:output message="tns:CriarFichaDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CriarFichaDocumentoAgregado">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Cria uma nova ficha de documento agregada a uma já existente no DocInporto.</wsdl:documentation>
+      <wsdl:input message="tns:CriarFichaDocumentoAgregadoSoapIn" />
+      <wsdl:output message="tns:CriarFichaDocumentoAgregadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CriarFichaDocumentoAssociado">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Cria uma nova ficha de documento associada a uma já existente no DocInporto.</wsdl:documentation>
+      <wsdl:input message="tns:CriarFichaDocumentoAssociadoSoapIn" />
+      <wsdl:output message="tns:CriarFichaDocumentoAssociadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DetalheFichaDocumento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Apresenta o detalhe da ficha de um documento do DocInporto.</wsdl:documentation>
+      <wsdl:input message="tns:DetalheFichaDocumentoSoapIn" />
+      <wsdl:output message="tns:DetalheFichaDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditarFichaDocumento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Coloca uma ficha de um documento do DocInporto em modo Edição.</wsdl:documentation>
+      <wsdl:input message="tns:EditarFichaDocumentoSoapIn" />
+      <wsdl:output message="tns:EditarFichaDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarFichaDocumento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Guarda as alterações realizadas na ficha de um documento do DocInporto.</wsdl:documentation>
+      <wsdl:input message="tns:GuardarFichaDocumentoSoapIn" />
+      <wsdl:output message="tns:GuardarFichaDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LibertaFichaDocumento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sai do modo Edição da ficha de um documento do DocInporto.</wsdl:documentation>
+      <wsdl:input message="tns:LibertaFichaDocumentoSoapIn" />
+      <wsdl:output message="tns:LibertaFichaDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarConteudoDocumento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obter conteudo de um documento registado no DocInporto.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarConteudoDocumentoSoapIn" />
+      <wsdl:output message="tns:ConsultarConteudoDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistarConteudoDocumento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Registar um conteudo de um documento registado no DocInporto.</wsdl:documentation>
+      <wsdl:input message="tns:RegistarConteudoDocumentoSoapIn" />
+      <wsdl:output message="tns:RegistarConteudoDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistarConteudoDocumentoXArq">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Sinalizar o docinporto que o conteudo já está digitallizado no XArq.</wsdl:documentation>
+      <wsdl:input message="tns:RegistarConteudoDocumentoXArqSoapIn" />
+      <wsdl:output message="tns:RegistarConteudoDocumentoXArqSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ArquivarDocumento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Arquivar um documento no DocInporto.</wsdl:documentation>
+      <wsdl:input message="tns:ArquivarDocumentoSoapIn" />
+      <wsdl:output message="tns:ArquivarDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarAnexoDocumento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obter anexo de um documento registado no DocInporto.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarAnexoDocumentoSoapIn" />
+      <wsdl:output message="tns:ConsultarAnexoDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistarAnexoDocumentoInterno">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Registar um anexo associado a um documento Interno registado no DocInporto.</wsdl:documentation>
+      <wsdl:input message="tns:RegistarAnexoDocumentoInternoSoapIn" />
+      <wsdl:output message="tns:RegistarAnexoDocumentoInternoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistarAnexoDocumentoEntrada">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Registar um anexo de um documento Entrada registado no DocInporto.</wsdl:documentation>
+      <wsdl:input message="tns:RegistarAnexoDocumentoEntradaSoapIn" />
+      <wsdl:output message="tns:RegistarAnexoDocumentoEntradaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PesquisaDocumentos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Pesquisa os documentos da lista Geral do DocInporto que satisfazem uma determinada pesquisa.</wsdl:documentation>
+      <wsdl:input message="tns:PesquisaDocumentosSoapIn" />
+      <wsdl:output message="tns:PesquisaDocumentosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PesquisaDocumentosV1">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Pesquisa os documentos da lista Geral do DocInporto que satisfazem uma determinada pesquisa.</wsdl:documentation>
+      <wsdl:input message="tns:PesquisaDocumentosV1SoapIn" />
+      <wsdl:output message="tns:PesquisaDocumentosV1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PesquisaDocumentosAgregadosCapa">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Pesquisa os documentos agregados a um documento do DocInporto que satisfaçam uma determinada pesquisa.</wsdl:documentation>
+      <wsdl:input message="tns:PesquisaDocumentosAgregadosCapaSoapIn" />
+      <wsdl:output message="tns:PesquisaDocumentosAgregadosCapaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PesquisaDocumentosAssociadoCapa">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Pesquisa os documentos associados a um documento do DocInporto que satisfaçam uma determinada pesquisa.</wsdl:documentation>
+      <wsdl:input message="tns:PesquisaDocumentosAssociadoCapaSoapIn" />
+      <wsdl:output message="tns:PesquisaDocumentosAssociadoCapaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaEntidade">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista a entidade actual.</wsdl:documentation>
+      <wsdl:input message="tns:ListaEntidadeSoapIn" />
+      <wsdl:output message="tns:ListaEntidadeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaAssunto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista os assuntos.</wsdl:documentation>
+      <wsdl:input message="tns:ListaAssuntoSoapIn" />
+      <wsdl:output message="tns:ListaAssuntoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaIdentidade">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista as identidades.</wsdl:documentation>
+      <wsdl:input message="tns:ListaIdentidadeSoapIn" />
+      <wsdl:output message="tns:ListaIdentidadeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PesquisaEncaminhamentoDocumento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista os encaminhamentos de um documento DocInporto.</wsdl:documentation>
+      <wsdl:input message="tns:PesquisaEncaminhamentoDocumentoSoapIn" />
+      <wsdl:output message="tns:PesquisaEncaminhamentoDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaPlanoArquivo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista os planos de arquivo.</wsdl:documentation>
+      <wsdl:input message="tns:ListaPlanoArquivoSoapIn" />
+      <wsdl:output message="tns:ListaPlanoArquivoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaAnexosDocumento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista os anexos de um documento DocInporto.</wsdl:documentation>
+      <wsdl:input message="tns:ListaAnexosDocumentoSoapIn" />
+      <wsdl:output message="tns:ListaAnexosDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaTipoRegisto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista os tipos de registos.</wsdl:documentation>
+      <wsdl:input message="tns:ListaTipoRegistoSoapIn" />
+      <wsdl:output message="tns:ListaTipoRegistoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaTipoEntrada">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista os tipos de documento entrada.</wsdl:documentation>
+      <wsdl:input message="tns:ListaTipoEntradaSoapIn" />
+      <wsdl:output message="tns:ListaTipoEntradaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaDespachoFinal">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista os 'modelos' de despachos finais.</wsdl:documentation>
+      <wsdl:input message="tns:ListaDespachoFinalSoapIn" />
+      <wsdl:output message="tns:ListaDespachoFinalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaTipoDespachoTexto">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista os 'modelos' de despachos.</wsdl:documentation>
+      <wsdl:input message="tns:ListaTipoDespachoTextoSoapIn" />
+      <wsdl:output message="tns:ListaTipoDespachoTextoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaTipoAnexo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista os tipos de anexos.</wsdl:documentation>
+      <wsdl:input message="tns:ListaTipoAnexoSoapIn" />
+      <wsdl:output message="tns:ListaTipoAnexoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaTecnico">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista os tecnicos.</wsdl:documentation>
+      <wsdl:input message="tns:ListaTecnicoSoapIn" />
+      <wsdl:output message="tns:ListaTecnicoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PesquisaDocumentosGM">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Pesquisa os documentos do DocInporto que satisfazem uma determinada pesquisa.Para o GM</wsdl:documentation>
+      <wsdl:input message="tns:PesquisaDocumentosGMSoapIn" />
+      <wsdl:output message="tns:PesquisaDocumentosGMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterURLSIG">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obter o URL para visualizar a planta de localização no SIG.</wsdl:documentation>
+      <wsdl:input message="tns:ObterURLSIGSoapIn" />
+      <wsdl:output message="tns:ObterURLSIGSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterValorJM">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obter o URL para visualizar a planta de localização no SIG.</wsdl:documentation>
+      <wsdl:input message="tns:ObterValorJMSoapIn" />
+      <wsdl:output message="tns:ObterValorJMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EncaminharDocumento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Encaminhamento Interno de um documento no DocInporto.</wsdl:documentation>
+      <wsdl:input message="tns:EncaminharDocumentoSoapIn" />
+      <wsdl:output message="tns:EncaminharDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EncaminharDocumentoV1">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Encaminhamento Interno de um documento no DocInporto.</wsdl:documentation>
+      <wsdl:input message="tns:EncaminharDocumentoV1SoapIn" />
+      <wsdl:output message="tns:EncaminharDocumentoV1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaNrPolicia">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna um DataSet com todos os números de policia existente para referencte ao CODMORADA</wsdl:documentation>
+      <wsdl:input message="tns:ObterListaNrPoliciaSoapIn" />
+      <wsdl:output message="tns:ObterListaNrPoliciaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CriarPreRegistoInterno">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Criar documento interno sem dados.</wsdl:documentation>
+      <wsdl:input message="tns:CriarPreRegistoInternoSoapIn" />
+      <wsdl:output message="tns:CriarPreRegistoInternoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConteudoDocumentoAssinado">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Conteudo Assinado DocInporto.</wsdl:documentation>
+      <wsdl:input message="tns:ConteudoDocumentoAssinadoSoapIn" />
+      <wsdl:output message="tns:ConteudoDocumentoAssinadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaAgregados">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obter Lista de agregados de um NUD.</wsdl:documentation>
+      <wsdl:input message="tns:ObterListaAgregadosSoapIn" />
+      <wsdl:output message="tns:ObterListaAgregadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaParaAgregacao">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obter Lista de documentos Possiveis para agregar ao NUD.</wsdl:documentation>
+      <wsdl:input message="tns:ObterListaParaAgregacaoSoapIn" />
+      <wsdl:output message="tns:ObterListaParaAgregacaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AgregarDocumento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Agregar Documento NUD ao NUD_Capa.</wsdl:documentation>
+      <wsdl:input message="tns:AgregarDocumentoSoapIn" />
+      <wsdl:output message="tns:AgregarDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarEncaminhamentoDocumento">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Encaminhamento Interno de um documento no DocInporto.</wsdl:documentation>
+      <wsdl:input message="tns:ValidarEncaminhamentoDocumentoSoapIn" />
+      <wsdl:output message="tns:ValidarEncaminhamentoDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaDocumentosArquivoGeral">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obter Lista de documentos enviados para arquivo Geral.</wsdl:documentation>
+      <wsdl:input message="tns:ListaDocumentosArquivoGeralSoapIn" />
+      <wsdl:output message="tns:ListaDocumentosArquivoGeralSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaInicioProcesso">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obter Lista de documentos enviados para arquivo Geral.</wsdl:documentation>
+      <wsdl:input message="tns:ActualizaInicioProcessoSoapIn" />
+      <wsdl:output message="tns:ActualizaInicioProcessoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicoDocumentosSoap" type="tns:ServicoDocumentosSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObterDespachoFormalAssinadoDocumento">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ObterDespachoFormalAssinadoDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CriarFichaDocumento">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/CriarFichaDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CriarFichaDocumentoAgregado">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/CriarFichaDocumentoAgregado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CriarFichaDocumentoAssociado">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/CriarFichaDocumentoAssociado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetalheFichaDocumento">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/DetalheFichaDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditarFichaDocumento">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/EditarFichaDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarFichaDocumento">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/GuardarFichaDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LibertaFichaDocumento">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/LibertaFichaDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarConteudoDocumento">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ConsultarConteudoDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistarConteudoDocumento">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/RegistarConteudoDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistarConteudoDocumentoXArq">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/RegistarConteudoDocumentoXArq" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ArquivarDocumento">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ArquivarDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarAnexoDocumento">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ConsultarAnexoDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistarAnexoDocumentoInterno">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/RegistarAnexoDocumentoInterno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistarAnexoDocumentoEntrada">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/RegistarAnexoDocumentoEntrada" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PesquisaDocumentos">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/PesquisaDocumentos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PesquisaDocumentosSoapHeaderUser" part="SoapHeaderUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PesquisaDocumentosV1">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/PesquisaDocumentosV1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:PesquisaDocumentosV1SoapHeaderUser" part="SoapHeaderUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PesquisaDocumentosAgregadosCapa">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/PesquisaDocumentosAgregadosCapa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PesquisaDocumentosAssociadoCapa">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/PesquisaDocumentosAssociadoCapa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaEntidade">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ListaEntidade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaAssunto">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ListaAssunto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaIdentidade">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ListaIdentidade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ListaIdentidadeSoapHeaderUser" part="SoapHeaderUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PesquisaEncaminhamentoDocumento">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/PesquisaEncaminhamentoDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaPlanoArquivo">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ListaPlanoArquivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaAnexosDocumento">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ListaAnexosDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaTipoRegisto">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ListaTipoRegisto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaTipoEntrada">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ListaTipoEntrada" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaDespachoFinal">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ListaDespachoFinal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaTipoDespachoTexto">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ListaTipoDespachoTexto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaTipoAnexo">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ListaTipoAnexo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaTecnico">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ListaTecnico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PesquisaDocumentosGM">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/PesquisaDocumentosGM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterURLSIG">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ObterURLSIG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterValorJM">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ObterValorJM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncaminharDocumento">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/EncaminharDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncaminharDocumentoV1">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/EncaminharDocumentoV1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:EncaminharDocumentoV1SoapHeaderUser" part="SoapHeaderUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaNrPolicia">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ObterListaNrPolicia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CriarPreRegistoInterno">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/CriarPreRegistoInterno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConteudoDocumentoAssinado">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ConteudoDocumentoAssinado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ConteudoDocumentoAssinadoSoapHeaderUser" part="SoapHeaderUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaAgregados">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ObterListaAgregados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ObterListaAgregadosSoapHeaderUser" part="SoapHeaderUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaParaAgregacao">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ObterListaParaAgregacao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ObterListaParaAgregacaoSoapHeaderUser" part="SoapHeaderUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarDocumento">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/AgregarDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:AgregarDocumentoSoapHeaderUser" part="SoapHeaderUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarEncaminhamentoDocumento">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ValidarEncaminhamentoDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ValidarEncaminhamentoDocumentoSoapHeaderUser" part="SoapHeaderUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaDocumentosArquivoGeral">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ListaDocumentosArquivoGeral" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaInicioProcesso">
+      <soap:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ActualizaInicioProcesso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ActualizaInicioProcessoSoapHeaderUser" part="SoapHeaderUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServicoDocumentosSoap12" type="tns:ServicoDocumentosSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObterDespachoFormalAssinadoDocumento">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ObterDespachoFormalAssinadoDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CriarFichaDocumento">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/CriarFichaDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CriarFichaDocumentoAgregado">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/CriarFichaDocumentoAgregado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CriarFichaDocumentoAssociado">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/CriarFichaDocumentoAssociado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetalheFichaDocumento">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/DetalheFichaDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditarFichaDocumento">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/EditarFichaDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarFichaDocumento">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/GuardarFichaDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LibertaFichaDocumento">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/LibertaFichaDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarConteudoDocumento">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ConsultarConteudoDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistarConteudoDocumento">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/RegistarConteudoDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistarConteudoDocumentoXArq">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/RegistarConteudoDocumentoXArq" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ArquivarDocumento">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ArquivarDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarAnexoDocumento">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ConsultarAnexoDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistarAnexoDocumentoInterno">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/RegistarAnexoDocumentoInterno" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistarAnexoDocumentoEntrada">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/RegistarAnexoDocumentoEntrada" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PesquisaDocumentos">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/PesquisaDocumentos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PesquisaDocumentosSoapHeaderUser" part="SoapHeaderUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PesquisaDocumentosV1">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/PesquisaDocumentosV1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:PesquisaDocumentosV1SoapHeaderUser" part="SoapHeaderUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PesquisaDocumentosAgregadosCapa">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/PesquisaDocumentosAgregadosCapa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PesquisaDocumentosAssociadoCapa">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/PesquisaDocumentosAssociadoCapa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaEntidade">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ListaEntidade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaAssunto">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ListaAssunto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaIdentidade">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ListaIdentidade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ListaIdentidadeSoapHeaderUser" part="SoapHeaderUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PesquisaEncaminhamentoDocumento">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/PesquisaEncaminhamentoDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaPlanoArquivo">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ListaPlanoArquivo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaAnexosDocumento">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ListaAnexosDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaTipoRegisto">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ListaTipoRegisto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaTipoEntrada">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ListaTipoEntrada" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaDespachoFinal">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ListaDespachoFinal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaTipoDespachoTexto">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ListaTipoDespachoTexto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaTipoAnexo">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ListaTipoAnexo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaTecnico">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ListaTecnico" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PesquisaDocumentosGM">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/PesquisaDocumentosGM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterURLSIG">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ObterURLSIG" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterValorJM">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ObterValorJM" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncaminharDocumento">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/EncaminharDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncaminharDocumentoV1">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/EncaminharDocumentoV1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:EncaminharDocumentoV1SoapHeaderUser" part="SoapHeaderUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaNrPolicia">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ObterListaNrPolicia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CriarPreRegistoInterno">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/CriarPreRegistoInterno" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConteudoDocumentoAssinado">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ConteudoDocumentoAssinado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ConteudoDocumentoAssinadoSoapHeaderUser" part="SoapHeaderUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaAgregados">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ObterListaAgregados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ObterListaAgregadosSoapHeaderUser" part="SoapHeaderUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterListaParaAgregacao">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ObterListaParaAgregacao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ObterListaParaAgregacaoSoapHeaderUser" part="SoapHeaderUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AgregarDocumento">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/AgregarDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:AgregarDocumentoSoapHeaderUser" part="SoapHeaderUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarEncaminhamentoDocumento">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ValidarEncaminhamentoDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ValidarEncaminhamentoDocumentoSoapHeaderUser" part="SoapHeaderUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaDocumentosArquivoGeral">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ListaDocumentosArquivoGeral" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaInicioProcesso">
+      <soap12:operation soapAction="http://www.cm-porto.pt/ServicoDocumentos/ActualizaInicioProcesso" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ActualizaInicioProcessoSoapHeaderUser" part="SoapHeaderUser" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicoDocumentos">
+    <wsdl:port name="ServicoDocumentosSoap" binding="tns:ServicoDocumentosSoap">
+      <soap:address location="http://10.10.0.131/CMPWSDocumentos/ServicoDocumentos.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServicoDocumentosSoap12" binding="tns:ServicoDocumentosSoap12">
+      <soap12:address location="http://10.10.0.131/CMPWSDocumentos/ServicoDocumentos.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

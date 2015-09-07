@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1AED060D-26D9-4C73-BFFB-F73989BDD373}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>DBAbstractDataLayer</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DBAbstractDataLayer</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <KeyContainerName></KeyContainerName>
+    <SignAssembly>false</SignAssembly>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE;AllowAlternativeDB</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;AllowAlternativeDB</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\CustomCommandBuilder\CustomCommandBuilder.csproj">
+      <Name>CustomCommandBuilder</Name>
+      <Project>{96F3E2F5-CDD5-4064-BE01-EDAB9D643207}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\AssemblyInfosShared\AssemblyInfoShared.cs">
+      <Link>AssemblyInfoShared.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConnectionBuilders\Builder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConnectionBuilders\SqlClientBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\AutoEliminacaoRule.cs" />
+    <Compile Include="DataAccessRules\ConcorrenciaRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\ControloAutRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\DALRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\DepositoRule.cs" />
+    <Compile Include="DataAccessRules\DiplomaModeloRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\EADGeneratorRule.cs" />
+    <Compile Include="DataAccessRules\EstatisticasRule.cs" />
+    <Compile Include="DataAccessRules\ExceptionHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\FedoraRule.cs" />
+    <Compile Include="DataAccessRules\FRDRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\GisaDataSetHelperRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\GisaInstallerRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\GISATreeNodeRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\ImportRule.cs" />
+    <Compile Include="DataAccessRules\IntGestDocRule.cs" />
+    <Compile Include="DataAccessRules\MovimentoRule.cs" />
+    <Compile Include="DataAccessRules\NivelRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\ObjetoDigitalStatusRule.cs" />
+    <Compile Include="DataAccessRules\PaginatedListRule.cs" />
+    <Compile Include="DataAccessRules\PermissoesRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\PersistencyHelperRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\PesquisaRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\RelatorioRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\SqlClient\SqlClientAutoEliminacaoRule.cs" />
+    <Compile Include="DataAccessRules\SqlClient\SqlClientConcorrenciaRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\SqlClient\SqlClientControloAutRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\SqlClient\SqlClientDepositoRule.cs" />
+    <Compile Include="DataAccessRules\SqlClient\SqlClientDiplomaModeloRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\SqlClient\SqlClientEADGeneratorRule.cs" />
+    <Compile Include="DataAccessRules\SqlClient\SqlClientEstatisticasRule.cs" />
+    <Compile Include="DataAccessRules\SqlClient\SqlClientFedoraRule.cs" />
+    <Compile Include="DataAccessRules\SqlClient\SqlClientFRDRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\SqlClient\SqlClientGisaDataSetHelperRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\SqlClient\SqlClientGisaInstallerRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\SqlClient\SqlClientGISATreeNodeRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\SqlClient\SqlClientImportRule.cs" />
+    <Compile Include="DataAccessRules\SqlClient\SqlClientIntGestDocRule.cs" />
+    <Compile Include="DataAccessRules\SqlClient\SqlClientMovimentoRule.cs" />
+    <Compile Include="DataAccessRules\SqlClient\SqlClientNivelRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\SqlClient\SqlClientObjectoDigitalStatusRule.cs" />
+    <Compile Include="DataAccessRules\SqlClient\SqlClientPaginatedListRule.cs" />
+    <Compile Include="DataAccessRules\SqlClient\SqlClientPermissoesRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\SqlClient\SqlClientPersistencyHelperRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\SqlClient\SqlClientPesquisaRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\SqlClient\SqlClientRelatorioRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\SqlClient\SqlClientTipoNivelRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\SqlClient\SqlClientTrusteeRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\SqlClient\SqlClientUFRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\SqlClient\SqlSyntax.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\Syntax.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\TipoNivelRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\TrusteeRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataAccessRules\UFRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IMetaModelProvider.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

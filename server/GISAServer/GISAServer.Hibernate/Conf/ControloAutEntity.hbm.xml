@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+
+<class name="GISAServer.Hibernate.Objects.ControloAutEntity, GISAServer.Hibernate" table="ControloAut" >
+
+<id name="Id" column="ID" type="System.Int64" unsaved-value="null"><generator class="native"/></id>
+
+<property name="Autorizado" column="Autorizado" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="ChaveColectividade" column="ChaveColectividade" access="field.pascalcase-underscore" not-null="false" type="System.String"  length="256" insert="true" update="true"/>
+<property name="ChaveRegisto" column="ChaveRegisto" access="field.pascalcase-underscore" not-null="false" type="System.String"  length="256" insert="true" update="true"/>
+<property name="Completo" column="Completo" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="DescContextoGeral" column="DescContextoGeral" access="field.pascalcase-underscore" not-null="false" type="StringClob"  insert="true" update="true"/>
+<property name="DescEnquadramentoLegal" column="DescEnquadramentoLegal" access="field.pascalcase-underscore" not-null="false" type="StringClob"  insert="true" update="true"/>
+<property name="DescEstatutoLegal" column="DescEstatutoLegal" access="field.pascalcase-underscore" not-null="false" type="StringClob"  insert="true" update="true"/>
+<property name="DescEstruturaInterna" column="DescEstruturaInterna" access="field.pascalcase-underscore" not-null="false" type="StringClob"  insert="true" update="true"/>
+<property name="DescHistoria" column="DescHistoria" access="field.pascalcase-underscore" not-null="false" type="StringClob"  insert="true" update="true"/>
+<property name="DescOcupacoesActividades" column="DescOcupacoesActividades" access="field.pascalcase-underscore" not-null="false" type="StringClob"  insert="true" update="true"/>
+<property name="DescOutraInformacaoRelevante" column="DescOutraInformacaoRelevante" access="field.pascalcase-underscore" not-null="false" type="StringClob"  insert="true" update="true"/>
+<property name="DescZonaGeografica" column="DescZonaGeografica" access="field.pascalcase-underscore" not-null="false" type="StringClob"  insert="true" update="true"/>
+<property name="IsDeleted" column="isDeleted" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="NotaExplicativa" column="NotaExplicativa" access="field.pascalcase-underscore" not-null="false" type="StringClob"  insert="true" update="true"/>
+<property name="Observacoes" column="Observacoes" access="field.pascalcase-underscore" not-null="false" type="StringClob"  insert="true" update="true"/>
+<property name="RegrasConvencoes" column="RegrasConvencoes" access="field.pascalcase-underscore" not-null="false" type="StringClob"  insert="true" update="true"/>
+<property name="Versao" column="Versao" access="field.pascalcase-underscore" not-null="true" type="System.Byte[]"  insert="false" update="false"/>
+<many-to-one name="Iso15924"  access="field.pascalcase-underscore" not-null="false" outer-join="auto" insert="true" update="true">
+	<column name="IDIso15924"/>
+</many-to-one>
+<many-to-one name="Iso639p2"  access="field.pascalcase-underscore" not-null="false" outer-join="auto" insert="true" update="true">
+	<column name="IDIso639p2"/>
+</many-to-one>
+<many-to-one name="TipoNoticiaAut"  access="field.pascalcase-underscore" not-null="true" outer-join="auto" insert="true" update="true">
+	<column name="IDTipoNoticiaAut"/>
+</many-to-one>
+
+<set name="FKNivelControloAutControloAut" cascade="none" inverse="true" lazy="true" access="field.pascalcase-underscore">
+	<key>
+		<column name="IDControloAut"/>
+	</key>
+	<one-to-many class="GISAServer.Hibernate.Objects.NivelControloAutEntity, GISAServer.Hibernate"/>
+</set>
+
+</class>
+</hibernate-mapping>

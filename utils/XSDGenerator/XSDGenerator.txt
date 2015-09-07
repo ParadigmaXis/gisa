@@ -1,0 +1,5 @@
+Exemplo de caso de utilização:
+
+(local)\GISA
+GISA_C_EMPTY
+GISADataset

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+
+<class name="GISAServer.Hibernate.Objects.TrusteePrivilegeEntity, GISAServer.Hibernate" table="TrusteePrivilege" >
+
+<composite-id name="Id" class="GISAServer.Hibernate.Utils.QuadIdComponent, GISAServer.Hibernate">
+	<key-property name="Key3" column="IdxTipoFunction" type="System.Byte"/>
+	<key-property name="Key4" column="IDTipoOperation" type="System.Byte"/>
+	<key-property name="Key2" column="IDTrustee" type="System.Int64"/>
+	<key-property name="Key1" column="IDTipoFunctionGroup" type="System.Byte"/>
+</composite-id>
+
+<property name="IsDeleted" column="isDeleted" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="IsGrant" column="IsGrant" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="Versao" column="Versao" access="field.pascalcase-underscore" not-null="true" type="System.Byte[]"  insert="false" update="false"/>
+<!--many-to-one name="FKTrusteePrivilegeFunctionOperation"  access="field.pascalcase-underscore" not-null="true" outer-join="auto" insert="false" update="false">
+	<column name="IDTipoFunctionGroup"/>
+	<column name="IdxTipoFunction"/>
+	<column name="IDTipoOperation"/>
+</many-to-one>
+<many-to-one name="TipoFunctionGroup" column="IDTipoFunctionGroup" access="field.pascalcase-underscore" not-null="true" outer-join="auto" insert="false" update="false"></many-to-one>
+<many-to-one name="TipoOperation" column="IDTipoOperation" access="field.pascalcase-underscore" not-null="true" outer-join="auto" insert="false" update="false"></many-to-one-->
+<many-to-one name="Trustee" column="IDTrustee" access="field.pascalcase-underscore" not-null="true" outer-join="auto" insert="false" update="false"></many-to-one>
+<!--many-to-one name="TipoFunction" column="IdxTipoFunction" access="field.pascalcase-underscore" not-null="true" outer-join="auto" insert="false" update="false"></many-to-one-->
+
+
+</class>
+</hibernate-mapping>

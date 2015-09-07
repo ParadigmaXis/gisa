@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+
+<class name="GISAServer.Hibernate.Objects.Iso15924Entity, GISAServer.Hibernate" table="Iso15924" >
+
+<id name="Id" column="ID" type="System.Int64" unsaved-value="null"><generator class="native"/></id>
+
+<property name="CodeAlpha2" column="CodeAlpha2" access="field.pascalcase-underscore" not-null="true" type="System.String"  length="2" insert="true" update="true"/>
+<property name="CodeAlpha3" column="CodeAlpha3" access="field.pascalcase-underscore" not-null="true" type="System.String"  length="3" insert="true" update="true"/>
+<property name="CodeNumeric" column="CodeNumeric" access="field.pascalcase-underscore" not-null="true" type="System.Decimal"  insert="true" update="true"/>
+<property name="IsDeleted" column="isDeleted" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="ScriptNameEnglish" column="ScriptNameEnglish" access="field.pascalcase-underscore" not-null="true" type="System.String"  length="50" insert="true" update="true"/>
+<property name="Versao" column="Versao" access="field.pascalcase-underscore" not-null="true" type="System.Byte[]"  insert="false" update="false"/>
+
+<set name="FKControloAutIso15924" cascade="none" inverse="true" lazy="true" access="field.pascalcase-underscore">
+	<key>
+		<column name="IDIso15924"/>
+	</key>
+	<one-to-many class="GISAServer.Hibernate.Objects.ControloAutEntity, GISAServer.Hibernate"/>
+</set>
+
+</class>
+</hibernate-mapping>

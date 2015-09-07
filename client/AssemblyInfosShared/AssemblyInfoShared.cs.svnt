@@ -1,0 +1,27 @@
+using System;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//Assembly Identity Attributes
+//[assembly: AssemblyCulture("")]
+//[assembly: AssemblyFlags()]
+[assembly: AssemblyVersion("$WCREV$")]
+
+//Informational Attributes
+[assembly: AssemblyProduct("Gisa")]
+[assembly: AssemblyInformationalVersion("$HASH$")]
+[assembly: AssemblyCompany("ParadigmaXis")]
+[assembly: AssemblyCopyright("© 2015 ParadigmaXis, SA.")]
+//[assembly: AssemblyTrademark("")]
+//[assembly: AssemblyFileVersion("")]
+
+//Assembly Manifest Attributes
+//[assembly: AssemblyTitle("")]
+//[assembly: AssemblyDescription("")]
+//[assembly: AssemblyConfiguration("")]
+//[assembly: AssemblyDefaultAlias("")]
+
+//Strong Name Attributes
+//[assembly: AssemblyDelaySign(false)]
+//[assembly: AssemblyKeyName("ParadigmaXis")]
+//[assembly: AssemblyKeyFile("")]

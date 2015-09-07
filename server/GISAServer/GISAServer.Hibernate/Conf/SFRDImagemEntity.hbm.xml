@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+
+<class name="GISAServer.Hibernate.Objects.SFRDImagemEntity, GISAServer.Hibernate" table="SFRDImagem" >
+
+<id name="Id" column="idx" type="System.Int64" unsaved-value="null"><generator class="native"/></id>
+
+<property name="Descricao" column="Descricao" access="field.pascalcase-underscore" not-null="false" type="StringClob"  insert="true" update="true"/>
+<property name="GUIOrder" column="GUIOrder" access="field.pascalcase-underscore" not-null="true" type="System.Int64"  insert="true" update="true"/>
+<property name="Identificador" column="Identificador" access="field.pascalcase-underscore" not-null="true" type="StringClob"  insert="true" update="true"/>
+<property name="IsDeleted" column="isDeleted" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="Tipo" column="Tipo" access="field.pascalcase-underscore" not-null="true" type="System.String"  length="10" insert="true" update="true"/>
+<property name="Versao" column="Versao" access="field.pascalcase-underscore" not-null="true" type="System.Byte[]"  insert="false" update="false"/>
+<many-to-one name="FRDBase"  access="field.pascalcase-underscore" not-null="true" outer-join="auto" insert="true" update="true">
+	<column name="IDFRDBase"/>
+</many-to-one>
+<many-to-one name="SFDImagemVolume"  access="field.pascalcase-underscore" not-null="true" outer-join="auto" insert="true" update="true">
+	<column name="IDSFDImagemVolume"/>
+</many-to-one>
+
+
+</class>
+</hibernate-mapping>

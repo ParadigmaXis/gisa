@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+
+<class name="GISAServer.Hibernate.Objects.FRDBaseDataDeDescricaoEntity, GISAServer.Hibernate" table="FRDBaseDataDeDescricao" >
+
+<composite-id name="Id" class="GISAServer.Hibernate.Utils.TripleIdComponent, GISAServer.Hibernate">
+	<key-property name="Key3" column="IDTrusteeOperator" type="System.Int64"/>
+	<key-property name="Key1" column="DataEdicao" type="System.DateTime"/>
+	<key-property name="Key2" column="IDFRDBase" type="System.Int64"/>
+</composite-id>
+
+<property name="DataAutoria" column="DataAutoria" access="field.pascalcase-underscore" not-null="true" type="System.DateTime"  insert="true" update="true"/>
+<property name="DataEdicao" column="DataEdicao" access="field.pascalcase-underscore" not-null="true" type="System.DateTime" insert="false" update="false" />
+<property name="IsDeleted" column="isDeleted" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="Versao" column="Versao" access="field.pascalcase-underscore" not-null="true" type="System.Byte[]"  insert="false" update="false"/>
+<many-to-one name="TrusteeAuthority"  access="field.pascalcase-underscore" not-null="false" outer-join="auto" insert="true" update="true">
+	<column name="IDTrusteeAuthority"/>
+</many-to-one>
+<many-to-one name="FRDBase" column="IDFRDBase" access="field.pascalcase-underscore" not-null="true" outer-join="auto" insert="false" update="false"></many-to-one>
+<many-to-one name="TrusteeOperator" column="IDTrusteeOperator" access="field.pascalcase-underscore" not-null="true" outer-join="auto" insert="false" update="false"></many-to-one>
+
+
+</class>
+</hibernate-mapping>

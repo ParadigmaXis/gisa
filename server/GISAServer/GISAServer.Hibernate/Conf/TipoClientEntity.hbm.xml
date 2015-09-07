@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+
+<class name="GISAServer.Hibernate.Objects.TipoClientEntity, GISAServer.Hibernate" table="TipoClient" >
+
+<id name="Id" column="ID" type="System.Int64" unsaved-value="null"><generator class="assigned"/></id>
+
+<property name="BuiltInName" column="BuiltInName" access="field.pascalcase-underscore" not-null="true" type="System.String"  length="20" insert="true" update="true"/>
+<property name="IsDeleted" column="isDeleted" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="Name" column="Name" access="field.pascalcase-underscore" not-null="true" type="System.String"  length="50" insert="true" update="true"/>
+<property name="Versao" column="Versao" access="field.pascalcase-underscore" not-null="true" type="System.Byte[]"  insert="false" update="false"/>
+
+<set name="FKClientLicenseTipoClient1" cascade="none" inverse="true" lazy="true" access="field.pascalcase-underscore">
+	<key>
+		<column name="IDTipoClient"/>
+	</key>
+	<one-to-many class="GISAServer.Hibernate.Objects.ClientLicenseEntity, GISAServer.Hibernate"/>
+</set>
+
+</class>
+</hibernate-mapping>

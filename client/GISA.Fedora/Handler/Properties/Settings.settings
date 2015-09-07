@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="GISA.Fedora.FedoraHandler.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="GISA_Fedora_FedoraHandler_Fedora_APIA_Fedora_API_A_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/fedora/services/access</Value>
+    </Setting>
+    <Setting Name="GISA_Fedora_FedoraHandler_Fedora_APIM_Fedora_API_M_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/fedora/services/management</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

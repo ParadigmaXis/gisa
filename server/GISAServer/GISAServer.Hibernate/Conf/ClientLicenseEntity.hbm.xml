@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+
+<class name="GISAServer.Hibernate.Objects.ClientLicenseEntity, GISAServer.Hibernate" table="ClientLicense" >
+
+<composite-id name="Id" class="GISAServer.Hibernate.Utils.PairIdComponent, GISAServer.Hibernate">
+	<key-property name="Key2" column="GrantDate" type="System.DateTime"/>
+	<key-property name="Key1" column="SequenceNumber" type="System.Int32"/>
+</composite-id>
+
+<property name="AssemblyVersion" column="AssemblyVersion" access="field.pascalcase-underscore" not-null="false" type="System.String"  length="256" insert="true" update="true"/>
+<property name="FloatingLicensesCount" column="FloatingLicensesCount" access="field.pascalcase-underscore" not-null="true" type="System.Int16"  insert="true" update="true"/>
+<property name="GrantDate" column="GrantDate" access="field.pascalcase-underscore" not-null="true" type="System.DateTime" insert="false" update="false" />
+<property name="GranterName" column="GranterName" access="field.pascalcase-underscore" not-null="false" type="System.String"  length="256" insert="true" update="true"/>
+<property name="IsDeleted" column="isDeleted" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="SequenceNumber" column="SequenceNumber" access="field.pascalcase-underscore" not-null="true" type="System.Int32" insert="false" update="false" />
+<property name="SerialNumber" column="SerialNumber" access="field.pascalcase-underscore" not-null="true" type="System.String"  length="19" insert="true" update="true"/>
+<property name="Versao" column="Versao" access="field.pascalcase-underscore" not-null="true" type="System.Byte[]"  insert="false" update="false"/>
+<many-to-one name="TipoClient"  access="field.pascalcase-underscore" not-null="true" outer-join="auto" insert="true" update="true">
+	<column name="IDTipoClient"/>
+</many-to-one>
+
+
+</class>
+</hibernate-mapping>

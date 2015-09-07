@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+
+<class name="GISAServer.Hibernate.Objects.TipoEstadoConservacaoEntity, GISAServer.Hibernate" table="TipoEstadoConservacao" >
+
+<id name="Id" column="ID" type="System.Int64" unsaved-value="null"><generator class="native"/></id>
+
+<property name="Designacao" column="Designacao" access="field.pascalcase-underscore" not-null="true" type="System.String"  length="50" insert="true" update="true"/>
+<property name="IsDeleted" column="isDeleted" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="Versao" column="Versao" access="field.pascalcase-underscore" not-null="true" type="System.Byte[]"  insert="false" update="false"/>
+
+<set name="FKSFRDUFComponenteTipoEstadoConservacao" cascade="none" inverse="true" lazy="true" access="field.pascalcase-underscore">
+	<key>
+		<column name="IDTipoEstadoConservacao"/>
+	</key>
+	<one-to-many class="GISAServer.Hibernate.Objects.SFRDUFComponenteEntity, GISAServer.Hibernate"/>
+</set>
+
+</class>
+</hibernate-mapping>

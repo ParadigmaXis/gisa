@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="InsereToponimia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codmorada" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="morada" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsereToponimiaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsereToponimiaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminaToponimia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codmorada" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminaToponimiaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EliminaToponimiaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizaToponimia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codmorada" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="morada" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizaToponimiaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ActualizaToponimiaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PesquisaToponimia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="morada" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PesquisaToponimiaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PesquisaToponimiaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SeleccionaToponimia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codmorada" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SeleccionaToponimiaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SeleccionaToponimiaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="InsereToponimiaSoapIn">
+    <wsdl:part name="parameters" element="tns:InsereToponimia" />
+  </wsdl:message>
+  <wsdl:message name="InsereToponimiaSoapOut">
+    <wsdl:part name="parameters" element="tns:InsereToponimiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminaToponimiaSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminaToponimia" />
+  </wsdl:message>
+  <wsdl:message name="EliminaToponimiaSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminaToponimiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizaToponimiaSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizaToponimia" />
+  </wsdl:message>
+  <wsdl:message name="ActualizaToponimiaSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizaToponimiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="PesquisaToponimiaSoapIn">
+    <wsdl:part name="parameters" element="tns:PesquisaToponimia" />
+  </wsdl:message>
+  <wsdl:message name="PesquisaToponimiaSoapOut">
+    <wsdl:part name="parameters" element="tns:PesquisaToponimiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="SeleccionaToponimiaSoapIn">
+    <wsdl:part name="parameters" element="tns:SeleccionaToponimia" />
+  </wsdl:message>
+  <wsdl:message name="SeleccionaToponimiaSoapOut">
+    <wsdl:part name="parameters" element="tns:SeleccionaToponimiaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ToponimiaWSSoap">
+    <wsdl:operation name="InsereToponimia">
+      <wsdl:input message="tns:InsereToponimiaSoapIn" />
+      <wsdl:output message="tns:InsereToponimiaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminaToponimia">
+      <wsdl:input message="tns:EliminaToponimiaSoapIn" />
+      <wsdl:output message="tns:EliminaToponimiaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaToponimia">
+      <wsdl:input message="tns:ActualizaToponimiaSoapIn" />
+      <wsdl:output message="tns:ActualizaToponimiaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PesquisaToponimia">
+      <wsdl:input message="tns:PesquisaToponimiaSoapIn" />
+      <wsdl:output message="tns:PesquisaToponimiaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionaToponimia">
+      <wsdl:input message="tns:SeleccionaToponimiaSoapIn" />
+      <wsdl:output message="tns:SeleccionaToponimiaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ToponimiaWSSoap" type="tns:ToponimiaWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsereToponimia">
+      <soap:operation soapAction="http://tempuri.org/InsereToponimia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminaToponimia">
+      <soap:operation soapAction="http://tempuri.org/EliminaToponimia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaToponimia">
+      <soap:operation soapAction="http://tempuri.org/ActualizaToponimia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PesquisaToponimia">
+      <soap:operation soapAction="http://tempuri.org/PesquisaToponimia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionaToponimia">
+      <soap:operation soapAction="http://tempuri.org/SeleccionaToponimia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ToponimiaWSSoap12" type="tns:ToponimiaWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsereToponimia">
+      <soap12:operation soapAction="http://tempuri.org/InsereToponimia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminaToponimia">
+      <soap12:operation soapAction="http://tempuri.org/EliminaToponimia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaToponimia">
+      <soap12:operation soapAction="http://tempuri.org/ActualizaToponimia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PesquisaToponimia">
+      <soap12:operation soapAction="http://tempuri.org/PesquisaToponimia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SeleccionaToponimia">
+      <soap12:operation soapAction="http://tempuri.org/SeleccionaToponimia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ToponimiaWS">
+    <wsdl:port name="ToponimiaWSSoap" binding="tns:ToponimiaWSSoap">
+      <soap:address location="http://10.10.11.25:1500/cmpwstoponimia/toponimia.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ToponimiaWSSoap12" binding="tns:ToponimiaWSSoap12">
+      <soap12:address location="http://10.10.11.25:1500/cmpwstoponimia/toponimia.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

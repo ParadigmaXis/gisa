@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+
+<class name="GISAServer.Hibernate.Objects.TrusteeEntity, GISAServer.Hibernate" table="Trustee" >
+
+<id name="Id" column="ID" type="System.Int64" unsaved-value="null"><generator class="native"/></id>
+
+<property name="BuiltInTrustee" column="BuiltInTrustee" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="CatCode" column="CatCode" access="field.pascalcase-underscore" not-null="true" type="System.String"  length="3" insert="true" update="true"/>
+<property name="Description" column="Description" access="field.pascalcase-underscore" not-null="false" type="System.String"  length="255" insert="true" update="true"/>
+<property name="IsActive" column="IsActive" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="IsDeleted" column="isDeleted" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="IsVisibleFunction" column="IsVisibleFunction" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="IsVisibleObject" column="IsVisibleObject" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="Name" column="Name" access="field.pascalcase-underscore" not-null="true" type="System.String"  length="50" insert="true" update="true"/>
+<property name="Versao" column="Versao" access="field.pascalcase-underscore" not-null="true" type="System.Byte[]"  insert="false" update="false"/>
+
+
+</class>
+</hibernate-mapping>

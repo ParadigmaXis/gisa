@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{32444116-C646-4A6B-A177-74C4E410B1D1}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>GISA.Model</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GISA.Model</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <KeyContainerName></KeyContainerName>
+    <SignAssembly>false</SignAssembly>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG;AllowAlternativeDB;IGNORELICENSE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;TESTING;IGNORELICENSE</DefineConstants>
+    <WarningLevel>1</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GISA.Webservices\GISA.Webservices.csproj">
+      <Project>{38063153-1424-4921-9296-A92645E198DE}</Project>
+      <Name>GISA.Webservices</Name>
+    </ProjectReference>
+    <Reference Include="Microsoft.VisualBasic">
+      <Name>Microsoft.VisualBasic</Name>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.5.2.9222, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalDependencies\NUnit-2.5.2.9222-net-2.0\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\GISA.DBAccess\DBAbstractDataLayer\DBAbstractDataLayer.csproj">
+      <Name>DBAbstractDataLayer</Name>
+      <Project>{1AED060D-26D9-4C73-BFFB-F73989BDD373}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Fedora\Handler\FedoraHandler.csproj">
+      <Project>{21F1AD66-1C1E-454B-9264-914655338ABF}</Project>
+      <Name>FedoraHandler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.SharedResources\GISA.SharedResources.csproj">
+      <Name>GISA.SharedResources</Name>
+      <Project>{FF599116-AB19-40CB-A5FE-9314646B212E}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Utils\GISA.Utils.csproj">
+      <Name>GISA.Utils</Name>
+      <Project>{FA9FD233-78AD-42EA-B104-953264998A28}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\AssemblyInfosShared\AssemblyInfoShared.cs">
+      <Link>AssemblyInfoShared.cs</Link>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ControloAutHelper.cs" />
+    <Compile Include="ImageHelper.cs" />
+    <Compile Include="ObjetoDigitalFedoraHelper.cs" />
+    <Compile Include="PreTransactionAction.cs" />
+    <Compile Include="Concorrencia.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DelegatesHelper.cs" />
+    <Compile Include="DomainValues.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FedoraHelper.cs" />
+    <Compile Include="FormConcurrencyChanges.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConcurrencyMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GISADataset.cs">
+      <DependentUpon>GISADataset.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GISADataset.Designer.cs">
+      <DependentUpon>GISADataset.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="GisaDataSetHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GisaPrincipal.cs" />
+    <Compile Include="GisaPrincipalPermission.cs" />
+    <Compile Include="GisaPrincipalPermissionAttribute.cs" />
+    <Compile Include="GISATreeNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GUIExtension.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MetaModel\MetaModelHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NiveisHelper.cs" />
+    <Compile Include="Nivel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NivelSorter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PermissoesHelper.cs" />
+    <Compile Include="PersistencyHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PostSaveAction.cs" />
+    <Compile Include="PXMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RecordRegisterHelper.cs" />
+    <Compile Include="ReflectionHelper.cs" />
+    <Compile Include="RegistryHelper.cs" />
+    <Compile Include="SessionHelper.cs" />
+    <Compile Include="TableDepthOrdered.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TipoNivel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TranslationHelper.cs" />
+    <Compile Include="Trustee.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UnidadesFisicasHelper.cs" />
+    <EmbeddedResource Include="FormConcurrencyChanges.resx">
+      <DependentUpon>FormConcurrencyChanges.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConcurrencyMessage.resx">
+      <DependentUpon>FormConcurrencyMessage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MetaModel\DataTypesDictionary.xml" />
+    <EmbeddedResource Include="MetaModel\GISADataset.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PXMenuItem.resx">
+      <DependentUpon>PXMenuItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GISADataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GISADataset.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GISADataset.xsc">
+      <DependentUpon>GISADataset.xsd</DependentUpon>
+    </None>
+    <None Include="GISADataset.xss">
+      <DependentUpon>GISADataset.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

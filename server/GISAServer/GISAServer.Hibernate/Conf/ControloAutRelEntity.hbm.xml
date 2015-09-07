@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+
+<class name="GISAServer.Hibernate.Objects.ControloAutRelEntity, GISAServer.Hibernate" table="ControloAutRel" >
+
+<composite-id name="Id" class="GISAServer.Hibernate.Utils.TripleIdComponent, GISAServer.Hibernate">
+	<key-property name="Key2" column="IDTipoRel" type="System.Int64"/>
+	<key-property name="Key3" column="IDControloAut" type="System.Int64"/>
+	<key-property name="Key1" column="IDControloAutAlias" type="System.Int64"/>
+</composite-id>
+
+<property name="Descricao" column="Descricao" access="field.pascalcase-underscore" not-null="false" type="System.String"  length="4000" insert="true" update="true"/>
+<property name="FimAno" column="FimAno" access="field.pascalcase-underscore" not-null="false" type="System.String"  length="4" insert="true" update="true"/>
+<property name="FimDia" column="FimDia" access="field.pascalcase-underscore" not-null="false" type="System.String"  length="2" insert="true" update="true"/>
+<property name="FimMes" column="FimMes" access="field.pascalcase-underscore" not-null="false" type="System.String"  length="2" insert="true" update="true"/>
+<property name="InicioAno" column="InicioAno" access="field.pascalcase-underscore" not-null="false" type="System.String"  length="4" insert="true" update="true"/>
+<property name="InicioDia" column="InicioDia" access="field.pascalcase-underscore" not-null="false" type="System.String"  length="2" insert="true" update="true"/>
+<property name="InicioMes" column="InicioMes" access="field.pascalcase-underscore" not-null="false" type="System.String"  length="2" insert="true" update="true"/>
+<property name="IsDeleted" column="isDeleted" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="Versao" column="Versao" access="field.pascalcase-underscore" not-null="true" type="System.Byte[]"  insert="false" update="false"/>
+<many-to-one name="ControloAut" column="IDControloAut" access="field.pascalcase-underscore" not-null="true" outer-join="auto" insert="false" update="false"></many-to-one>
+<many-to-one name="ControloAutAlias" column="IDControloAutAlias" access="field.pascalcase-underscore" not-null="true" outer-join="auto" insert="false" update="false"></many-to-one>
+<many-to-one name="TipoRel" column="IDTipoRel" access="field.pascalcase-underscore" not-null="true" outer-join="auto" insert="false" update="false"></many-to-one>
+
+
+</class>
+</hibernate-mapping>

@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F5551557-CF9F-4DF6-B64D-E88165877C34}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GISA.IntGestDoc</RootNamespace>
+    <AssemblyName>GISA.IntGestDoc</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>false</SignAssembly>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalDependencies\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\AssemblyInfosShared\AssemblyInfoShared.cs">
+      <Link>AssemblyInfoShared.cs</Link>
+    </Compile>
+    <Compile Include="Controllers\DocInPortoWS.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\IIntGestDocService.cs" />
+    <Compile Include="Controllers\InternalEntitiesFactory.cs" />
+    <Compile Include="Controllers\SuggestionsFactory.cs" />
+    <Compile Include="Database\Database.cs" />
+    <Compile Include="Model\CorrespondenciaDocs.cs" />
+    <Compile Include="Model\CorrespondenciaRAs.cs" />
+    <Compile Include="Model\EntidadeExterna.cs" />
+    <Compile Include="Model\Correspondencia.cs" />
+    <Compile Include="Model\Entidade.cs" />
+    <Compile Include="Model\EntidadeInterna.cs" />
+    <Compile Include="Model\EntidadesExternas\DocumentoAnexo.cs" />
+    <Compile Include="Model\EntidadesExternas\DocumentoComposto.cs" />
+    <Compile Include="Model\EntidadesExternas\DocumentoExterno.cs" />
+    <Compile Include="Model\EntidadesExternas\DocumentoSimples.cs" />
+    <Compile Include="Model\EntidadesExternas\Ideografico.cs" />
+    <Compile Include="Model\EntidadesExternas\Onomastico.cs" />
+    <Compile Include="Model\EntidadesExternas\Produtor.cs" />
+    <Compile Include="Model\EntidadesExternas\RegistoAutoridadeExterno.cs" />
+    <Compile Include="Model\EntidadesExternas\Geografico.cs" />
+    <Compile Include="Model\EntidadesExternas\Tipologia.cs" />
+    <Compile Include="Model\DataIncompleta.cs" />
+    <Compile Include="Model\EntidadesInternas\DocumentoGisa.cs" />
+    <Compile Include="Model\EntidadesInternas\DocumentoInterno.cs" />
+    <Compile Include="Model\EntidadesInternas\Geografico.cs" />
+    <Compile Include="Model\EntidadesInternas\Ideografico.cs" />
+    <Compile Include="Model\EntidadesInternas\Onomastico.cs" />
+    <Compile Include="Model\EntidadesInternas\Produtor.cs" />
+    <Compile Include="Model\EntidadesInternas\PropriedadeDocumentoGisa.cs" />
+    <Compile Include="Model\EntidadesInternas\PropriedadeDocumentoGisaTemplate.cs" />
+    <Compile Include="Model\EntidadesInternas\RegistoAutoridadeInterno.cs" />
+    <Compile Include="Model\EntidadesInternas\Tipologia.cs" />
+    <Compile Include="Model\TipoEntidade.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TipoOpcao.cs" />
+    <Compile Include="UserInterface\ControlDocumentoExterno.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\ControlDocumentoExterno.Designer.cs">
+      <DependentUpon>ControlDocumentoExterno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\ControlDocumentoExternoAnexo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\ControlDocumentoExternoAnexo.Designer.cs">
+      <DependentUpon>ControlDocumentoExternoAnexo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\ControlDocumentoExternoProcesso.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\ControlDocumentoExternoProcesso.Designer.cs">
+      <DependentUpon>ControlDocumentoExternoProcesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\ControlDocumentoGisa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\ControlDocumentoGisa.Designer.cs">
+      <DependentUpon>ControlDocumentoGisa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\ControlDocumentoGisaAnexo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\ControlDocumentoGisaAnexo.Designer.cs">
+      <DependentUpon>ControlDocumentoGisaAnexo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\ControlDocumentoGisaProcesso.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\ControlDocumentoGisaProcesso.Designer.cs">
+      <DependentUpon>ControlDocumentoGisaProcesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\CorrespondenciaSuggestionPicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\CorrespondenciaSuggestionPicker.Designer.cs">
+      <DependentUpon>CorrespondenciaSuggestionPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\CorrespondenciaSuggestionPickerList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\CorrespondenciaSuggestionPickerList.Designer.cs">
+      <DependentUpon>CorrespondenciaSuggestionPickerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\CorrespondenciaSuggestionPickerLstGeog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\CorrespondenciaSuggestionPickerLstGeog.Designer.cs">
+      <DependentUpon>CorrespondenciaSuggestionPickerLstGeog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\DocInPorto\ControlDocInPorto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\DocInPorto\ControlDocInPorto.Designer.cs">
+      <DependentUpon>ControlDocInPorto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\DocInPorto\DebuggedTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserInterface\DocumentParentSuggestionPicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\DocumentParentSuggestionPicker.Designer.cs">
+      <DependentUpon>DocumentParentSuggestionPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\FormIntergationReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\FormIntergationReport.Designer.cs">
+      <DependentUpon>FormIntergationReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\FormNewValue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterface\FormNewValue.Designer.cs">
+      <DependentUpon>FormNewValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\IconsHelper.cs" />
+    <Compile Include="UserInterface\PropriedadeSuggestionPicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\PropriedadeSuggestionPicker.Designer.cs">
+      <DependentUpon>PropriedadeSuggestionPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\PropriedadeSuggestionPickerLst.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserInterface\PropriedadeSuggestionPickerLst.Designer.cs">
+      <DependentUpon>PropriedadeSuggestionPickerLst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface\PropriedadeSuggestionPickerTemplate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GISA.Controls\GISA.Controls.ControloAut\GISA.Controls.ControloAut.csproj">
+      <Project>{70A59663-0E7E-47FD-96FF-3A605E195966}</Project>
+      <Name>GISA.Controls.ControloAut</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Controls\GISA.Controls.Nivel\GISA.Controls.Nivel.csproj">
+      <Project>{5176195E-C1B0-4B24-AFFB-9BA6291F9A25}</Project>
+      <Name>GISA.Controls.Nivel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Controls\Localizacao\GISA.Controls.Localizacao.csproj">
+      <Project>{C56A5802-874B-4F6F-9F43-978545849A78}</Project>
+      <Name>GISA.Controls.Localizacao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Controls\PxComboBox\GISA.Controls.PxComboBox.csproj">
+      <Project>{A97E6388-1209-49F4-8B05-2B472D082809}</Project>
+      <Name>GISA.Controls.PxComboBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Controls\PxDateBox\GISA.Controls.PxDateBox.csproj">
+      <Project>{58AD7224-ACCB-476A-A0FD-3EA277AD35CC}</Project>
+      <Name>GISA.Controls.PxDateBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Controls\PxListView\GISA.Controls.PxListView.csproj">
+      <Project>{AFEBABBD-BA58-43DC-8AF4-CBCB5C645686}</Project>
+      <Name>GISA.Controls.PxListView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Controls\PxNumericBox\GISA.Controls.PxNumericBox.csproj">
+      <Project>{62D16596-88DF-494B-8C5E-9413B50C3EE7}</Project>
+      <Name>GISA.Controls.PxNumericBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.DBAccess\DBAbstractDataLayer\DBAbstractDataLayer.csproj">
+      <Project>{1AED060D-26D9-4C73-BFFB-F73989BDD373}</Project>
+      <Name>DBAbstractDataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.GUIHelper\GISA.GUIHelper.csproj">
+      <Project>{93248ED8-9C8F-4477-8B6F-1D5161FFE37B}</Project>
+      <Name>GISA.GUIHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Model\GISA.Model.csproj">
+      <Project>{32444116-C646-4A6B-A177-74C4E410B1D1}</Project>
+      <Name>GISA.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Search\GISA.Search.csproj">
+      <Project>{092BC027-F24B-4A5F-9CDA-2969CEF4F722}</Project>
+      <Name>GISA.Search</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.SharedResources\GISA.SharedResources.csproj">
+      <Project>{FF599116-AB19-40CB-A5FE-9314646B212E}</Project>
+      <Name>GISA.SharedResources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GISA.Webservices\GISA.Webservices.csproj">
+      <Project>{38063153-1424-4921-9296-A92645E198DE}</Project>
+      <Name>GISA.Webservices</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\ControlDocumentoExterno.resx">
+      <DependentUpon>ControlDocumentoExterno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\ControlDocumentoExternoAnexo.resx">
+      <DependentUpon>ControlDocumentoExternoAnexo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\ControlDocumentoExternoProcesso.resx">
+      <DependentUpon>ControlDocumentoExternoProcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\ControlDocumentoGisa.resx">
+      <DependentUpon>ControlDocumentoGisa.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\ControlDocumentoGisaAnexo.resx">
+      <DependentUpon>ControlDocumentoGisaAnexo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\ControlDocumentoGisaProcesso.resx">
+      <DependentUpon>ControlDocumentoGisaProcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\CorrespondenciaSuggestionPicker.resx">
+      <DependentUpon>CorrespondenciaSuggestionPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\CorrespondenciaSuggestionPickerList.resx">
+      <DependentUpon>CorrespondenciaSuggestionPickerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\DocInPorto\ControlDocInPorto.resx">
+      <DependentUpon>ControlDocInPorto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\DocumentParentSuggestionPicker.resx">
+      <DependentUpon>DocumentParentSuggestionPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\FormIntergationReport.resx">
+      <DependentUpon>FormIntergationReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\FormNewValue.resx">
+      <DependentUpon>FormNewValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\PropriedadeSuggestionPickerLst.resx">
+      <DependentUpon>PropriedadeSuggestionPickerLst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterface\PropriedadeSuggestionPickerTemplate.resx">
+      <DependentUpon>PropriedadeSuggestionPickerTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Database\HistoricalData\20100503-dipExamples.bin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Database\HistoricalData\20100503-dipMoradasExamples.bin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Resources\action_check.png" />
+    <None Include="Resources\action_add.png" />
+    <None Include="Resources\action_remove.png" />
+    <None Include="Resources\action_check_grey.png" />
+    <None Include="Resources\Actualizar.bmp" />
+    <None Include="Resources\cmp.png" />
+    <Content Include="Resources\document_16.png" />
+    <None Include="Resources\integrar3.png" />
+    <None Include="Resources\integrar2.png" />
+    <None Include="Resources\integrar1.png" />
+    <None Include="Resources\integrar.png" />
+    <None Include="Resources\reply.png" />
+    <None Include="Resources\save.png" />
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="IntGestDoc.log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\subject_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

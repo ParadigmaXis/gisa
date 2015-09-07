@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-lazy="false">
+
+<class name="GISAServer.Hibernate.Objects.SFRDAvaliacaoEntity, GISAServer.Hibernate" table="SFRDAvaliacao" >
+
+<id name="Id" column="IDFRDBase" type="System.Int64" unsaved-value="null"><generator class="assigned"/></id>
+
+<property name="AvaliacaoTabela" column="AvaliacaoTabela" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="Frequencia" column="Frequencia" access="field.pascalcase-underscore" not-null="false" type="System.Decimal"  insert="true" update="true"/>
+<property name="IsDeleted" column="isDeleted" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="Observacoes" column="Observacoes" access="field.pascalcase-underscore" not-null="false" type="StringClob"  insert="true" update="true"/>
+<property name="PrazoConservacao" column="PrazoConservacao" access="field.pascalcase-underscore" not-null="false" type="System.Int16"  insert="true" update="true"/>
+<property name="Preservar" column="Preservar" access="field.pascalcase-underscore" not-null="false" type="System.Boolean"  insert="true" update="true"/>
+<property name="Publicar" column="Publicar" access="field.pascalcase-underscore" not-null="true" type="System.Boolean"  insert="true" update="true"/>
+<property name="Versao" column="Versao" access="field.pascalcase-underscore" not-null="true" type="System.Byte[]"  insert="false" update="false"/>
+<many-to-one name="AutoEliminacao"  access="field.pascalcase-underscore" not-null="false" outer-join="auto" insert="true" update="true">
+	<column name="IDAutoEliminacao"/>
+</many-to-one>
+<many-to-one name="Densidade"  access="field.pascalcase-underscore" not-null="false" outer-join="auto" insert="true" update="true">
+	<column name="IDDensidade"/>
+</many-to-one>
+<many-to-one name="FRDBase"  access="field.pascalcase-underscore" not-null="true" outer-join="auto" insert="false" update="false">
+	<column name="IDFRDBase"/>
+</many-to-one>
+<many-to-one name="ModeloAvaliacao"  access="field.pascalcase-underscore" not-null="false" outer-join="auto" insert="true" update="true">
+	<column name="IDModeloAvaliacao"/>
+</many-to-one>
+<many-to-one name="Pertinencia"  access="field.pascalcase-underscore" not-null="false" outer-join="auto" insert="true" update="true">
+	<column name="IDPertinencia"/>
+</many-to-one>
+<many-to-one name="Subdensidade"  access="field.pascalcase-underscore" not-null="false" outer-join="auto" insert="true" update="true">
+	<column name="IDSubdensidade"/>
+</many-to-one>
+
+
+</class>
+</hibernate-mapping>
