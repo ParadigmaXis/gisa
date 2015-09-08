@@ -1,6 +1,8 @@
 # GISA - Gestão Integrada de Sistemas de Arquivo
 
 _<inserir parágrafos com o contexto do projeto>_
+## O que é
+O GISA é uma aplicação de gestão de Arquivos, concebido para dar apoio ao arquivista nas múltiplas operações da cadeia arquivística. GISA é marca registada da ParadigmaXis, sob o n.º 373005.
 
 ## Configuração do ambiente de desenvolvimento
 ### Configuração de instância do SQLServer
