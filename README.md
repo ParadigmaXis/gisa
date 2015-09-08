@@ -4,6 +4,16 @@ _<inserir parágrafos com o contexto do projeto>_
 ## O que é
 O GISA é uma aplicação de gestão de Arquivos, concebido para dar apoio ao arquivista nas múltiplas operações da cadeia arquivística. GISA é marca registada da ParadigmaXis, sob o n.º 373005.
 
+Para uma informação mais detalhada, consultar o sítio do [GISA](http://gisa.paradigmaxis.pt).
+
+O GISA inclui um [Manual do Utilizador](http://gisa.paradigmaxis.pt/docs/) disponível à comunidade para ajuda na utilização da aplicação e para colaboração na redação do mesmo.
+
+No sentido de fomentar a divulgação do GISA e a comunicação entre os diferentes membros desta comunidade, são disponibilizados os seguintes canais:
+*	[Twitter](https://www.github.com)http://twitter.com/gisa
+*	[Facebook](http://www.facebook.com/pages/GISA/144794542242404)
+*	[Linkedin](http://www.linkedin.com/groups?gid=3751885)
+
+
 ## Configuração do ambiente de desenvolvimento
 ### Configuração de instância do SQLServer
  - Named Instance: ``GISA``
