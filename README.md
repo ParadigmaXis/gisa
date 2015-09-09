@@ -13,6 +13,7 @@ No sentido de fomentar a divulgação do GISA e a comunicação entre os diferen
 *	[Facebook](http://www.facebook.com/pages/GISA/144794542242404)
 *	[Linkedin](http://www.linkedin.com/groups?gid=3751885)
 
+Também se disponibiliza um [grupo de utilizadores do GISA] (https://groups.google.com/forum/#!forum/gisa-users) para apoio técnico.
 
 ## Configuração do ambiente de desenvolvimento
 ### Configuração de instância do SQLServer
