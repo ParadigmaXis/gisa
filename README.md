@@ -2,7 +2,7 @@
 
 _<inserir parágrafos com o contexto do projeto>_
 ## O que é
-O GISA é uma aplicação de gestão de Arquivos, concebido para dar apoio ao arquivista nas múltiplas operações da cadeia arquivística. GISA é marca registada da ParadigmaXis, sob o n.º 373005.
+O GISA é uma aplicação de gestão de Arquivos, concebida para apoiar o arquivista nas múltiplas operações da cadeia arquivística. GISA é marca registada da ParadigmaXis, sob o n.º 373005.
 
 Para uma informação mais detalhada, consultar o sítio do [GISA](http://gisa.paradigmaxis.pt).
 
