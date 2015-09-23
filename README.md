@@ -15,6 +15,16 @@ No sentido de fomentar a divulgação do GISA e a comunicação entre os diferen
 
 Também se disponibiliza um [grupo de utilizadores do GISA] (https://groups.google.com/forum/#!forum/gisa-users) para apoio técnico.
 
+## Licença
+Os módulos do GISA disponibilizados em código aberto sob a licença [GNU General Public License v2.0] (http://www.gnu.org/licenses/gpl-2.0.html)  são os seguintes:
+ - *Unidades Informacionais*: Descrição arquivística segundo [ISAD(G)] (http://www.ica.org/10207/standards/isadg-general-international-standard-archival-description-second-edition.html), avaliação, indexação, pesquisa, exportação das descrições para EAD, importação de dados via Excel, associação da descrição ao respetivo documento digital ou digitalizado.
+ - *Unidades Físicas*: Recenseamento das unidades físicas e pesquisa.
+ - *Controlo de Autoridade*: Definição do plano de classificação orgânico segundo a [ISAAR-CPF] (http://www.ica.org/10203/standards/isaar-cpf-international-standard-archival-authority-record-for-corporate-bodies-persons-and-families-2nd-edition.html), criação de termos de indexação e de relações entre eles de forma a construir um tesauro.
+ - *Administração*: Configurações, Estatísticas, Controlo de acessos.
+ - *Gestão de Requisições*: Controlo de requisições e devoluções.
+ - *Gestão de Depósitos*: Controlo do espaço livre em depósito.
+ - *Catálogo especial de Processos de obras*: Descrição específica de uma tipologia de documentos e respetiva pesquisa.
+
 ## Configuração do ambiente de desenvolvimento
 ### Configuração de instância do SQLServer
  - Named Instance: ``GISA``
