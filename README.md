@@ -66,7 +66,7 @@ Os módulos do GISA disponibilizados em código aberto sob a licença [GNU Gener
  - Antes de abrir a _solution_ executar o ``updateVersionNumber.bat`` para criar o ficheiro ``AssemblyInfoShared.cs``.
 
 ### Criação de um _installer_
- - Garantir que o `msbuild` está no _path_ do sistema (e.g., `C:\Windows\Microsoft.NET\Framework\v4.0.30319`)
+ - Garantir que o caminho do `msbuild` está no _path_ do sistema (e.g., `C:\Windows\Microsoft.NET\Framework\v4.0.30319`)
  - Instalar o [NSIS](http://nsis.sourceforge.net/Download) >2.4 e adicionar o diretório no _path_ do sistema (e.g., `C:\Program Files (x86)\NSIS`)
  - Compilar o GISA e o respetivo _installer_: `> msbuild GISABuilder.xml`
 
