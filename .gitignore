@@ -79,3 +79,5 @@ client/GISA.Controls/DoubleProgressBar/bin/
 *.suo
 *.csproj.user
 *.sln.cache
+installer/Bin/Setup.exe
+deployable/release/
