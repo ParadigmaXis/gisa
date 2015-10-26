@@ -983,11 +983,8 @@ namespace GISA
                     errorMessage.AppendLine("Identificador: " + MasterPanelPesquisa.txtID.Text);
 
                 ndSearch.TextoLivre = Helper.AddFieldToSearch(qp, "Texto Livre", MasterPanelPesquisa.txtPesquisaSimples.Text, ref errorMessage);
-                
-                if (MasterPanelPesquisa.cbModulo.Items.Count == 1)
-                    ndSearch.Modulo = 1;
-                else
-                    ndSearch.Modulo = MasterPanelPesquisa.cbModulo.SelectedIndex;
+
+                ndSearch.Modulo = DisallowFullSearchWhenUserCantUseIt();
 
                 ndSearch.CodigoParcial = Helper.AddFieldToSearch(qp, "Código Parcial", MasterPanelPesquisa.txtCodigoParcial.Text, ref errorMessage);
                 ndSearch.Designacao = Helper.AddFieldToSearch(qp, "Designação", MasterPanelPesquisa.txtDesignacao.Text, ref errorMessage);
@@ -1160,7 +1157,20 @@ namespace GISA
             return countResults;
 		}
 
-		private void ActivateDetalhesTexto() {
+        private int DisallowFullSearchWhenUserCantUseIt()
+        {
+            var user = SessionHelper.GetGisaPrincipal().TrusteeUserOperator;
+            var groups = user.GetUserGroupsRows();
+            var acessoCompleto = PermissoesHelper.GrpAcessoCompleto;
+            var possuiAcessoCompleto = groups.Any(g => g.IDGroup == acessoCompleto.ID);
+
+            if (!possuiAcessoCompleto || MasterPanelPesquisa.cbModulo.Items.Count == 1)
+                return 1;
+            else
+                return MasterPanelPesquisa.cbModulo.SelectedIndex;
+        }
+
+        private void ActivateDetalhesTexto() {
             if (PesquisaList1.GetSelectedRows.Count() == 1)
             {
 				rtfDetalhes.Clear();
