@@ -6,15 +6,6 @@ O GISA é uma aplicação de gestão de Arquivos, concebida para apoiar o arquiv
 
 Para uma informação mais detalhada, consultar o sítio do [GISA](http://gisa.paradigmaxis.pt).
 
-O GISA inclui um [Manual do Utilizador](http://gisa.paradigmaxis.pt/docs/inicio#manual_de_utilizador) disponível à comunidade para ajuda na utilização da aplicação e para colaboração na redação do mesmo.
-
-No sentido de fomentar a divulgação do GISA e a comunicação entre os diferentes membros desta comunidade, são disponibilizados os seguintes canais:
-*	[Twitter](http://twitter.com/gisa)
-*	[Facebook](http://www.facebook.com/pages/GISA/144794542242404)
-*	[Linkedin](http://www.linkedin.com/groups?gid=3751885)
-
-Também se disponibiliza um [grupo de utilizadores do GISA] (https://groups.google.com/forum/#!forum/gisa-users) para apoio técnico.
-
 ## Licença
 Os módulos do GISA disponibilizados em código aberto sob a licença [GNU General Public License v2.0] (http://www.gnu.org/licenses/gpl-2.0.html)  são os seguintes:
  - *Unidades Informacionais*: Descrição arquivística segundo [ISAD(G)] (http://www.ica.org/10207/standards/isadg-general-international-standard-archival-description-second-edition.html), avaliação, indexação, pesquisa, exportação das descrições para EAD, importação de dados via Excel, associação da descrição ao respetivo documento digital ou digitalizado.
@@ -76,5 +67,17 @@ Para a instalação do GISA poderá usar um installer que tenha criado ou então
 
 Os requisitos e os procedimentos de instalação do GISA encontram-se no [Manual de instalação online](http://gisa.paradigmaxis.pt/docs/inicio#manual_de_instalacao).
 
+Depois instalada, o acesso à aplicação é feito com o seguinte login:
+ * Username: admin
+ * Password: 123456
 
+## Utilização do GISA
 
+O GISA inclui um [Manual do Utilizador](http://gisa.paradigmaxis.pt/docs/inicio#manual_de_utilizador) disponível à comunidade para ajuda na utilização da aplicação e para colaboração na redação do mesmo.
+
+No sentido de fomentar a divulgação do GISA e a comunicação entre os diferentes membros desta comunidade, são disponibilizados os seguintes canais:
+*	[Twitter](http://twitter.com/gisa)
+*	[Facebook](http://www.facebook.com/pages/GISA/144794542242404)
+*	[Linkedin](http://www.linkedin.com/groups?gid=3751885)
+
+Também se disponibiliza um [grupo de utilizadores do GISA] (https://groups.google.com/forum/#!forum/gisa-users) para apoio técnico.
