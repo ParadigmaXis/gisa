@@ -6,7 +6,7 @@ O GISA é uma aplicação de gestão de Arquivos, concebida para apoiar o arquiv
 
 Para uma informação mais detalhada, consultar o sítio do [GISA](http://gisa.paradigmaxis.pt).
 
-O GISA inclui um [Manual do Utilizador](http://gisa.paradigmaxis.pt/docs/) disponível à comunidade para ajuda na utilização da aplicação e para colaboração na redação do mesmo.
+O GISA inclui um [Manual do Utilizador](http://gisa.paradigmaxis.pt/docs/inicio#manual_de_utilizador) disponível à comunidade para ajuda na utilização da aplicação e para colaboração na redação do mesmo.
 
 No sentido de fomentar a divulgação do GISA e a comunicação entre os diferentes membros desta comunidade, são disponibilizados os seguintes canais:
 *	[Twitter](http://twitter.com/gisa)
@@ -71,81 +71,10 @@ Os módulos do GISA disponibilizados em código aberto sob a licença [GNU Gener
  - Compilar o GISA e o respetivo _installer_: `> msbuild GISABuilder.xml`
 
 ## Instalação do GISA
-### Modo de funcionamento
 
-O GISA disponibilizado em código aberto pode ter um dos seguintes modos de funcionamento:
- -	*Monoposto*, permitindo a execução autónoma a partir de um único posto de trabalho.
- - *Cliente/servidor*, estando a informação centralizada no servidor e acessível a vários utilizadores em diferentes postos de trabalho (clientes).
-Dependendo do modo de funcionamento escolhido, os requisitos necessários para instalar e a forma como se processa a instalação são diferentes.
+Para a instalação do GISA poderá usar um installer que tenha criado ou então fazer o [download do setup.exe] (https://github.com/ParadigmaXis/gisa/tree/master/deployable/release/CD).
 
-### Monoposto GISA
+Os requisitos e os procedimentos de instalação do GISA encontram-se no [Readme.txt](https://github.com/ParadigmaXis/gisa/blob/master/deployable/release/CD/readme.txt).
 
-**Requisitos de instalação**
 
-O equipamento necessário depende do volume de informação e do número de utilizadores. Os requisitos aconselhados, dizem respeito a um caso típico de utilização e, são os que se seguem.
-
-Computador com as seguintes características:
- -	Processador (CPU): Pentium Core Duo 2.13GHz ou superior
- -	Memória (RAM): 2 GB ou superior
- -	Capacidade de armazenamento: 2GB ou superior (deverá ser contemplado o crescimento da BD)
- -	Sistemas operativos:
-   -	Windows XP, com o Service Pack 1a ou superior
-   -	Windows Vista
-   -	Windows 7
-
-Software necessário:
- - Microsoft .NET Framework 3.5 com o Service Pack 1
- - Microsoft SQLServer 2008
-   -	com os componentes adicionais:
-      -	Database Engine Services
-      -	Management Tools Basic
-      -	SQL Client Connectivity SDK
-   -	com as configurações seguintes:
-      -	nome da instância: GISA
-      -	base de dados: Case Sensitive e Accent Sensitive
-      -	autenticação: Mixed mode
-
-*Importante*: Para verificar que tem instalado o último service pack e quaisquer atualizações críticas para o sistema operativo que está a usar bem como para instalar a Microsoft .NET Framework visite o sítio [http://windowsupdate.microsoft.com na Web] (http://windowsupdate.microsoft.com na Web).
-
-**Instalação**
-
-A instalação do software é iniciada na máquina escolhida, executando o programa **setup.exe** com privilégios de Administrador. Para instalar o GISA em monoposto, deverá ser aceite a licença, para poder escolher o tipo de instalação Monoposto e o diretório de instalação.
-
-### Cliente/servidor
-
-**Requisitos Cliente(s) GISA**
-
- Computador com as seguintes características:
-- Processador (CPU): Pentium P4, 1.6 GHz ou superior
--	Memória (RAM): 1 GB ou superior
--	Capacidade de armazenamento: 170 MB de espaço disponível em disco
--	Velocidade da rede: 1Gbps (recomendado) ou 100Mbps (mínimo) - não necessária na versão monoposto
--	Sistemas operativos:
-   -	Windows XP, com o service pack 1a ou superior
-   -	Windows Vista
-   -	Windows 7
-
-Software necessário:
-- Microsoft .NET Framework 3.5 com o Service Pack 1
-
-**Requisitos Servidor GISA**
-
-Computador com características próprias de um servidor aplicacional, sendo aconselhadas as seguintes:
--	Nº de processadores:  2 ou mais
--	Processador (CPU): Intel Core Duo ou superior
--	Velocidade do Processador: 3.00GHz no mínimo 
--	Memoria (RAM): 2 GB ou superior
--	Controlador do disco:  SATA2 ou superior
--	Capacidade de armazenamento: 2GB ou superior (deverá ser contemplado o crescimento da BD)
--	Velocidade da rede: 1Gbps (recomendado) ou 100Mbps (mínimo)
--	Sistema operativo: Windows Server 2003 ou superior
-
-Software necessário:
--	Sistema de Gestão de Base de Dados Relacional (SGBDR): Microsoft SQL Server 2008 R2
-
-**Instalação**
-
-1. Executar em cada máquina cliente o programa **setup.exe** com privilégios de Administrador. Aceitando a licença, escolher o modo de instalação Cliente e o diretório de instalação.
-
-2. Executar no servidor o programa **setup.exe** com privilégios de Administrador. Aceitando a licença, escolher o modo de instalação Servidor e o diretório de instalação.
 
