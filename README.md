@@ -75,6 +75,8 @@ Depois instalada, o acesso à aplicação é feito com o seguinte login:
 
 O GISA inclui um [Manual do Utilizador](http://gisa.paradigmaxis.pt/docs/inicio#manual_de_utilizador) disponível à comunidade para ajuda na utilização da aplicação e para colaboração na redação do mesmo.
 
+## Divulgação do GISA
+
 No sentido de fomentar a divulgação do GISA e a comunicação entre os diferentes membros desta comunidade, são disponibilizados os seguintes canais:
 *	[Twitter](http://twitter.com/gisa)
 *	[Facebook](http://www.facebook.com/pages/GISA/144794542242404)
