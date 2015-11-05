@@ -57,6 +57,8 @@ namespace GISA
 		internal System.Windows.Forms.Label Label2;
 		internal System.Windows.Forms.Label Label4;
 		internal System.Windows.Forms.Label Label5;
+        internal Label label7;
+        private LinkLabel linkLabel1;
         internal System.Windows.Forms.Label Label6;
 		[System.Diagnostics.DebuggerStepThrough()]
 		private void InitializeComponent()
@@ -75,6 +77,8 @@ namespace GISA
             this.Label4 = new System.Windows.Forms.Label();
             this.Label5 = new System.Windows.Forms.Label();
             this.Label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // btnClose
@@ -209,6 +213,29 @@ namespace GISA
             this.Label6.TabIndex = 15;
             this.Label6.Text = "Bibliotecas utilizadas";
             // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(183, 147);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(440, 21);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Licença: GNU General Public License, version 2";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(298, 168);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(203, 13);
+            this.linkLabel1.TabIndex = 17;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "http://www.gnu.org/licenses/gpl-2.0.html";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // FormGISAAbout
             // 
             this.AcceptButton = this.btnClose;
@@ -216,6 +243,8 @@ namespace GISA
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(641, 437);
+            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.Label6);
             this.Controls.Add(this.Label5);
             this.Controls.Add(this.Label4);
@@ -233,6 +262,7 @@ namespace GISA
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Acerca de ...";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
 		}
 
@@ -313,6 +343,11 @@ namespace GISA
 			}
 			return version;
 		}
-	}
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(linkLabel1.Text);
+        }
+    }
 
 } //end of root namespace

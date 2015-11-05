@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Project DefaultTargets="GatherReleaseDeployable" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-
 	<PropertyGroup>
 		<Release_CD>.\deployable\release\CD</Release_CD>
 		<Release_CD_Documentacao>$(Release_CD)\Documentacao</Release_CD_Documentacao>

@@ -55,7 +55,7 @@ InstType "Servidor"
 !insertmacro MUI_PAGE_WELCOME
 ; License page
 !define MUI_LICENSEPAGE_RADIOBUTTONS
-!insertmacro MUI_PAGE_LICENSE "..\Resources\License.rtf"
+!insertmacro MUI_PAGE_LICENSE "..\Resources\gpl-2.0.txt"
 ; Components page
 !define MUI_PAGE_CUSTOMFUNCTION_PRE VerifyInstalledComponents
 !insertmacro MUI_PAGE_COMPONENTS
