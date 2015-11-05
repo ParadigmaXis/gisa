@@ -140,14 +140,15 @@ namespace LumiSoft.UI.Controls
 			this.ResumeLayout(false);
 
 		}
-		#endregion
+        #endregion
 
 
-		#region Events handling
+        #region Events handling
 
-		#region function m_pListBox_MouseMove
-		
-		private void listBox_MouseMove(object sender, System.Windows.Forms.MouseEventArgs e)
+        #region function m_pListBox_MouseMove
+
+        [System.Diagnostics.DebuggerStepThrough]
+        private void listBox_MouseMove(object sender, System.Windows.Forms.MouseEventArgs e)
 		{
 			int index = m_pListBox.IndexFromPoint(e.X,e.Y);
 

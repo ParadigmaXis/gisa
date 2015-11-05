@@ -239,13 +239,17 @@ namespace GISA
 			}
 			else
 			{
-				ToolBarButtonCreateLikeUF.Enabled = AllowCreate;
+				ToolBarButtonCreateLikeUF.Enabled = canDuplicate;
 				ToolBarButtonEditUF.Enabled = AllowEdit;
 				ToolBarButtonRemoveUF.Enabled = AllowDelete;
 			}
 		}
 
-		public void disableAddEditAndRemove()
+        private bool canDuplicate;
+
+        public void DisallowDuplication() { canDuplicate = false; }
+
+        public void disableAddEditAndRemove()
 		{
 			ToolBarButtonCreateLikeUF.Enabled = false;
 			ToolBarButtonCreateUF.Enabled = false;

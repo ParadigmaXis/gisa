@@ -627,6 +627,7 @@ namespace GISA
 
         // ToolTip
         private DataGridViewRow dataGridView1_MouseMove_previousRow;
+        [System.Diagnostics.DebuggerStepThrough]
         private void dataGridView1_CellMouseMove(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex < 0) return;
@@ -676,6 +677,7 @@ namespace GISA
                 master.ufList.ReloadList();
                 master.ufList.MultiSelectListView = true;
                 master.ufList.DefineShowItemToolTips = true;
+                master.DisallowDuplication();
 
                 master.UpdateSupoortPanelPermissions("GISA.FRDUnidadeFisica");
                 master.UpdateToolBarButtons();

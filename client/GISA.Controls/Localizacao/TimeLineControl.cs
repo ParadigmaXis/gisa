@@ -458,10 +458,11 @@ namespace GISA.Controls.Localizacao
 			g.FillRectangle(new SolidBrush(mExtendedIntervalColor), rrr);
 		}
 
-	#endregion
+        #endregion
 
-	#region  Interaction event handlers 
-		protected override void OnMouseMove(System.Windows.Forms.MouseEventArgs e)
+        #region  Interaction event handlers 
+        [System.Diagnostics.DebuggerStepThrough]
+        protected override void OnMouseMove(System.Windows.Forms.MouseEventArgs e)
 		{
 			if (mMarkers == null)
 			{

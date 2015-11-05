@@ -625,7 +625,8 @@ namespace GISA
 			}
 		}
 
-		private void frmLogin_MouseMove(object sender, System.Windows.Forms.MouseEventArgs e)
+        [System.Diagnostics.DebuggerStepThrough]
+        private void frmLogin_MouseMove(object sender, System.Windows.Forms.MouseEventArgs e)
 		{
 			if (IsMoving)
 			{

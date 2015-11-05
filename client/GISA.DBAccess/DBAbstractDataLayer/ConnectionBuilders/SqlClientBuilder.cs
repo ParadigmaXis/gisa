@@ -8,9 +8,10 @@ namespace DBAbstractDataLayer.ConnectionBuilders
 	// TODO: passar pra builder, tudo que for comum entre os vários builders, passar para a classe abstracta
 	public sealed class SqlClientBuilder: Builder
 	{
-        private const string NormalConnectionTemplate = @"Integrated Security=SSPI;Persist Security Info=True;Connect Timeout=60;Initial Catalog={0};Data Source={1}; ";
+        //private const string NormalConnectionTemplate = @"Integrated Security=SSPI;Persist Security Info=True;Connect Timeout=60;Initial Catalog={0};Data Source={1}; ";
+        private const string NormalConnectionTemplate = @"Persist Security Info=True;Connect Timeout=60;Initial Catalog={0};Data Source=APOLO;UID=sa;PWD=PXpassword1!";
 
-		private static SqlConnection connection = null;
+        private static SqlConnection connection = null;
 		protected sealed override IDbConnection CreateConnection()
 		{
             string connectionString = string.Format(NormalConnectionTemplate, "GISA", Server);

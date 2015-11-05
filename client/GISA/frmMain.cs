@@ -2171,6 +2171,7 @@ namespace GISA
             serverPingTimer.Start();            
 		}
 
+        [DebuggerStepThrough]
         private void serverPingTimer_Tick(object sender, System.EventArgs e)
         {
             SetServerStatus();

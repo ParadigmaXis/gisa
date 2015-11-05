@@ -356,7 +356,8 @@ namespace GISA.Controls.Nivel
 
 		public delegate void setToolTipEventEventHandler(object sender, object item);
 		public event setToolTipEventEventHandler setToolTipEvent;
-		private void lstVwNiveisDocumentais_MouseMove(object sender, System.Windows.Forms.MouseEventArgs e)
+        [System.Diagnostics.DebuggerStepThrough]
+        private void lstVwNiveisDocumentais_MouseMove(object sender, System.Windows.Forms.MouseEventArgs e)
 		{
             lstVwPaginated.ShowItemToolTips = true;
 			// Find the item under the mouse.

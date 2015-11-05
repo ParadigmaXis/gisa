@@ -143,8 +143,7 @@ namespace GISA.Model
 				{
 					conn.Open();
 					GisaDataSetHelperRule.Current.LoadStaticDataTables(mDataSet, conn);
-				}
-				catch (System.SystemException ex)
+				} catch (System.SystemException ex)
 				{
 					// tratar as excepções de acesso à base de dados mantendo o dataset a null
 					mDataSet = null;

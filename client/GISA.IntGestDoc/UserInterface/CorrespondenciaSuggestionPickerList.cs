@@ -110,6 +110,7 @@ namespace GISA.IntGestDoc.UserInterface
                 this.correspondenciaSuggestionPicker1.Correspondencia = null;
         }
 
+        [System.Diagnostics.DebuggerStepThrough]
         private void lvCorrepondencias_MouseMove(object sender, MouseEventArgs e)
         {
             var item = lvCorrepondencias.GetItemAt(e.X, e.Y);

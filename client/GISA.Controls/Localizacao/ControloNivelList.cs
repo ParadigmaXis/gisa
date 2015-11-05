@@ -101,7 +101,8 @@ namespace GISA.Controls.Localizacao
 		public delegate void setToolTipEventEventHandler(object sender, object item);
 		public event setToolTipEventEventHandler setToolTipEvent;
 
-		private void trVwLocalizacao_MouseMove(object sender, System.Windows.Forms.MouseEventArgs e)
+        [System.Diagnostics.DebuggerStepThrough]
+        private void trVwLocalizacao_MouseMove(object sender, System.Windows.Forms.MouseEventArgs e)
 		{
             // Find the node under the mouse.
 			GISATreeNode currentNode = (GISATreeNode)(trVwLocalizacao.GetNodeAt(e.X, e.Y));

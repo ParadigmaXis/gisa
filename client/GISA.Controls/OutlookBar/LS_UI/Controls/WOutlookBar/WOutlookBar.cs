@@ -518,7 +518,7 @@ namespace LumiSoft.UI.Controls.WOutlookBar
 
 		#region function OnMouseMove
 
-		protected override void OnMouseMove(System.Windows.Forms.MouseEventArgs e)
+		[System.Diagnostics.DebuggerStepThrough] protected override void OnMouseMove(System.Windows.Forms.MouseEventArgs e)
 		{
 			base.OnMouseMove(e);
 			

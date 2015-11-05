@@ -164,11 +164,12 @@ namespace LumiSoft.UI.Controls
 			}
 		}
 
-		#endregion
+        #endregion
 
-		#region function WSpinEdit_MouseMove
+        #region function WSpinEdit_MouseMove
 
-		private void WSpinEdit_MouseMove(object sender, System.Windows.Forms.MouseEventArgs e)
+        [System.Diagnostics.DebuggerStepThrough]
+        private void WSpinEdit_MouseMove(object sender, System.Windows.Forms.MouseEventArgs e)
 		{
 			if(IsMouseInButtonRect()){
 				this.Invalidate(false);

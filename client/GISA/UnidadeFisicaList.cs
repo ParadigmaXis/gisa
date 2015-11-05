@@ -507,6 +507,7 @@ namespace GISA
         public bool DefineShowItemToolTips { get { return this.lstVwPaginated.ShowItemToolTips; } set { this.lstVwPaginated.ShowItemToolTips = value; } }
         
         private ListViewItem lstVwUnidadesFisicas_MouseMove_previousItem;
+        [System.Diagnostics.DebuggerStepThrough]
         private void lstVwUnidadesFisicas_MouseMove(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             this.lstVwPaginated.ShowItemToolTips = true;

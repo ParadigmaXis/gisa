@@ -542,7 +542,8 @@ namespace GISA.Controls
 			execKeyDown = true;
 		}
 
-		protected override void OnMouseMove(MouseEventArgs e)
+        [System.Diagnostics.DebuggerStepThrough]
+        protected override void OnMouseMove(MouseEventArgs e)
 		{
 			base.OnMouseMove (e);
 
@@ -551,7 +552,8 @@ namespace GISA.Controls
 		}
 
 
-		protected override void OnMouseLeave(EventArgs e)
+        [System.Diagnostics.DebuggerStepThrough]
+        protected override void OnMouseLeave(EventArgs e)
 		{
 			base.OnMouseLeave (e);
 			execMouseUp = false;
@@ -580,7 +582,8 @@ namespace GISA.Controls
 		}
 
 		private System.Windows.Forms.Timer clickTypeSelectorTimer = new System.Windows.Forms.Timer();
-		private void OnTimedEvent(object source, EventArgs e)
+        [System.Diagnostics.DebuggerStepThrough]
+        private void OnTimedEvent(object source, EventArgs e)
 		{
 			selectNewItem();
 		}

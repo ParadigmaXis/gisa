@@ -117,6 +117,7 @@ namespace GISA.Controls.Nivel
 
         public delegate void setToolTipEventEventHandler(object sender, object item);
         public event setToolTipEventEventHandler setToolTipEvent;
+        [System.Diagnostics.DebuggerStepThrough]
         private void lstVwNiveisDocumentais_MouseMove(object sender, System.Windows.Forms.MouseEventArgs e)
         {
             lstVwPaginated.ShowItemToolTips = true;
