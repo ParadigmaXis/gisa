@@ -61,7 +61,7 @@ Os módulos do GISA disponibilizados em código aberto sob a licença [GNU Gener
  - Instalar o [NSIS](http://nsis.sourceforge.net/Download) >2.4 e adicionar o diretório no _path_ do sistema (e.g., `C:\Program Files (x86)\NSIS`)
  - Compilar o GISA e o respetivo _installer_: `> msbuild GISABuilder.xml`
 
-## Instalação do GISA
+## Instalação
 
 Para a instalação do GISA poderá usar um installer que tenha criado ou então fazer o [download do setup.exe] (https://github.com/ParadigmaXis/gisa/tree/master/deployable/release/CD).
 
@@ -71,11 +71,11 @@ Depois instalada, o acesso à aplicação é feito com o seguinte login:
  * Username: admin
  * Password: 123456
 
-## Utilização do GISA
+## Utilização
 
 O GISA inclui um [Manual do Utilizador](http://gisa.paradigmaxis.pt/docs/inicio#manual_de_utilizador) disponível à comunidade para ajuda na utilização da aplicação e para colaboração na redação do mesmo.
 
-## Divulgação do GISA
+## Divulgação
 
 No sentido de fomentar a divulgação do GISA e a comunicação entre os diferentes membros desta comunidade, são disponibilizados os seguintes canais:
 *	[Twitter](http://twitter.com/gisa)
