@@ -74,7 +74,7 @@ Os módulos do GISA disponibilizados em código aberto sob a licença [GNU Gener
 
 Para a instalação do GISA poderá usar um installer que tenha criado ou então fazer o [download do setup.exe] (https://github.com/ParadigmaXis/gisa/tree/master/deployable/release/CD).
 
-Os requisitos e os procedimentos de instalação do GISA encontram-se no [Readme.txt](https://github.com/ParadigmaXis/gisa/blob/master/deployable/release/CD/readme.txt).
+Os requisitos e os procedimentos de instalação do GISA encontram-se no [Manual de instalação online](http://gisa.paradigmaxis.pt/docs/inicio#manual_de_instalacao).
 
 
 
