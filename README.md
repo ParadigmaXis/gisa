@@ -2,19 +2,19 @@
 
 _<inserir parágrafos com o contexto do projeto>_
 ## O que é
-O GISA é uma aplicação de gestão de Arquivos, concebida para apoiar o arquivista nas múltiplas operações da cadeia arquivística. GISA é marca registada da ParadigmaXis, sob o n.º 373005.
+O GISA é uma aplicação informática de gestão de Arquivos, concebida para apoiar o arquivista nas múltiplas operações da cadeia arquivística. GISA é marca registada da ParadigmaXis SA, sob o n.º 373005.
 
 Para uma informação mais detalhada, consultar o sítio do [GISA](http://gisa.paradigmaxis.pt).
 
-## Licença
-Os módulos do GISA disponibilizados em código aberto sob a licença [GNU General Public License v2.0] (http://www.gnu.org/licenses/gpl-2.0.html)  são os seguintes:
+## Módulos e Licença
+Os módulos do GISA atualmente existentes em código aberto, sob a licença [GNU General Public License v2.0] (http://www.gnu.org/licenses/gpl-2.0.html) são os seguintes:
  - *Unidades Informacionais*: Descrição arquivística segundo [ISAD(G)] (http://www.ica.org/10207/standards/isadg-general-international-standard-archival-description-second-edition.html), avaliação, indexação, pesquisa, exportação das descrições para EAD, importação de dados via Excel, associação da descrição ao respetivo documento digital ou digitalizado.
  - *Unidades Físicas*: Recenseamento das unidades físicas e pesquisa.
  - *Controlo de Autoridade*: Definição do plano de classificação orgânico segundo a [ISAAR-CPF] (http://www.ica.org/10203/standards/isaar-cpf-international-standard-archival-authority-record-for-corporate-bodies-persons-and-families-2nd-edition.html), criação de termos de indexação e de relações entre eles de forma a construir um tesauro.
  - *Administração*: Configurações, Estatísticas, Controlo de acessos.
  - *Gestão de Requisições*: Controlo de requisições e devoluções.
  - *Gestão de Depósitos*: Controlo do espaço livre em depósito.
- - *Catálogo especial de Processos de obras*: Descrição específica de uma tipologia de documentos e respetiva pesquisa.
+ - *Catálogo especial de Processos de obras*: Descrição específica de uma tipologia de documentos (Processos de obras) e respetiva pesquisa.
 
 ## Configuração do ambiente de desenvolvimento
 ### Configuração de instância do SQLServer
@@ -63,11 +63,11 @@ Os módulos do GISA disponibilizados em código aberto sob a licença [GNU Gener
 
 ## Instalação
 
-Para a instalação do GISA poderá usar um installer que tenha criado ou então fazer o [download do setup.exe] (https://github.com/ParadigmaXis/gisa/tree/master/deployable/release/CD).
+Para a instalação do GISA poderá usar um installer que tenha criado para o efeito ou então fazer o [download do setup.exe] (https://github.com/ParadigmaXis/gisa/tree/master/deployable/release/CD).
 
 Os requisitos e os procedimentos de instalação do GISA encontram-se no [Manual de instalação online](http://gisa.paradigmaxis.pt/docs/inicio#manual_de_instalacao).
 
-Depois instalada, o acesso à aplicação é feito com o seguinte login:
+Depois de instalada, o acesso à aplicação é feito com o seguinte login:
  * Username: admin
  * Password: 123456
 
