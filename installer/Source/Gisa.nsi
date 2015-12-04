@@ -476,6 +476,7 @@ Section "Cliente" Client
  SetOverwrite try
  File "..\..\client\GISA\bin\Release\*.dll"
  File "..\..\client\GISA\bin\Release\*.exe"
+ File "..\..\client\GISA\bin\Release\*.config"
  File "..\..\client\ExternalDependencies\ImportFromExcel\*.dll"
  SetOverwrite ifnewer
  File "..\Resources\readme.txt"
