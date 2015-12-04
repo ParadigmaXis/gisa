@@ -73,7 +73,7 @@ Depois de instalada, o acesso à aplicação é feito com o seguinte login:
 
 ## Utilização
 
-O GISA inclui um [Manual do Utilizador](http://gisa.paradigmaxis.pt/docs/inicio#manual_de_utilizador) disponível à comunidade para ajuda na utilização da aplicação e para colaboração na redação do mesmo.
+O GISA inclui um [Manual do Utilizador](http://gisa.paradigmaxis.pt/docs/inicio#manual_de_instalacao_do_gisa_open_source) disponível à comunidade para ajuda na utilização da aplicação e para colaboração na redação do mesmo.
 
 ## Divulgação
 
