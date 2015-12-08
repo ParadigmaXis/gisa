@@ -6,7 +6,9 @@
 
 Para a instalação do GISA poderá usar um installer que tenha criado para o efeito ou então fazer o download do ficheiro "setup.exe".
 
-Os requisitos e os procedimentos de instalação do GISA encontram-se no Manual de instalação online em http://gisa.paradigmaxis.pt/docs/inicio#manual_de_instalacao_do_gisa_open_source.
+Os requisitos e os procedimentos de instalação do GISA encontram-se no Manual de instalação online em:
+
+http://gisa.paradigmaxis.pt/docs/inicio#manual_de_instalacao_do_gisa_open_source
 
 Depois de instalado, o acesso à aplicação é feito com o seguinte login:
 
