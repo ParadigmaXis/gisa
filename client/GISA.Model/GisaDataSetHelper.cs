@@ -437,6 +437,63 @@ namespace GISA.Model
             }
             return sb.ToString();
         }
+
+        public static void RecordEstatisticaPesquisa(long id, string catCode) {
+            try {
+                using (var ho = new GisaDataSetHelper.HoldOpen(GisaDataSetHelper.GetConnection())) {
+                    using (var tr = ho.Connection.BeginTransaction(IsolationLevel.Serializable)) {
+                        using (var cmd = ho.Connection.CreateCommand()) {
+                            cmd.Connection = ho.Connection;
+                            cmd.Transaction = tr;
+                            cmd.CommandText = "insert into EstatisticaPesquisa (ID, CatCode, UserID, AccessDateTime, AccessMethod, IPAddress) values (@ID, @CatCode, @UserID, @AccessDateTime, @AccessMethod, @IPAddress)";
+                            cmd.CommandType = CommandType.Text;
+                            var idParam = cmd.CreateParameter();
+                            idParam.DbType = DbType.Int64;
+                            idParam.ParameterName = "@ID";
+                            idParam.Value = id;
+                            var catCodeParam = cmd.CreateParameter();
+                            catCodeParam.DbType = DbType.StringFixedLength;
+                            catCodeParam.Size = 2;
+                            catCodeParam.ParameterName = "@CatCode";
+                            catCodeParam.Value = catCode;
+                            var userIDParam = cmd.CreateParameter();
+                            userIDParam.DbType = DbType.Int64;
+                            userIDParam.ParameterName = "@UserID";
+                            userIDParam.Value = (System.Threading.Thread.CurrentPrincipal as GisaPrincipal).TrusteeUserOperator.ID;
+                            var accessDateTimeParam = cmd.CreateParameter();
+                            accessDateTimeParam.DbType = DbType.DateTime;
+                            accessDateTimeParam.ParameterName = "@AccessDateTime";
+                            accessDateTimeParam.Value = DateTime.UtcNow;
+                            var accessMethodParam = cmd.CreateParameter();
+                            accessMethodParam.DbType = DbType.StringFixedLength;
+                            accessMethodParam.Size = 1;
+                            accessMethodParam.Value = "D";
+                            accessMethodParam.ParameterName = "@AccessMethod";
+                            var ipAddressParam = cmd.CreateParameter();
+                            ipAddressParam.DbType = DbType.String;
+                            ipAddressParam.Size = -1;
+                            ipAddressParam.Value = Environment.MachineName;
+                            ipAddressParam.ParameterName = "@IPAddress";
+                            (ipAddressParam as System.Data.Common.DbParameter).IsNullable = false;
+                            cmd.Parameters.Add(idParam);
+                            cmd.Parameters.Add(catCodeParam);
+                            cmd.Parameters.Add(userIDParam);
+                            cmd.Parameters.Add(accessDateTimeParam);
+                            cmd.Parameters.Add(accessMethodParam);
+                            cmd.Parameters.Add(ipAddressParam);
+                            cmd.ExecuteNonQuery();
+                            cmd.CommandText = "EstatisticaPesquisaSimplificar";
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.Clear();
+                            cmd.ExecuteNonQuery();
+                            tr.Commit();
+                        }
+                    }
+                }
+            } catch (Exception ex) {
+                System.Diagnostics.Debug.WriteLine(ex);
+            }
+        }
 	}
 
 	#if DEBUG

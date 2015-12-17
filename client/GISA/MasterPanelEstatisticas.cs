@@ -400,8 +400,7 @@ namespace GISA
         #region "Stats report"
 
         private string GetStatisticsText() {
-            if (tabControl1.SelectedTab.Equals(this.tabGisa))
-            {
+            if (tabControl1.SelectedTab.Equals(this.tabGisa)) {
                 StringBuilder periodo = new StringBuilder();
                 var from = this.Build_dataInicio();
                 var to = this.Build_dataFim();
@@ -410,10 +409,46 @@ namespace GISA
 
                 return periodo.ToString() + "\n" + GetTotaisPeriodo() + "\n" + GetTotais() + "\n" +
                     "Gerado em: " + DateTime.Now.ToString();
-            }
-            else
-            {
+            } else if (tabControl1.SelectedTab.Equals(this.tabFedora)) {
                 return controlFedoraEstatisticas1.GetStatisticsText();
+            } else if (tabControl1.SelectedTab.Equals(this.tabEstatisticaPesquisa)) {
+                var builder = new StringBuilder();
+                Action<ListView> toCsv = (lv) => {
+                    foreach (var g in lv.Groups.Cast<ListViewGroup>()) {
+                        builder.Append(g.Header);
+                        builder.Append("\n");
+                        var separator = "";
+                        foreach (var ch in lv.Columns.Cast<ColumnHeader>()) {
+                            if (ch.Tag != null) {
+                                builder.Append(separator);
+                                separator = "\t";
+                                builder.Append(ch.Text);
+                            }
+                        }
+                        builder.Append("\n");
+                        separator = "";
+                        foreach (var item in lv.Items.Cast<ListViewItem>()) {
+                            if (g.Equals(item.Group)) {
+                                foreach (var ch in lv.Columns.Cast<ColumnHeader>()) {
+                                    if (ch.Tag != null) {
+                                        builder.Append(separator);
+                                        separator = "\t";
+                                        builder.Append(item.SubItems[ch.Index].Text);
+                                    }
+                                }
+                                builder.Append("\n");
+                                separator = "";
+                            }
+                        }
+                        builder.Append("\n");
+                    }
+                };
+                toCsv(listViewTotal);
+                builder.Append("\n");
+                toCsv(listViewTopTen);
+                return builder.ToString();
+            } else {
+                return String.Empty;
             }
         }
 
@@ -552,6 +587,123 @@ namespace GISA
                     throw;
                 }
                 finally { ho.Dispose(); }
+            }
+        }
+
+        private void AplicarClick(object sender, EventArgs e) {
+            listViewTotal.Items.Clear();
+            listViewTopTen.Items.Clear();
+            using (var ho = new GisaDataSetHelper.HoldOpen(GisaDataSetHelper.GetConnection())) {
+                using (var cmd = ho.Connection.CreateCommand()) {
+                    cmd.CommandType = CommandType.Text;
+
+                    var fromDefault = DateTime.UtcNow;
+                    var toDefault = DateTime.UtcNow;
+                    cmd.CommandText = "select min(AccessDateTime), max(AccessDateTime) from EstatisticaPesquisa";
+                    using (var reader = cmd.ExecuteReader()) {
+                        if (reader.Read()) {
+                            fromDefault = reader.GetDateTime(0);
+                            toDefault = reader.GetDateTime(1);
+                        }
+                    }
+                    cmd.CommandText = "select * from dbo.EstatisticaAcessosCount(@From, @To)";
+                    var fromParam = cmd.CreateParameter();
+                    fromParam.DbType = DbType.DateTime;
+                    fromParam.ParameterName = "@From";
+                    if (pxCompleteDateBoxEstatisticaPesquisaFrom.Checked) {
+                        fromParam.Value = pxCompleteDateBoxEstatisticaPesquisaFrom.GetStandardMaskDateMet(true);
+                    } else {
+                        fromParam.Value = fromDefault;
+                    }
+                    var toParam = cmd.CreateParameter();
+                    toParam.DbType = DbType.DateTime;
+                    toParam.ParameterName = "@To";
+                    if (pxCompleteDateBoxEstatisticaPesquisaTo.Checked) {
+                        toParam.Value = pxCompleteDateBoxEstatisticaPesquisaTo.GetStandardMaskDateMet(false);
+                    } else {
+                        toParam.Value = toDefault;
+                    }
+                    cmd.Parameters.Add(fromParam);
+                    cmd.Parameters.Add(toParam);
+                    using (var reader = cmd.ExecuteReader()) {
+                        try {
+                            listViewTotal.BeginUpdate();
+                            // Criar um ListViewItem por grupo
+                            foreach (var g in listViewTotal.Groups.Cast<ListViewGroup>()) {
+                                listViewTotal.Items.Add(new ListViewItem { Group = g, Tag = g.Tag });
+                            }
+                            // Criar um ListViewSubItem por coluna
+                            foreach (var lvi in listViewTotal.Items.Cast<ListViewItem>()) {
+                                foreach (var ch in listViewTotal.Columns.Cast<ColumnHeader>()) {
+                                    if (ch.Index > 0) {
+                                        lvi.SubItems.Add(new ListViewItem.ListViewSubItem { Name = ch.Name, Text = "0", Tag = ch.Tag });
+                                    }
+                                }
+                            }
+                            while (reader.Read()) {
+                                var n = reader.GetInt32(0);
+                                var catCode = reader.GetString(1);
+                                var accessMethod = reader.GetString(2);
+                                var item = listViewTotal.Items
+                                    .Cast<ListViewItem>()
+                                    .Single(lvi => lvi.Tag.Equals(catCode));
+                                var subitem = item.SubItems
+                                    .Cast<ListViewItem.ListViewSubItem>()
+                                    .Single(lvsi => accessMethod.Equals(lvsi.Tag));
+                                subitem.Text = n.ToString();
+                            }
+                        } finally {
+                            listViewTotal.EndUpdate();
+                        }
+                    }
+                    // calcular o total e colocar no Text
+                    foreach (var lvi in listViewTotal.Items.Cast<ListViewItem>()) {
+                        lvi.Text = lvi.SubItems.Cast<ListViewItem.ListViewSubItem>().Where(lvsi => !String.IsNullOrEmpty(lvsi.Text)).Select(lvsi => Int32.Parse(lvsi.Text)).Sum().ToString();
+                    }
+                    cmd.CommandText = "select * from dbo.EstatisticaAcessosTopTen(@From, @To, @CatCode)";
+                    var catCodeParam = cmd.CreateParameter();
+                    catCodeParam.DbType = DbType.StringFixedLength;
+                    catCodeParam.Size = 2;
+                    catCodeParam.ParameterName = "@CatCode";
+                    cmd.Parameters.Add(catCodeParam);
+                    foreach (var lvg in listViewTopTen.Groups.Cast<ListViewGroup>()) {
+                        catCodeParam.Value = lvg.Tag.ToString();
+                        using (var reader = cmd.ExecuteReader()) {
+                            while (reader.Read()) {
+                                var n = reader.GetValue(0);
+                                var id = reader.GetValue(1);
+                                
+                                var item = new ListViewItem { Group = lvg, Tag = id.ToString(), Text = id.ToString() };
+
+                                listViewTopTen.Items.Add(item);
+                                foreach (var ch in listViewTopTen.Columns.Cast<ColumnHeader>()) {
+                                    if (ch.Index > 0) {
+                                        item.SubItems.Add("0");
+                                    }
+                                }
+                                item.SubItems[listViewTopTen.Columns.Cast<ColumnHeader>().Single(ch => "SUM".Equals(ch.Tag)).Index].Text = n.ToString();
+                            }
+                        }
+                    }
+                    var idParam = cmd.CreateParameter();
+                    idParam.DbType = DbType.Int64;
+                    idParam.ParameterName = "@ID";
+                    cmd.Parameters.Add(idParam);
+                    foreach (var lvi in listViewTopTen.Items.Cast<ListViewItem>()) {
+                        cmd.CommandText = "select * from dbo.EstatisticaAcessosTopTenParciais(@From, @To, @ID, @CatCode)";
+                        catCodeParam.Value = lvi.Group.Tag;
+                        idParam.Value = Int64.Parse(lvi.Tag.ToString());
+                        using (var reader = cmd.ExecuteReader()) {
+                            while (reader.Read()) {
+                                var n = reader.GetValue(0);
+                                var accessMethod = reader.GetValue(1);
+                                var txt = reader.GetString(2);
+                                lvi.SubItems[listViewTopTen.Columns.Cast<ColumnHeader>().Single(ch => accessMethod.Equals(ch.Tag)).Index].Text = n.ToString();
+                                lvi.Text = txt;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

@@ -1173,9 +1173,12 @@ namespace GISA
         private void ActivateDetalhesTexto() {
             if (PesquisaList1.GetSelectedRows.Count() == 1)
             {
-				rtfDetalhes.Clear();
+                var frdRow = PesquisaList1.SelectedRow as GISADataset.FRDBaseRow;
+                // Conta como consulta de detalhe da Unidade Informacional
+                GisaDataSetHelper.RecordEstatisticaPesquisa(frdRow.IDNivel, "UI");
+                rtfDetalhes.Clear();
 				rtfDetalhes.Rtf = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Microsoft Sans Serif;}}\\viewkind4\\uc1\\pard\\f0\\fs24 " +
-                    GetFRDBaseAsRTF((GISADataset.FRDBaseRow)PesquisaList1.SelectedRow) + "\\par}";
+                    GetFRDBaseAsRTF(frdRow) + "\\par}";
                 pnlDetalhesTexto.BringToFront();
 			}
 			else
@@ -1217,7 +1220,8 @@ namespace GISA
 			if (PesquisaList1.GetSelectedRows.Count() == 1)
 			{
                 List<UFRule.UFsAssociadas> ufsAssociadas = new List<UFRule.UFsAssociadas>();
-                string ID = ((GISADataset.FRDBaseRow)PesquisaList1.SelectedRow).ID.ToString();
+                var frdRow = (GISADataset.FRDBaseRow)PesquisaList1.SelectedRow;
+                string ID = frdRow.ID.ToString();
 
 				GisaDataSetHelper.ManageDatasetConstraints(false);
 
@@ -1269,6 +1273,11 @@ namespace GISA
                 pnlUnidadesFisicas.BringToFront();
 
                 this.btnExportUFs.Enabled = dataGridView1.Rows.Count > 0;
+
+                if (dataGridView1.Rows.Count > 0) {
+                    // Conta como consulta de detalhe da Unidade Informacional
+                    GisaDataSetHelper.RecordEstatisticaPesquisa(frdRow.IDNivel, "UI");
+                }
 
 				Trace.WriteLine("<<ActivateDetalhesUnidadesFisicas>>: " + new TimeSpan(DateTime.Now.Ticks - calc).ToString());
 			}
@@ -1387,15 +1396,20 @@ namespace GISA
 
                 this.panelInfoSDocs1.GetSDocs(IDNivel);
                 this.panelInfoSDocs1.BringToFront();
-            }
-            else
+
+                // Conta como consulta de detalhe da Unidade Informacional
+                GisaDataSetHelper.RecordEstatisticaPesquisa(IDNivel, "UI");
+            } else
                 ToolBar_ButtonClick(this, new ToolBarButtonClickEventArgs(ToolBarButton2));
         }
 
         private void ActivateDetalhesEP() {
-            if (PesquisaList1.GetSelectedRows.Count() == 1)
+            if (PesquisaList1.GetSelectedRows.Count() == 1) {
                 this.panelInfoEPs1.BringToFront();
-            else
+                // Conta como consulta de detalhe da Unidade Informacional
+                var frdRow = PesquisaList1.SelectedRow as GISADataset.FRDBaseRow;
+                GisaDataSetHelper.RecordEstatisticaPesquisa(frdRow.IDNivel, "UI");
+            } else
                 ToolBar_ButtonClick(this, new ToolBarButtonClickEventArgs(ToolBarButton2));
         }
 
@@ -2361,6 +2375,10 @@ namespace GISA
                 }
 
                 pnlDetalhesImagem.BringToFront();
+                if (lstImagens.Items.Count > 0 || trvODsFedora.Nodes.Count > 0) {
+                    // Conta como consulta de Objecto Digital
+                    GisaDataSetHelper.RecordEstatisticaPesquisa(frdRow.IDNivel, "OD");
+                }
             }
             else
                 ToolBar_ButtonClick(this, new ToolBarButtonClickEventArgs(ToolBarButton2));

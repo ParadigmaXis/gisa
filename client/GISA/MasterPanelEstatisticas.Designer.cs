@@ -28,6 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ColumnHeader columnHeader6;
+            System.Windows.Forms.ColumnHeader columnHeader7;
+            System.Windows.Forms.ColumnHeader columnHeader8;
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Unidades Documentais", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Objetos Digitais", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Unidades Físicas", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Unidades Documentais", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Objetos Digitais", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("Unidades Físicas", System.Windows.Forms.HorizontalAlignment.Left);
             this.toolBarCopyToClipboard = new System.Windows.Forms.ToolBarButton();
             this.GrpBx_Periodo = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -55,6 +64,24 @@
             this.tabGisa = new System.Windows.Forms.TabPage();
             this.tabFedora = new System.Windows.Forms.TabPage();
             this.controlFedoraEstatisticas1 = new GISA.ControlFedoraEstatisticas();
+            this.tabEstatisticaPesquisa = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.listViewTotal = new System.Windows.Forms.ListView();
+            this.listViewTopTen = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button2 = new System.Windows.Forms.Button();
+            this.pxCompleteDateBoxEstatisticaPesquisaFrom = new GISA.Controls.PxCompleteDateBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pxCompleteDateBoxEstatisticaPesquisaTo = new GISA.Controls.PxCompleteDateBox();
+            columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pnlToolbarPadding.SuspendLayout();
             this.GrpBx_Periodo.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -69,6 +96,10 @@
             this.tabControl1.SuspendLayout();
             this.tabGisa.SuspendLayout();
             this.tabFedora.SuspendLayout();
+            this.tabEstatisticaPesquisa.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblFuncao
@@ -80,13 +111,31 @@
             // 
             this.ToolBar.Buttons.AddRange(new System.Windows.Forms.ToolBarButton[] {
             this.toolBarCopyToClipboard});
-            this.ToolBar.Size = new System.Drawing.Size(12334, 26);
+            this.ToolBar.Size = new System.Drawing.Size(13018, 26);
             this.ToolBar.ButtonClick += new System.Windows.Forms.ToolBarButtonClickEventHandler(this.ToolBar_ButtonClick);
             // 
             // pnlToolbarPadding
             // 
             this.pnlToolbarPadding.Location = new System.Drawing.Point(0, 24);
             this.pnlToolbarPadding.Size = new System.Drawing.Size(771, 28);
+            // 
+            // columnHeader6
+            // 
+            columnHeader6.Tag = "SUM";
+            columnHeader6.Text = "Total";
+            columnHeader6.Width = 114;
+            // 
+            // columnHeader7
+            // 
+            columnHeader7.Tag = "D";
+            columnHeader7.Text = "Nº Consultas Cliente Desktop";
+            columnHeader7.Width = 123;
+            // 
+            // columnHeader8
+            // 
+            columnHeader8.Tag = "W";
+            columnHeader8.Text = "Nº Consultas Internet";
+            columnHeader8.Width = 112;
             // 
             // toolBarCopyToClipboard
             // 
@@ -95,9 +144,9 @@
             // 
             // GrpBx_Periodo
             // 
-            this.GrpBx_Periodo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.GrpBx_Periodo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.GrpBx_Periodo.Controls.Add(this.button1);
             this.GrpBx_Periodo.Controls.Add(this.chkExclImport);
             this.GrpBx_Periodo.Controls.Add(this.cdbDataInicio);
@@ -147,9 +196,9 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -293,8 +342,8 @@
             // 
             // gBox_Totais
             // 
-            this.gBox_Totais.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.gBox_Totais.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gBox_Totais.Controls.Add(this.tableLayoutPanel2);
             this.gBox_Totais.Location = new System.Drawing.Point(3, 183);
             this.gBox_Totais.Name = "gBox_Totais";
@@ -367,11 +416,12 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabGisa);
             this.tabControl1.Controls.Add(this.tabFedora);
+            this.tabControl1.Controls.Add(this.tabEstatisticaPesquisa);
             this.tabControl1.Location = new System.Drawing.Point(0, 57);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -403,13 +453,195 @@
             // 
             // controlFedoraEstatisticas1
             // 
-            this.controlFedoraEstatisticas1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.controlFedoraEstatisticas1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.controlFedoraEstatisticas1.Location = new System.Drawing.Point(6, 6);
             this.controlFedoraEstatisticas1.Name = "controlFedoraEstatisticas1";
             this.controlFedoraEstatisticas1.Size = new System.Drawing.Size(751, 465);
             this.controlFedoraEstatisticas1.TabIndex = 0;
+            // 
+            // tabEstatisticaPesquisa
+            // 
+            this.tabEstatisticaPesquisa.Controls.Add(this.groupBox1);
+            this.tabEstatisticaPesquisa.Location = new System.Drawing.Point(4, 22);
+            this.tabEstatisticaPesquisa.Name = "tabEstatisticaPesquisa";
+            this.tabEstatisticaPesquisa.Padding = new System.Windows.Forms.Padding(3);
+            this.tabEstatisticaPesquisa.Size = new System.Drawing.Size(763, 477);
+            this.tabEstatisticaPesquisa.TabIndex = 2;
+            this.tabEstatisticaPesquisa.Text = "Pesquisa";
+            this.tabEstatisticaPesquisa.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.groupBox2);
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.pxCompleteDateBoxEstatisticaPesquisaFrom);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.pxCompleteDateBoxEstatisticaPesquisaTo);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(757, 471);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Filtro";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.tableLayoutPanel4);
+            this.groupBox2.Location = new System.Drawing.Point(6, 47);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(745, 418);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Resultados";
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.listViewTotal, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.listViewTopTen, 1, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(739, 399);
+            this.tableLayoutPanel4.TabIndex = 3;
+            // 
+            // listViewTotal
+            // 
+            this.listViewTotal.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            columnHeader6,
+            columnHeader7,
+            columnHeader8});
+            this.listViewTotal.Dock = System.Windows.Forms.DockStyle.Fill;
+            listViewGroup1.Header = "Unidades Documentais";
+            listViewGroup1.Name = "listViewGroupTotalUD";
+            listViewGroup1.Tag = "UI";
+            listViewGroup2.Header = "Objetos Digitais";
+            listViewGroup2.Name = "listViewGroupTotalOD";
+            listViewGroup2.Tag = "OD";
+            listViewGroup3.Header = "Unidades Físicas";
+            listViewGroup3.Name = "listViewGroupTotalUF";
+            listViewGroup3.Tag = "UF";
+            this.listViewTotal.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            listViewGroup1,
+            listViewGroup2,
+            listViewGroup3});
+            this.listViewTotal.Location = new System.Drawing.Point(3, 3);
+            this.listViewTotal.Name = "listViewTotal";
+            this.listViewTotal.Size = new System.Drawing.Size(363, 393);
+            this.listViewTotal.TabIndex = 2;
+            this.listViewTotal.UseCompatibleStateImageBehavior = false;
+            this.listViewTotal.View = System.Windows.Forms.View.Details;
+            // 
+            // listViewTopTen
+            // 
+            this.listViewTopTen.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.listViewTopTen.Dock = System.Windows.Forms.DockStyle.Fill;
+            listViewGroup4.Header = "Unidades Documentais";
+            listViewGroup4.Name = "listViewGroupTopTenUD";
+            listViewGroup4.Tag = "UI";
+            listViewGroup5.Header = "Objetos Digitais";
+            listViewGroup5.Name = "listViewGroupTopTenOD";
+            listViewGroup5.Tag = "OD";
+            listViewGroup6.Header = "Unidades Físicas";
+            listViewGroup6.Name = "listViewGroupTopTenUF";
+            listViewGroup6.Tag = "UF";
+            this.listViewTopTen.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            listViewGroup4,
+            listViewGroup5,
+            listViewGroup6});
+            this.listViewTopTen.Location = new System.Drawing.Point(372, 3);
+            this.listViewTopTen.Name = "listViewTopTen";
+            this.listViewTopTen.Size = new System.Drawing.Size(364, 393);
+            this.listViewTopTen.TabIndex = 1;
+            this.listViewTopTen.UseCompatibleStateImageBehavior = false;
+            this.listViewTopTen.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Tag = "ID";
+            this.columnHeader1.Text = "Designação";
+            this.columnHeader1.Width = 110;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Tag = "SUM";
+            this.columnHeader2.Text = "Nº Consultas";
+            this.columnHeader2.Width = 114;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Tag = "D";
+            this.columnHeader3.Text = "Nº Consultas Cliente Desktop";
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Tag = "W";
+            this.columnHeader4.Text = "Nº Consultas Internet";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(569, 17);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "Aplicar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.AplicarClick);
+            // 
+            // pxCompleteDateBoxEstatisticaPesquisaFrom
+            // 
+            this.pxCompleteDateBoxEstatisticaPesquisaFrom.Checked = false;
+            this.pxCompleteDateBoxEstatisticaPesquisaFrom.Day = 1;
+            this.pxCompleteDateBoxEstatisticaPesquisaFrom.Location = new System.Drawing.Point(44, 19);
+            this.pxCompleteDateBoxEstatisticaPesquisaFrom.Month = 1;
+            this.pxCompleteDateBoxEstatisticaPesquisaFrom.Name = "pxCompleteDateBoxEstatisticaPesquisaFrom";
+            this.pxCompleteDateBoxEstatisticaPesquisaFrom.Size = new System.Drawing.Size(167, 22);
+            this.pxCompleteDateBoxEstatisticaPesquisaFrom.TabIndex = 16;
+            this.pxCompleteDateBoxEstatisticaPesquisaFrom.Year = 1;
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(8, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 24);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "entre";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(232, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(16, 24);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "e";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pxCompleteDateBoxEstatisticaPesquisaTo
+            // 
+            this.pxCompleteDateBoxEstatisticaPesquisaTo.Checked = false;
+            this.pxCompleteDateBoxEstatisticaPesquisaTo.Day = 1;
+            this.pxCompleteDateBoxEstatisticaPesquisaTo.Location = new System.Drawing.Point(254, 19);
+            this.pxCompleteDateBoxEstatisticaPesquisaTo.Month = 1;
+            this.pxCompleteDateBoxEstatisticaPesquisaTo.Name = "pxCompleteDateBoxEstatisticaPesquisaTo";
+            this.pxCompleteDateBoxEstatisticaPesquisaTo.Size = new System.Drawing.Size(167, 22);
+            this.pxCompleteDateBoxEstatisticaPesquisaTo.TabIndex = 17;
+            this.pxCompleteDateBoxEstatisticaPesquisaTo.Year = 1;
             // 
             // MasterPanelEstatisticas
             // 
@@ -418,9 +650,9 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "MasterPanelEstatisticas";
             this.Size = new System.Drawing.Size(771, 560);
+            this.Controls.SetChildIndex(this.tabControl1, 0);
             this.Controls.SetChildIndex(this.lblFuncao, 0);
             this.Controls.SetChildIndex(this.pnlToolbarPadding, 0);
-            this.Controls.SetChildIndex(this.tabControl1, 0);
             this.pnlToolbarPadding.ResumeLayout(false);
             this.GrpBx_Periodo.ResumeLayout(false);
             this.GrpBx_Periodo.PerformLayout();
@@ -436,6 +668,10 @@
             this.tabControl1.ResumeLayout(false);
             this.tabGisa.ResumeLayout(false);
             this.tabFedora.ResumeLayout(false);
+            this.tabEstatisticaPesquisa.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -469,5 +705,20 @@
         private System.Windows.Forms.TabPage tabGisa;
         private System.Windows.Forms.TabPage tabFedora;
         private ControlFedoraEstatisticas controlFedoraEstatisticas1;
+        private System.Windows.Forms.TabPage tabEstatisticaPesquisa;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button button2;
+        internal Controls.PxCompleteDateBox pxCompleteDateBoxEstatisticaPesquisaFrom;
+        internal System.Windows.Forms.Label label1;
+        internal System.Windows.Forms.Label label2;
+        internal Controls.PxCompleteDateBox pxCompleteDateBoxEstatisticaPesquisaTo;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.ListView listViewTotal;
+        private System.Windows.Forms.ListView listViewTopTen;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }

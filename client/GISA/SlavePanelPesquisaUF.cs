@@ -614,11 +614,13 @@ namespace GISA
 		{
 			if (PesquisaUFList1.GetSelectedRows.Count() == 1)
 			{
-
-				rtfDetalhes.Clear();
+                var nivelRow = (GISADataset.NivelRow)PesquisaUFList1.SelectedRow;
+                // Conta como consulta de detalhe da Unidade Física
+                GisaDataSetHelper.RecordEstatisticaPesquisa(nivelRow.ID, "UF");
+                rtfDetalhes.Clear();
 				//rtfDetalhes.Rtf = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Microsoft Sans Serif;}}\\viewkind4\\uc1\\pard\\f0\\fs24 " + GetFRDBaseAsRTF((GISADataset.NivelRow)(PesquisaUFList1.SelectedItems[0].Tag)) + "\\par}";
                 rtfDetalhes.Rtf = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1033{\\fonttbl{\\f0\\fnil\\fcharset0 Microsoft Sans Serif;}}\\viewkind4\\uc1\\pard\\f0\\fs24 " + 
-                    GetFRDBaseAsRTF((GISADataset.NivelRow)(PesquisaUFList1.SelectedRow)) + "\\par}";
+                    GetFRDBaseAsRTF(nivelRow) + "\\par}";
 				Debug.WriteLine("");
 				Debug.WriteLine(rtfDetalhes.Rtf);
 				Debug.WriteLine("");
@@ -634,10 +636,14 @@ namespace GISA
 			{
 				long ticks = DateTime.Now.Ticks;
                 List<PesquisaRule.DocAssociado> docsAssociados = new List<PesquisaRule.DocAssociado>();
-				//string ID = ((GISADataset.NivelRow)(PesquisaUFList1.SelectedItems[0].Tag)).ID.ToString();
-                string ID = ((GISADataset.NivelRow)(PesquisaUFList1.SelectedRow)).ID.ToString();
+                var nivelRow = (GISADataset.NivelRow)PesquisaUFList1.SelectedRow;
+                string ID = nivelRow.ID.ToString();
 
-				GisaDataSetHelper.ManageDatasetConstraints(false);
+                // Conta como consulta de detalhe da Unidade Física
+                GisaDataSetHelper.RecordEstatisticaPesquisa(nivelRow.ID, "UF");
+
+
+                GisaDataSetHelper.ManageDatasetConstraints(false);
 
                 GisaDataSetHelper.HoldOpen ho = new GisaDataSetHelper.HoldOpen(GisaDataSetHelper.GetConnection());
 				try
