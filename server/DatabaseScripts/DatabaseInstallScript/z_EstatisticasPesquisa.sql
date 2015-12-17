@@ -54,7 +54,7 @@ create function dbo.EstatisticaAcessosTopTenParciais(@From datetime, @To datetim
 	from EstatisticaPesquisa
 	where AccessDateTime between @From and @To
 	)
-	select count(*) N, AccessMethod from A where ID = @ID and CatCode = @CatCode group by AccessMethod
+	select count(*) N, AccessMethod, (select Designacao from NivelDesignado where ID = @ID) Designacao from A where ID = @ID and CatCode = @CatCode group by AccessMethod
 go
 if exists (select * from sys.objects where object_id = object_id(N'dbo.EstatisticaPesquisaSimplificar'))
 	drop procedure dbo.EstatisticaPesquisaSimplificar
