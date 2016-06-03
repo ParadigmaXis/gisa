@@ -261,7 +261,7 @@ namespace GISA
             this.GroupBox3.Size = new System.Drawing.Size(584, 481);
             this.GroupBox3.TabIndex = 2;
             this.GroupBox3.TabStop = false;
-            this.GroupBox3.Text = "Unidades fÌsicas agregadas";
+            this.GroupBox3.Text = "Unidades f√≠sicas agregadas";
             // 
             // btnExportUFs
             // 
@@ -328,7 +328,7 @@ namespace GISA
             this.GroupBox4.Size = new System.Drawing.Size(584, 481);
             this.GroupBox4.TabIndex = 1;
             this.GroupBox4.TabStop = false;
-            this.GroupBox4.Text = "DescriÁ„o";
+            this.GroupBox4.Text = "Descri√ß√£o";
             // 
             // rtfDetalhes
             // 
@@ -462,7 +462,7 @@ namespace GISA
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(26, 26);
             this.btnActualizar.TabIndex = 23;
-            this.CurrentToolTip.SetToolTip(this.btnActualizar, "Mostrar no ecr„ todo");
+            this.CurrentToolTip.SetToolTip(this.btnActualizar, "Mostrar no ecr√£ todo");
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnFullScreen
@@ -474,7 +474,7 @@ namespace GISA
             this.btnFullScreen.Name = "btnFullScreen";
             this.btnFullScreen.Size = new System.Drawing.Size(26, 26);
             this.btnFullScreen.TabIndex = 22;
-            this.CurrentToolTip.SetToolTip(this.btnFullScreen, "Mostrar no ecr„ todo");
+            this.CurrentToolTip.SetToolTip(this.btnFullScreen, "Mostrar no ecr√£ todo");
             this.btnFullScreen.Click += new System.EventHandler(this.btnFullScreen_Click);
             // 
             // trvODsFedora
@@ -519,7 +519,7 @@ namespace GISA
             this.controlFedoraPdfViewer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.controlFedoraPdfViewer.Location = new System.Drawing.Point(0, 0);
             this.controlFedoraPdfViewer.Name = "controlFedoraPdfViewer";
-            this.controlFedoraPdfViewer.Qualidade = "MÈdia";
+            this.controlFedoraPdfViewer.Qualidade = "M√©dia";
             this.controlFedoraPdfViewer.Size = new System.Drawing.Size(382, 462);
             this.controlFedoraPdfViewer.TabIndex = 0;
             // 
@@ -555,25 +555,25 @@ namespace GISA
             // MenuItemPrintInventarioResumido
             // 
             this.MenuItemPrintInventarioResumido.Index = 0;
-            this.MenuItemPrintInventarioResumido.Text = "&Invent·rio resumido";
+            this.MenuItemPrintInventarioResumido.Text = "&Invent√°rio resumido";
             this.MenuItemPrintInventarioResumido.Visible = false;
             // 
             // MenuItemPrintInventarioDetalhado
             // 
             this.MenuItemPrintInventarioDetalhado.Index = 1;
-            this.MenuItemPrintInventarioDetalhado.Text = "&Invent·rio detalhado";
+            this.MenuItemPrintInventarioDetalhado.Text = "&Invent√°rio detalhado";
             this.MenuItemPrintInventarioDetalhado.Visible = false;
             // 
             // MenuItemPrintCatalogoResumido
             // 
             this.MenuItemPrintCatalogoResumido.Index = 2;
-            this.MenuItemPrintCatalogoResumido.Text = "&Cat·logo resumido";
+            this.MenuItemPrintCatalogoResumido.Text = "&Cat√°logo resumido";
             this.MenuItemPrintCatalogoResumido.Visible = false;
             // 
             // MenuItemPrintCatalogoDetalhado
             // 
             this.MenuItemPrintCatalogoDetalhado.Index = 3;
-            this.MenuItemPrintCatalogoDetalhado.Text = "&Cat·logo detalhado";
+            this.MenuItemPrintCatalogoDetalhado.Text = "&Cat√°logo detalhado";
             this.MenuItemPrintCatalogoDetalhado.Visible = false;
             // 
             // MenuItem1
@@ -585,7 +585,7 @@ namespace GISA
             // MenuItemPrintUnidadesFisicasAssociadas
             // 
             this.MenuItemPrintUnidadesFisicasAssociadas.Index = 5;
-            this.MenuItemPrintUnidadesFisicasAssociadas.Text = "&Unidades FÌsicas Associadas";
+            this.MenuItemPrintUnidadesFisicasAssociadas.Text = "&Unidades F√≠sicas Associadas";
             this.MenuItemPrintUnidadesFisicasAssociadas.Visible = false;
             // 
             // MenuItemPrintResultadosPesquisaResumidos
@@ -667,16 +667,16 @@ namespace GISA
             ToolBarButtonSDocs.ToolTipText = "SubDocumentos";
 			ToolBarButton3.ToolTipText = "Detalhes";
 			ToolBarButton4.ToolTipText = "Imagens";
-			ToolBarButton5.ToolTipText = "Unidades fÌsicas";
-			ToolBarButtonReports.ToolTipText = "RelatÛrios";
-            ToolBarButton_InfoEPs.ToolTipText = "InformaÁ„o da entidade produtora";
+			ToolBarButton5.ToolTipText = "Unidades f√≠sicas";
+			ToolBarButtonReports.ToolTipText = "Relat√≥rios";
+            ToolBarButton_InfoEPs.ToolTipText = "Informa√ß√£o da entidade produtora";
             this.btnFullScreen.Image = SharedResourceSets.CurrentSharedResourceSets.getImageResource(typeof(SharedActionIcons), "ActionFullScreen_enabled_16x16.png");
             this.btnActualizar.Image = SharedResourcesOld.CurrentSharedResources.Actualizar;
 
             ToolBar.ImageList = SharedResourcesOld.CurrentSharedResources.PesquisaResultadosImageList;
             trvODsFedora.ImageList = SharedResources.SharedResourcesOld.CurrentSharedResources.FedoraImageList;
 
-            this.CurrentToolTip.SetToolTip(this.btnFullScreen, "Mostrar no ecr„ todo");
+            this.CurrentToolTip.SetToolTip(this.btnFullScreen, "Mostrar no ecr√£ todo");
             this.CurrentToolTip.SetToolTip(this.btnActualizar, SharedResourcesOld.CurrentSharedResources.ActualizarString);
 
             this.btnExportUFs.Image = SharedResourcesOld.CurrentSharedResources.Export;
@@ -771,12 +771,12 @@ namespace GISA
 					}
 					catch (Exception ex)
 					{
-                        MessageBox.Show("N„o foi possÌvel completar a pesquisa solicitada. " + Environment.NewLine + "Erro: " + ex.Message, "DeterminaÁ„o dos resultados de pesquisa", MessageBoxButtons.OK, MessageBoxIcon.Warning);						
+                        MessageBox.Show("N√£o foi poss√≠vel completar a pesquisa solicitada. " + Environment.NewLine + "Erro: " + ex.Message, "Determina√ß√£o dos resultados de pesquisa", MessageBoxButtons.OK, MessageBoxIcon.Warning);						
 						ShowResults = false;
 						Debug.WriteLine(ex);
                         throw;
 					}
-					Debug.WriteLine("<<c·lculo da pesquisa>>: " + new TimeSpan(DateTime.Now.Ticks - calc).ToString());
+					Debug.WriteLine("<<c√°lculo da pesquisa>>: " + new TimeSpan(DateTime.Now.Ticks - calc).ToString());
 
 					if (ShowResults)
 					{
@@ -791,7 +791,7 @@ namespace GISA
 
 						Debug.WriteLine("<<Popular resultados da pesquisa>>: " + new TimeSpan(DateTime.Now.Ticks - calc).ToString());
 
-						this.lblFuncao.Text = string.Format("Resultados da pesquisa ({0} {1})", resultNumber, ((resultNumber == 1) ? "descriÁ„o" : "descriÁıes"));
+						this.lblFuncao.Text = string.Format("Resultados da pesquisa ({0} {1})", resultNumber, ((resultNumber == 1) ? "descri√ß√£o" : "descri√ß√µes"));
 					}
 					else
 					{
@@ -849,7 +849,7 @@ namespace GISA
                         panelInfoEPs1.BuildTree(frdRow.NivelRow, ho.Connection);
                     }
                     else
-                        MessageBox.Show("O elemento selecionado foi apagado por outro utilizador." + System.Environment.NewLine + "Por esse motivo n„o È possÌvel apresentar qualquer detalhe sobre esse elemento", "SeleÁ„o de resultados da pesquisa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("O elemento selecionado foi apagado por outro utilizador." + System.Environment.NewLine + "Por esse motivo n√£o √© poss√≠vel apresentar qualquer detalhe sobre esse elemento", "Sele√ß√£o de resultados da pesquisa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 catch (Exception ex)
                 {
@@ -903,13 +903,13 @@ namespace GISA
 					PesquisaRule.Current.LoadSelectedData(GisaDataSetHelper.GetInstance(), rhRow.ID, Convert.ToInt64(TipoFRDBase.FRDOIRecolha), ho.Connection);
 				}
 
-				// se n„o existir um nÛ selecionado para o nivel do nÛ selecionado ignora-se a chamada a este metodo
+				// se n√£o existir um n√≥ selecionado para o nivel do n√≥ selecionado ignora-se a chamada a este metodo
 				if (rhRow == null)
 					return;
 
 				try
 				{
-					// este teste relevou-se necess·rio para algumas sequencias de acÁıes faziam o TopLevelControl ser null quando chegavamos a este ponto
+					// este teste relevou-se necess√°rio para algumas sequencias de ac√ß√µes faziam o TopLevelControl ser null quando chegavamos a este ponto
 					if (TopLevelControl != null)
 						((frmMain)TopLevelControl).EnterWaitMode();
 					this.lblFuncao.Text = string.Format("selecionado {0}", rhRow.TipoNivelRelacionadoRow.Designacao);
@@ -970,7 +970,7 @@ namespace GISA
             long countResults = 0;
             try
             {
-                // TODO: Considerar retirar a dependÍncia com Lucene.Net para fazer a validaÁ„o dos campos: nem todos s„o validados....
+                // TODO: Considerar retirar a depend√™ncia com Lucene.Net para fazer a valida√ß√£o dos campos: nem todos s√£o validados....
                 NivelDocumentalSearch ndSearch = new NivelDocumentalSearch();
                 Lucene.Net.Analysis.Analyzer analyzer = new Lucene.Net.Analysis.Standard.StandardAnalyzer(Lucene.Net.Util.Version.LUCENE_30);
                 QueryParser qp = new QueryParser(Lucene.Net.Util.Version.LUCENE_30, string.Empty, analyzer);
@@ -986,8 +986,8 @@ namespace GISA
 
                 ndSearch.Modulo = DisallowFullSearchWhenUserCantUseIt();
 
-                ndSearch.CodigoParcial = Helper.AddFieldToSearch(qp, "CÛdigo Parcial", MasterPanelPesquisa.txtCodigoParcial.Text, ref errorMessage);
-                ndSearch.Designacao = Helper.AddFieldToSearch(qp, "DesignaÁ„o", MasterPanelPesquisa.txtDesignacao.Text, ref errorMessage);
+                ndSearch.CodigoParcial = Helper.AddFieldToSearch(qp, "C√≥digo Parcial", MasterPanelPesquisa.txtCodigoParcial.Text, ref errorMessage);
+                ndSearch.Designacao = Helper.AddFieldToSearch(qp, "Designa√ß√£o", MasterPanelPesquisa.txtDesignacao.Text, ref errorMessage);
                 ndSearch.Autor = Helper.AddFieldToSearch(qp, "Autor", MasterPanelPesquisa.txtAutor.Text, ref errorMessage);
                 ndSearch.EntidadeProdutora = Helper.AddFieldToSearch(qp, "Entidade Produtora", MasterPanelPesquisa.txtEntidadeProdutora.Text, ref errorMessage);
 
@@ -1014,8 +1014,8 @@ namespace GISA
                     ndSearch.DataProducaoFimDoFim = MasterPanelPesquisa.cdbFimDoFim.GetStandardMaskDate.ToString("yyyyMMdd");
 
                 ndSearch.TipologiaInformacional = Helper.AddFieldToSearch(qp, "Tipologia Informacional", MasterPanelPesquisa.txtTipologiaInformacional.Text, ref errorMessage);
-                ndSearch.TermosIndexacao = Helper.AddFieldToSearch(qp, "IndexaÁ„o", MasterPanelPesquisa.txtIndexacao.Text, ref errorMessage);
-                ndSearch.ConteudoInformacional = Helper.AddFieldToSearch(qp, "Conte˙do Informacional", MasterPanelPesquisa.txtConteudoInformacional.Text, ref errorMessage);
+                ndSearch.TermosIndexacao = Helper.AddFieldToSearch(qp, "Indexa√ß√£o", MasterPanelPesquisa.txtIndexacao.Text, ref errorMessage);
+                ndSearch.ConteudoInformacional = Helper.AddFieldToSearch(qp, "Conte√∫do Informacional", MasterPanelPesquisa.txtConteudoInformacional.Text, ref errorMessage);
                 ndSearch.Notas = Helper.AddFieldToSearch(qp, "Notas", MasterPanelPesquisa.txtNotas.Text, ref errorMessage);
                 ndSearch.Cota = Helper.AddFieldToSearch(qp, "Cota", Helper.EscapeSpecialCharactersCotaDocumento(MasterPanelPesquisa.txtCota.Text.ToLower()), ref errorMessage);
                 ndSearch.Agrupador = Helper.AddFieldToSearch(qp, "Agrupador", MasterPanelPesquisa.txtAgrupador.Text, ref errorMessage);
@@ -1117,14 +1117,14 @@ namespace GISA
 
                 if (errorMessage.Length > 0)
                 {
-                    MessageBox.Show("O(s) campo(s) seguinte(s) tem(Ím) valor(es) incorrecto(s): " +
+                    MessageBox.Show("O(s) campo(s) seguinte(s) tem(√™m) valor(es) incorrecto(s): " +
                         System.Environment.NewLine +
                         errorMessage.ToString());
 
                     return 0;
                 }
                 
-                // impedir efectuar uma pesquisa no servidor de pesquisa quando, na pesquisa avanÁada, n„o existe nenhum critÈrio definido excepto um nivel a partir da estrutura
+                // impedir efectuar uma pesquisa no servidor de pesquisa quando, na pesquisa avan√ßada, n√£o existe nenhum crit√©rio definido excepto um nivel a partir da estrutura
                 if (!ndSearch.IsCriteriaEmpty() || !MasterPanelPesquisa.chkEstruturaArquivistica.Checked)
                     resultadosDaPesquisa.AddRange(SearchImpl.search(ndSearch.ToString(), "nivelDocumental", SessionHelper.GetGisaPrincipal().TrusteeUserOperator.ID.ToString()));
                 else
@@ -1135,7 +1135,7 @@ namespace GISA
             }
             catch (Exception)
             {
-                MessageBox.Show("Erro na conex„o com o servidor de pesquisa", "Gisa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Erro na conex√£o com o servidor de pesquisa", "Gisa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             
 
@@ -1165,7 +1165,7 @@ namespace GISA
             var possuiAcessoCompleto = groups.Any(g => g.IDGroup == acessoCompleto.ID);
 
             if (!possuiAcessoCompleto || MasterPanelPesquisa.cbModulo.Items.Count == 1)
-                return 1;
+                return 0;
             else
                 return MasterPanelPesquisa.cbModulo.SelectedIndex;
         }
@@ -1206,7 +1206,7 @@ namespace GISA
 
         }
 
-        private string[] _colNames = { "CÛdigo", "DesignaÁ„o", "ProduÁ„o", "Cota", "Cota Documento" };
+        private string[] _colNames = { "C√≥digo", "Designa√ß√£o", "Produ√ß√£o", "Cota", "Cota Documento" };
         private DataTable build_UFsRelacionadasDataTable()
         {
             DataTable _t = new DataTable();
@@ -1268,7 +1268,7 @@ namespace GISA
 
                 this.dataGridView1.columnClick_refreshData += _ColumnHeaderMouseClick; 
 
-                this.GroupBox3.Text = string.Format("Unidades fÌsicas agregadas ({0})", dataGridView1.Rows.Count);
+                this.GroupBox3.Text = string.Format("Unidades f√≠sicas agregadas ({0})", dataGridView1.Rows.Count);
 
                 pnlUnidadesFisicas.BringToFront();
 
@@ -1287,7 +1287,7 @@ namespace GISA
 			}
 		}
 
-        // Header: altera a ordenaÁ„o
+        // Header: altera a ordena√ß√£o
         private void _ColumnHeaderMouseClick(object sender, EventArgs e)
         {
             DataTable ordered = build_UFsRelacionadasDataTable();
@@ -1309,7 +1309,7 @@ namespace GISA
 
         }
 
-        // Clausula de ordenaÁ„o:
+        // Clausula de ordena√ß√£o:
         private string build_order_by()
         {
             string _o = "";
@@ -1422,8 +1422,8 @@ namespace GISA
 				}
 			}
 
-			//Antes de permitir a visualizaÁ„o de qualquer informaÁ„o acerca da Unidade FÌsica seleccionada
-			//È necess·rio garantir que esta ainda n„o foi apagada por algum utilizador
+			//Antes de permitir a visualiza√ß√£o de qualquer informa√ß√£o acerca da Unidade F√≠sica seleccionada
+			//√© necess√°rio garantir que esta ainda n√£o foi apagada por algum utilizador
 			bool nvIsDeleted = false;
 			if (PesquisaList1.GetSelectedRows.Count() > 0)
 			{
@@ -1446,7 +1446,7 @@ namespace GISA
 
 			if (! nvIsDeleted)
 			{
-                // Limpar browser e PDFs tempor·rios
+                // Limpar browser e PDFs tempor√°rios
                 controlFedoraPdfViewer.Clear();
                 ImageHelper.DeleteFilteredFiles("*.pdf");
 
@@ -1470,7 +1470,7 @@ namespace GISA
 			}
 			else
 			{
-				MessageBox.Show("O elemento selecionado foi apagado por outro utilizador." + System.Environment.NewLine + "Por esse motivo n„o È possÌvel apresentar qualquer detalhe sobre esse elemento", "SeleÁ„o de resultados da pesquisa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+				MessageBox.Show("O elemento selecionado foi apagado por outro utilizador." + System.Environment.NewLine + "Por esse motivo n√£o √© poss√≠vel apresentar qualquer detalhe sobre esse elemento", "Sele√ß√£o de resultados da pesquisa", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 				ToolBar_ButtonClick(this, new ToolBarButtonClickEventArgs(ToolBarButton2));
 			}
 
@@ -1479,13 +1479,13 @@ namespace GISA
 
 		private void MenuItemPrint_Click(object sender, System.EventArgs e)
 		{
-            //TODO: verificar se esta vari·vel È precisa uma vez que nunca È preenchida neste mÈtodo..
+            //TODO: verificar se esta vari√°vel √© precisa uma vez que nunca √© preenchida neste m√©todo..
             ArrayList searchResults = null;
 			try
 			{
                 if (PesquisaList1.Items.Count == 0)
-					MessageBox.Show("N„o foram encontrados resultados na ˙ltima pesquisa " + Environment.NewLine + 
-                        "a partir dos quais possa ser construÌdo um relatÛrio.", "RelatÛrio", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+					MessageBox.Show("N√£o foram encontrados resultados na √∫ltima pesquisa " + Environment.NewLine + 
+                        "a partir dos quais possa ser constru√≠do um relat√≥rio.", "Relat√≥rio", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 				else
 				{
 					if (sender == MenuItemPrintInventarioResumido)
@@ -1565,11 +1565,11 @@ namespace GISA
             }
             else
             {
-                criteriosDePesquisa.Add("MÛdulo", MasterPanelPesquisa.cbModulo.SelectedItem.ToString());
+                criteriosDePesquisa.Add("M√≥dulo", MasterPanelPesquisa.cbModulo.SelectedItem.ToString());
 
                 if (!MasterPanelPesquisa.txtCodigoParcial.Text.Equals(string.Empty))
                 {
-                    criteriosDePesquisa.Add("CÛdigo parcial", MasterPanelPesquisa.txtCodigoParcial.Text);
+                    criteriosDePesquisa.Add("C√≥digo parcial", MasterPanelPesquisa.txtCodigoParcial.Text);
                 }
                 if (!MasterPanelPesquisa.txtID.Text.Equals(string.Empty))
                 {
@@ -1577,7 +1577,7 @@ namespace GISA
                 }
                 if (!MasterPanelPesquisa.txtDesignacao.Text.Equals(string.Empty))
                 {
-                    criteriosDePesquisa.Add("DesignaÁ„o", MasterPanelPesquisa.txtDesignacao.Text);
+                    criteriosDePesquisa.Add("Designa√ß√£o", MasterPanelPesquisa.txtDesignacao.Text);
                 }
                 if (!MasterPanelPesquisa.txtAutor.Text.Equals(string.Empty))
                 {
@@ -1596,7 +1596,7 @@ namespace GISA
                         sb.Append(" Ou ");
                     }
                     string final = sb.ToString().TrimEnd();
-                    criteriosDePesquisa.Add("NÌvel de descriÁ„o", final.Remove(final.Length-3));
+                    criteriosDePesquisa.Add("N√≠vel de descri√ß√£o", final.Remove(final.Length-3));
                 }
 
                 StringBuilder datasProducao = new StringBuilder();
@@ -1653,7 +1653,7 @@ namespace GISA
                 }
                 if(datasProducao.Length > 0)
                 {
-                    criteriosDePesquisa.Add("Datas de produÁ„o", datasProducao.ToString());
+                    criteriosDePesquisa.Add("Datas de produ√ß√£o", datasProducao.ToString());
                 }
                 if (!MasterPanelPesquisa.txtTipologiaInformacional.Text.Equals(string.Empty))
                 {
@@ -1661,11 +1661,11 @@ namespace GISA
                 }
                 if (!MasterPanelPesquisa.txtIndexacao.Text.Equals(string.Empty))
                 {
-                    criteriosDePesquisa.Add("Termos de indexaÁ„o", MasterPanelPesquisa.txtIndexacao.Text);
+                    criteriosDePesquisa.Add("Termos de indexa√ß√£o", MasterPanelPesquisa.txtIndexacao.Text);
                 }
                 if (!MasterPanelPesquisa.txtConteudoInformacional.Text.Equals(string.Empty))
                 {
-                    criteriosDePesquisa.Add("Conte˙do informacional", MasterPanelPesquisa.txtConteudoInformacional.Text);
+                    criteriosDePesquisa.Add("Conte√∫do informacional", MasterPanelPesquisa.txtConteudoInformacional.Text);
                 }
                 if (!MasterPanelPesquisa.txtNotas.Text.Equals(string.Empty))
                 {
@@ -1732,7 +1732,7 @@ namespace GISA
                         sb.Append(" ");
                     }
                     string final = sb.ToString().TrimEnd();
-                    criteriosDePesquisa.Add("TÈcnica de registo", final.Remove(final.Length - 3));
+                    criteriosDePesquisa.Add("T√©cnica de registo", final.Remove(final.Length - 3));
                 }
                 if (MasterPanelPesquisa.chkEstadoConservacao.Checked)
                 {
@@ -1743,7 +1743,7 @@ namespace GISA
                         sb.Append(" Ou ");                        
                     }
                     string final = sb.ToString().TrimEnd();
-                    criteriosDePesquisa.Add("Estado de conservaÁ„o", final.Remove(final.Length - 3));
+                    criteriosDePesquisa.Add("Estado de conserva√ß√£o", final.Remove(final.Length - 3));
                 }
                 if (MasterPanelPesquisa.chkEstruturaArquivistica.Checked)
                     criteriosDePesquisa.Add("Pesquisa por estrutura", MasterPanelPesquisa.cnList.SelectedNivelDesignacao);
@@ -1808,18 +1808,18 @@ namespace GISA
             // "\\i{}\\par{}BlaBla: \\i0{}\\par{}"
 
             if (scpCon_PROC_OBRAS.requerentes.Count > 0)
-                Result.Append("\\i{}Requerentes/propriet·rios (iniciais): \\i0{}\\par{}").Append(GetConditionalText("  ", gen_list(scpCon_PROC_OBRAS.requerentes), ""));
+                Result.Append("\\i{}Requerentes/propriet√°rios (iniciais): \\i0{}\\par{}").Append(GetConditionalText("  ", gen_list(scpCon_PROC_OBRAS.requerentes), ""));
 
             if (scpCon_PROC_OBRAS.averbamentos.Count > 0)
-                Result.Append("\\i{}\\par{}Requerentes/propriet·rios (averbamento): \\i0{}\\par{}").Append(GetConditionalText("  ", gen_list(scpCon_PROC_OBRAS.averbamentos), ""));
+                Result.Append("\\i{}\\par{}Requerentes/propriet√°rios (averbamento): \\i0{}\\par{}").Append(GetConditionalText("  ", gen_list(scpCon_PROC_OBRAS.averbamentos), ""));
 
             // Localizacao com forma autorizada e outras formas:
             if (scpCon_PROC_OBRAS.loc_actual.Count > 0)
-                Result.Append("\\i{}\\par{}LocalizaÁ„o da obra (designaÁ„o atual): \\i0{}\\par{}")
+                Result.Append("\\i{}\\par{}Localiza√ß√£o da obra (designa√ß√£o atual): \\i0{}\\par{}")
                     .Append(GetConditionalText("  ", gen_list(scpCon_PROC_OBRAS.loc_actual_OutrasFormas), ""));
 
             if (scpCon_PROC_OBRAS.loc_antiga.Count > 0)
-                Result.Append("\\i{}\\par{}LocalizaÁ„o da obra (designaÁ„o antiga): \\i0{}\\par{}")
+                Result.Append("\\i{}\\par{}Localiza√ß√£o da obra (designa√ß√£o antiga): \\i0{}\\par{}")
                     .Append(GetConditionalText("  ", gen_list(scpCon_PROC_OBRAS.loc_antiga), ""));
 
             if (!scpCon_PROC_OBRAS.tipo_obra.Equals(string.Empty))
@@ -1832,7 +1832,7 @@ namespace GISA
 
             // Tecnico com forma autorizada e outras:
             if (scpCon_PROC_OBRAS.tecnicoObra.Count > 0)
-                Result.Append("\\i{}\\par{}TÈcnico de obra: \\i0{}\\par{}")
+                Result.Append("\\i{}\\par{}T√©cnico de obra: \\i0{}\\par{}")
                     .Append(GetConditionalText("  ", gen_list(scpCon_PROC_OBRAS.tecnicoObra_OutrasFormas), ""));
 
             if (scpCon_PROC_OBRAS.atestado.Count > 0)
@@ -1840,7 +1840,7 @@ namespace GISA
                     .Append(GetConditionalText("  ", gen_list(scpCon_PROC_OBRAS.atestado), ""));
 
             if (scpCon_PROC_OBRAS.datasLicenca.Count > 0)
-                Result.Append("\\i{}\\par{}Data da licenÁa de construÁ„o: \\i0{}\\par{}")
+                Result.Append("\\i{}\\par{}Data da licen√ßa de constru√ß√£o: \\i0{}\\par{}")
                     .Append(GetConditionalText("  ", gen_list(scpCon_PROC_OBRAS.datasLicenca), ""));
 
             Result.Append("\\par{}");
@@ -1981,10 +1981,10 @@ namespace GISA
                 if (idTipoNivelRelacionado == TipoNivelRelacionado.D || idTipoNivelRelacionado == TipoNivelRelacionado.SD)
                     cotas = PesquisaRule.Current.LoadDocumentoCotas(IDFRDbase, ho.Connection);
 
-				// --IdentificaÁ„o--
-				Result.Append("\\fs36\\b{}IdentificaÁ„o\\b0{}\\fs24\\sb196\\sa48\\par{}\\sb0\\sa0{}");
-				// Codigo de ReferÍncia
-				Result.Append(GetConditionalText("\\i{}CÛdigo de referencia: \\i0{}", 
+				// --Identifica√ß√£o--
+				Result.Append("\\fs36\\b{}Identifica√ß√£o\\b0{}\\fs24\\sb196\\sa48\\par{}\\sb0\\sa0{}");
+				// Codigo de Refer√™ncia
+				Result.Append(GetConditionalText("\\i{}C√≥digo de referencia: \\i0{}", 
                     DBAbstractDataLayer.DataAccessRules.NivelRule.Current.GetCodigoOfNivel(FRDBaseRow.NivelRow.ID, ho.Connection)[0].ToString(), "\\par{}"));
 			}
 			catch (Exception ex)
@@ -1997,11 +1997,11 @@ namespace GISA
                 GisaDataSetHelper.ManageDatasetConstraints(true);
 			}
 
-			// Nivel de descriÁ„o (TipoNivel)
-			Result.Append(GetConditionalText("\\i{}NÌvel de descriÁ„o: \\i0{}", TipoNivelRelacionado.GetTipoNivelRelacionadoDaPrimeiraRelacaoEncontrada(FRDBaseRow.NivelRow).Designacao, "\\par{}"));
-			// TÌtulo
-			//Result.Append("\\i{}DesignaÁ„o: \\i0{}" + Nivel.GetDesignacao(FRDBaseRow.NivelRow) + "\\par{}");
-            Result.Append("\\i{}TÌtulo: \\i0{}" + Nivel.GetDesignacao(FRDBaseRow.NivelRow) + "\\par{}");
+			// Nivel de descri√ß√£o (TipoNivel)
+			Result.Append(GetConditionalText("\\i{}N√≠vel de descri√ß√£o: \\i0{}", TipoNivelRelacionado.GetTipoNivelRelacionadoDaPrimeiraRelacaoEncontrada(FRDBaseRow.NivelRow).Designacao, "\\par{}"));
+			// T√≠tulo
+			//Result.Append("\\i{}Designa√ß√£o: \\i0{}" + Nivel.GetDesignacao(FRDBaseRow.NivelRow) + "\\par{}");
+            Result.Append("\\i{}T√≠tulo: \\i0{}" + Nivel.GetDesignacao(FRDBaseRow.NivelRow) + "\\par{}");
 			// Datas
 			if (FRDBaseRow.GetSFRDDatasProducaoRows().Length == 1)
 			{
@@ -2009,18 +2009,18 @@ namespace GISA
                 if (!FRDBaseRow.GetSFRDDatasProducaoRows()[0].IsInicioTextoNull())
                     inicioTexto = FRDBaseRow.GetSFRDDatasProducaoRows()[0].InicioTexto + " ";
 
-                Result.Append("\\i{}Data(s) de produÁ„o: \\i0{}" + inicioTexto + GUIHelper.GUIHelper.FormatDateInterval(FRDBaseRow.GetSFRDDatasProducaoRows()[0]) + "\\par{}");
+                Result.Append("\\i{}Data(s) de produ√ß√£o: \\i0{}" + inicioTexto + GUIHelper.GUIHelper.FormatDateInterval(FRDBaseRow.GetSFRDDatasProducaoRows()[0]) + "\\par{}");
 			}
 
             // Agrupador
             if (FRDBaseRow.GetSFRDAgrupadorRows().Length == 1)
                 Result.Append(GetConditionalText("\\i{}Agrupador: \\i0{}", FRDBaseRow.GetSFRDAgrupadorRows()[0].Agrupador, "\\par{}"));
             
-            //Dimens„o do documento
+            //Dimens√£o do documento
             var dimSup = GisaDataSetHelper.GetInstance().SFRDDimensaoSuporte.Cast<GISADataset.SFRDDimensaoSuporteRow>()
                 .SingleOrDefault(r => r.IDFRDBase == FRDBaseRow.ID);
             if (dimSup != null)
-                Result.Append(GetConditionalText("\\i{}Dimens„o: \\i0{}", dimSup["Nota"] == DBNull.Value ? "" : dimSup.Nota, "\\par{}"));
+                Result.Append(GetConditionalText("\\i{}Dimens√£o: \\i0{}", dimSup["Nota"] == DBNull.Value ? "" : dimSup.Nota, "\\par{}"));
 
             // Cota do documento na UF
             if (cotas.Count > 0)
@@ -2041,7 +2041,7 @@ namespace GISA
             if (FRDBaseRow.GetSFRDContextoRows().Length == 1)
 			{
                 if (FRDBaseRow.NivelRow.IDTipoNivel != TipoNivel.ESTRUTURAL)
-                    Contexto.Append(GetConditionalText("\\i{}HistÛria administrativa: \\i0{}\\par{}", string.Format("{0}", FRDBaseRow.GetSFRDContextoRows()[0]["HistoriaAdministrativa"]), "\\par{}"));
+                    Contexto.Append(GetConditionalText("\\i{}Hist√≥ria administrativa: \\i0{}\\par{}", string.Format("{0}", FRDBaseRow.GetSFRDContextoRows()[0]["HistoriaAdministrativa"]), "\\par{}"));
                 else
                 {
                     GISADataset.ControloAutRow caRow = FRDBaseRow.NivelRow.GetNivelControloAutRows()[0].ControloAutRow;
@@ -2050,20 +2050,20 @@ namespace GISA
                     if (caRow.GetControloAutDatasExistenciaRows().Length > 0)
                     {
                         cadeRow = caRow.GetControloAutDatasExistenciaRows()[0];
-                        Contexto.Append(GetConditionalText("\\i{}Datas de existÍncia: \\i0{}\\par{}", GUIHelper.GUIHelper.FormatDateInterval(cadeRow), "\\par{}"));
+                        Contexto.Append(GetConditionalText("\\i{}Datas de exist√™ncia: \\i0{}\\par{}", GUIHelper.GUIHelper.FormatDateInterval(cadeRow), "\\par{}"));
                     }
 
-                    Contexto.Append(GetConditionalText("\\i{}HistÛria: \\i0{}\\par{}", string.Format("{0}", caRow["DescHistoria"]), "\\par{}"));
-                    Contexto.Append(GetConditionalText("\\i{}Zona geogr·fica: \\i0{}\\par{}", string.Format("{0}", caRow["DescZonaGeografica"]), "\\par{}"));
+                    Contexto.Append(GetConditionalText("\\i{}Hist√≥ria: \\i0{}\\par{}", string.Format("{0}", caRow["DescHistoria"]), "\\par{}"));
+                    Contexto.Append(GetConditionalText("\\i{}Zona geogr√°fica: \\i0{}\\par{}", string.Format("{0}", caRow["DescZonaGeografica"]), "\\par{}"));
                     Contexto.Append(GetConditionalText("\\i{}Estatuto legal: \\i0{}\\par{}", string.Format("{0}", caRow["DescEstatutoLegal"]), "\\par{}"));
-                    Contexto.Append(GetConditionalText("\\i{}FunÁıes, ocupaÁıes e atividades: \\i0{}\\par{}", string.Format("{0}", caRow["DescOcupacoesActividades"]), "\\par{}"));
+                    Contexto.Append(GetConditionalText("\\i{}Fun√ß√µes, ocupa√ß√µes e atividades: \\i0{}\\par{}", string.Format("{0}", caRow["DescOcupacoesActividades"]), "\\par{}"));
                     Contexto.Append(GetConditionalText("\\i{}Enquadramento legal: \\i0{}\\par{}", string.Format("{0}", caRow["DescEnquadramentoLegal"]), "\\par{}"));
                     Contexto.Append(GetConditionalText("\\i{}Estrutura interna: \\i0{}\\par{}", string.Format("{0}", caRow["DescEstruturaInterna"]), "\\par{}"));
                     Contexto.Append(GetConditionalText("\\i{}Contexto geral: \\i0{}\\par{}", string.Format("{0}", caRow["DescContextoGeral"]), "\\par{}"));
-                    Contexto.Append(GetConditionalText("\\i{}Outras informaÁıes relevantes: \\i0{}\\par{}", string.Format("{0}", caRow["DescOutraInformacaoRelevante"]), "\\par{}"));
+                    Contexto.Append(GetConditionalText("\\i{}Outras informa√ß√µes relevantes: \\i0{}\\par{}", string.Format("{0}", caRow["DescOutraInformacaoRelevante"]), "\\par{}"));
                 }
 
-                Contexto.Append(GetConditionalText("\\i{}HistÛria arquivÌstica: \\i0{}\\par{}", string.Format("{0}", FRDBaseRow.GetSFRDContextoRows()[0]["HistoriaCustodial"]), "\\par{}"));
+                Contexto.Append(GetConditionalText("\\i{}Hist√≥ria arquiv√≠stica: \\i0{}\\par{}", string.Format("{0}", FRDBaseRow.GetSFRDContextoRows()[0]["HistoriaCustodial"]), "\\par{}"));
                 Contexto.Append(GetConditionalText("\\i{}Fonte imediata de aquisicao: \\i0{}\\par{}", string.Format("{0}", FRDBaseRow.GetSFRDContextoRows()[0]["FonteImediataDeAquisicao"]), "\\par{}"));
                 GISADataset.RelacaoHierarquicaRow[] rhrows = FRDBaseRow.NivelRow.GetRelacaoHierarquicaRowsByNivelRelacaoHierarquica();
                 if (rhrows.Length > 0)
@@ -2072,9 +2072,9 @@ namespace GISA
                     if ((idT == TipoNivelRelacionado.SR) || (idT == TipoNivelRelacionado.SSR))
                     {
                         if (System.Convert.ToBoolean(FRDBaseRow.GetSFRDContextoRows()[0]["SerieAberta"]))
-                            Contexto.Append(GetConditionalText("\\i{}CondiÁ„o da SÈrie: \\i0{}\\par{}", string.Format("{0}", "Aberta"), "\\par{}"));
+                            Contexto.Append(GetConditionalText("\\i{}Condi√ß√£o da S√©rie: \\i0{}\\par{}", string.Format("{0}", "Aberta"), "\\par{}"));
                         else
-                            Contexto.Append(GetConditionalText("\\i{}CondiÁ„o da SÈrie: \\i0{}\\par{}", string.Format("{0}", "Fechada"), "\\par{}"));
+                            Contexto.Append(GetConditionalText("\\i{}Condi√ß√£o da S√©rie: \\i0{}\\par{}", string.Format("{0}", "Fechada"), "\\par{}"));
                     }
                 }
 			}
@@ -2096,7 +2096,7 @@ namespace GISA
 
             // --ConteudoEstrutura--
 
-            Result.Append(Section("\\fs36\\b{}Conte˙do e estrutura\\b0{}\\fs24\\sb196\\sa48\\par{}\\sb0\\sa0{}",
+            Result.Append(Section("\\fs36\\b{}Conte√∫do e estrutura\\b0{}\\fs24\\sb196\\sa48\\par{}\\sb0\\sa0{}",
                 GetConditionalText("\\i{}Tipologia informacional: \\i0{}\\par{}", GetTermosIndexados(FRDBaseRow, TipoNoticiaAut.TipologiaInformacional), "")));
 
             // -- Conteudo caso seja um processo de obras --
@@ -2106,8 +2106,8 @@ namespace GISA
 
             try {
                 if (processoObras) {
-                    //Result.Append(GetConditionalText("", "\\i{}Conte˙do informacional: \\i0{}\\par{}", "\\li128\\par\\li0{}"));
-                    Result.Append(GetConditionalText("", "\\i{}Conte˙do informacional: \\i0{}\\par{}", ""));
+                    //Result.Append(GetConditionalText("", "\\i{}Conte√∫do informacional: \\i0{}\\par{}", "\\li128\\par\\li0{}"));
+                    Result.Append(GetConditionalText("", "\\i{}Conte√∫do informacional: \\i0{}\\par{}", ""));
                     Result.Append(gen_content_PROCESSO_OBRAS(FRDBaseRow.IDNivel, ho.Connection));
                 }
             }
@@ -2124,20 +2124,20 @@ namespace GISA
 			if (FRDBaseRow.GetSFRDConteudoEEstruturaRows().Length == 1)
 			{
                 if (!processoObras)
-                    ConteudoEstrutura += GetConditionalText("\\i{}Conte˙do informacional: \\i0{}\\par{}", string.Format(" {0}", FRDBaseRow.GetSFRDConteudoEEstruturaRows()[0]["ConteudoInformacional"]), "\\li128\\par\\li0{}");
+                    ConteudoEstrutura += GetConditionalText("\\i{}Conte√∫do informacional: \\i0{}\\par{}", string.Format(" {0}", FRDBaseRow.GetSFRDConteudoEEstruturaRows()[0]["ConteudoInformacional"]), "\\li128\\par\\li0{}");
                 else
-                    ConteudoEstrutura += GetConditionalText("\\i{}ObservaÁıes: \\i0{}\\par{}", string.Format(" {0}", FRDBaseRow.GetSFRDConteudoEEstruturaRows()[0]["ConteudoInformacional"]), "\\li128\\par\\li0{}");
+                    ConteudoEstrutura += GetConditionalText("\\i{}Observa√ß√µes: \\i0{}\\par{}", string.Format(" {0}", FRDBaseRow.GetSFRDConteudoEEstruturaRows()[0]["ConteudoInformacional"]), "\\li128\\par\\li0{}");
 
 				ConteudoEstrutura += GetConditionalText("\\i{}Diploma: \\i0{}\\par{}", GetTermosIndexados(FRDBaseRow, TipoNoticiaAut.Diploma), "\\li128\\li0{}");
 				ConteudoEstrutura += GetConditionalText("\\i{}Modelo: \\i0{}\\par{}", GetTermosIndexados(FRDBaseRow, TipoNoticiaAut.Modelo), "\\li128\\li0{}");
 
-				//AvaliaÁ„o
+				//Avalia√ß√£o
 				if (FRDBaseRow.GetSFRDAvaliacaoRows().Length > 0)
 				{
 					string ava = null;
                     var sfrda = FRDBaseRow.GetSFRDAvaliacaoRows()[0];
 
-                    ConteudoEstrutura += GetConditionalText("\\i{}ObservaÁıes/Enquadramento legal: \\i0{}\\par{}", string.Format("{0}", sfrda["Observacoes"]), "\\li128\\par\\li0{}");
+                    ConteudoEstrutura += GetConditionalText("\\i{}Observa√ß√µes/Enquadramento legal: \\i0{}\\par{}", string.Format("{0}", sfrda["Observacoes"]), "\\li128\\par\\li0{}");
 
                     if (sfrda.IsPreservarNull() && sfrda.IsPrazoConservacaoNull())
 						ava = "";
@@ -2146,25 +2146,25 @@ namespace GISA
                         if (sfrda.Preservar)
 							ava = "Preservar.";
 						else
-                            ava = "Eliminar apÛs " + (sfrda.IsPrazoConservacaoNull() ? "0" : sfrda.PrazoConservacao.ToString()) + " ano(s).";
+                            ava = "Eliminar ap√≥s " + (sfrda.IsPrazoConservacaoNull() ? "0" : sfrda.PrazoConservacao.ToString()) + " ano(s).";
 					}    
 
 					if (ava.CompareTo("") != 0)
-						ConteudoEstrutura += GetConditionalText("\\i{}AvaliaÁ„o: \\i0{}\\par{}", ava, "\\li128\\li0{}\\par{}");
+						ConteudoEstrutura += GetConditionalText("\\i{}Avalia√ß√£o: \\i0{}\\par{}", ava, "\\li128\\li0{}\\par{}");
 
                     ConteudoEstrutura += "\\i{}Publicado: \\i0{}\\par{}" + Concorrencia.translateBoolean(FRDBaseRow.GetSFRDAvaliacaoRows()[0].Publicar) + "\\li128\\par\\li0{}";
-                    ConteudoEstrutura += GetConditionalText("\\i{}ReferÍncia na tabela de avaliaÁ„o: \\i0{}\\par{}", string.Format("{0}", FRDBaseRow.GetSFRDAvaliacaoRows()[0]["RefTabelaAvaliacao"]), "\\li128\\li0{}\\par{}");
+                    ConteudoEstrutura += GetConditionalText("\\i{}Refer√™ncia na tabela de avalia√ß√£o: \\i0{}\\par{}", string.Format("{0}", FRDBaseRow.GetSFRDAvaliacaoRows()[0]["RefTabelaAvaliacao"]), "\\li128\\li0{}\\par{}");
 
                     if (!sfrda.IsIDAutoEliminacaoNull())
-                        ConteudoEstrutura += "\\i{}Auto de eliminaÁ„o: \\i0{}\\par{}" + sfrda.AutoEliminacaoRow.Designacao + "\\li128\\li0{}\\par{}";
+                        ConteudoEstrutura += "\\i{}Auto de elimina√ß√£o: \\i0{}\\par{}" + sfrda.AutoEliminacaoRow.Designacao + "\\li128\\li0{}\\par{}";
 				}
 
-                ConteudoEstrutura += GetConditionalText("\\i{}IncorporaÁıes: \\i0{}\\par{}", string.Format("{0}", FRDBaseRow.GetSFRDConteudoEEstruturaRows()[0]["Incorporacao"]), "\\li128\\par\\li0{}");
+                ConteudoEstrutura += GetConditionalText("\\i{}Incorpora√ß√µes: \\i0{}\\par{}", string.Format("{0}", FRDBaseRow.GetSFRDConteudoEEstruturaRows()[0]["Incorporacao"]), "\\li128\\par\\li0{}");
 
                 Result.Append(ConteudoEstrutura);
 			}
 
-			// --CondiÁıes de acesso e de utilizaÁ„o--
+			// --Condi√ß√µes de acesso e de utiliza√ß√£o--
 			if (FRDBaseRow.GetSFRDCondicaoDeAcessoRows().Length == 1)
 			{
 				// Linguas
@@ -2208,7 +2208,7 @@ namespace GISA
 				if (tecs.Length > 2)
 					tecs = tecs.Substring(0, tecs.Length - 2);
 
-				//Estado de ConservaÁ„o
+				//Estado de Conserva√ß√£o
 				string cons = "";
                 foreach (GISADataset.SFRDEstadoDeConservacaoRow con in FRDBaseRow.GetSFRDCondicaoDeAcessoRows()[0].GetSFRDEstadoDeConservacaoRows())
 					cons += con.TipoEstadoDeConservacaoRow.Designacao + ", ";
@@ -2216,36 +2216,36 @@ namespace GISA
 				if (cons.Length > 2)
 					cons = cons.Substring(0, cons.Length - 2);
 
-				Result.Append(Section("\\fs36\\b{}CondiÁıes de acesso e de utilizaÁ„o\\b0{}\\fs24\\sb196\\sa48\\par{}\\sb0\\sa0{}", GetConditionalText("\\i{}CondiÁıes de acesso: \\i0{}\\par{}", string.Format("{0}", FRDBaseRow.GetSFRDCondicaoDeAcessoRows()[0]["CondicaoDeAcesso"]), "\\li128\\par\\li0{}"), GetConditionalText("\\i{}CondiÁıes de reproduÁ„o: \\i0{}\\par{}", string.Format("{0}", FRDBaseRow.GetSFRDCondicaoDeAcessoRows()[0]["CondicaoDeReproducao"]), "\\li128\\par\\li0{}"), GetConditionalText("\\i{}Linguas: \\i0{}\\par{}", string.Format("{0}", langs), "\\li128\\par\\li0{}"), GetConditionalText("\\i{}Alfabetos: \\i0{}\\par{}", string.Format("{0}", alfs), "\\li128\\par\\li0{}"), GetConditionalText("\\i{}Formas de Suporte / Acondicionamento: \\i0{}\\par{}", string.Format("{0}", fsas), "\\li128\\par\\li0{}"), GetConditionalText("\\i{}Materiais de Suporte: \\i0{}\\par{}", string.Format("{0}", mats), "\\li128\\par\\li0{}"), GetConditionalText("\\i{}TÈcnicas de Registo: \\i0{}\\par{}", string.Format("{0}", tecs), "\\li128\\par\\li0{}"), GetConditionalText("\\i{}Estado de ConservaÁ„o: \\i0{}\\par{}", string.Format("{0}", cons), "\\li128\\par\\li0{}"), GetConditionalText("\\i{}Instrumentos de pesquisa: \\i0{}\\par{}", string.Format("{0}", FRDBaseRow.GetSFRDCondicaoDeAcessoRows()[0]["AuxiliarDePesquisa"]), "\\li128\\par\\li0{}")));
+				Result.Append(Section("\\fs36\\b{}Condi√ß√µes de acesso e de utiliza√ß√£o\\b0{}\\fs24\\sb196\\sa48\\par{}\\sb0\\sa0{}", GetConditionalText("\\i{}Condi√ß√µes de acesso: \\i0{}\\par{}", string.Format("{0}", FRDBaseRow.GetSFRDCondicaoDeAcessoRows()[0]["CondicaoDeAcesso"]), "\\li128\\par\\li0{}"), GetConditionalText("\\i{}Condi√ß√µes de reprodu√ß√£o: \\i0{}\\par{}", string.Format("{0}", FRDBaseRow.GetSFRDCondicaoDeAcessoRows()[0]["CondicaoDeReproducao"]), "\\li128\\par\\li0{}"), GetConditionalText("\\i{}Linguas: \\i0{}\\par{}", string.Format("{0}", langs), "\\li128\\par\\li0{}"), GetConditionalText("\\i{}Alfabetos: \\i0{}\\par{}", string.Format("{0}", alfs), "\\li128\\par\\li0{}"), GetConditionalText("\\i{}Formas de Suporte / Acondicionamento: \\i0{}\\par{}", string.Format("{0}", fsas), "\\li128\\par\\li0{}"), GetConditionalText("\\i{}Materiais de Suporte: \\i0{}\\par{}", string.Format("{0}", mats), "\\li128\\par\\li0{}"), GetConditionalText("\\i{}T√©cnicas de Registo: \\i0{}\\par{}", string.Format("{0}", tecs), "\\li128\\par\\li0{}"), GetConditionalText("\\i{}Estado de Conserva√ß√£o: \\i0{}\\par{}", string.Format("{0}", cons), "\\li128\\par\\li0{}"), GetConditionalText("\\i{}Instrumentos de pesquisa: \\i0{}\\par{}", string.Format("{0}", FRDBaseRow.GetSFRDCondicaoDeAcessoRows()[0]["AuxiliarDePesquisa"]), "\\li128\\par\\li0{}")));
             }
 
-			// --DocumentaÁ„o associada--
+			// --Documenta√ß√£o associada--
 			if (FRDBaseRow.GetSFRDDocumentacaoAssociadaRows().Length > 0)
-				Result.Append(Section("\\fs36\\b{}DocumentaÁ„o associada\\b0{}\\fs24\\sb196\\sa48\\par{}\\sb0\\sa0{}", GetConditionalText("\\i{}ExistÍncia e localizaÁ„o de originais: \\i0{}\\par{}", string.Format("{0}", FRDBaseRow.GetSFRDDocumentacaoAssociadaRows()[0]["ExistenciaDeOriginais"]), "\\li128\\par\\li0{}") + GetConditionalText("\\i{}ExistÍncia e localizaÁ„o de cÛpias: \\i0{}\\par{}", string.Format("{0}", FRDBaseRow.GetSFRDDocumentacaoAssociadaRows()[0]["ExistenciaDeCopias"]), "\\li128\\par\\li0{}") + GetConditionalText("\\i{}Unidades de DescriÁ„o: \\i0{}\\par{}", string.Format("{0}", FRDBaseRow.GetSFRDDocumentacaoAssociadaRows()[0]["UnidadesRelacionadas"]), "\\li128\\par\\li0{}") + GetConditionalText("\\i{}Notas de PublicaÁ„o: \\i0{}\\par{}", string.Format("{0}", FRDBaseRow.GetSFRDDocumentacaoAssociadaRows()[0]["NotaDePublicacao"]), "\\li128\\par\\li0{}")));
+				Result.Append(Section("\\fs36\\b{}Documenta√ß√£o associada\\b0{}\\fs24\\sb196\\sa48\\par{}\\sb0\\sa0{}", GetConditionalText("\\i{}Exist√™ncia e localiza√ß√£o de originais: \\i0{}\\par{}", string.Format("{0}", FRDBaseRow.GetSFRDDocumentacaoAssociadaRows()[0]["ExistenciaDeOriginais"]), "\\li128\\par\\li0{}") + GetConditionalText("\\i{}Exist√™ncia e localiza√ß√£o de c√≥pias: \\i0{}\\par{}", string.Format("{0}", FRDBaseRow.GetSFRDDocumentacaoAssociadaRows()[0]["ExistenciaDeCopias"]), "\\li128\\par\\li0{}") + GetConditionalText("\\i{}Unidades de Descri√ß√£o: \\i0{}\\par{}", string.Format("{0}", FRDBaseRow.GetSFRDDocumentacaoAssociadaRows()[0]["UnidadesRelacionadas"]), "\\li128\\par\\li0{}") + GetConditionalText("\\i{}Notas de Publica√ß√£o: \\i0{}\\par{}", string.Format("{0}", FRDBaseRow.GetSFRDDocumentacaoAssociadaRows()[0]["NotaDePublicacao"]), "\\li128\\par\\li0{}")));
 
             // --Notas--
 			if (FRDBaseRow.GetSFRDNotaGeralRows().Length > 0)
 				Result.Append(Section("\\fs36\\b{}Nota Geral\\b0{}\\fs24\\sb196\\sa48\\par{}\\sb0\\sa0{}", GetConditionalText("", string.Format("{0}", FRDBaseRow.GetSFRDNotaGeralRows()[0]["NotaGeral"]), "\\li128\\par\\li0{}")));
 
-			// --Controlo de DescriÁ„o--
+			// --Controlo de Descri√ß√£o--
 			if (! (FRDBaseRow.IsRegrasOuConvencoesNull()))
 			{
 				string lastEdit = "";
 				if (GisaDataSetHelper.GetInstance().FRDBaseDataDeDescricao.Select("IdFRDBase =" + FRDBaseRow.ID.ToString(), "DataEdicao DESC").Length > 0)
 					lastEdit = ((GISADataset.FRDBaseDataDeDescricaoRow)(GisaDataSetHelper.GetInstance().FRDBaseDataDeDescricao.Select("IdFRDBase =" + FRDBaseRow.ID.ToString(), "DataEdicao DESC")[0])).DataEdicao.ToString();
 
-				Result.Append(Section("\\fs36\\b{}Controlo de DescriÁ„o\\b0{}\\fs24\\sb196\\sa48\\par{}\\sb0\\sa0{}", 
-                    GetConditionalText("\\i{}Regras e ConvenÁıes: \\i0{}\\par{}", string.Format("{0}", FRDBaseRow.RegrasOuConvencoes), "\\li128\\par\\li0{}") +
+				Result.Append(Section("\\fs36\\b{}Controlo de Descri√ß√£o\\b0{}\\fs24\\sb196\\sa48\\par{}\\sb0\\sa0{}", 
+                    GetConditionalText("\\i{}Regras e Conven√ß√µes: \\i0{}\\par{}", string.Format("{0}", FRDBaseRow.RegrasOuConvencoes), "\\li128\\par\\li0{}") +
                     GetConditionalText("\\i{}Notas do arquivista: \\i0{}\\par{}", string.Format("{0}", FRDBaseRow.NotaDoArquivista), "\\li128\\par\\li0{}") + 
-                    GetConditionalText("\\i{}Data da ˙ltima ediÁ„o: \\i0{}\\par{}", string.Format("{0}", lastEdit), "\\li128\\par\\li0{}")));
+                    GetConditionalText("\\i{}Data da √∫ltima edi√ß√£o: \\i0{}\\par{}", string.Format("{0}", lastEdit), "\\li128\\par\\li0{}")));
 			}
 
-			// --IndexaÁ„o--
-            Result.Append(Section("\\fs36\\b{}IndexaÁ„o\\b0{}\\fs24\\sb196\\sa48\\par{}\\sb0\\sa0{}",
-                GetConditionalText("\\i{}Conte˙dos: \\i0{}\\par{}", GetTermosIndexados_OutrasFormas(FRDBaseRow), "")));
+			// --Indexa√ß√£o--
+            Result.Append(Section("\\fs36\\b{}Indexa√ß√£o\\b0{}\\fs24\\sb196\\sa48\\par{}\\sb0\\sa0{}",
+                GetConditionalText("\\i{}Conte√∫dos: \\i0{}\\par{}", GetTermosIndexados_OutrasFormas(FRDBaseRow), "")));
             
-            // Acrescentar informaÁ„o nos detalhes dos resultados da pesquisa de UAs:
-            // InformaÁ„o de requisiÁ„o, se estiver requisitada e n„o devolvida. Qual a requisiÁ„o, a data e a entidade e as notas.
+            // Acrescentar informa√ß√£o nos detalhes dos resultados da pesquisa de UAs:
+            // Informa√ß√£o de requisi√ß√£o, se estiver requisitada e n√£o devolvida. Qual a requisi√ß√£o, a data e a entidade e as notas.
             ho = new GisaDataSetHelper.HoldOpen(GisaDataSetHelper.GetConnection());
             try
             {
@@ -2254,7 +2254,7 @@ namespace GISA
                 {
                     MovimentoRule.RequisicaoInfo requisicao = MovimentoRule.Current.getRequisicaoInfo(FRDBaseRow.IDNivel, ho.Connection);
 
-                    Result.Append("\\fs36\\b{}RequisiÁ„o:\\b0{}\\fs24\\sb196\\sa48\\par{}\\sb0\\sa0{}");
+                    Result.Append("\\fs36\\b{}Requisi√ß√£o:\\b0{}\\fs24\\sb196\\sa48\\par{}\\sb0\\sa0{}");
                     // Codigo de movimento
                     Result.Append(GetConditionalText("\\i{}Movimento: \\i0{}", requisicao.idMovimento.ToString(), "\\par{}"));
                     Result.Append(GetConditionalText("\\i{}Data: \\i0{}", requisicao.data.ToString(), "\\par{}"));
@@ -2328,7 +2328,7 @@ namespace GISA
 
                 var isModoPublicadoOnly = MasterPanelPesquisa.cbModulo.SelectedItem.Equals(TranslationHelper.FormatModPesquisaIntToText(ModuloPesquisa.Publicacao));
 
-                // listar imagens que n„o do tipo Fedora
+                // listar imagens que n√£o do tipo Fedora
                 lstImagens.Items.AddRange(frdRow.GetSFRDImagemRows().Where(r => !r.Tipo.Equals(FedoraHelper.typeFedora)).OrderBy(r => r.GUIOrder).ToArray());
 
                 // listar imagens do tipo fedora
@@ -2420,7 +2420,7 @@ namespace GISA
             lstImagens.SelectedItems.Clear();
             controlFedoraPdfViewer.BringToFront();
             var isModoPublicadoOnly = MasterPanelPesquisa.cbModulo.SelectedItem.Equals(TranslationHelper.FormatModPesquisaIntToText(ModuloPesquisa.Publicacao));
-            if (node != null && node.Nodes.Count == 0) // mostrar mostrar pdf do nÛ selecionado caso n„o corresponda a um composto
+            if (node != null && node.Nodes.Count == 0) // mostrar mostrar pdf do n√≥ selecionado caso n√£o corresponda a um composto
             {
                 var odRow = node.Tag as GISADataset.ObjetoDigitalRow;
                 if (FedoraHelper.HasObjDigReadPermission(odRow.pid))
@@ -2428,7 +2428,7 @@ namespace GISA
                 this.btnFullScreen.Enabled = true;
                 this.btnActualizar.Enabled = true;
             }
-            else if (node != null && node.Nodes.Count > 0 && isModoPublicadoOnly) // se se tratar de um composto sÛ mostrar se a pesquisa estiver definida para mostrar ODs publicados e esse OD estar publicado
+            else if (node != null && node.Nodes.Count > 0 && isModoPublicadoOnly) // se se tratar de um composto s√≥ mostrar se a pesquisa estiver definida para mostrar ODs publicados e esse OD estar publicado
             {
                 var odRow = node.Tag as GISADataset.ObjetoDigitalRow;
                 if (FedoraHelper.HasObjDigReadPermission(odRow.pid) && odRow.Publicado)
