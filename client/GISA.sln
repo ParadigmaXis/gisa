@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual C# Express 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DropDownTreeView", "GISA.Controls\DropDownTreeView\DropDownTreeView.csproj", "{1584E999-76E5-4F93-BE3D-C2ED622C92FF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GISA.Controls.DoubleProgressBar", "GISA.Controls\DoubleProgressBar\GISA.Controls.DoubleProgressBar.csproj", "{7D7C60B4-CB5E-4714-BE8A-654CF83F02C9}"
@@ -288,7 +290,8 @@ Global
 		{71F2B044-CDED-494F-9857-F3D55454B1ED}.Release|Any CPU.Build.0 = Release|Any CPU
 		{71F2B044-CDED-494F-9857-F3D55454B1ED}.Release|x86.ActiveCfg = Release|x86
 		{71F2B044-CDED-494F-9857-F3D55454B1ED}.Release|x86.Build.0 = Release|x86
-		{33B6E76F-8345-4AA1-9B7F-DFA9CBB476E9}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{33B6E76F-8345-4AA1-9B7F-DFA9CBB476E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33B6E76F-8345-4AA1-9B7F-DFA9CBB476E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33B6E76F-8345-4AA1-9B7F-DFA9CBB476E9}.Debug|x86.ActiveCfg = Debug|x86
 		{33B6E76F-8345-4AA1-9B7F-DFA9CBB476E9}.Debug|x86.Build.0 = Debug|x86
 		{33B6E76F-8345-4AA1-9B7F-DFA9CBB476E9}.Release|Any CPU.ActiveCfg = Release|x86

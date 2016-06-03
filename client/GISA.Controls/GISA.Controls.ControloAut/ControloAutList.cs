@@ -63,7 +63,7 @@ namespace GISA.Controls.ControloAut
 		public System.Windows.Forms.Label lblNoticiaAut;
 		public System.Windows.Forms.TextBox txtFiltroDesignacao;
         public System.Windows.Forms.Label lblFiltroDesignacao;
-        public System.Windows.Forms.ToolTip ToolTip;
+        public new System.Windows.Forms.ToolTip ToolTip;
         public System.Windows.Forms.ColumnHeader colDatasExistencia;
         public System.Windows.Forms.CheckBox chkValidado;
         [System.Diagnostics.DebuggerStepThrough()]
