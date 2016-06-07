@@ -17,7 +17,7 @@
       <property name="connection.driver_class">NHibernate.Driver.SqlClientDriver</property>
 
 	      <property name="connection.connection_string">
-        initial catalog=GISA;Integrated Security=SSPI;Data Source=(local)\GISA
+        initial catalog=GISA;Integrated Security=SSPI;Data Source=(local)\SQLEXPRESS
       </property>
 
       <property name="dialect">NHibernate.Dialect.MsSql2008Dialect</property>        
