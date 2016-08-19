@@ -193,7 +193,6 @@ Exemplos:
 
 -  `Arquivo Municipal do Porto <http://gisaweb.cm-porto.pt/>`__
 -  `Arquivo Sophia de Mello Breyner <http://arquivo.cm-gaia.pt/>`__
--  `Arquivo Municipal Alfredo Pimenta <http://www.amap.com.pt/gisa/>`__
 -  `Arquivo da Faculdade de Letras da Universidade do
    Porto <http://catac.letras.up.pt/>`__
 -  `Arquivo da Faculdade de Engenharia da Universidade do
