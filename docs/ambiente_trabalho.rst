@@ -31,25 +31,26 @@ A organização dos módulos está feita da seguinte forma:
    -  Conteúdo
    -  Tipologia Informacional
 
-- Unidades físicas
+-  Unidades físicas
 
-  -  Descrição
-  -  Gestão de depósitos
-  -  Pesquisa
+   -  Descrição
+   -  Gestão de depósitos
+   -  Pesquisa
 
-- Unidades informacionais
+-  Unidades informacionais
 
   -  Descrição
   -  Requisições (A)
   -  Devoluções (A)
   -  Pesquisa
 
-- Objetos digitais
+-  Objetos digitais
 
   -  Fedora (A)
   -  Monitorização de PDFs
 
 -  Administração
+
   -  Configuração global
   -  Grupos de utilizadores (B)
   -  Utilizadores (B)
