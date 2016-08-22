@@ -31,36 +31,34 @@ A organização dos módulos está feita da seguinte forma:
    -  Conteúdo
    -  Tipologia Informacional
 
-\* Unidades físicas
+- Unidades físicas
 
--  Descrição
--  Gestão de depósitos
--  Pesquisa
+  -  Descrição
+  -  Gestão de depósitos
+  -  Pesquisa
 
-\* Unidades informacionais
+- Unidades informacionais
 
--  Descrição
--  Requisições (A)
--  Devoluções (A)
--  Pesquisa
+  -  Descrição
+  -  Requisições (A)
+  -  Devoluções (A)
+  -  Pesquisa
 
-\* Objetos digitais
+- Objetos digitais
 
--  Fedora (A)
+  -  Fedora (A)
+  -  Monitorização de PDFs
 
-\* Administração
+-  Administração
+  -  Configuração global
+  -  Grupos de utilizadores (B)
+  -  Utilizadores (B)
+  -  Permissões por Módulo (B)
+  -  Permissões pelo Plano de Classificação (B)
+  -  Estatísticas
+  -  Permissões por Objeto Digital (A, B)
 
--  Configuração global
--  Grupos de utilizadores (B)
--  Utilizadores (B)
--  Permissões por Módulo (B)
--  Permissões pelo Plano de Classificação (B)
--  Estatísticas
--  Permissões por Objeto Digital (A, B)
-
-(A) Módulos opcionais
-
-(B) Módulos inexistentes na versão monoposto
+'(A)' Módulos opcionais '(B)' Módulos inexistentes na versão monoposto
 
 Alguns módulos acima poderão não estar disponíveis para alguns
 utilizadores, pois depende das permissões definidas para cada um.
@@ -438,7 +436,7 @@ na lista, podem usar-se os seguintes campos como critério de pesquisa:
    entidades produtoras, cujos termos autorizados, paralelos e outros,
    obedeçam à expressão indicada.
 
-\*\ ``Notícia de autoridade`` - Neste caso só tem um tipo possível, ou
+-  ``Notícia de autoridade`` - Neste caso só tem um tipo possível, ou
 seja, *Entidade Produtora*.
 
 -  ``Validado`` - A caixa de verificação ``Validado`` tem três estados:
@@ -453,7 +451,7 @@ especiais:
 
 -  **%**, representando qualquer combinação de caracteres e
 
-**\*\_**, representando um único caracter qualquer.
+-  **_**, representando um único caracter qualquer.
 
 A pesquisa através dos filtros não é sensível a maiúsculas nem a
 diacríticos.
@@ -498,7 +496,7 @@ Para limpar os critérios de ordenação, clicar no cabeçalho da lista
 paginada com o botão direito do rato.
 
 .. |image0| image:: _static/images/ambientetrabalhogeral2.jpg
-   :width: 500px
+   :width: 650px
 .. |image1| image:: _static/images/areacontexto.jpg
    :width: 400px
 .. |image2| image:: _static/images/areadetalhes.jpg
