@@ -73,7 +73,7 @@ Os valores apresentados são:
    da ``Administração`` (ver detalhadamemte em `Configuração
    global <configuracao_global.html>`__.
 
-\* ``Ocupados`` - Total das larguras das unidades físicas existentes em
+-  ``Ocupados`` - Total das larguras das unidades físicas existentes em
 depósito. Este valor é estimado se existirem algumas unidades físicas
 sem registo das respetivas larguras no sistema, pois para estes casos
 considera-se terem uma largura média hipotética, calculada com base nas
@@ -82,7 +82,7 @@ larguras efetivamente registadas no sistema.
 -  ``Livres`` - Este valor é a diferença entre os metros lineares totais
    e os metros lineares ocupados.
 
-\* ``UFs em depósito`` - Número de unidades físicas existentes em
+-  ``UFs em depósito`` - Número de unidades físicas existentes em
 depósito.
 
 -  ``UFs sem largura`` - Número de unidades físicas sem largura
