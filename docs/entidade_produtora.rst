@@ -392,13 +392,13 @@ seguintes categorias de relações:
    duas entidades produtoras em que uma delas é hierarquicamente
    superior à outra:
 
-\* ``Temporal`` - esta relação é unidirecional e verifica-se entre duas
+- ``Temporal`` - esta relação é unidirecional e verifica-se entre duas
 entidades produtoras em que uma delas é temporalmente posterior à outra:
 
 -  ``Associativa`` - esta relação é bidirecional e associa de uma forma
    geral duas entidades produtoras;
 
-\* ``Familiar`` - esta relação é bidirecional e associa duas entidades
+- ``Familiar`` - esta relação é bidirecional e associa duas entidades
 produtoras com uma relação familiar.
 
 |image14|
