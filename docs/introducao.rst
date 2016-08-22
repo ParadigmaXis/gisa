@@ -205,7 +205,7 @@ Pesquisa de informação
 
 A pesquisa num Arquivo é essencialmente originada pela necessidade de
 aceder a determinada *informação*. A resposta pode ser dada pelo GISA
-(ver em detalhe a pagina `Pesquisa de Unidades Informacionais via
+(ver em detalhe a página `Pesquisa de Unidades Informacionais via
 aplicação <pesquisa_ui.html>`__ ) se esta informação estiver
 representada no sistema, através das unidades informacionais:
 
@@ -268,8 +268,10 @@ Existem funcionalidades de interoperabilidade associadas ao GISA via:
    Arquivos <http://portal.arquivos.pt/>`__ e a
    `EUROPEANA <http://www.europeana.eu/portal/>`__.
 -  Importação para o GISA de dados existentes no ficheiro Excel, desde
-   que obedeçam a um formato específico. == Gestão de utilizadores e
-   permissões ==
+   que obedeçam a um formato específico. 
+   
+Gestão de utilizadores e permissões
+--------------------------------
 
 Como em qualquer sistema multi-utilizador, cada utilizador GISA é
 identificado individualmente através do nome e palavra-chave. O seu
@@ -362,8 +364,8 @@ nível de descrição da estrutura documental (série ou documento),
 referenciando-as quer via caminho de rede, quando se encontram num
 sistema de ficheiros, quer via URL, quando se encontram num servidor
 web. O GISA-MOD - *Módulo de Objetos Digitais do GISA* é inspirado no
-modelo de referência *`Open Archival Information
-System <http://en.wikipedia.org/wiki/Open_Archival_Information_System>`__*
+modelo de referência `Open Archival Information
+System <http://en.wikipedia.org/wiki/Open_Archival_Information_System>`__
 (OAIS), do *Consultative Committee for Space Data Systems* (CCSDS), o
 qual representa um esquema conceptual que disciplina e orienta um
 sistema para a preservação e manutenção do acesso à informação digital a
@@ -372,46 +374,13 @@ longo prazo. Este módulo assenta no repositório digital *open source*
 responsabilidade o armazenamento, manutenção e disponibilização dos
 objetos digitais, fornecendo:
 
--  apoio à construção de *objetos digitais* para submissão, de forma
-   adequada, ao Repositório Digital. Cada objeto digital inclui
-   referências a ficheiros matriz de conteúdo digital ou a outros
-   objetos digitais e também metadados descritivos e estruturais.
-
-\* *integração com o GISA*, permitindo a associação de cada objeto
-digital a uma unidade de descrição documental GISA, de forma a usar a
-meta-informação descritiva e estrutural (título, tipologia informacional
-e termos de indexação).
-
--  *estruturação dos objetos digitais*, pois quando uma unidade de
-   descrição tem vários *objetos digitais simples*, estes podem estar
-   estruturados de forma a constituir um único *objeto digital
-   composto*. Os objetos digitais compostos referenciam os objetos
-   digitais simples e estes por sua vez referenciam as imagens.
-
-\* visualização dos documentos em formato PDF e com *qualidade
-ajustável*. É apresentado um PDF com as imagens que constituem cada
-objeto digital, sendo possível escolher entre quatro resoluções
-(``Mínima``, ``Baixa``, ``Média``, ``Alta``). Por omissão, está
-selecionada a resolução ``Baixa``.
-
--  *visualização flexível* do documento em um ou mais PDFs, conforme a
-   conveniência. Para um documento com vários objetos digitais simples,
-   sem constituirem objeto digital composto, a sua visualização é feita
-   através de vários PDFs . Quando os objetos digitais simples
-   constituem um objeto digital composto, a visualização do documento é
-   feita através de um único PDF, cujos marcadores são os títulos destes
-   objetos digitais simples, referenciando a primeira imagem de cada um.
-
-\* *permissões* de leitura e escrita sobre cada objeto digital simples.
-As permissões de um objeto digital composto, são a conjunção das
-permissões dos seus objetos digitais simples. Isto é, um PDF de um
-objeto digital composto só pode apresentar imagens relativas aos seus
-objetos digitais simples com permissão de leitura, ignorando todos os
-que não tenham permissão.
-
--  *versionamento* de cada objeto digital, mostrando a evolução deste,
-   desde a sua criação. Ficam registadas todas alterações que foram
-   efetuadas, quando e por quem.
+-  apoio à construção de *objetos digitais* para submissão, de forma adequada, ao Repositório Digital. Cada objeto digital inclui referências a ficheiros matriz de conteúdo digital ou a outros objetos digitais e também metadados descritivos e estruturais.
+-  *integração com o GISA*, permitindo a associação de cada objeto digital a uma unidade de descrição documental GISA, de forma a usar a me tainformação descritiva e estrutural (títul, tipologia informacional e termos de indexação).
+-  *estruturação dos objetos digitais*, pois quando uma unidade de descrição tem vários *objetos digitais simples*, estes podem estar estruturados de forma a constituir um único *objeto digital composto*. Os objetos digitais compostos referenciam os objetos digitais simples e estes por sua vez referenciam as imagens.
+-  *visualização dos documentos* em formato PDF e com *qualidade ajustável*. É apresentado um PDF com as imagens que constituem cada objeto digital, sendo possível escolher entre quatro resoluções (``Mínima``, ``Baixa``, ``Média``, ``Alta``). Por omissão, está selecionada a resolução ``Baixa``.
+- *visualização flexível* do documento em um ou mais PDFs, conforme a conveniência. Para um documento com vários objetos digitais simples, sem constituirem objeto digital composto, a sua visualização é feita através de vários PDFs . Quando os objetos digitais simples constituem um objeto digital composto, a visualização do documento é feita através de um único PDF, cujos marcadores são os títulos destes objetos digitais simples, referenciando a primeira imagem de cada um.
+- *permissões* de leitura e escrita sobre cada objeto digital simples. As permissões de um objeto digital composto, são a conjunção das permissões dos seus objetos digitais simples. Isto é, um PDF de um objeto digital composto só pode apresentar imagens relativas aos seus objetos digitais simples com permissão de leitura, ignorando todos os que não tenham permissão.
+- *versionamento* de cada objeto digital, mostrando a evolução deste, desde a sua criação. Ficam registadas todas alterações que foram efetuadas, quando e por quem.
 
 Os ficheiros de imagens a guardar no Repositório Digital, deverão
 residir num disco adequado e convenientemente dimensionado e serem
