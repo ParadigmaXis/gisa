@@ -271,7 +271,7 @@ Para elaboração de listagens necessárias ao serviço de arquivo:
    detalhe ver a secção `Geração de
    relatórios <descricao_ui.html#geracao-de-relatorios>`__.
 
-\* ``Listas de unidades informacionais``, resultados de pesquisas
+-  ``Listas de unidades informacionais``, resultados de pesquisas
 (obedecendo a determinados critérios de pesquisa) efetuadas na área
 *Unidades informacionais/Pesquisa*. Para mais detalhe ver a secção
 `Relatórios de unidades informacionais <pesquisa_ui.html#relatorios>`__.
@@ -281,7 +281,7 @@ Para elaboração de listagens necessárias ao serviço de arquivo:
    físicas/Pesquisa*. Para mais detalhe ver a secção `Relatórios de
    unidades físicas <pesquisa_uf.html#relatorios>`__.
 
-\* ``Listas de entidades produtoras``, ver a secção `Geração de
+-  ``Listas de entidades produtoras``, ver a secção `Geração de
 relatório de entidades
 produtoras <entidade_produtora.html#geracao-de-relatorio-de-entidades-produtoras>`__
 da página `Entidades produtoras <entidade_produtora.html>`__.
@@ -290,8 +290,7 @@ da página `Entidades produtoras <entidade_produtora.html>`__.
    `Geração de relatório de
    conteúdos <conteudo.html#geracao-de-relatorio-de-conteudos>`__.
 
-\*
-``Listas de registos de autoridade do tipo Tipologias informacional``,
+-  ``Listas de registos de autoridade do tipo Tipologias informacional``,
 ver a secção `Geração de relatório de tipologias
 informacionais <tipologia_informacional.html#geracao-de-relatorio-de-tipologias-informacionais>`__.
 
@@ -327,7 +326,7 @@ será necessário registar:
    preenchimento da sua dimensão. Para isso consultar `Unidades
    Físicas <descricao_uf.html>`__;
 
-\* todas as entradas de unidades físicas no depósito, não esquecendo o
+-  todas as entradas de unidades físicas no depósito, não esquecendo o
 preenchimento da sua dimensão. Para isso consultar `Unidades
 Físicas <descricao_uf.html>`__;
 
@@ -337,7 +336,7 @@ Físicas <descricao_uf.html>`__;
    informacionais/Descrição* e para um maior detalhe consultar `Conteúdo
    e estrutura - Avaliação, seleção e eliminação <avaliacao.html>`__;
 
-\* o abate (eliminação física) dos documentos que constam nos autos de
+-  o abate (eliminação física) dos documentos que constam nos autos de
 eliminação. Para isso consultar `Abate de Unidades
 físicas <gestao_depositos.html#unidades-fisicas-associadas>`__.
 
@@ -357,7 +356,7 @@ Para *exportar* dados do GISA:
 -  *para ficheiro*, usando o formato **EAD**, consultar a secção
    `Exportação para EAD <descricao_ui.html#exportacao-para-ead>`__;
 
-\* *para servidores agregadores*, que reconheçam o protocolo
+-  *para servidores agregadores*, que reconheçam o protocolo
 **OAI-PMH**, basta ter o GISA Internet instalado e na instalação ser
 configurada essa opção.
 
