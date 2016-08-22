@@ -138,7 +138,7 @@ campos:
    autorizada ou não, devem obedecer à expressão introduzida neste
    campo.
 
-\* ``Notícia de autoridade`` - Este campo só está ativo para filtragem
+-  ``Notícia de autoridade`` - Este campo só está ativo para filtragem
 neste caso, de *Conteúdos*, permitindo filtrar os registos por notícia
 de autoriadde do tipo *Ideográfico* ou *Onomástico* ou *Nome
 geográfico/Topónimo citadino*.
@@ -213,7 +213,7 @@ seguintes tipos de forma:
 -  ``Forma paralela``, que permite indicar diferentes formas nas quais a
    forma autorizada do nome ocorre noutras línguas,
 
-\* ``Forma normalizada segundo outras regras``, permitindo formas
+-  ``Forma normalizada segundo outras regras``, permitindo formas
 normalizadas construídas segundo outras normas que não as utilizadas
 pelo serviço de arquivo que criou o registo de autoridade,
 
@@ -231,7 +231,7 @@ Neste momento, deve escolher-se uma das seguintes hipóteses:
    botão ``Aceitar``. O botão ``Aceitar`` com fica ativo se o termo não
    existir.
 
-\* ``Escolher um termo já existente`` - Para esta opção, digitar o
+-  ``Escolher um termo já existente`` - Para esta opção, digitar o
 início do termo a editar para posicionar a lista na zona desejada.
 Verificar que ao digitar o texto, este vai aparecendo em rodapé.
 
@@ -258,7 +258,7 @@ estabelecer relações com outros registos de autoridade:
    *termo genérico* *Pessoal*, automaticamente, o termo *Pessoal* fica
    com o termo específico *Pessoal docente*.
 
-\* *Relação de outro tipo qualquer*, representando uma relação entre
+-  *Relação de outro tipo qualquer*, representando uma relação entre
 termos que nada têm em comum a nível conceptual, mas que de alguma forma
 estão relacionados. Podem ser, por exemplo, contíguos no tempo, quando
 um objeto dá origem a outro (pe. Lagarta e Borboleta) ou um processo que
