@@ -131,8 +131,7 @@ campos:
 -  ``Designação`` - os termos que aparecem na lista, na sua forma
    autorizada ou não, devem obedecer à expressão introduzida neste
    campo.
-
-\* ``Notícia de autoridade`` - Este campo não é usado pois a lista de
+-  ``Notícia de autoridade`` - Este campo não é usado pois a lista de
 registos já está a ser filtrada por registos do tipo *Tipologia
 informacional*.
 
@@ -207,7 +206,7 @@ Nesta janela pode escolher-se uma das seguintes hipóteses:
    botão ``Aceitar``. O botão ``Aceitar`` fica ativo se o termo não
    existir.
 
-\* ``Escolher um termo já existente`` - Para esta opção, digitar o
+-  ``Escolher um termo já existente`` - Para esta opção, digitar o
 início do termo a editar para posicionar a lista na zona desejada.
 Verificar que ao digitar o texto, este vai aparecendo em rodapé.
 
@@ -226,7 +225,7 @@ estabelecer, deve-se:
 
 -  selecionar uma tipologia informacional na área de contexto,
 
-\* na área de detalhe, selecionar o tipo ``Termo relacionado`` e clicar
+-  na área de detalhe, selecionar o tipo ``Termo relacionado`` e clicar
 no botão ``Adicionar item``, abrindo-se a seguinte janela:
 
 |image10|
