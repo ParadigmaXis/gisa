@@ -20,7 +20,7 @@ B: ``Filtrar dados`` - Botão que permite filtrar na vista documental, os
 níveis documentais pelo Título, Identificador, Código parcial ou
 Conteúdo.
 
-C:\ `` Área de seleção de um nível`` - Permite a navegação na estrutura
+C: `` Área de seleção de um nível`` - Permite a navegação na estrutura
 arquivística de forma a selecionar o nível pretendido.
 
 D: ``Operador`` - Permite selecionar o utilizador ou grupo de
@@ -51,7 +51,7 @@ pretendida:
 -  ``Próprio`` - quando só se pretende definir permissões no *nível
    selecionado* na área de contexto.
 
-\* ``Todos documentais`` - quando se pretende definir permissões em
+-  ``Todos documentais`` - quando se pretende definir permissões em
 *níveis documentais de topo da estrutura documental*. Ou seja, quando na
 área de contexto está um nível orgânico selecionado, este filtro permite
 apresentar todos os níveis documentais diretamente relacionados com esse
@@ -84,8 +84,8 @@ para se poder atribuir as permissões:
 
 Escolher para cada operação o valor pretendido e de seguida clicar no
 botão ``Confirmar`` para estabelecer as permissões definidas nos níveis
-selecionados. É possível escolher os seguintes valores: **Sim**, **Não**
-ou *vazio*. Quando se escolhe o valor *vazio*, a permissão deve voltar à
+selecionados. É possível escolher os seguintes valores: Sim, Não
+ou ``vazio``. Quando se escolhe o valor *vazio*, a permissão deve voltar à
 permissão implícita que o nível possuía, estabelecida por
 `omissão <permissoes_omissao.html#niveis-novos>`__ ou como resultado de
 um `cálculo <permissoes_calculo.html>`__.
@@ -103,6 +103,6 @@ quando se definem:
    explícita.
 
 .. |image0| image:: _static/images/permissoesplanoclassificacao.png
-   :width: 500px
+   :width: 650px
 .. |image1| image:: _static/images/editarpermissoes.png
    :width: 300px
