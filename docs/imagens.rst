@@ -69,7 +69,7 @@ Primeiro, selecionar o tipo de referência a associar:
 -  ``Diretório``, quando a referência é um caminho para o sistema de
    ficheiros onde se encontram os objetos digitais.
 
-\* ``Web``, quando a referência é um URL para um objeto digital que se
+-  ``Web``, quando a referência é um URL para um objeto digital que se
 encontra num servidor de ficheiros. Neste caso, quando as imagens são
 apresentadas dentro de uma página web, também deve ser indicado o
 endereço desta página no módulo *Configuração Global* da área de
