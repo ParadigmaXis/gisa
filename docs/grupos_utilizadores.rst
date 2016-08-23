@@ -107,13 +107,13 @@ navegação:
 |image6|
 
 Quando se cria um grupo novo, por omissão, aparecem todas as permissões
-com o valor _**Não**_, indicando que o grupo não tem permissão para
+com o valor *Não*, indicando que o grupo não tem permissão para
 utilizar a aplicação. Em função do tipo de grupo e do `cálculo de
 permissões <permissoes_calculo.html>`__ feito pelo sistema, pode
-atribuir-se permissão explícita com **Sim**, retirar explicitamente com
-**Não** ou repor o valor por
+atribuir-se permissão explícita com Sim, retirar explicitamente com
+Não ou repor o valor por
 `omissão <permissoes_omissao.html#grupos-ou-utilizadores-novos>`__
-_**Não**_.
+*Não*.
 
 Na área de detalhes desta janela, é possível atribuir permissões aos
 grupos de utilizadores sobre as operações permitidas em cada módulo:
@@ -121,7 +121,7 @@ grupos de utilizadores sobre as operações permitidas em cada módulo:
 
 Para se definir uma permissão, seleciona-se a linha do módulo e na
 coluna correspondente à operação clica-se até se obter o valor
-pretendido: **Sim**, **Não** ou _**Não**_.
+pretendido: Sim, Não ou *Não*.
 
 O módulo `Permissões por Módulo <permissoes_modulo.html>`__ também
 permite definir as permissões dos utilizadores ou grupos sobre os
