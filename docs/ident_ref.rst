@@ -35,7 +35,7 @@ O GISA admite vários tipos de código, os quais se descrevem a seguir:
    facilmente o contexto de um documento com o código
    ``PT-AMP/RUP/SG-DA-RA/SA/001/0001.85``.
 
-\* ``Outros códigos`` - estes códigos são outros possíveis
+-  ``Outros códigos`` - estes códigos são outros possíveis
 identificadores usados previamente à utilização do GISA e que podem
 continuar a ser referenciados por algum utilizador do sistema. Este
 campo não é preenchido ou editado pelo utilizador, só pode ser
@@ -49,7 +49,7 @@ usados para pesquisas, mas não serão utilizados como identificadores.
    descrição, sendo também disponibilizado ao utilizador para possíveis
    pesquisas.
 
-\* ``Agrupador`` - código a preencher opcionalmente pelo utilizador,
+-  ``Agrupador`` - código a preencher opcionalmente pelo utilizador,
 permitindo agrupar um conjunto de unidades de descrição, de alguma forma
 relacionadas entre si, desde que estas tenham todas o mesmo código. Este
 campo pode ser por exemplo utilizado em casos de processos, constituídos
@@ -92,19 +92,19 @@ O GISA admite *datas incompletas*, as quais deverão ser preenchidas com
 Nas unidades de descrição, os campos de datas podem ser preenchidos da
 seguinte forma:
 
-+-----------------+---------------------------------------------------------------------+-----------------------------------+
-| Data            | Preenchimento do campo                                              | Exemplo                           |
-+=================+=====================================================================+===================================+
-| Completa        | Campos ano, mês e dia preenchidos                                   | 1910/03/23                        |
-+-----------------+---------------------------------------------------------------------+-----------------------------------+
-| Indeterminada   | Campos ano, mês e dia preenchidos com data desconhecida             | ????/??/??                        |
-+-----------------+---------------------------------------------------------------------+-----------------------------------+
-| Incompleta      | Campos ano, mês e dia preenchidos com data parcialmente conhecida   | 19??/??/?? (séc XX)               |
-|                 |                                                                     | 2000/12/?? (dezembro de 2000)     |
-|                 |                                                                     | 196?/??/?? (anos 60 do séc. XX)   |
-+-----------------+---------------------------------------------------------------------+-----------------------------------+
-| Vazia           | Campos ano, mês e dia ainda por preencher                           | \_ \_ \_ \_ /\_ \_ /\_ \_         |
-+-----------------+---------------------------------------------------------------------+-----------------------------------+
++-----------------+------------------------------------------------------------+-----------------------------------+
+| Data            | Preenchimento do campo                                     | Exemplo                           |
++=================+============================================================+===================================+
+| Completa        | Campos ano, mês e dia preenchidos                          | - 1910/03/23                      |
++-----------------+------------------------------------------------------------+-----------------------------------+
+| Indeterminada   | Campos ano, mês e dia preenchidos com data desconhecida    | - ????/??/??                      |
++-----------------+------------------------------------------------------------+-----------------------------------+
+| Incompleta      | Campos ano, mês e dia preenchidos com data parcialmente    | - 19??/??/?? (séc XX)             |
+|                 | conhecida                                                  | - 2000/12/?? (dezembro de 2000)   |
+|                 |                                                            | - 196?/??/?? (anos 60 do séc. XX) |
++-----------------+------------------------------------------------------------+-----------------------------------+
+| Vazia           | Campos ano, mês e dia ainda por preencher                  | - \_ \_ \_ \_ /\_ \_ /\_ \_       |
++-----------------+------------------------------------------------------------+-----------------------------------+
 
 Nível de descrição
 ------------------
@@ -127,4 +127,4 @@ superiores, este campo mostra os diferentes tipos de nível em causa
 separados por “;”.
 
 .. |image0| image:: _static/images/identificacao.png
-   :width: 300px
+   :width: 650px
