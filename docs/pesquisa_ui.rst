@@ -414,17 +414,17 @@ de formato a gerar (RTF ou PDF) na seguinte janela.
 |image14|
 
 .. |image0| image:: _static/images/pesquisa.jpg
-   :width: 300px
+   :width: 650px
 .. |image1| image:: _static/images/pesquisasimples.png
-   :width: 500px
+   :width: 650px
 .. |image2| image:: _static/images/pesquisaavancada.png
-   :width: 500px
+   :width: 650px
 .. |image3| image:: _static/images/pesquisauds.jpg
-   :width: 500px
+   :width: 650px
 .. |image4| image:: _static/images/criterios.png
-   :width: 500px
+   :width: 650px
 .. |image5| image:: _static/images/estruturapesquisa.png
-   :width: 500px
+   :width: 650px
 .. |image6| image:: _static/images/resultadospesquisa.jpg
    :width: 400px
 .. |image7| image:: _static/images/detalhespesquisa.png
