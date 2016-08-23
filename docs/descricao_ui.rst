@@ -67,7 +67,7 @@ relatório em formato PDF ou RTF. Ver
 
 J: ``Exportar para EAD`` - Botão que permite a exportação dos dados do
 GISA para um ficheiro apresentando um formato EAD. Ver `Exportar para
-EAD <descricao_ui.html#exportar-para-ead>`__ para um maior detalhe.
+EAD <descricao_ui.html#exportacao-para-ead>`__ para um maior detalhe.
 
 K: ``Importação`` - botão que faculta a importação de dados, existentes
 num ficheiro Excel, para o GISA, desde que obedeçam às regras definidas
@@ -112,7 +112,7 @@ detentora, o botão ``Criar subnível`` mostra um menu com duas opções:
 -  ``Criar Grupo de arquivos`` - permitindo criar um nível do tipo
    ``Grupo de arquivos`` debaixo dessa entidade.
 
-\* ``Criar Arquivo`` - permitindo associar uma entidade produtora do
+- ``Criar Arquivo`` - permitindo associar uma entidade produtora do
 tipo ``Arquivo``, o topo da estrutura orgânica, já existente.
 
 Grupo de arquivos
@@ -345,7 +345,7 @@ regra para atribuição dos tipos de nível a constar no menu é a seguinte:
 +-----------------------------------------------+-----------------------------------------------+
 | ``Documento/Processo``                        | ``Documento subordinado/Ato informacional``   |
 +-----------------------------------------------+-----------------------------------------------+
-| ``Documento subordinado/Ato informacional``   | -                                             |
+| ``Documento subordinado/Ato informacional``   | --                                            |
 +-----------------------------------------------+-----------------------------------------------+
 
 Se por exemplo estiver selecionado um nível orgânico, o menu apresentado
@@ -488,13 +488,13 @@ A lista de níveis documentais pode ser filtrada pelos seguintes campos:
 -  ``Título``, selecionando unidades informacionais cuja designação
    obedeça à expressão introduzida neste campo.
 
-\* ``Identificador``, selecionando unidades informacionais cujo
+-  ``Identificador``, selecionando unidades informacionais cujo
 identificador obedeça à expressão introduzida neste campo.
 
 -  ``Código parcial``, selecionando unidades informacionais cujo código
    parcial obedeça à expressão introduzida neste campo.
 
-\*\ `` Conteúdo``, selecionando unidades informacionais cujo conteúdo
+-  `` Conteúdo``, selecionando unidades informacionais cujo conteúdo
 obedeça à expressão introduzida neste campo.
 
 -  ``Esconder níveis não diretos``, o qual, se assinalado (é-o por
@@ -711,7 +711,7 @@ zonas e campos da descrição de unidades informacionais são:
    indexacao
 
 .. |image0| image:: _static/images/estruturaarquivistica.jpg
-   :width: 300px
+   :width: 650px
 .. |image1| image:: _static/images/criared.png
    :width: 350px
 .. |image2| image:: _static/images/estruturaorganica.png
