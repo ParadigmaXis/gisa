@@ -30,7 +30,7 @@ diferentes:
 
 -  abordagem sistémica ou
 
-\* abordagem baseada numa tabela de seleção (estipulada por portaria).
+-  abordagem baseada numa tabela de seleção (estipulada por portaria).
 
 No painel a seguir mostra-se o ambiente de trabalho para executar a 1ª
 etapa da operação de avaliação.
@@ -68,7 +68,7 @@ F: ``Observações`` - Observações ao processo de avaliação do nível em
 questão.
 
 Abordagem sistémica
-~~~~~~~~~~~~~~~~~~~
+--------------------------------
 
 Numa abordagem sistémica, o objeto de análise é a informação, dando
 especial importância ao contexto produtor dessa informação e tendo como
@@ -87,7 +87,8 @@ Avaliação sistémica da série *Processos individuais de alunos*:
 
 |image2|
 
-**Pertinência**
+Pertinência
+~~~~~~~~~~~~~~~~~~~
 
 A *Pertinência* deve transmitir a proximidade da informação com os
 objetivos primordiais da instituição (os quais constam de sucessivos
@@ -100,7 +101,7 @@ O campo ``Nível`` pode assumir um dos seguintes valores:
 -  ``A`` - quando há uma relação direta entre os atos informacionais e
    os objetivos da instituição.
 
-\* ``B`` - quando há uma relação indireta entre os atos informacionais e
+-  ``B`` - quando há uma relação indireta entre os atos informacionais e
 os objetivos da instituição.
 
 -  ``C`` - quando há uma relação periférica ou redundante da informação
@@ -114,11 +115,13 @@ atribuído ao campo ``Nível``:
 | Nível    | Ponderação   | Sugestão                        |
 +==========+==============+=================================+
 | A ou B   | 1            | informação é para conservar     |
-+----------+--------------+---------------------------------+
-| C        | 0            | informação pode ser eliminada   |
+----------------------+---------------------------------+
+| C        | 0            
+| informação pode ser eliminada   |
 +----------+--------------+---------------------------------+
 
-**Frequência de uso**
+Frequência de uso
+~~~~~~~~~~~~~~~~~~~
 
 A *Frequência de uso* quantifica a utilização da informação pela
 instituição produtora. Considera-se que a sua ponderação é:
@@ -126,10 +129,11 @@ instituição produtora. Considera-se que a sua ponderação é:
 -  ``1`` - quando o uso é máximo/médio, correspondendo a uma ou mais que
    uma vez por semana.
 
-\* ``0`` - quando o uso é mínimo, correspondendo a menos que uma vez por
+-  ``0`` - quando o uso é mínimo, correspondendo a menos que uma vez por
 semana.
 
-**Densidade**
+Densidade
+~~~~~~~~~~~~~~~~~~~
 
 A avaliação de uma unidade arquivística implica saber, em termos
 informacionais, se concentra a informação mais completa. Para isso, será
@@ -148,7 +152,7 @@ informação associada que estiver selecionada na lista.
 C: ``Apagar item`` - Botão que permite apagar a associação a uma unidade
 de informação.
 
-***Informação em análise***
+**Informação em análise**
 
 Relativamente à *Densidade* da informação em análise deve definir-se o
 ``Tipo de produção`` e o respetivo ``Grau de densidade``. Se o
@@ -157,7 +161,7 @@ Relativamente à *Densidade* da informação em análise deve definir-se o
 +--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+--------------------------------------+
 | Tipo de produção   | Grau de densidade                                                                                                                                                                                                                                | Ponderação da densidade   | Sugestão                             |
 +====================+==================================================================================================================================================================================================================================================+===========================+======================================+
-| *Primária*         | informação duplicada                                                                                                                                                                                                                             | 0                         | pode ser substituído pelo original   |
+| *Primária*         | informação duplicada                                                                                                                                                                                                                          | 0                         | ode ser substituído pelo original   |
 +--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+--------------------------------------+
 | *Primária*         | informação original                                                                                                                                                                                                                              | 1                         | deve ser guardada                    |
 +--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+--------------------------------------+
@@ -166,7 +170,7 @@ Relativamente à *Densidade* da informação em análise deve definir-se o
 | *Secundária*       | restante informação parcelar, ou cumulativa de informação primária                                                                                                                                                                               | 1                         | pode ser substituída pela primária   |
 +--------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+--------------------------------------+
 
-***Informação relacionada***
+**Informação relacionada**
 
 Para atribuir uma ponderação adequada ao critério *Densidade*, deve
 também registar-se o ``Tipo de produção`` e o ``Grau de densidade`` de
@@ -182,7 +186,7 @@ clica-se no botão ``Adicionar item`` (A) e aparece o seguinte diálogo:
 
 |image4|
 
-1. Selecionar o nível documental pretendido na hierarquia apresentada na
+1. Selecionar o nível documental pretendido na hierarqui apresentada na
 janela.
 
 2. Caracterizar a densidade dessa unidade arquivística
@@ -201,11 +205,13 @@ Para editar uma unidade arquivística relacionada, clica-se botão
 |image5|
 
 Pode alterar-se a densidade dessa unidade arquivística
-(``Tipo de produção`` e ``Grau de densidade``) e a ponderação. Por fim,
+(``Tipo de produção`` e ``Grau de densidade``) e a pond
+eração. Por fim,
 clica-se no botão ``Atualizar`` para alterar a informação relacionada ou
 no ``Cancelar`` para desistir dessa alteração.
 
-**Destino final**
+Destino final
+~~~~~~~~~~~~~~~~~~~
 
 A decisão sobre o ``Destino final`` da informação rege-se pela seguinte
 tabela:
@@ -221,7 +227,7 @@ tabela:
 +---------------+--------------+-------------+--------------------------+-----------------+-----------------------+
 | 1             | 1 ou 0       | 1           | Conservação permanente   | Conservação     | -                     |
 +---------------+--------------+-------------+--------------------------+-----------------+-----------------------+
-| 1             | 1            | 0           | Conservação temporária   | Eliminação      | Nº anos a conservar   |
+1             | 1      | 0           | Conservação temporária   | Eliminação      | Nº anos a conservar   |
 +---------------+--------------+-------------+--------------------------+-----------------+-----------------------+
 | 1             | 0            | 0           | Eliminação               | Eliminação      | 0                     |
 +---------------+--------------+-------------+--------------------------+-----------------+-----------------------+
@@ -236,12 +242,12 @@ Analisando os dois exemplos, para o caso da série:
    visto a ``Pertinência`` ser ``0``, a ``Frequência`` ser ``0`` e a
    ``Densidade`` também ser ``0``.
 
-\* *Processos individuais de alunos* o resultado é ``Conservação``,
+-  *Processos individuais de alunos* o resultado é ``Conservação``,
 visto a ``Pertinência`` ser ``1``, a ``Frequência`` ser ``0`` e a
 ``Densidade`` ser ``1``.
 
 Abordagem baseada numa tabela de seleção
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------------
 
 Outra abordagem, é a definição do destino final e dos prazos de
 conservação para os documentos, tendo como instrumento de apoio uma
@@ -258,7 +264,7 @@ arquivística. Existem dois campos, ``Diploma`` e
 se regeu a avaliação e o outro a entrada, na tabela de seleção do
 diploma em causa, correspondente à informação que está a ser avaliada.
 
-Destino final
+Destino
 ~~~~~~~~~~~~~
 
 O resultado da avaliação é registado no campo ``Destino final``, que
@@ -266,7 +272,7 @@ pode assumir os seguintes valores:
 
 -  ``<>`` - destino ainda por definir.
 
-\* ``Conservação`` - conservação permanente de toda a informação que se
+-  ``Conservação`` - conservação permanente de toda a informação que se
 revelou pertinente face aos objetivos da instituição, densa em matéria
 de conteúdo informativo, independentemente da frequência da sua
 utilização;
@@ -276,10 +282,7 @@ utilização;
    contudo, sempre que a frequência de uso justifique a sua retenção
    durante algum tempo ou haja alguma regulamentação nesse sentido, é
    estabelecido um prazo para a sua conservação temporária.
-
-**Prazo de conservação**
-
-O ``Prazo de conservação`` é um campo que só fica disponível no caso de
+zo de conservação`` é um campo que só fica disponível no caso de
 o ``Destino final`` ser ``Eliminação`` e é aí que se define o nº de anos
 que a documentação deve ser conservada antes de ser abatida.
 
@@ -363,7 +366,7 @@ Para a avaliação desses conteúdos existem dois painéis:
    para avaliar, em lote ou não, os documentos pertencentes a uma série
    ou subsérie já avaliada.
 
-\* `Passo 2: Seleção das unidades físicas
+-  `Passo 2: Seleção das unidades físicas
 associadas <avaliacao.html#passo-2selecao-das-unidades-fisicas>`__, para
 completar os autos de eliminação com unidades físicas, por o
 recenseamento se ter feito ao nível da unidade física e não ao nível da
@@ -410,7 +413,7 @@ A seleção de documentos é feito na lista do painel intitulada
    físicas da lista apresentada, que ficarão automaticamente
    selecionados todos os documentos nela incluídos.
 
-\* selecionar um ou vários elementos da lista, recorrendo-se às teclas
+-  selecionar um ou vários elementos da lista, recorrendo-se às teclas
 de ``Shift`` e ``Ctrl`` para seleções múltiplas adjacentes ou não.
 
 A lista de documentos apresentada encontra-se inicialmente filtrada,
@@ -558,11 +561,11 @@ Colocar visto nos autos de eliminação pretendidos e de seguida clicar no
 botão ``Ok`` para remover.
 
 .. |image0| image:: _static/images/avaliacao.jpg
-   :width: 500px
+   :width: 650px
 .. |image1| image:: _static/images/avaliacaosistemica.png
-   :width: 500px
+   :width: 650px
 .. |image2| image:: _static/images/avaliacaosistemicacons.png
-   :width: 500px
+   :width: 650px
 .. |image3| image:: _static/images/densidade.jpg
    :width: 400px
 .. |image4| image:: _static/images/informacaorelacionada.png
@@ -570,22 +573,22 @@ botão ``Ok`` para remover.
 .. |image5| image:: _static/images/editarinformacaorelacionada.png
    :width: 400px
 .. |image6| image:: _static/images/avaliacaoportaria.png
-   :width: 500px
+   :width: 650px
 .. |image7| image:: _static/images/seleccionarautoeliminacao.png
-   :width: 500px
+   :width: 650px
 .. |image8| image:: _static/images/criarautoeliminacao.png
    :width: 400px
 .. |image9| image:: _static/images/passo1_1.jpg
-   :width: 500px
+   :width: 650px
 .. |image10| image:: _static/images/passo1_1_o.png
-   :width: 500px
+   :width: 650px
 .. |image11| image:: _static/images/passo1_2.png
-   :width: 500px
+   :width: 650px
 .. |image12| image:: _static/images/passo1_3.png
-   :width: 500px
+   :width: 650px
 .. |image13| image:: _static/images/passo2.jpg
-   :width: 500px
+   :width: 650px
 .. |image14| image:: _static/images/adicionarautopasso2.png
-   :width: 500px
+   :width: 650px
 .. |image15| image:: _static/images/removerautopasso2.png
-   :width: 500px
+   :width: 650px
