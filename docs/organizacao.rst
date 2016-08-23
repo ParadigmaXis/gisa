@@ -11,21 +11,21 @@ Para a ``Tradição documental``, os valores possíveis são:
 
 -  ``Cópia``
 
-\* ``Minuta``
+-  ``Minuta``
 
 -  ``Original``
 
-\* ``Resumo``
+-  ``Resumo``
 
 Para a ``Ordenação``, os valores possíveis são:
 
 -  ``Aleatória``
 
-\* ``Alfabética``
+-  ``Alfabética``
 
 -  ``Cronológica``
 
-\* ``Numérica``
+-  ``Numérica``
 
 -  ``Sistemática``
 
@@ -37,4 +37,4 @@ assinalado em cada um dos campos ``Tradição documental`` e
 |image0|
 
 .. |image0| image:: _static/images/organizacaoordenacao.png
-   :width: 500px
+   :width: 650px
