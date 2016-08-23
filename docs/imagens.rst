@@ -9,7 +9,7 @@ mesmo. Se esse documento estiver em suporte digital será também
 imediatamente visualizado, desde que associado à sua unidade de
 descrição no GISA.
 
-Esta zona não consta na na *ISAD-G*, mas é uma das principais áreas da
+Esta zona não consta na *ISAD-G*, mas é uma das principais áreas da
 `descrição multinível <descricao_ui.html#descricao-multinivel>`__ no
 GISA, pois permite o acesso rápido à informação e ao mesmo tempo
 contribui para a conservação dos documentos originais, quando se
@@ -119,7 +119,7 @@ através da aplicação, que está associada no Windows àquele tipo de
 ficheiro.
 
 .. |image0| image:: _static/images/imagens.jpg
-   :width: 500px
+   :width: 650px
 .. |image1| image:: _static/images/associarrefimagem.png
    :width: 400px
 .. |image2| image:: _static/images/associarrefdirimagem.jpg
