@@ -131,67 +131,67 @@ aplicação.
 Unidades físicas
 ~~~~~~~~~~~~~~~~
 
-As operações da área das ``Unidades físicas`` que se refletem na
+As operações da área das ``Unidades físicas (UFs)`` que se refletem na
 contagem das ``Estatísticas``:
 
-+--------------------------------------------------+--------------------+--------------------+--------------------+
-| Operação                                         | Criação            | Edição             | Eliminação         |
-+==================================================+====================+====================+====================+
-| Criação de registo via barra de ferramentas      | 1 Unidade física   |                    |                    |
-+--------------------------------------------------+--------------------+--------------------+--------------------+
-| Duplicação via barra de ferramentas              | 1 Unidade física   |                    |                    |
-+--------------------------------------------------+--------------------+--------------------+--------------------+
-| Edição via barra de ferramentas                  |                    | 1 Unidade física   |                    |
-+--------------------------------------------------+--------------------+--------------------+--------------------+
-| Edição de campos de formulário                   |                    | 1 Unidade física   |                    |
-+--------------------------------------------------+--------------------+--------------------+--------------------+
-| Eliminação de registo via barra de ferramentas   |                    |                    | 1 Unidade física   |
-+--------------------------------------------------+--------------------+--------------------+--------------------+
++--------------------------------------------------+------------+------------+------------+
+| Operação                                         | Criação    | Edição     | Eliminação |
++==================================================+============+============+============+
+| Criação de registo via barra de ferramentas      | 1 UF       |            |            |
++--------------------------------------------------+------------+------------+------------+
+| Duplicação via barra de ferramentas              | 1 UF       |            |            |
++--------------------------------------------------+------------+------------+------------+
+| Edição via barra de ferramentas                  |            | 1 UF       |            |
++--------------------------------------------------+------------+------------+------------+
+| Edição de campos de formulário                   |            | 1 UF       |            |
++--------------------------------------------------+------------+------------+------------+
+| Eliminação de registo via barra de ferramentas   |            |            | 1 UF       |
++--------------------------------------------------+------------+------------+------------+
 
 Controlo de Autoridade
 ~~~~~~~~~~~~~~~~~~~~~~
 
 As operações da área do ``Controlo de Autoridade`` que se refletem na
-contagem das ``Estatísticas``, quer em termos de registos de autoridade
-quer de unidades informacionais às quais estes estão associados:
+contagem das ``Estatísticas``, quer em termos de registos de autoridade (RAs)
+quer de unidades informacionais (UIs) às quais estes estão associados:
 
-+------------------------------------------+-------------------------+--------------------------+--------------------------+
-| Operação                                 | Criação                 | Edição                   | Eliminação               |
-+==========================================+=========================+==========================+==========================+
-| Criação de registo via barra de          | 1 Registo de autoridade |                          |                          |
-| ferramentas                              |                         |                          |                          |
-+------------------------------------------+-------------------------+--------------------------+--------------------------+
-| Edição da notícia de autoridade via      | 1 Registo de autoridade |                          | 1 Registo de autoridade  |
-| barra de ferramentas                     |                         |                          |                          |
-+------------------------------------------+-------------------------+--------------------------+--------------------------+
-| Edição do termo via barra de ferramentas |                         | 1 Registo de autoridade  |                          |
-+------------------------------------------+-------------------------+--------------------------+--------------------------+
-| Edição do campo ``3. Relações`` de uma   | 1 Unidade informacional | 1 Registo de autoridade  |                          |
-| Entidade produtora, adicionando uma      |                         |                          |                          |
-| relação pela primeira vez                |                         |                          |                          |
-+------------------------------------------+-------------------------+--------------------------+--------------------------+
-| Edição do campo ``3. Relações`` de uma   |                         | 1 Registo de autoridade; |                          |
-| Entidade produtora, adicionando uma      |                         | 1 Unidade informacional  |                          |
-| relação, não sendo a primeira vez        |                         |                          |                          |
-+------------------------------------------+-------------------------+--------------------------+--------------------------+
-| Edição do campo ``3. Relações`` de uma   |                         | 1 Unidade informacional  |                          |
-| Entidade produtora, editando uma relação |                         |                          |                          |
-+------------------------------------------+-------------------------+--------------------------+--------------------------+
-| Edição do campo ``3. Relações`` de uma   |                         | 1 Registo de autoridade; |                          |
-| Entidade produtora, eliminando uma       |                         | 1 Unidade informacional  |                          |
-| relação                                  |                         |                          |                          |
-+------------------------------------------+-------------------------+--------------------------+--------------------------+
-| Eliminação de registo via barra de       |                         |                          | 1 Registo de autoridade  |
-| ferramentas                              |                         |                          |                          |
-+------------------------------------------+-------------------------+--------------------------+--------------------------+
-| Edição do resto dos campos de formulário |                         | 1 Registo de autoridade  |                          |
-+------------------------------------------+-------------------------+--------------------------+--------------------------+
++------------------------------------------+-------------+------------+-------------+
+| Operação                                 | Criação     | Edição     | Eliminação  |
++==========================================+=============+============+=============+
+| Criação de registo via barra de          | 1 RA        |            |             |
+| ferramentas                              |             |            |             |
++------------------------------------------+-------------+------------+-------------+
+| Edição da notícia de autoridade via      | 1 RA        |            | 1 RA        |
+| barra de ferramentas                     |             |            |             |
++------------------------------------------+-------------+------------+-------------+
+| Edição do termo via barra de ferramentas |             | 1 RA       |             |
++------------------------------------------+-------------+------------+-------------+
+| Edição do campo ``3. Relações`` de uma   | 1 UI        | 1 RA       |             |
+| Entidade produtora, adicionando uma      |             |            |             |
+| relação pela primeira vez                |             |            |             |
++------------------------------------------+-------------+------------+-------------+
+| Edição do campo ``3. Relações`` de uma   |             | 1 RA;      |             |
+| Entidade produtora, adicionando uma      |             | 1 UI       |             |
+| relação, não sendo a primeira vez        |             |            |             |
++------------------------------------------+-------------+------------+-------------+
+| Edição do campo ``3. Relações`` de uma   |             | 1 UI       |             |
+| Entidade produtora, editando uma relação |             |            |             |
++------------------------------------------+-------------+------------+-------------+
+| Edição do campo ``3. Relações`` de uma   |             | 1 RA;      |             |
+| Entidade produtora, eliminando uma       |             | 1 UI       |             |
+| relação                                  |             |            |             |
++------------------------------------------+-------------+------------+-------------+
+| Eliminação de registo via barra de       |             |            | 1 RA        |
+| ferramentas                              |             |            |             |
++------------------------------------------+-------------+------------+-------------+
+| Edição do resto dos campos de formulário |             | 1 RA       |             |
++------------------------------------------+-------------+------------+-------------+
 
 
 Unidades Informacionais
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-As operações da área das ``Unidades Informacionais`` que se refletem na
+As operações da área das ``Unidades Informacionais (UIs)`` que se refletem na
 contagem das ``Estatísticas``:
 
 +--------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------+---------------------------+---------------------------+
