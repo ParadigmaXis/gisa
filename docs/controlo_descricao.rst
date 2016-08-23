@@ -68,17 +68,17 @@ informação:
 -  ``Data de registo``, a data em que foi efetuada a criação ou
    alteração do nível de descrição arquivística selecionado.
 
-\* ``Data de descrição``, data introduzida no campo anterior referente à
+-  ``Data de descrição``, data introduzida no campo anterior referente à
 data em que foi feita a descrição, a qual pode ser anterior à
 ``Data de registo``.
 
 -  ``Operador``, responsável pela introdução/alteração dos dados (no
    caso da versão monoposto não existe operador).
 
-\* ``Autor da descrição``, responsável pela descrição existente, o qual
+-  ``Autor da descrição``, responsável pela descrição existente, o qual
 pode ser diferente do operador.
 
 -  ``Importado``, indica se o registo é efetuado via importação ou não.
 
 .. |image0| image:: _static/images/controlodescricaoui.jpg
-   :width: 500px
+   :width: 650px
