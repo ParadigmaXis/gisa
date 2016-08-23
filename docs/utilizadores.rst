@@ -108,12 +108,12 @@ opções:
 
 -  ``Acesso a toda a informação`` - todos os níveis ficam com permissões
    totais, ou seja, todas as operações sobre os níveis assumem
-   inicialmente o valor _**Sim**_.
+   inicialmente o valor ** _Sim_ **.
 -  ``Acesso apenas a informação publicada`` - todos os níveis publicados
    ficam com permissões de leitura e o restantes níveis sem permissões.
    Ou seja, apenas a operação ``Ler`` dos níveis publicados assume o
-   valor _**Sim**_, pois todas as outras operações destes níveis e todas
-   as operações dos restantes níveis assumem o valor _**Não**_.
+   valor ** _Sim_ **, pois todas as outras operações destes níveis e todas
+   as operações dos restantes níveis assumem o valor ** _Não_ **.
 
 F: ``Descrição`` - Neste campo pode introduzir-se uma descrição que
 caracterize o utilizador selecionado.
@@ -133,7 +133,7 @@ utilizadores selecionado ao utilizador em causa.
 
 As permissões dos utilizadores, sobre os módulos ou sobre os níveis de
 descrição, podem depender das permissões dos grupos aos quais pertencem.
-As regras de cálculo são apresentadas na página\ `Cálculo de
+As regras de cálculo são apresentadas na página \ `Cálculo de
 permissões <permissoes_calculo.html>`__.
 
 Permissões por módulo de um utilizador
