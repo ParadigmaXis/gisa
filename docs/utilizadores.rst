@@ -108,12 +108,12 @@ opções:
 
 -  ``Acesso a toda a informação`` - todos os níveis ficam com permissões
    totais, ou seja, todas as operações sobre os níveis assumem
-   inicialmente o valor ** _Sim_ **.
+   inicialmente o valor *Sim*.
 -  ``Acesso apenas a informação publicada`` - todos os níveis publicados
    ficam com permissões de leitura e o restantes níveis sem permissões.
    Ou seja, apenas a operação ``Ler`` dos níveis publicados assume o
-   valor ** _Sim_ **, pois todas as outras operações destes níveis e todas
-   as operações dos restantes níveis assumem o valor ** _Não_ **.
+   valor *Sim*, pois todas as outras operações destes níveis e todas
+   as operações dos restantes níveis assumem o valor *Não*.
 
 F: ``Descrição`` - Neste campo pode introduzir-se uma descrição que
 caracterize o utilizador selecionado.
@@ -148,9 +148,9 @@ navegação:
 
 Quando se cria um utilizador novo, este não possui qualquer tipo de
 acesso aos módulos, ou seja, por omissão, as operações sobre os módulos
-assumem o valor _**Não**_. Pode atribuir-se **Sim** explícito às
+assumem o valor *Não*. Pode atribuir-se Sim explícito às
 permissões e posteriormente, a qualquer momento, voltar a retirar com
-**Não** explícito ou repor o `valor por
+Não explícito ou repor o `valor por
 omissão <permissoes_omissao.html#grupos-ou-utilizadores-novos>`__ ou
 outro valor implícito, resultado de `cálculo de
 permissões <permissoes_calculo.html>`__.
@@ -161,7 +161,7 @@ permissões do utilizador sobre as operações que este pode executar:
 
 Para se definir uma permissão, seleciona-se a linha do módulo e na
 coluna correspondente à operação clica-se até se obter o valor
-pretendido: **Não**, **Sim** ou _**Não**_.
+pretendido: Não, Sim ou *Não*.
 
 O módulo `Permissões por Módulo <permissoes_modulo.html>`__ também
 permite definir as permissões dos utilizadores ou grupos sobre os
