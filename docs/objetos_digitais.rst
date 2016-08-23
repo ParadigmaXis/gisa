@@ -608,35 +608,30 @@ benefício recolhido e o esforço necessário.
 Exemplo 1 - Livros de registos de batismos
 ~~~~~~~~~~~~~~~~~~~~~~
 **UI selecionada**: Série de registos de batismo
-**OD(s) associado(s)**: Cada série tem vários ODs associados e cada OD corresponde a um livro.
-**Benefício vs Esforço**: Não exige muito esforço na descrição e associação de ODs, mas a pesquisa só vai devolver a série, na qual se pode localizar o livro pretendido. Cada livro é um PDF, em que a visualização dos registos se mantém sequencial.
-
+- **OD(s) associado(s)**: Cada série tem vários ODs associados e cada OD corresponde a um livro.
+- **Benefício vs Esforço**: Não exige muito esforço na descrição e associação de ODs, mas a pesquisa só vai devolver a série, na qual se pode localizar o livro pretendido. Cada livro é um PDF, em que a visualização dos registos se mantém sequencial.
 
 **UI selecionada**: Documento simples correspondente a um registo de batismo
-**OD(s) associado(s)**: Cada documento simples tem um OD associado.
-**Benefício vs Esforço**: Exige mais esforço na descrição e na criação/associação de cada OD, mas a pesquisa recupera diretamente o PDF do registo pretendido.
+- **OD(s) associado(s)**: Cada documento simples tem um OD associado.
+- **Benefício vs Esforço**: Exige mais esforço na descrição e na criação/associação de cada OD, mas a pesquisa recupera diretamente o PDF do registo pretendido.
 
 Exemplo 2 - Processos individuais de pessoal
 ~~~~~~~~~~~~~~~~~~~~~~
 **UI selecionada**: Processo
-**OD(s) associado(s)**: Cada processo corresponde a vários ODs simples, em que cada um corresponde a um conjunto de documentos simples do mesmo ano civil.
-**Benefício vs Esforço**: Não exige muito esforço, mas a pesquisa só devolve processos, nos quais se pode localizar o PDF do ano pretendido. Dentro de cada ano, a visualização dos documentos simples é sequencial.
-
+- **OD(s) associado(s)**: Cada processo corresponde a vários ODs simples, em que cada um corresponde a um conjunto de documentos simples do mesmo ano civil.
+- **Benefício vs Esforço**: Não exige muito esforço, mas a pesquisa só devolve processos, nos quais se pode localizar o PDF do ano pretendido. Dentro de cada ano, a visualização dos documentos simples é sequencial.
 
 **UI selecionada**: Processo
-**OD(s) associado(s)**: Cada processo corresponde a um OD composto, constituído por vários ODs simples, em que cada um corresponde a um conjunto de documentos simples de um ano civil.
-**Benefício vs Esforço**: O esforço é idêntico, o resultado da pesquisa é um processo associado a um único PDF, o qual tem um marcador por cada ano civil. Dentro de cada ano civil, a visualização dos documentos simples mantém-se sequencial.
-
-
-**UI selecionada**: Documento simples
-**OD(s) associado(s)**: Cada documento simples é associado a um OD simples, fazendo com que cada processo corresponda a vários ODs simples.
-**Benefício vs Esforço**: Exige mais esforço na descrição de documentos e associação de ODs, mas a pesquisa de um documento simples é direta, devolvendo o respetivo PDF. A pesquisa de um processo dá como resultado um conjunto de PDFs.
-
+- **OD(s) associado(s)**: Cada processo corresponde a um OD composto, constituído por vários ODs simples, em que cada um corresponde a um conjunto de documentos simples de um ano civil.
+- **Benefício vs Esforço**: O esforço é idêntico, o resultado da pesquisa é um processo associado a um único PDF, o qual tem um marcador por cada ano civil. Dentro de cada ano civil, a visualização dos documentos simples mantém-se sequencial.
 
 **UI selecionada**: Documento simples
-**OD(s) associado(s)**: Cada documento simples corresponde a um OD simples. O processo é um OD composto constituído pelos vários ODs simples.
-**Benefício vs Esforço**: Exige pouco mais esforço que o caso anterior. Em termos de resultado de pesquisa é que cada processo dá como resultado um único PDF, com marcadores a apontarem para o início de cada documento simples.
+- **OD(s) associado(s)**: Cada documento simples é associado a um OD simples, fazendo com que cada processo corresponda a vários ODs simples.
+- **Benefício vs Esforço**: Exige mais esforço na descrição de documentos e associação de ODs, mas a pesquisa de um documento simples é direta, devolvendo o respetivo PDF. A pesquisa de um processo dá como resultado um conjunto de PDFs.
 
+**UI selecionada**: Documento simples
+- **OD(s) associado(s)**: Cada documento simples corresponde a um OD simples. O processo é um OD composto constituído pelos vários ODs simples.
+- **Benefício vs Esforço**: Exige pouco mais esforço que o caso anterior. Em termos de resultado de pesquisa é que cada processo dá como resultado um único PDF, com marcadores a apontarem para o início de cada documento simples.
 
 
 .. |image0| image:: _static/images/ambientetrabalho.jpg
