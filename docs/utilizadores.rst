@@ -108,12 +108,12 @@ opções:
 
 -  ``Acesso a toda a informação`` - todos os níveis ficam com permissões
    totais, ou seja, todas as operações sobre os níveis assumem
-   inicialmente o valor ***Sim***.
+   inicialmente o valor _**Sim**_.
 -  ``Acesso apenas a informação publicada`` - todos os níveis publicados
    ficam com permissões de leitura e o restantes níveis sem permissões.
    Ou seja, apenas a operação ``Ler`` dos níveis publicados assume o
-   valor ***Sim***, pois todas as outras operações destes níveis e todas
-   as operações dos restantes níveis assumem o valor ***Não***.
+   valor _**Sim**_, pois todas as outras operações destes níveis e todas
+   as operações dos restantes níveis assumem o valor _**Não**_.
 
 F: ``Descrição`` - Neste campo pode introduzir-se uma descrição que
 caracterize o utilizador selecionado.
@@ -148,7 +148,7 @@ navegação:
 
 Quando se cria um utilizador novo, este não possui qualquer tipo de
 acesso aos módulos, ou seja, por omissão, as operações sobre os módulos
-assumem o valor ***Não***. Pode atribuir-se **Sim** explícito às
+assumem o valor _**Não**_. Pode atribuir-se **Sim** explícito às
 permissões e posteriormente, a qualquer momento, voltar a retirar com
 **Não** explícito ou repor o `valor por
 omissão <permissoes_omissao.html#grupos-ou-utilizadores-novos>`__ ou
@@ -161,14 +161,14 @@ permissões do utilizador sobre as operações que este pode executar:
 
 Para se definir uma permissão, seleciona-se a linha do módulo e na
 coluna correspondente à operação clica-se até se obter o valor
-pretendido: **Não**, **Sim** ou ***Não***.
+pretendido: **Não**, **Sim** ou _**Não**_.
 
 O módulo `Permissões por Módulo <permissoes_modulo.html>`__ também
 permite definir as permissões dos utilizadores ou grupos sobre os
 módulos, a partir de um determinado módulo.
 
 .. |image0| image:: _static/images/utilizadores.jpg
-   :width: 500px
+   :width: 650px
 .. |image1| image:: _static/images/novoutilizador.png
    :width: 200px
 .. |image2| image:: _static/images/editarutilizador.png
@@ -180,6 +180,6 @@ módulos, a partir de um determinado módulo.
 .. |image5| image:: _static/images/removerutilizadoraviso.png
    :width: 300px
 .. |image6| image:: _static/images/utilizadoresdetalhes.jpg
-   :width: 500px
+   :width: 650px
 .. |image7| image:: _static/images/permissoesuser.png
-   :width: 500px
+   :width: 650px
