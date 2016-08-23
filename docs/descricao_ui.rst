@@ -620,9 +620,7 @@ duas folhas:
 
 A primeira coluna de cada tabela Excel, designada por ``Identificador``,
 é onde se colocam os códigos identificadores dos registos da tabela.
-Esse código é usado noutras colunas para referenciar registos da própria
-tabela ou da outra tabela dentro do próprio ficheiro. No fim, estes os
-códigos são descartado pelo importador.
+Esse código é usado noutras colunas, da própria tabela ou de outras tabelas do ficheiro excel, para referenciar os registos do próprio ficheiro. No fim, estes códigos são descartado pelo importador.
 
 Na importação poderão existir dados numa única tabela ou então nas duas.
 A coluna ``UnidadesFisicas`` da tabela ``Documentos`` permite referir
