@@ -46,21 +46,9 @@ Altura em metros, sob o ponto de vista da UF na prateleira.
 
 **Formato admitido / exemplos:** Número decimal.
 
-``Altura``
-------------------
-Altura em metros, sob o ponto de vista da UF na prateleira.
-
-**Formato admitido / exemplos:** Número decimal.
-
 ``Largura``
 ------------------
 Largura em metros, sob o ponto de vista da UF na prateleira.
-
-**Formato admitido / exemplos:** Número decimal.
-
-``Altura``
-------------------
-Altura em metros, sob o ponto de vista da UF na prateleira.
 
 **Formato admitido / exemplos:** Número decimal.
 
