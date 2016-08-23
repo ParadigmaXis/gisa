@@ -1,4 +1,4 @@
-* Indexação
+Indexação
 ===========
 
 Esta zona não pertence à descrição ISAD-G, mas é considerada como
@@ -47,4 +47,4 @@ o registo pretendido, clica-se no botão ``Apagar item`` ou pressiona-se
 a tecla ``DEL`` e confirma-se clicando em ``Ok``.
 
 .. |image0| image:: _static/images/indexacao.jpg
-   :width: 500px
+   :width: 450px
