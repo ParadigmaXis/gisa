@@ -74,7 +74,8 @@ vista entre a estrutura orgânica e a estrutura documental.
 E: ``Filtrar dados`` – Botão em posição *off* que permite filtrar a
 lista de níveis documentais.
 
-**Criar um nível documental**
+Criar um nível documental
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 O procedimento para criar um nível documental, ``Documento/Processo`` ou
 ``Documento subordinado/Ato informacional``, será o seguinte:
@@ -103,7 +104,7 @@ Campos de preenchimento:
    (“/”) nem o hífen (“-”) para não se confundir com os separadores de
    níveis do código de referência.
 
-\* ``Título`` – Campo de texto para designar o documento, o qual é de
+- ``Título`` – Campo de texto para designar o documento, o qual é de
 preenchimento obrigatório.
 
 -  ``Tipologia`` – Tipologia informacional existente no controlo de
@@ -123,7 +124,7 @@ uma lista extensa, pode usar-se o filtro, usando os seguintes critérios:
    termos autorizados, paralelos e outros obedeçam à expressão de
    pesquisa indicada.
 
-\* ``Notícia de autoridade`` - Neste caso, só existe um tipo possível,
+- ``Notícia de autoridade`` - Neste caso, só existe um tipo possível,
 ``Tipologia informacional``.
 
 -  ``Validado`` - Caixa de verificação que tem três estados: a) *sem
@@ -137,7 +138,8 @@ uma lista extensa, pode usar-se o filtro, usando os seguintes critérios:
 Por fim, clicar no botão ``Aceitar``, o qual só aparece ativo depois de
 preenchidos os campos obrigatórios.
 
-**Editar um nível documental**
+Editar um nível documental
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 É sempre possível editar o ``Código parcial``, ``Título`` ou
 ``Tipologia`` do nível selecionado com o botão ``Editar nível`` da barra
@@ -164,7 +166,8 @@ procedimento em `Contexto <contexto.html>`__). Por fim, restando uma
 na barra de navegação, este já pode ser eliminado através do botão
 ``Eliminar nível``.
 
-**Ver níveis estruturais/Ver níveis documentais**
+Ver níveis estruturais/Ver níveis documentais
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Quando se seleciona uma unidade orgânica na estrutura orgânica, é
 possível mostrar a estrutura documental subjacente, clicando no botão
@@ -172,7 +175,8 @@ possível mostrar a estrutura documental subjacente, clicando no botão
 basta clicar no botão ``Ver níveis estruturais``, que se encontra na
 mesma posição do botão anterior.
 
-**Filtrar**
+Filtrar
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Para se filtrar elementos de uma lista pode-se clicar no botão
 ``Filtrar dados`` da barra de ferramentas, este fica em posição *on* e é
@@ -206,13 +210,13 @@ seguintes campos:
 -  ``Título`` – permite selecionar unidades informacionais com títulos
    que estejam de acordo com o critério.
 
-\* ``Identificador`` – permite selecionar unidades informacionais com
+-  ``Identificador`` – permite selecionar unidades informacionais com
 identificadores que estejam de acordo com o critério.
 
 -  ``Código parcial`` - permite selecionar unidades informacionais com
    códigos parciais que estejam de acordo com o critério.
 
-\* ``Conteúdo`` - permite selecionar unidades informacionais cujo
+-  ``Conteúdo`` - permite selecionar unidades informacionais cujo
 conteúdo esteja de acordo com o critério de pesquisa.
 
 Gestão de OD associado a um Documento subordinado/Ato informacional
@@ -520,7 +524,7 @@ esta lista de ``Objetos Digitais Simples``, pode ter:
 
 -  objetos digitais diretamente associados a este nível ou
 
-\* objetos digitais associados aos seus documentos subordinados.
+- objetos digitais associados aos seus documentos subordinados.
 
 A primeira abordagem é adotada quando o esforço necessário para a
 descrição de documentos simples é demasiado grande, sendo mais fácil
@@ -620,9 +624,9 @@ benefício recolhido e o esforço necessário.
 +------------------------------------+------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. |image0| image:: _static/images/ambientetrabalho.jpg
-   :width: 300px
+   :width: 650px
 .. |image1| image:: _static/images/criarodsimples.jpg
-   :width: 500px
+   :width: 650px
 .. |image2| image:: _static/images/criardocumento.jpg
    :width: 300px
 .. |image3| image:: _static/images/controloautoridade.png
@@ -630,24 +634,24 @@ benefício recolhido e o esforço necessário.
 .. |image4| image:: _static/images/filtro.jpg
    :width: 400px
 .. |image5| image:: _static/images/odsimples.jpg
-   :width: 500px
+   :width: 650px
 .. |image6| image:: _static/images/odsimples1.jpg
    :width: 400px
 .. |image7| image:: _static/images/servidorweb.png
-   :width: 500px
+   :width: 650px
 .. |image8| image:: _static/images/adicionarurl.png
    :width: 300px
 .. |image9| image:: _static/images/areadetalhe.jpg
-   :width: 500px
+   :width: 650px
 .. |image10| image:: _static/images/odsimples_metadados.jpg
-   :width: 500px
+   :width: 650px
 .. |image11| image:: _static/images/escolhertitulo.jpg
    :width: 300px
 .. |image12| image:: _static/images/servidorweb.png
-   :width: 500px
+   :width: 650px
 .. |image13| image:: _static/images/adicionarurl.png
    :width: 300px
 .. |image14| image:: _static/images/listaodssimples2.jpg
-   :width: 500px
+   :width: 650px
 .. |image15| image:: _static/images/listaodssimples.jpg
-   :width: 500px
+   :width: 650px
