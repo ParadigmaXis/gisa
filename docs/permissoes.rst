@@ -368,43 +368,43 @@ Se este utilizador for adicionado ao grupo **Leitores** passa a herdar, pela `Re
 |image18|
 
 
-.. |image0| image:: _static/images/AtribuirGrupoAUtilizador.png
+.. |image0| image:: _static/images/PermissoesModuloGrupo.png
    :width: 650px
-.. |image1| image:: _static/images/atribuirgrupoautilizador.png
+.. |image1| image:: _static/images/AtribuirGrupoAUtilizador.png
    :width: 650px
-.. |image2| image:: _static/images/permissoesmoduloutilizador.png
+.. |image2| image:: _static/images/PermissoesModuloUtilizador.png
    :width: 650px
-.. |image3| image:: _static/images/permissoesmodulogrupo2.png
+.. |image3| image:: _static/images/PermissoesModuloGrupo2.png
    :width: 650px
-.. |image4| image:: _static/images/permissoesmoduloutilizador2.png
+.. |image4| image:: _static/images/PermissoesModuloUtilizador2.png
    :width: 650px
-.. |image5| image:: _static/images/exemplo1.png
+.. |image5| image:: _static/images/Exemplo1.png
    :width: 650px
-.. |image6| image:: _static/images/exemplo2_1.png
+.. |image6| image:: _static/images/Exemplo2_1.png
    :width: 650px
-.. |image7| image:: _static/images/exemplo2_2.png
+.. |image7| image:: _static/images/Exemplo2_2.png
    :width: 650px
-.. |image8| image:: _static/images/exemplo2_3.png
+.. |image8| image:: _static/images/Exemplo2_3.png
    :width: 650px
-.. |image9| image:: _static/images/exemplo2_4.png
+.. |image9| image:: _static/images/Exe4plo2_4.png
    :width: 650px
-.. |image10| image:: _static/images/exemplo2_5.png
+.. |image10| image:: _static/images/Exemplo2_5.png
    :width: 650px
-.. |image11| image:: _static/images/exemplo3_1.png
+.. |image11| image:: _static/images/Exemplo3_1.png
    :width: 650px
-.. |image12| image:: _static/images/exemplo3_2.png
+.. |image12| image:: _static/images/Exemplo3_2.png
    :width: 650px
-.. |image13| image:: _static/images/exemplo3_3.png
+.. |image13| image:: _static/images/Exemplo3_3.png
    :width: 650px
-.. |image14| image:: _static/images/exemplopermissoesod1.png
+.. |image14| image:: _static/images/ExemploPermissoesOD1.png
    :width: 650px
-.. |image15| image:: _static/images/exemplopermissoesod2.png
+.. |image15| image:: _static/images/ExemploPermissoesOD2.png
    :width: 650px
-.. |image16| image:: _static/images/exemplopermissoesod5.png
+.. |image16| image:: _static/images/ExemploPermissoesOD5.png
    :width: 650px
-.. |image17| image:: _static/images/exemplopermissoesod4.png
+.. |image17| image:: _static/images/ExemploPermissoesOD4.png
    :width: 650px
-.. |image18| image:: _static/images/exemplopermissoesod3.png
+.. |image18| image:: _static/images/ExemploPermissoesOD3.png
    :width: 650px
 
    
