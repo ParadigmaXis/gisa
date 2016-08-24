@@ -276,54 +276,8 @@ Gestão de utilizadores e permissões
 Como em qualquer sistema multi-utilizador, cada utilizador GISA é
 identificado individualmente através do nome e palavra-chave. O seu
 perfil pode ser definido individualmente ou através de grupos,
-previamente criados para determinado perfil de utilização, ao qual
-pertence.
-
-A gestão de permissões é necessária quando existem utilizadores com
-responsabilidades e competências distintas. As *permissões* são dadas a
-um *utilizador ou grupo de utilizadores*, podendo ou não efetuar
-*operações* sobre *recursos* existentes na aplicação.
-
-Os valores possíveis para as permissões são:
-
--  ``Sim`` - para dar acesso, ou
--  ``Não`` - para limitar o acesso.
-
-Existem três diferentes recursos da aplicação, cujas operações deverão
-estar ou não acessíveis, dependendo do utilizador:
-
--  ``Módulos`` - é onde se define a possibilidade ou não de criar,
-   alterar, remover ou visualizar registos em determinada área da
-   aplicação. Por exemplo, definir só permissões de leitura na área de
-   Controlo de Autoridade, ou permissões totais na Descrição de Unidades
-   físicas, etc..
--  ``Níveis`` - é possível controlar o tipo de acesso (criação,
-   alteração, remoção e visualização) a cada nível de descrição da
-   estrutura arquivística existente. Por exemplo, um utilizador só poder
-   visualizar e expandir determinado nível de descrição, sem poder
-   editar, apagar ou criar nível subjacente.
--  ``Objetos digitais`` - é possível controlar o tipo de acesso (escrita
-   e visualização) a cada objeto digital de forma independente do acesso
-   à unidade de descrição correspondente. Assim, qualquer utilizador com
-   acesso a uma descrição de um documento, pode não ter acesso ao
-   documento digital ou então ter acesso, total (a todos os objetos
-   digitais) ou parcial (a parte dos objetos digitais).
-
-Em ambiente monoposto o GISA admite um único utilizador com permissões
-totais.
-
-Quando se cria um utilizador, um nível de descrição ou um objeto
-digital, o sistema atribui automaticamente `permissões por
-omissão <permissoes_omissao.html>`__. São valores implícitos e
-representam-se em itálico. Estes valores podem ser alterados
-explicitamente pelo utilizador ou alterados implicitamente, sendo o
-resultado de `cálculo de permissões <permissoes_calculo.html>`__. Esta
-distinção de valores é importante nos cálculos de permissões, pois um
-valor explícito prevalece sobre um valor implícito. Os valores das
-permissões por omissão de um utilizador, sobre um nível ou objeto por
-ele criado, são excecionalmente **Sim** explícitos, uma vez que ele deve
-ser o proprietário do nível e só perder essa prevalência de forma
-explícita por algum utilizador com permissão para tal.
+previamente criados para determinado perfil de utilização, aos quais ele pode pertencer.
+Para uma descrição mais detalhada da gestão de permissões consultar \ `Permissões <permissoes.rst>`__.
 
 Gestão de Requisições/Devoluções
 --------------------------------
