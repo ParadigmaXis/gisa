@@ -36,10 +36,10 @@ totais.
 
 Quando se cria um utilizador, um nível de descrição ou um objeto
 digital, o sistema atribui automaticamente `permissões por
-omissão <permissoes.html#permissoes_omissao>`__. São valores implícitos e
+omissão <permissoes.html#permissoes-omissao>`__. São valores implícitos e
 representam-se em itálico. Estes valores podem ser alterados
 explicitamente pelo utilizador ou alterados implicitamente, sendo o
-resultado de `cálculo de permissões <permissoes.html#permissoes_calculo>`__. Esta
+resultado de `cálculo de permissões <permissoes.html#permissoes-calculo>`__. Esta
 distinção de valores é importante nos cálculos de permissões, pois um
 valor explícito prevalece sobre um valor implícito. Os valores das
 permissões por omissão de um utilizador, sobre um nível ou objeto por
@@ -197,29 +197,29 @@ Este exemplo tem como objetivo __definir um conjunto de utilizadores só com per
 
 Assim, apresentamos a melhor forma de o fazer:
 
-1. Na área `Grupo de utilizadores <grupos_utilizadores.html>`__, criar o grupo de utilizadores **Leitor**, cujas `permissões por omissão <permissoes.html#permissoes_por_omissao>`__ sobre os módulos aparecem todas a *Não*. 
+1. Na área `Grupo de utilizadores <grupos_utilizadores.html>`__, criar o grupo de utilizadores **Leitor**, cujas `permissões por omissão <permissoes.html#permissoes-por-omissao>`__ sobre os módulos aparecem todas a *Não*. 
 
 2. Definir explicitamente as __permissões sobre os módulos__ no grupo de utilizadores. Para este caso, colocar o valor Sim (Explícito) nos módulos de *Pesquisa* que existem nas *Unidades informacionais* e também nas *Unidades físicas*. 
 
 |image0|
 
 3. Na área`Utilizadores <permissoes.html#utilizadores>`__ , criar os __utilizadores__, cujas
-`permissões por omissão <permissoes.html#permissoes_por_omissao>`__ sobre os módulos são iniciadas com o valor *Não*. 
+`permissões por omissão <permissoes.html#permissoes-por-omissao>`__ sobre os módulos são iniciadas com o valor *Não*. 
 Neste exemplo, pouco importa o que é definido por omissão nas permissões sobre os níveis. 
 
 4. Associar cada utilizador ao grupo **Leitor**. A janela a seguir mostra o utilizador **fatima** associado a esse grupo. 
 
 |image1|
 
-As permissões do utilizador, como não foram definidas explicitamente, aparecem em itálico e são o resultado da aplicação das regras do `cálculo de permissões <permissoes.html#permissoes_calculo>`__.
+As permissões do utilizador, como não foram definidas explicitamente, aparecem em itálico e são o resultado da aplicação das regras do `cálculo de permissões <permissoes.html#permissoes-calculo>`__.
 
 |image2|
 
 Em __conclusão__, pode verificar-se que as permissões do utilizador **fatima** com o valor:
 
-    - *Sim* implícito é o resultado da combinação do *Não* existente, por omissão, no utilizador, com o Sim explícito do grupo de utilizadores, aplicando a `Regra 2.1 <permissoes.html#regra_2_1>`__ do cálculo de permissões.
+    - *Sim* implícito é o resultado da combinação do *Não* existente, por omissão, no utilizador, com o Sim explícito do grupo de utilizadores, aplicando a `Regra 2.1 <permissoes.html#regra-2-1>`__ do cálculo de permissões.
 
-    - *Não* implícito, deve-se ao facto de o grupo de utilizadores ao qual pertence também ter *Não* implícito e portanto, ficar com o valor inicial inalterado, segundo a `Regra 4 <permissoes.html#regra_4>`__ do cálculo de permissões. 
+    - *Não* implícito, deve-se ao facto de o grupo de utilizadores ao qual pertence também ter *Não* implícito e portanto, ficar com o valor inicial inalterado, segundo a `Regra 4 <permissoes.html#regra-4>`__ do cálculo de permissões. 
 
 	
 Exemplo de associação de um utilizador a mais que um grupo de utilizadores
@@ -237,11 +237,11 @@ Este exemplo ilustra as permissões de um utilizador, que __pertence a mais que 
 
 Em __conclusão__, verifica-se que o utilizador **fatima** não tendo permissões explícitas, assume o valor:
 
-- *Sim* na operação ''Ler'' nos módulos do *Controlo de autoridade*, sendo o resultado da combinação das permissões dos dois grupos de utilizadores a ele atribuídos, por aplicação da `Regra 2.2 <permissoes.html#regra_2_2>`__, a qual remete para a `Regra 5 <permissoes.html#regra_5>`__ do cálculo de permissões. Pela `Regra 5 <permissoes.html#regra_5>`__, entre vários grupos de utilizadores, quando um dos grupos (**LeitorCA**) tem uma permissão com Sim explícito e o outro (**Leitor**) com *Não* implícito, o resultado é o Sim explícito. Voltando à `Regra 2.2 <permissoes.html#regra_2_2>`__, o resultado final é  portanto o mesmo valor mas implícito, *Sim*.
+- *Sim* na operação ''Ler'' nos módulos do *Controlo de autoridade*, sendo o resultado da combinação das permissões dos dois grupos de utilizadores a ele atribuídos, por aplicação da `Regra 2.2 <permissoes.html#regra-2-2>`__, a qual remete para a `Regra 5 <permissoes.html#regra-5>`__ do cálculo de permissões. Pela `Regra 5 <permissoes.html#regra-5>`__, entre vários grupos de utilizadores, quando um dos grupos (**LeitorCA**) tem uma permissão com Sim explícito e o outro (**Leitor**) com *Não* implícito, o resultado é o Sim explícito. Voltando à `Regra 2.2 <permissoes.html#regra-2-2>`__, o resultado final é  portanto o mesmo valor mas implícito, *Sim*.
 
--  *Não* existente no módulo *Pesquisa* de *Unidades físicas*, sendo o resultado da combinação das permissões dos dois grupos de utilizadores a ele atribuídos, por aplicação da `Regra 2.2 <permissoes.html#regra_2_2>`__, a qual remete para a `Regra 5 <permissoes.html#regra_5>`__ do cálculo de permissões. Pela `Regra 5 <permissoes.html#regra_5>`__, quando um dos grupos (**LeitorCA**) tem um Não explícito e o outro (**Leitor**) um Sim explícito, o resultado é o Não explícito. Voltando à `Regra 2.2 <permissoes.html#regra_2_2>`__, o resultado final é  portanto o mesmo valor mas implícito, *Não*.
+-  *Não* existente no módulo *Pesquisa* de *Unidades físicas*, sendo o resultado da combinação das permissões dos dois grupos de utilizadores a ele atribuídos, por aplicação da `Regra 2.2 <permissoes.html#regra-2-2>`__, a qual remete para a `Regra 5 <permissoes.html#regra-5>`__ do cálculo de permissões. Pela `Regra 5 <permissoes.html#regra-5>`__, quando um dos grupos (**LeitorCA**) tem um Não explícito e o outro (**Leitor**) um Sim explícito, o resultado é o Não explícito. Voltando à `Regra 2.2 <permissoes.html#regra-2-2>`__, o resultado final é  portanto o mesmo valor mas implícito, *Não*.
 
--  *Não* implícito nas restantes permissões, por aplicação da `Regra 4 <permissoes.html#regra_4>`__ do cálculo de permissões. Isto deve-se ao facto de os grupos de utilizadores, ao qual o utilizador pertence, terem todos valores implícitos e tratar-se de permissão sobre módulos.
+-  *Não* implícito nas restantes permissões, por aplicação da `Regra 4 <permissoes.html#regra-4>`__ do cálculo de permissões. Isto deve-se ao facto de os grupos de utilizadores, ao qual o utilizador pertence, terem todos valores implícitos e tratar-se de permissão sobre módulos.
 
 Exemplos de atribuição de permissões por nível
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -258,12 +258,12 @@ Apresentam-se de seguida alguns casos exemplificativos de como usar esta funcion
 
 Este exemplo é o caso típico de um __utilizador externo registado no sistema só com acesso de leitura aos níveis publicados e a determinados documentos__, não públicos, aos quais ele, por determinada razão, poderá aceder para leitura.
 
-  - Primeiro, na área `Utilizadores <utilizadores.html>`__, criar um utilizador, **antonio1945**, escolhendo a opção ''Acesso apenas a informação publicada''. Por `omissão <permissoes.html#nineis_novos>`__, as permissões deste utilizador sobre os __módulos__ assumem o valor *Não* implícito e as suas permissões sobre os __níveis__ assumem também o valor *Não* implícito, exceto nos níveis publicados, cuja operação ''Ler'' assume o valor *Sim* implícito.
-  - De seguida, associar este utilizador ao grupo **Leitor**, referido nos exemplos anteriores, para poder ter acesso aos módulos de pesquisa, por aplicação da `Regra 2.1 <permissoes.html#regra_2>`__ do cálculo de permissões. 
-  - Para definir que o utilizador **antonio1945** tem acesso de leitura a um determinado documento, no módulo `Permissões pelo Plano de Classificação <permissoes.html#permissoes_plano>`__:
+  - Primeiro, na área `Utilizadores <utilizadores.html>`__, criar um utilizador, **antonio1945**, escolhendo a opção ''Acesso apenas a informação publicada''. Por `omissão <permissoes.html#niveis-novos>`__, as permissões deste utilizador sobre os __módulos__ assumem o valor *Não* implícito e as suas permissões sobre os __níveis__ assumem também o valor *Não* implícito, exceto nos níveis publicados, cuja operação ''Ler'' assume o valor *Sim* implícito.
+  - De seguida, associar este utilizador ao grupo **Leitor**, referido nos exemplos anteriores, para poder ter acesso aos módulos de pesquisa, por aplicação da `Regra 2.1 <permissoes.html#regra-2>`__ do cálculo de permissões. 
+  - Para definir que o utilizador **antonio1945** tem acesso de leitura a um determinado documento, no módulo `Permissões pelo Plano de Classificação <permissoes.html#permissoes-plano>`__:
      - Selecionar o documento *Testamento de António Francisco (fl. 6v-8v)* e o utilizador **antonio1945** na área de contexto. 
      - No ''Filtro'' manter a opção ''Próprio'', pois é sobre esse nível que se pretende definir permissões. 
-     - Atribuir explicitamente permissões de leitura ao nível mostrado, colocando em ''Ler'' o valor Sim (explícito), aplicando-se a `Regra 1 <permissoes.html#regra_1>`__ do cálculo de permissões.
+     - Atribuir explicitamente permissões de leitura ao nível mostrado, colocando em ''Ler'' o valor Sim (explícito), aplicando-se a `Regra 1 <permissoes.html#regra-1>`__ do cálculo de permissões.
 
 |image5|
 
@@ -277,35 +277,35 @@ Antes de mais, dado que neste caso se vão atribuir as mesmas permissões a um c
 
 Então, o procedimento pode ser o seguinte:
 
-1. Na área `Grupo de utilizadores <grupos_utilizadores.html>`__, criar o grupo de utilizadores **GrupoA**, cujas permissões sobre os níveis ficam, por `omissão <permissoes.html#grupos_ou_utilizadores_novos>`__, com o valor *Não* implícito. 
+1. Na área `Grupo de utilizadores <grupos_utilizadores.html>`__, criar o grupo de utilizadores **GrupoA**, cujas permissões sobre os níveis ficam, por `omissão <permissoes.html#grupos-ou-utilizadores-novos>`__, com o valor *Não* implícito. 
 
-2. Para atribuir as permissões no painel de `Permissões pelo Plano de Classificação <permissoes.html#permissoes_plano>`__, de forma que o grupo  __só tenha acesso de leitura e navegação em todos os níveis__ arquivísticos:
+2. Para atribuir as permissões no painel de `Permissões pelo Plano de Classificação <permissoes.html#permissoes-plano>`__, de forma que o grupo  __só tenha acesso de leitura e navegação em todos os níveis__ arquivísticos:
 
 |image6|
 
       - Selecionar a entidade produtora de topo da estrutura orgânica e de seguida o grupo **GrupoA**, na área de contexto. 
-      - No ''Filtro'' selecionar a opção ''Todos'', para se poderem mostrar todos os níveis da estrutura arquivística. Se houver muitas páginas na ''Lista de Permissões Atribuídas'', ou se volta a aumentar o número de elementos por página na `Configuração global <configuracao_global.html>`__ para se poder reduzir o número de páginas ou se atribui __permissões explícitas somente aos níveis produtores e aos documentais de topo__, uma vez que os restantes níveis documentais herdam as permissões dos níveis documentais de topo (ver `Regra 3 <permissoes.html#regra_3>`__ do cálculo de permissões). Seguindo esta última via, é aconselhável usar-se os vários filtros para o conseguir de uma forma rápida. Assim, para se selecionar os níveis produtores, usa-se o filtro ''Todos'' e como a lista aparece ordenada por tipo de nível, basta selecionar os primeiros níveis da lista até encontrar o primeiro nível documental. Para se selecionar os níveis documentais de topo, usa-se o filtro ''Todos documentais'' (para mais detalhe ver `Permissões pelo Plano de Classificação <permissoes.html#permissoes_plano>`__). 
+      - No ''Filtro'' selecionar a opção ''Todos'', para se poderem mostrar todos os níveis da estrutura arquivística. Se houver muitas páginas na ''Lista de Permissões Atribuídas'', ou se volta a aumentar o número de elementos por página na `Configuração global <configuracao_global.html>`__ para se poder reduzir o número de páginas ou se atribui __permissões explícitas somente aos níveis produtores e aos documentais de topo__, uma vez que os restantes níveis documentais herdam as permissões dos níveis documentais de topo (ver `Regra 3 <permissoes.html#regra-3>`__ do cálculo de permissões). Seguindo esta última via, é aconselhável usar-se os vários filtros para o conseguir de uma forma rápida. Assim, para se selecionar os níveis produtores, usa-se o filtro ''Todos'' e como a lista aparece ordenada por tipo de nível, basta selecionar os primeiros níveis da lista até encontrar o primeiro nível documental. Para se selecionar os níveis documentais de topo, usa-se o filtro ''Todos documentais'' (para mais detalhe ver `Permissões pelo Plano de Classificação <permissoes.html#permissoes-plano>`__). 
       - Na ''Lista de Permissões Atribuídas'', para cada página, selecionar todos níveis pretendidos ao mesmo tempo e na janela de edição múltipla (para a abrir, clicar com lado direito do rato), atribuir **Sim** explícito nas operações ''Ler'' e ''Expandir''.
 
 |image7|
 
-3. Neste momento, ainda falta criar o outro grupo de utilizadores, **GrupoB**,  na área `Grupo de utilizadores <grupos_utilizadores.html>`__, cujas permissões sobre os níveis têm o `valor por omissão <permissoes.html#grupos_ou_utilizadores_novos>`__ *Não*. 
+3. Neste momento, ainda falta criar o outro grupo de utilizadores, **GrupoB**,  na área `Grupo de utilizadores <grupos_utilizadores.html>`__, cujas permissões sobre os níveis têm o `valor por omissão <permissoes.html#grupos-ou-utilizadores-novos>`__ *Não*. 
 
-4. Para que o **GrupoB** tenha acesso total à série *Obras Municipais* e a todos os seus documentos, no painel de `Permissões pelo Plano de Classificação <permissoes.html#permissoes_plano>`__, selecionar a série *Obras Municipais* e o **GrupoB**. No ''Filtro'', selecionar a opção ''Próprio'' e atribuir Sim a todas as operações do nível selecionado.
+4. Para que o **GrupoB** tenha acesso total à série *Obras Municipais* e a todos os seus documentos, no painel de `Permissões pelo Plano de Classificação <permissoes.html#permissoes-plano>`__, selecionar a série *Obras Municipais* e o **GrupoB**. No ''Filtro'', selecionar a opção ''Próprio'' e atribuir Sim a todas as operações do nível selecionado.
 
 |image8|
 
-5. Na área de `Utilizadores <utilizadores.html>`__, criar os utilizadores, escolhendo a opção ''Acesso apenas a informação publicada'' para que, por `omissão <permissoes.html#permissoes_omissao\>`__, todos os níveis publicados tenham o valor *Sim* na operação ''Ler'' e *Não* em todos os outros casos. Por fim, associar os utilizadores ao **GrupoA** e ao **GrupoB**, ativando o `cálculo de permissões <permissoes.html#permissoes_calculo>`__. 
+5. Na área de `Utilizadores <utilizadores.html>`__, criar os utilizadores, escolhendo a opção ''Acesso apenas a informação publicada'' para que, por `omissão <permissoes.html#permissoes-omissao\>`__, todos os níveis publicados tenham o valor *Sim* na operação ''Ler'' e *Não* em todos os outros casos. Por fim, associar os utilizadores ao **GrupoA** e ao **GrupoB**, ativando o `cálculo de permissões <permissoes.html#permissoes-calculo>`__. 
 
 Em __conclusão__, depois dos cálculos, as permissões de __cada um destes utilizadores__ sobre os níveis:
 
--  Na série *Obras municipais*, têm o valor *Sim* implícito em todas as operações, por aplicação da `Regra 2.1 <permissoes.html#regra_2>`__ e da `Regra 5 <permissoes.html#regra_5>`__ do cálculo de permissões.
+-  Na série *Obras municipais*, têm o valor *Sim* implícito em todas as operações, por aplicação da `Regra 2.1 <permissoes.html#regra-2>`__ e da `Regra 5 <permissoes.html#regra-5>`__ do cálculo de permissões.
 
 |image9|
 
--  Nos __documentos subjacentes__ à série *Obras municipais*, assumem o valor *Sim* em todas as operações, por aplicação da `Regra 3 <permissoes.html#regra_3>`__ do cálculo de permissões.
+-  Nos __documentos subjacentes__ à série *Obras municipais*, assumem o valor *Sim* em todas as operações, por aplicação da `Regra 3 <permissoes.html#regra-3>`__ do cálculo de permissões.
  
--  Nos restantes níveis, por aplicação da `Regra 2.2 <permissoes.html#regra_2>`__ e `Regra 5 <permissoes.html#regra_5>`__ do cálculo de permissões, nas operações ''Ler'' e ''Expandir'', assumem o valor *Sim*, e nas operações ''Criar'', ''Escrever'' e ''Apagar'', mantêm o valor *Não* por se aplicar a `Regra 4 <permissoes.html#regra_4>`__.
+-  Nos restantes níveis, por aplicação da `Regra 2.2 <permissoes.html#regra-2>`__ e `Regra 5 <permissoes.html#regra_5>`__ do cálculo de permissões, nas operações ''Ler'' e ''Expandir'', assumem o valor *Sim*, e nas operações ''Criar'', ''Escrever'' e ''Apagar'', mantêm o valor *Não* por se aplicar a `Regra 4 <permissoes.html#regra-4>`__.
 
 |image10|
 
@@ -313,9 +313,9 @@ Em __conclusão__, depois dos cálculos, as permissões de __cada um destes util
 
 Este exemplo ilustra um caso em que existe um grupo de utilizadores internos com __acesso total, exceto a determinada informação produzida por um departamento que deve ser interditada, por ser confidencial__.
 
-1. Primeiro, na área de `Grupo de utilizadores <grupos_utilizadores.html>`__, criar o **GrupoC**, cujas permissões sobre os níveis assumem, por `omissão <permissoes.html#grupos_ou_utilizadores_novos\>`__, o valor *Não*. 
+1. Primeiro, na área de `Grupo de utilizadores <grupos_utilizadores.html>`__, criar o **GrupoC**, cujas permissões sobre os níveis assumem, por `omissão <permissoes.html#grupos-ou-utilizadores-novos\>`__, o valor *Não*. 
 
-2. Na área `Permissões pelo Plano de Classificação <permissoes.html#permissoes_plano>`__:
+2. Na área `Permissões pelo Plano de Classificação <permissoes.html#permissoes-plano>`__:
   - Selecionar a entidade produtora, *Polícia*, na área de contexto, cujos documentos são de acesso restrito.
   - Selecionar o **GrupoC** na área de contexto, onde definir as permissões.
   - No ''Filtro'' selecionar a opção ''Todos documentais'', para listar as permissões dos níveis documentais diretamente relacionados com essa entidade produtora (ou com outras subjacentes a esse, caso existissem).
@@ -325,15 +325,15 @@ Este exemplo ilustra um caso em que existe um grupo de utilizadores internos com
 
 3. Na área de `Utilizadores <utilizadores.html>`__, criar os utilizadores, escolhendo a opção ''Acesso a toda a informação''. As permissões destes utilizadores sobre os níveis assumem o valor *Sim*. 
 
-4. Por fim, associar os utilizadores ao grupo **GrupoC**, desencandeando a aplicação da `Regra 2.1 <permissoes.html#regra_2>`__ do cálculo de permissões. 
+4. Por fim, associar os utilizadores ao grupo **GrupoC**, desencandeando a aplicação da `Regra 2.1 <permissoes.html#regra-2>`__ do cálculo de permissões. 
 
 Em __conclusão__, as permissões de um destes utilizadores, por exemplo o **UtilizadorC**:
 
--  Nos níveis documentais, diretamente ou indiretamente, debaixo da entidade produtora *Polícia* assumem o valor *Não* em todas as operações, por aplicação da `Regra 2.1 <permissoes.html#regra_2>`__ do cálculo de permissões.
+-  Nos níveis documentais, diretamente ou indiretamente, debaixo da entidade produtora *Polícia* assumem o valor *Não* em todas as operações, por aplicação da `Regra 2.1 <permissoes.html#regra-2>`__ do cálculo de permissões.
 
 |image12|
 
--  Os restantes níveis, mantêm o valor *Sim*, por ser aplicada a `Regra 4 <permissoes.html#regra_4>`__.
+-  Os restantes níveis, mantêm o valor *Sim*, por ser aplicada a `Regra 4 <permissoes.html#regra-4>`__.
 
 |image13|
 
@@ -341,7 +341,7 @@ Em __conclusão__, as permissões de um destes utilizadores, por exemplo o **Uti
 
 Nesta secção usa-se como exemplo a definição de um determinado grupo de utilizadores poder visualizar todos os níveis de descrição subjacentes a uma dada série, mas não poder visualizar os objetos digitais associados.
 
-Assim, na área de `Permissões por Objeto Digital <permissoes.html#permissoes_od>`__:
+Assim, na área de `Permissões por Objeto Digital <permissoes.html#permissoes-od>`__:
 
 |image14|
 
@@ -363,7 +363,7 @@ Por exemplo, o utilizador **fatima** cujas permissões por omissão são de ''Ac
 
 |image17|
 
-Se este utilizador for adicionado ao grupo **Leitores** passa a herdar, pela `Regra 2.1 <permissoes.html#regra_2>`__ do cálculo de permissões, as permissões deste grupo relativamente aos objetos digitais deste exemplo:
+Se este utilizador for adicionado ao grupo **Leitores** passa a herdar, pela `Regra 2.1 <permissoes.html#regra-2>`__ do cálculo de permissões, as permissões deste grupo relativamente aos objetos digitais deste exemplo:
 
 |image18|
 
