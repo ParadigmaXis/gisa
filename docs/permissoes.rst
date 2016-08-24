@@ -52,8 +52,10 @@ Permissões por omissão
 
 Quando se criam utilizadores, grupos de utilizadores, níveis de descrição e objetos digitais, surgem permissões por omissão, cujo valor depende de caso para caso. Apresentam-se a seguir os diferentes casos.
 
-### Grupos ou Utilizadores novos
-#### Permissões nos módulos
+Grupos ou Utilizadores novos
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Permissões nos módulos**
 
 O valor por omissão das permissões nos módulos, para o caso de criação de um:
 
@@ -61,7 +63,7 @@ O valor por omissão das permissões nos módulos, para o caso de criação de u
 
 -  **Grupo de utilizadores** - também é *Não* (implícito) para todas as operações (Criar, Ler, Escrever, Apagar).
 
-#### Permissões nos níveis
+**Permissões nos níveis**
 
 Quando se criam grupos ou utilizadores novos, o sistema atribui automaticamente permissões sobre os níveis de descrição já existentes. O valor por omissão nas permissões nos níveis, para o caso de criação de um:
 
@@ -71,7 +73,7 @@ Quando se criam grupos ou utilizadores novos, o sistema atribui automaticamente 
 
 - **Grupo de utilizadores** - é *Não* (implícito) para todas as operações (Criar, Ler, Escrever, Apagar e Expandir) sobre os níveis existentes.
 
-#### Permissões nos objetos digitais
+**Permissões nos objetos digitais**
 
 O valor por omissão das permissões sobre os objetos digitais já existentes, quando é criado um:
 
@@ -84,7 +86,8 @@ O valor por omissão das permissões sobre os objetos digitais já existentes, q
 -  **Grupo de utilizadores** - é *Não* (implícito) para Ler e Escrever.
 
 
-### Níveis novos
+Níveis novos
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Um utilizador, para criar níveis de descrição, debaixo de um determinado nível, deve pelo menos ter permissões para Criar e Expandir sobre esse nível. Para qualquer nível criado de novo, o sistema atribui automaticamente permissões iniciais, ao utilizador que o criou e a todos o outros, estabelecendo as operações (Criar, Ler, Escrever, Apagar e/ou Expandir) possíveis nesse nível.
 
@@ -101,7 +104,8 @@ Quando um nível novo (orgânico ou documental) está diretamente **subjacente a
 
 - **nos grupos de utilizadores** - *Não* (implícito) em todas as operações.
 
-### Objetos digitais novos
+Objetos digitais novos
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Um utilizador com permissões de criação de objetos digitais tem, pelo menos, permissões para Ler e Expandir os níveis de descrição aos quais vai associar o objeto digital. Para qualquer objeto digital criado de novo, o sistema atribui permissões iniciais ao utilizador que o criou e a todos o outros.
 
@@ -134,30 +138,32 @@ O cálculo, ocorrendo, aplica as regras apresentadas a seguir.
 
 Para ver exemplos deste cálculo, consultar **Exemplos de atribuição de permissões**.
 
-### Regras de cálculo das permissões dos utilizadores
-#### Regra 1
+Regras de cálculo das permissões dos utilizadores
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Regra 1**
 
 1. Caso o utilizador tenha um valor explícito na permissão de uma operação sobre um nível, objeto ou módulo, este não é afetado por nenhum cálculo, permanecendo esse valor.
 
 2. Caso o utilizador tenha um valor implícito na permissão de uma operação sobre um nível, objeto ou módulo, o valor passará a ser o resultado do cálculo aplicando a **Regra 2**.
 
-#### Regra 2
+**Regra 2**
 
 Caso o utilizador tenha um valor implícito na permissão de uma operação sobre um nível, objeto ou módulo:
 
-##### Regra 2. 1
+**Regra 2. 1**
 
 Se o utilizador pertence a um grupo de utilizadores, a permissão sobre um nível, objeto ou módulo, assume o valor implícito equivalente ao valor da permissão do grupo, desde que este seja explícito. Caso o resultado não seja um valor explícito, aplicar a **Regra 3**.
 
-##### Regra 2. 2
+**Regra 2. 2**
 
 Se o utilizador pertence a vários grupos de utilizadores, a permissão sobre um nível, objeto ou módulo, assume o valor implícito equivalente ao valor resultado da aplicação das regras do cálculo de permissões entre grupos, desde que este seja explícito. Caso o resultado não seja um valor explícito, aplicar a **Regra 3**.
 
-##### Regra 2. 3
+**Regra 2. 3**
 
 Se o utilizador não pertence a nenhum grupo, aplicar a **Regra 3**.
 
-#### Regra 3
+**Regra 3**
 
 Caso o utilizador tenha um valor implícito na permissão de uma operação sobre um nível, objeto ou módulo, não pertence a nenhum grupo ou o resultado da permissão via grupo(s) tem um valor implícito:
 
@@ -165,18 +171,18 @@ Caso o utilizador tenha um valor implícito na permissão de uma operação sobr
 
 2. Caso contrário, aplicar a **Regra 4**.
 
-#### Regra 4
+**Regra 4**
 
 Se nenhuma das regras se aplicar, ou seja, se o utilizador tiver um valor implícito na permissão de uma operação sobre um objeto ou módulo, não pertence a nenhum grupo ou o resultado da permissão via grupo(s) tem um valor implícito, a permissão mantêm-se com o valor implícito que tiver.
 Regras de cálculo das permissões entre grupos de utilizadores
 
 Quando um utilizador tem uma permissão implícita e pertence a vários grupos, deverá haver um cálculo de permissões entre esses grupos. O resultado deste cálculo é utilizado na **Regra 2** do **Cálculo de permissões** e é obtido através das regras de cálculo apresentadas a seguir.
 
-#### Regra 5
+**Regra 5**
 
 Se determinada permissão, nos vários grupos tiver valores explícitos e entre eles houver pelo menos um Não explícito é esse o resultado, senão é o Sim explícito. Caso não haja valores explícitos, aplica-se a **Regra 6**.
 
-#### Regra 6
+**Regra 6**
 
 Se só houver permissões implícitas nos vários grupos, desde que um deles tenha o valor *Não* implícito, é esse o resultado. Caso contrário, o resultado é o valor *Sim* implícito.
 
@@ -184,7 +190,8 @@ Se só houver permissões implícitas nos vários grupos, desde que um deles ten
 Exemplos de atribuição de permissões
 ------------------
 
-### Exemplo de grupo de utilizadores só com acesso à área de pesquisa
+Exemplo de grupo de utilizadores só com acesso à área de pesquisa
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Este exemplo tem como objetivo __definir um conjunto de utilizadores só com permissões para aceder às áreas de Pesquisa__. 
 
@@ -215,7 +222,8 @@ Em __conclusão__, pode verificar-se que as permissões do utilizador **fatima**
     - *Não* implícito, deve-se ao facto de o grupo de utilizadores ao qual pertence também ter *Não* implícito e portanto, ficar com o valor inicial inalterado, segundo a `Regra 4 <permissoes.html#regra_4>`__ do cálculo de permissões. 
 
 	
-### Exemplo de associação de um utilizador a mais que um grupo de utilizadores
+Exemplo de associação de um utilizador a mais que um grupo de utilizadores
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Este exemplo ilustra as permissões de um utilizador, que __pertence a mais que um grupo de utilizadores__, como sendo o resultado do cálculo das combinações das permissões dos vários grupos.
 
@@ -235,7 +243,8 @@ Em __conclusão__, verifica-se que o utilizador **fatima** não tendo permissõe
 
 -  *Não* implícito nas restantes permissões, por aplicação da `Regra 4 <permissoes.html#regra_4>`__ do cálculo de permissões. Isto deve-se ao facto de os grupos de utilizadores, ao qual o utilizador pertence, terem todos valores implícitos e tratar-se de permissão sobre módulos.
 
-### Exemplos de atribuição de permissões por nível
+Exemplos de atribuição de permissões por nível
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Apresentam-se de seguida alguns casos exemplificativos de como usar esta funcionalidade de controlo de acesso a níveis arquivísticos:
 
@@ -245,7 +254,7 @@ Apresentam-se de seguida alguns casos exemplificativos de como usar esta funcion
 
 -  **Exemplo 3** - Definição de um grupo de utilizadores, cujos utilizadores deverão ter acesso total a todos os níveis da estrutura arquivística, exceto a um ramo, cujo acesso deverá ser interdito. 
 
-#### Exemplo 1
+**Exemplo 1**
 
 Este exemplo é o caso típico de um __utilizador externo registado no sistema só com acesso de leitura aos níveis publicados e a determinados documentos__, não públicos, aos quais ele, por determinada razão, poderá aceder para leitura.
 
@@ -258,7 +267,7 @@ Este exemplo é o caso típico de um __utilizador externo registado no sistema s
 
 |image5|
 
-#### Exemplo 2
+**Exemplo 2**
 
 Neste exemplo, escolhe-se uma situação em que há a necessidade de um grupo de utilizadores internos __com autorização para navegar e visualizar todos os níveis de descrição__, mas __com permissão total somente sobre informação relativa a uma série documental__.
 
@@ -300,7 +309,7 @@ Em __conclusão__, depois dos cálculos, as permissões de __cada um destes util
 
 |image10|
 
-#### Exemplo 3
+**Exemplo 3**
 
 Este exemplo ilustra um caso em que existe um grupo de utilizadores internos com __acesso total, exceto a determinada informação produzida por um departamento que deve ser interditada, por ser confidencial__.
 
@@ -328,7 +337,7 @@ Em __conclusão__, as permissões de um destes utilizadores, por exemplo o **Uti
 
 |image13|
 
-### Exemplo de atribuição de permissões a objetos digitais
+**Exemplo de atribuição de permissões a objetos digitais**
 
 Nesta secção usa-se como exemplo a definição de um determinado grupo de utilizadores poder visualizar todos os níveis de descrição subjacentes a uma dada série, mas não poder visualizar os objetos digitais associados.
 
@@ -359,7 +368,7 @@ Se este utilizador for adicionado ao grupo **Leitores** passa a herdar, pela `Re
 |image18|
 
 
-.. |image0| image:: _static/images/permissoesmodulogrupo.png
+.. |image0| image:: _static/images/AtribuirGrupoAUtilizador.png
    :width: 650px
 .. |image1| image:: _static/images/atribuirgrupoautilizador.png
    :width: 650px
