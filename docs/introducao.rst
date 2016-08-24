@@ -277,7 +277,7 @@ Como em qualquer sistema multi-utilizador, cada utilizador GISA é
 identificado individualmente através do nome e palavra-chave. O seu
 perfil pode ser definido individualmente ou através de grupos,
 previamente criados para determinado perfil de utilização, aos quais ele pode pertencer.
-Para uma descrição mais detalhada da gestão de permissões consultar \ `Permissões <permissoes.rst>`__.
+Para uma descrição mais detalhada da gestão de permissões consultar `Permissões <permissoes.html>`__.
 
 Gestão de Requisições/Devoluções
 --------------------------------
