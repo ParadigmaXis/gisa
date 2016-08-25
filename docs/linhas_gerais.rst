@@ -280,9 +280,7 @@ Para elaboração de listagens necessárias ao serviço de arquivo:
    físicas/Pesquisa*. Para mais detalhe ver a secção `Relatórios de
    unidades físicas <pesquisa_uf.html#relatorios>`__.
 
--  ``Listas de entidades produtoras``, ver a secção `Geração de relatório de entidades
-produtoras <entidade_produtora.html#geracao-de-relatorio-de-entidades-produtoras>`__
-da página `Entidades produtoras <entidade_produtora.html>`__.
+-  ``Listas de entidades produtoras``, ver a secção `Geração de relatório de entidades produtoras <entidade_produtora.html#geracao-de-relatorio-de-entidades-produtoras>`__ da página `Entidades produtoras <entidade_produtora.html>`__.
 
 -  ``Listas de registos de autoridade do tipo Conteúdo``, ver a secção
    `Geração de relatório de conteúdos <conteudo.html#geracao-de-relatorio-de-conteudos>`__.
