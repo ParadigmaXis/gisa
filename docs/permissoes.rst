@@ -258,9 +258,11 @@ Apresentam-se de seguida alguns casos exemplificativos de como usar esta funcion
 
 Este exemplo é o caso típico de um *utilizador externo registado no sistema só com acesso de leitura aos níveis publicados e a determinados documentos*, não públicos, aos quais ele, por determinada razão, poderá aceder para leitura.
 
-  - Primeiro, na área `Utilizadores <utilizadores.html>`__, criar um utilizador, **antonio1945**, escolhendo a opção ''Acesso apenas a informação publicada''. Por `omissão <permissoes.html#niveis-novos>`__, as permissões deste utilizador sobre os *módulos* assumem o valor *Não* implícito e as suas permissões sobre os *níveis* assumem também o valor *Não* implícito, exceto nos níveis publicados, cuja operação ''Ler'' assume o valor *Sim* implícito.
-  - De seguida, associar este utilizador ao grupo **Leitor**, referido nos exemplos anteriores, para poder ter acesso aos módulos de pesquisa, por aplicação da **Regra 2.1** do cálculo de permissões. 
-  - Para definir que o utilizador **antonio1945** tem acesso de leitura a um determinado documento, no módulo `Permissões pelo Plano de Classificação <permissoes_plano.html>`__:
+-  Primeiro, na área `Utilizadores <utilizadores.html>`__, criar um utilizador, **antonio1945**, escolhendo a opção ''Acesso apenas a informação publicada''. Por `omissão <permissoes.html#niveis-novos>`__, as permissões deste utilizador sobre os *módulos* assumem o valor *Não* implícito e as suas permissões sobre os *níveis* assumem também o valor *Não* implícito, exceto nos níveis publicados, cuja operação ''Ler'' assume o valor *Sim* implícito.
+
+-  De seguida, associar este utilizador ao grupo **Leitor**, referido nos exemplos anteriores, para poder ter acesso aos módulos de pesquisa, por aplicação da **Regra 2.1** do cálculo de permissões. 
+
+-  Para definir que o utilizador **antonio1945** tem acesso de leitura a um determinado documento, no módulo `Permissões pelo Plano de Classificação <permissoes_plano.html>`__:
      - Selecionar o documento *Testamento de António Francisco (fl. 6v-8v)* e o utilizador **antonio1945** na área de contexto. 
      - No ''Filtro'' manter a opção ''Próprio'', pois é sobre esse nível que se pretende definir permissões. 
      - Atribuir explicitamente permissões de leitura ao nível mostrado, colocando em ''Ler'' o valor Sim (explícito), aplicando-se a **Regra 1** do cálculo de permissões.
@@ -399,7 +401,7 @@ Se este utilizador for adicionado ao grupo **Leitores** passa a herdar, pela **R
 .. |image14| image:: _static/images/ExemploPermissoesOD1.png
    :width: 650px
 .. |image15| image:: _static/images/ExemploPermissoesOD2.png
-   :width: 400px
+   :width: 200px
 .. |image16| image:: _static/images/ExemploPermissoesOD5.png
    :width: 650px
 .. |image17| image:: _static/images/ExemploPermissoesOD4.png
