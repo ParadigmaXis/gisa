@@ -186,9 +186,7 @@ campos:
    autorizada ou não, devem obedecer à expressão introduzida neste
    campo.
 
--   ``Notícia de autoridade`` - Este campo não é usado pois a lista de
-registos já está a ser filtrada por registos do tipo *Entidade
-produtora*.
+-   ``Notícia de autoridade`` - Este campo não é usado pois a lista de registos já está a ser filtrada por registos do tipo *Entidade produtora*.
 
 -  ``Validado``, permitindo visualizar *todos* os registos de autoridade
    quando a caixa de verificação tem fundo cinza e um visto, ou só
@@ -197,8 +195,7 @@ produtora*.
    registos de autoridade *não validados*, em que a caixa de verificação
    tem fundo branco e não tem visto.
 
-Para mais detalhe consultar
-`Filtros <ambiente_trabalho.html#filtros>`__.
+Para mais detalhe consultar `Filtros <ambiente_trabalho.html#filtros>`__.
 
 Geração de relatório de entidades produtoras
 --------------------------------------------
