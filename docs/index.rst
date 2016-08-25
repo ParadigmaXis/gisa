@@ -41,6 +41,7 @@ GISA em posto de trabalho
    configuracao_global
    grupos_utilizadores
    utilizadores
+   permissoes
    permissoes_modulo
    permissoes_plano
    estatisticas
