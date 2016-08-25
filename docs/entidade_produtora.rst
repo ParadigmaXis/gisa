@@ -186,7 +186,7 @@ campos:
    autorizada ou não, devem obedecer à expressão introduzida neste
    campo.
 
-\* ``Notícia de autoridade`` - Este campo não é usado pois a lista de
+-   ``Notícia de autoridade`` - Este campo não é usado pois a lista de
 registos já está a ser filtrada por registos do tipo *Entidade
 produtora*.
 
@@ -281,7 +281,7 @@ existir mais termos com os seguintes tipos de forma:
 -  ``Forma paralela``, que permite indicar diferentes formas nas quais a
    forma autorizada do nome ocorre noutras línguas.
 
-\* ``Forma normalizada segundo outras regras``, permitindo formas
+- ``Forma normalizada segundo outras regras``, permitindo formas
 normalizadas construídas segundo outras normas que não as utilizadas
 pelo serviço de arquivo que criou o registo de autoridade.
 
@@ -299,7 +299,7 @@ Neste momento, deve escolher-se uma das seguintes hipóteses:
    botão ``Aceitar``. O botão ``Aceitar`` só fica ativo se o termo não
    existir.
 
-\* ``Escolher um termo já existente`` - Para esta opção, pode ajudar
+- ``Escolher um termo já existente`` - Para esta opção, pode ajudar
 digitar o início do termo a escolher para o localizar rapidamente na
 lista. Ao digitar o texto, este vai aparecendo em rodapé.
 
