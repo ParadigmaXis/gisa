@@ -138,7 +138,7 @@ Referência do documento na Unidade Física.
 
 **Formato admitido / exemplos:** Campo de texto.
 
-``TipoInformacional`
+``TipoInformacional``
 ------------------
 Designação da tipologia informacional da unidade de descrição.
 
@@ -174,8 +174,9 @@ Permite indicar se a descrição é pública ou não.
 
 **Formato admitido / exemplos:** Lista de valores admitidos: ``0`` (não publicado) ou ``1`` (publicado).
 
-``Incorporaçoes ``
+``Incorporaçoes``
 ------------------
+Permite descrever detalhes das incorporações.
 
 **Formato admitido / exemplos:** Campo de texto.
 
@@ -290,13 +291,13 @@ Permite a associação de termos de indexação do tipo ``Onomástico`` ao docum
 
 **Formato admitido / exemplos:** Admite um termo autorizado (ou uma lista de termos separados por ;), já registado no GISA como onomástico.
 
-`Ideograficos``  
+``Ideograficos``  
 ------------------
 Permite a associação de termos de indexação do tipo ``Ideográfico`` ao documento.
 
 **Formato admitido / exemplos:** Admite um termo autorizado (ou uma lista de termos separados por ;), registado no GISA como ideográfico.
 
- ``Geograficos``  
+``Geograficos``  
 ------------------
 Permite a associação de termos de indexação do tipo ``Nome geográfico/Topónimo citadino`` ao documento.
 
