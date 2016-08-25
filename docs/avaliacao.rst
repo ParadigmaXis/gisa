@@ -115,9 +115,8 @@ atribuído ao campo ``Nível``:
 | Nível    | Ponderação   | Sugestão                        |
 +==========+==============+=================================+
 | A ou B   | 1            | informação é para conservar     |
-----------------------+---------------------------------+
-| C        | 0            
-| informação pode ser eliminada   |
++----------+--------------+---------------------------------+
+| C        | 0            | informação pode ser eliminada   |
 +----------+--------------+---------------------------------+
 
 Frequência de uso
@@ -227,7 +226,7 @@ tabela:
 +---------------+--------------+-------------+--------------------------+-----------------+-----------------------+
 | 1             | 1 ou 0       | 1           | Conservação permanente   | Conservação     | -                     |
 +---------------+--------------+-------------+--------------------------+-----------------+-----------------------+
-1             | 1      | 0           | Conservação temporária   | Eliminação      | Nº anos a conservar   |
+| 1             | 1            | 0           | Conservação temporária   | Eliminação      | Nº anos a conservar   |
 +---------------+--------------+-------------+--------------------------+-----------------+-----------------------+
 | 1             | 0            | 0           | Eliminação               | Eliminação      | 0                     |
 +---------------+--------------+-------------+--------------------------+-----------------+-----------------------+
@@ -361,16 +360,9 @@ na definição do destino final a atribuir ao seu conteúdo.
 
 Para a avaliação desses conteúdos existem dois painéis:
 
--  `Passo 1: Avaliação e seleção dos conteúdos da unidade de
-   descrição <avaliacao.html#passo-1avaliacao-e-selecao-dos-conteudos-da-unidade-de-descricao>`__,
-   para avaliar, em lote ou não, os documentos pertencentes a uma série
-   ou subsérie já avaliada.
+-  **Passo 1: Avaliação e seleção dos conteúdos da unidade de descrição**, para avaliar, em lote ou não, os documentos pertencentes a uma série ou subsérie já avaliada.
 
--  `Passo 2: Seleção das unidades físicas
-associadas <avaliacao.html#passo-2selecao-das-unidades-fisicas>`__, para
-completar os autos de eliminação com unidades físicas, por o
-recenseamento se ter feito ao nível da unidade física e não ao nível da
-unidade de informação documento.
+-  **Passo 2: Seleção das unidades físicas associadas**, para completar os autos de eliminação com unidades físicas, por o recenseamento se ter feito ao nível da unidade física e não ao nível da unidade de informação documento.
 
 Passo 1: Avaliação e seleção dos conteúdos da unidade de descrição
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
