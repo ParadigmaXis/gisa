@@ -185,8 +185,7 @@ Avaliação documental
 Independentemente da abordagem adotada, a *avaliação documental* tem
 alguns procedimentos que deverão ser tidos em conta.
 
-Numa primeira etapa, deverá ser efetuada a `avaliação das
-séries <avaliacao.html#avaliacao-de-um-nivel-documental>`__* ou dos
+Numa primeira etapa, deverá ser efetuada a `avaliação das séries <avaliacao.html#avaliacao-de-um-nivel-documental>`__ ou dos
 documentos que não constituam série, escolhendo qual a melhor abordagem
 para chegar a um destino final adequado. Assim, se a série for para:
 
