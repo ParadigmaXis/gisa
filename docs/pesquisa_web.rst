@@ -109,9 +109,10 @@ Os campos de pesquisa genéricos são:
    nas descrições das séries e dos documentos.
 
 Para pesquisar processos de obra, podem utilizar-se os seguintes campos
-específicos: \* ``Requerente`` - permite pesquisar requerentes e
-proprietários, iniciais ou que constem de averbamentos.
+específicos: 
 
+-  ``Requerente`` - permite pesquisar requerentes e
+proprietários, iniciais ou que constem de averbamentos.
 -  ``Local atual`` e ``Nº`` - permite procurar a localização pela
    designação atual.
 -  ``Local antigo`` e ``Nº`` - permite procurar a localização pela
@@ -176,7 +177,7 @@ de uma pesquisa, é apresentado:
 -  um campo de pesquisa simples, mostrando o critério usado, com a
    possibilidade de fazer uma nova pesquisa;
 
-\* um navegador que mostra o nº total de resultados e a ordem do
+-  um navegador que mostra o nº total de resultados e a ordem do
 resultado mostrado na página, possibilitando visualizar os detalhes do
 resultado seguinte ou do resultado anterior.
 
