@@ -95,7 +95,7 @@ O gráfico mostra três diferentes fatias:
    da diferença entre o valor total de metros lineares de prateleira e o
    valor estimado de metros lineares ocupados.
 
-\* ``Ocupado`` - Valor exato dos metros lineares ocupados pelas unidades
+-  ``Ocupado`` - Valor exato dos metros lineares ocupados pelas unidades
 físicas, cujas larguras foram registadas no sistema.
 
 -  ``Ocupado estimado`` - Para o caso das unidades físicas, cuja largura
@@ -105,6 +105,6 @@ físicas, cujas larguras foram registadas no sistema.
    unidades físicas, cujas larguras não foram registadas no sistema.
 
 .. |image0| image:: _static/images/gestaodepositos1.jpg
-   :width: 500px
+   :width: 650px
 .. |image1| image:: _static/images/gestaodepositos2.png
-   :width: 500px
+   :width: 650px
