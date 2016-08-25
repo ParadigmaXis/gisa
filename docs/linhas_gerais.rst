@@ -185,7 +185,7 @@ Avaliação documental
 Independentemente da abordagem adotada, a *avaliação documental* tem
 alguns procedimentos que deverão ser tidos em conta.
 
-Numa primeira etapa, deverá ser efetuada a *`avaliação das
+Numa primeira etapa, deverá ser efetuada a `avaliação das
 séries <avaliacao.html#avaliacao-de-um-nivel-documental>`__* ou dos
 documentos que não constituam série, escolhendo qual a melhor abordagem
 para chegar a um destino final adequado. Assim, se a série for para:
@@ -281,14 +281,12 @@ Para elaboração de listagens necessárias ao serviço de arquivo:
    físicas/Pesquisa*. Para mais detalhe ver a secção `Relatórios de
    unidades físicas <pesquisa_uf.html#relatorios>`__.
 
--  ``Listas de entidades produtoras``, ver a secção `Geração de
-relatório de entidades
+-  ``Listas de entidades produtoras``, ver a secção `Geração de relatório de entidades
 produtoras <entidade_produtora.html#geracao-de-relatorio-de-entidades-produtoras>`__
 da página `Entidades produtoras <entidade_produtora.html>`__.
 
 -  ``Listas de registos de autoridade do tipo Conteúdo``, ver a secção
-   `Geração de relatório de
-   conteúdos <conteudo.html#geracao-de-relatorio-de-conteudos>`__.
+   `Geração de relatório de conteúdos <conteudo.html#geracao-de-relatorio-de-conteudos>`__.
 
 -  ``Listas de registos de autoridade do tipo Tipologias informacional``,
 ver a secção `Geração de relatório de tipologias
