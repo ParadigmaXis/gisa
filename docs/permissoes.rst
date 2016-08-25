@@ -203,7 +203,7 @@ Assim, apresentamos a melhor forma de o fazer:
 
 |image0|
 
-3. Na área`Utilizadores <permissoes.html#utilizadores>`__ , criar os *utilizadores*, cujas
+3. Na área `Utilizadores <utilizadores.html>`__ , criar os *utilizadores*, cujas
 `permissões por omissão <permissoes.html#permissoes-por-omissao>`__ sobre os módulos são iniciadas com o valor *Não*. 
 Neste exemplo, pouco importa o que é definido por omissão nas permissões sobre os níveis. 
 
@@ -258,9 +258,9 @@ Apresentam-se de seguida alguns casos exemplificativos de como usar esta funcion
 
 Este exemplo é o caso típico de um *utilizador externo registado no sistema só com acesso de leitura aos níveis publicados e a determinados documentos*, não públicos, aos quais ele, por determinada razão, poderá aceder para leitura.
 
-  - Primeiro, na área `Utilizadores <utilizadores.html>`__, criar um utilizador, **antonio1945**, escolhendo a opção ''Acesso apenas a informação publicada''. Por `omissão <permissoes.html#niveis-novos>`__, as permissões deste utilizador sobre os *módulos_* assumem o valor *Não* implícito e as suas permissões sobre os *níveis* assumem também o valor *Não* implícito, exceto nos níveis publicados, cuja operação ''Ler'' assume o valor *Sim* implícito.
-  - De seguida, associar este utilizador ao grupo **Leitor**, referido nos exemplos anteriores, para poder ter acesso aos módulos de pesquisa, por aplicação da `Regra 2.1 <permissoes.html#regra-2>`__ do cálculo de permissões. 
-  - Para definir que o utilizador **antonio1945** tem acesso de leitura a um determinado documento, no módulo `Permissões pelo Plano de Classificação <permissoes.html#permissoes-plano>`__:
+  - Primeiro, na área `Utilizadores <utilizadores.html>`__, criar um utilizador, **antonio1945**, escolhendo a opção ''Acesso apenas a informação publicada''. Por `omissão <permissoes.html#niveis-novos>`__, as permissões deste utilizador sobre os *módulos* assumem o valor *Não* implícito e as suas permissões sobre os *níveis* assumem também o valor *Não* implícito, exceto nos níveis publicados, cuja operação ''Ler'' assume o valor *Sim* implícito.
+  - De seguida, associar este utilizador ao grupo **Leitor**, referido nos exemplos anteriores, para poder ter acesso aos módulos de pesquisa, por aplicação da **Regra 2.1** do cálculo de permissões. 
+  - Para definir que o utilizador **antonio1945** tem acesso de leitura a um determinado documento, no módulo `Permissões pelo Plano de Classificação <permissoes_plano.html>`__:
      - Selecionar o documento *Testamento de António Francisco (fl. 6v-8v)* e o utilizador **antonio1945** na área de contexto. 
      - No ''Filtro'' manter a opção ''Próprio'', pois é sobre esse nível que se pretende definir permissões. 
      - Atribuir explicitamente permissões de leitura ao nível mostrado, colocando em ''Ler'' o valor Sim (explícito), aplicando-se a **Regra 1** do cálculo de permissões.
@@ -279,23 +279,23 @@ Então, o procedimento pode ser o seguinte:
 
 1. Na área `Grupo de utilizadores <grupos_utilizadores.html>`__, criar o grupo de utilizadores **GrupoA**, cujas permissões sobre os níveis ficam, por `omissão <permissoes.html#grupos-ou-utilizadores-novos>`__, com o valor *Não* implícito. 
 
-2. Para atribuir as permissões no painel de `Permissões pelo Plano de Classificação <permissoes.html#permissoes-pelo-plano-de-classificacao>`__, de forma que o grupo  *só tenha acesso de leitura e navegação em todos os níveis* arquivísticos:
+2. Para atribuir as permissões no painel de `Permissões pelo Plano de Classificação <permissoes_plano.html>`__, de forma que o grupo  *só tenha acesso de leitura e navegação em todos os níveis* arquivísticos:
 
 |image6|
 
       - Selecionar a entidade produtora de topo da estrutura orgânica e de seguida o grupo **GrupoA**, na área de contexto. 
-      - No ''Filtro'' selecionar a opção ''Todos'', para se poderem mostrar todos os níveis da estrutura arquivística. Se houver muitas páginas na ''Lista de Permissões Atribuídas'', ou se volta a aumentar o número de elementos por página na `Configuração global <configuracao_global.html>`__ para se poder reduzir o número de páginas ou se atribui *permissões explícitas somente aos níveis produtores e aos documentais de topo*, uma vez que os restantes níveis documentais herdam as permissões dos níveis documentais de topo (ver **Regra 3** do cálculo de permissões). Seguindo esta última via, é aconselhável usar-se os vários filtros para o conseguir de uma forma rápida. Assim, para se selecionar os níveis produtores, usa-se o filtro ''Todos'' e como a lista aparece ordenada por tipo de nível, basta selecionar os primeiros níveis da lista até encontrar o primeiro nível documental. Para se selecionar os níveis documentais de topo, usa-se o filtro ''Todos documentais'' (para mais detalhe ver `Permissões pelo Plano de Classificação <permissoes.html#permissoes-pelo-plano-de-classificacao>`__). 
+      - No ''Filtro'' selecionar a opção ''Todos'', para se poderem mostrar todos os níveis da estrutura arquivística. Se houver muitas páginas na ''Lista de Permissões Atribuídas'', ou se volta a aumentar o número de elementos por página na `Configuração global <configuracao_global.html>`__ para se poder reduzir o número de páginas ou se atribui *permissões explícitas somente aos níveis produtores e aos documentais de topo*, uma vez que os restantes níveis documentais herdam as permissões dos níveis documentais de topo (ver **Regra 3** do cálculo de permissões). Seguindo esta última via, é aconselhável usar-se os vários filtros para o conseguir de uma forma rápida. Assim, para se selecionar os níveis produtores, usa-se o filtro ''Todos'' e como a lista aparece ordenada por tipo de nível, basta selecionar os primeiros níveis da lista até encontrar o primeiro nível documental. Para se selecionar os níveis documentais de topo, usa-se o filtro ''Todos documentais'' (para mais detalhe ver `Permissões pelo Plano de Classificação <permissoes_plano.html>`__). 
       - Na ''Lista de Permissões Atribuídas'', para cada página, selecionar todos níveis pretendidos ao mesmo tempo e na janela de edição múltipla (para a abrir, clicar com lado direito do rato), atribuir **Sim** explícito nas operações ''Ler'' e ''Expandir''.
 
 |image7|
 
 3. Neste momento, ainda falta criar o outro grupo de utilizadores, **GrupoB**,  na área `Grupo de utilizadores <grupos_utilizadores.html>`__, cujas permissões sobre os níveis têm o `valor por omissão <permissoes.html#grupos-ou-utilizadores-novos>`__ *Não*. 
 
-4. Para que o **GrupoB** tenha acesso total à série *Obras Municipais* e a todos os seus documentos, no painel de `Permissões pelo Plano de Classificação <permissoes.html#permissoes-pelo-plano-de-classificacao>`__, selecionar a série *Obras Municipais* e o **GrupoB**. No ''Filtro'', selecionar a opção ''Próprio'' e atribuir Sim a todas as operações do nível selecionado.
+4. Para que o **GrupoB** tenha acesso total à série *Obras Municipais* e a todos os seus documentos, no painel de `Permissões pelo Plano de Classificação <permissoes_plano.html>`__, selecionar a série *Obras Municipais* e o **GrupoB**. No ''Filtro'', selecionar a opção ''Próprio'' e atribuir Sim a todas as operações do nível selecionado.
 
 |image8|
 
-5. Na área de `Utilizadores <utilizadores.html>`__, criar os utilizadores, escolhendo a opção ''Acesso apenas a informação publicada'' para que, por `omissão <permissoes.html#permissoes-por-omissao\>`__, todos os níveis publicados tenham o valor *Sim* na operação ''Ler'' e *Não* em todos os outros casos. Por fim, associar os utilizadores ao **GrupoA** e ao **GrupoB**, ativando o `cálculo de permissões <permissoes.html#calculo-de-permissoes>`__. 
+5. Na área de `Utilizadores <utilizadores.html>`__, criar os utilizadores, escolhendo a opção ''Acesso apenas a informação publicada'' para que, por `omissão <permissoes.html#permissoes-por-omissao>`__, todos os níveis publicados tenham o valor *Sim* na operação ''Ler'' e *Não* em todos os outros casos. Por fim, associar os utilizadores ao **GrupoA** e ao **GrupoB**, ativando o `cálculo de permissões <permissoes.html#calculo-de-permissoes>`__. 
 
 Em *conclusão*, depois dos cálculos, as permissões de *cada um destes utilizadores* sobre os níveis:
 
@@ -313,9 +313,9 @@ Em *conclusão*, depois dos cálculos, as permissões de *cada um destes utiliza
 
 Este exemplo ilustra um caso em que existe um grupo de utilizadores internos com *acesso total, exceto a determinada informação produzida por um departamento que deve ser interditada, por ser confidencial*.
 
-1. Primeiro, na área de `Grupo de utilizadores <grupos_utilizadores.html>`__, criar o **GrupoC**, cujas permissões sobre os níveis assumem, por `omissão <permissoes.html#grupos-ou-utilizadores-novos\>`__, o valor *Não*. 
+1. Primeiro, na área de `Grupo de utilizadores <grupos_utilizadores.html>`__, criar o **GrupoC**, cujas permissões sobre os níveis assumem, por `omissão <permissoes.html#grupos-ou-utilizadores-novos>`__, o valor *Não*. 
 
-2. Na área `Permissões pelo Plano de Classificação <permissoes.html#permissoes-pelo-plano-de-classificacao>`__:
+2. Na área `Permissões pelo Plano de Classificação <permissoes_plano.html>`__:
   - Selecionar a entidade produtora, *Polícia*, na área de contexto, cujos documentos são de acesso restrito.
   - Selecionar o **GrupoC** na área de contexto, onde definir as permissões.
   - No ''Filtro'' selecionar a opção ''Todos documentais'', para listar as permissões dos níveis documentais diretamente relacionados com essa entidade produtora (ou com outras subjacentes a esse, caso existissem).
@@ -341,7 +341,7 @@ Em *conclusão*, as permissões de um destes utilizadores, por exemplo o **Utili
 
 Nesta secção usa-se como exemplo a definição de um determinado grupo de utilizadores poder visualizar todos os níveis de descrição subjacentes a uma dada série, mas não poder visualizar os objetos digitais associados.
 
-Assim, na área de `Permissões por Objeto Digital <permissoes.html#permissoes-por-objeto-digital>`__:
+Assim, na área de `Permissões por Objeto Digital <permissoes_od.html>`__:
 
 |image14|
 
@@ -386,7 +386,7 @@ Se este utilizador for adicionado ao grupo **Leitores** passa a herdar, pela **R
    :width: 650px
 .. |image8| image:: _static/images/Exemplo2_3.png
    :width: 650px
-.. |image9| image:: _static/images/Exe4plo2_4.png
+.. |image9| image:: _static/images/Exemplo2_4.png
    :width: 650px
 .. |image10| image:: _static/images/Exemplo2_5.png
    :width: 650px
@@ -399,7 +399,7 @@ Se este utilizador for adicionado ao grupo **Leitores** passa a herdar, pela **R
 .. |image14| image:: _static/images/ExemploPermissoesOD1.png
    :width: 650px
 .. |image15| image:: _static/images/ExemploPermissoesOD2.png
-   :width: 650px
+   :width: 400px
 .. |image16| image:: _static/images/ExemploPermissoesOD5.png
    :width: 650px
 .. |image17| image:: _static/images/ExemploPermissoesOD4.png
