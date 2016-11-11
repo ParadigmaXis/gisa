@@ -65,7 +65,7 @@ Os módulos do GISA atualmente existentes em código aberto, sob a licença [GNU
 
 Para a instalação do GISA poderá usar um installer que tenha criado para o efeito ou então fazer o [download do setup.exe] (https://github.com/ParadigmaXis/gisa/tree/master/deployable/release/CD).
 
-Os requisitos e os procedimentos de instalação do GISA encontram-se no [Manual de instalação online](http://gisa.paradigmaxis.pt/docs/inicio#manual_de_instalacao_do_gisa_open_source).
+Os requisitos e os procedimentos de instalação do GISA encontram-se no [Manual de instalação online](http://gisa.readthedocs.io/pt/latest/index.html#manual-de-instalacao-do-gisa-open-source).
 
 Depois de instalada, o acesso à aplicação é feito com o seguinte login:
  * Username: admin
@@ -73,7 +73,7 @@ Depois de instalada, o acesso à aplicação é feito com o seguinte login:
 
 ## Utilização
 
-O GISA inclui um [Manual do Utilizador](http://gisa.readthedocs.org/) disponível à comunidade para ajuda na utilização da aplicação e para colaboração na redação do mesmo.
+O GISA inclui um [Manual do Utilizador](http://gisa.readthedocs.io/pt/latest/index.html#manual-de-utilizador) disponível à comunidade para ajuda na utilização da aplicação e para colaboração na redação do mesmo.
 
 ## Divulgação
 
