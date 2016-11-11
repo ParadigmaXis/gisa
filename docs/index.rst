@@ -8,6 +8,18 @@ Documentação
 
 Nesta área poderá consultar toda a documentação do GISA, a qual se encontra em constante evolução e melhoria. O manual de utilizador disponibilizado em baixo diz respeito à versão 2.12 do GISA.
 
+
+Manual de instalação do GISA Open Source
+--------------------
+
+.. toctree::
+   :maxdepth: 2
+   
+   modo_funcionamento
+   instalacao_monoposto
+   instalacao_cliente_servidor
+
+
 Manual de utilizador
 --------------------
 
@@ -48,4 +60,11 @@ GISA em posto de trabalho
    permissoes_od
    imagens_ilustracao
    destaques
+   
+GISA Internet
++++++++++++++++++++++++++
+
+.. toctree::
+   :maxdepth: 2
+
    pesquisa_web
