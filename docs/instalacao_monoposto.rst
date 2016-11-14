@@ -38,7 +38,7 @@ O installer (setup.exe) da última versão poderá ser criado conforme se indica
 -    No Microsoft SQL Server Management Studio:
    -   executar o script DBInstallScript.sql, que se encontra no diretório Servidor do diretório de instalação do GISA
 -    No diretório de instalação, dentro da pasta Cliente, existe um ficheiro de configuração GISA.exe.config que deverá ter os seguintes valores (alterar caso necessário):
-   -   <add key=“GISA.ServerLocation” value=“localhost\GISA”/>
+   -   <add key=“GISA.ServerLocation” value=“localhost\\GISA”/>
    -   <add key=“GISA.DataSource” value=“GISA”/>
 -    Executar o GISA com utilizador ADMIN:
    -   login: admin
