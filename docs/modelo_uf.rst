@@ -78,7 +78,12 @@ Conteúdo informacional.
 
 ``EntidadeDetentora``
 ------------------
-Designação da ``Entidade Detentora``.
+Designação da Entidade Detentora.
 
 **Formato admitido / exemplos:** A designação da entidade detentora já deverá existir no GISA.
 
+``LocalConsulta``
+------------------
+Designação do local onde se encontra a UF.
+
+**Formato admitido / exemplos:** A designação da entidade detentora já deverá existir no GISA.
