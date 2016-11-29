@@ -585,7 +585,7 @@ Importação de dados em Excel
 ----------------------------
 
 É possível importar, automaticamente, registos de documentos (simples
-e/ou compostos) existentes em ficheiros Excel para o GISA, desde que os
+e/ou compostos) e unidades físicas, existentes em ficheiros Excel para o GISA, desde que os
 dados estejam em conformidade com o modelo e regras estabelecidas neste
 documento.
 
@@ -609,23 +609,23 @@ Modelo Excel
 ~~~~~~~~~~~~
 
 O modelo do ficheiro Excel encontra-se disponível para download em `Importacao Excel_Modelo.xls <https://github.com/ParadigmaXis/gisa/blob/master/deployable/release/CD/Importacao/importacao%20excel_Modelo.xls>`__ e é constituído por
-duas folhas:
+duas tabelas, uma em cada folha, Documentos e UnidadesFisicas.
+
+Na importação poderão existir dados numa única tabela ou então nas duas.
+
+A primeira coluna de cada tabela Excel, designada por ``Identificador``,
+é onde se colocam os códigos identificadores dos registos da tabela.
+Esse código é usado noutras colunas, da própria tabela ou de outras tabelas do ficheiro excel, para referenciar registos dentro do ficheiro. No fim, estes códigos são descartados pelo importador. Por exemplo, a coluna ``UnidadesFisicas`` da tabela ``Documentos`` permite referir identificadores que constam na coluna ``Identificador`` da tabela ``UnidadesFisicas``, de forma a relacionar uma unidade informacional a uma ou várias unidades físicas.
+
+Para um maior detalhe das colunas, consultar:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    
    modelo_ui
    modelo_uf
 
-A primeira coluna de cada tabela Excel, designada por ``Identificador``,
-é onde se colocam os códigos identificadores dos registos da tabela.
-Esse código é usado noutras colunas, da própria tabela ou de outras tabelas do ficheiro excel, para referenciar os registos do próprio ficheiro. No fim, estes códigos são descartado pelo importador.
 
-Na importação poderão existir dados numa única tabela ou então nas duas.
-A coluna ``UnidadesFisicas`` da tabela ``Documentos`` permite referir
-identificadores que constam na coluna ``Identificador`` da tabela
-``UnidadesFisicas``, de forma a relacionar uma unidade informacional a
-uma ou várias unidades físicas.
 
 Processo de importação
 ~~~~~~~~~~~~~~~~~~~~~~
