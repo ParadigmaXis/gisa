@@ -608,8 +608,7 @@ cenários de erro e sugestões de correção dos mesmos.
 Modelo Excel
 ~~~~~~~~~~~~
 
-O modelo do ficheiro Excel, ``Importacao Excel_Modelo.xls``, que se
-encontra na pasta ``Importacao`` do CD de instalação, é constituído por
+O modelo do ficheiro Excel encontra-se disponível para download em `Importacao Excel_Modelo.xls <https://github.com/ParadigmaXis/gisa/blob/master/deployable/release/CD/Importacao/importacao%20excel_Modelo.xls>`__ e é constituído por
 duas folhas:
 
 .. toctree::
