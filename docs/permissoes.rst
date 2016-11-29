@@ -141,23 +141,25 @@ Para ver exemplos deste cálculo, consultar **Exemplos de atribuição de permis
 Regras de cálculo das permissões dos utilizadores
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+O valor da permissão que um utilizador tem numa operação sobre um nível, objeto ou módulo, está sujeita às seguintes regras.
+
 **Regra 1**
 
-1. Caso o utilizador tenha um valor explícito na permissão de uma operação sobre um nível, objeto ou módulo, este não é afetado por nenhum cálculo, permanecendo esse valor.
+1. Caso o utilizador tenha um valor **explícito** na permissão, é esse o valor que permanece.
 
-2. Caso o utilizador tenha um valor implícito na permissão de uma operação sobre um nível, objeto ou módulo, o valor passará a ser o resultado do cálculo aplicando a **Regra 2**.
+2. Caso o utilizador tenha um valor **implícito** na permissão, se ele não pertencer a nenhum grupo, aplicar a **Regra 3**, caso contrário, aplicar a **Regra 2**.
 
 **Regra 2**
 
-Caso o utilizador tenha um valor implícito na permissão de uma operação sobre um nível, objeto ou módulo:
+Caso o utilizador tenha um valor **implícito** na permissão:
 
 **Regra 2. 1**
 
-Se o utilizador pertence a um grupo de utilizadores, a permissão sobre um nível, objeto ou módulo, assume o valor implícito equivalente ao valor da permissão do grupo, desde que este seja explícito. Caso o resultado não seja um valor explícito, aplicar a **Regra 3**.
+Se o utilizador pertence a um grupo de utilizadores, o valor da sua permissão será implícito, mas igual à permissão do grupo, desde que a deste seja explícita. Caso o resultado não seja um valor implícito, aplicar a **Regra 3**.
 
 **Regra 2. 2**
 
-Se o utilizador pertence a vários grupos de utilizadores, a permissão sobre um nível, objeto ou módulo, assume o valor implícito equivalente ao valor resultado da aplicação das regras do cálculo de permissões entre grupos, desde que este seja explícito. Caso o resultado não seja um valor explícito, aplicar a **Regra 3**.
+Se o utilizador pertence a vários grupos de utilizadores, deverão ser aplicadas as **Regras do cálculo de permissões entre grupos de utilizadores** enumeradas em baixo. Se o resultado do cálculo da permissão dos grupos ao qual o utilizador pertence tem um valor explícito, ele fica com o mesmo valor mas implícito, caso contrário aplicar a **Regra 3**.
 
 **Regra 2. 3**
 
@@ -165,16 +167,18 @@ Se o utilizador não pertence a nenhum grupo, aplicar a **Regra 3**.
 
 **Regra 3**
 
-Caso o utilizador tenha um valor implícito na permissão de uma operação sobre um nível, objeto ou módulo, não pertence a nenhum grupo ou o resultado da permissão via grupo(s) tem um valor implícito:
+Caso o utilizador tenha um valor **implícito** na permissão, se não pertencer a a nenhum grupo ou se pertencer e o resultado da permissão via grupo(s) tiver um valor **implícito**:
 
-1. Se se tratar da permissão de uma operação sobre um nível documental, esta assume o valor implícito equivalente ao valor da permissão do nível documental hierarquicamente superior.
+1. Se se tratar da permissão de uma operação sobre um **nível documental**, esta assume o valor implícito equivalente ao valor da permissão do nível documental hierarquicamente superior.
 
 2. Caso contrário, aplicar a **Regra 4**.
 
 **Regra 4**
 
-Se nenhuma das regras se aplicar, ou seja, se o utilizador tiver um valor implícito na permissão de uma operação sobre um objeto ou módulo, não pertence a nenhum grupo ou o resultado da permissão via grupo(s) tem um valor implícito, a permissão mantêm-se com o valor implícito que tiver.
+Se nenhuma das regras se aplicar, ou seja, se o utilizador tiver um valor **implícito** na permissão, não pertencer a nenhum grupo, ou então, pertencer e o resultado da permissão via grupo(s) tiver um valor implícito, a permissão manter-se-á com o valor implícito que tiver.
+
 Regras de cálculo das permissões entre grupos de utilizadores
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Quando um utilizador tem uma permissão implícita e pertence a vários grupos, deverá haver um cálculo de permissões entre esses grupos. O resultado deste cálculo é utilizado na **Regra 2** do **Cálculo de permissões** e é obtido através das regras de cálculo apresentadas a seguir.
 
