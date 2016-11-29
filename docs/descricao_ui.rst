@@ -159,8 +159,7 @@ produtoras <entidade_produtora.html>`__.
 Ao mesmo tempo, estes níveis podem constituir um nível descrição
 arquivística, segundo a ISAD-G, cuja descrição tem como objeto o
 conjunto de todos os documentos produzidos por esse nível. Para um maior
-detalhe consultar `Descrição
-multinível <descricao_ui.html#descricao-multinivel>`__.
+detalhe consultar `Descriçãoível <descricao_ui.html#descricao-multinivel>`__.
 
 Navegação na estrutura orgânica
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -679,10 +678,7 @@ Descrição multinível
 
 A descrição arquivística, feita na área de detalhes deste módulo
 *Unidades in formacionais/Descrição*, é uma `descrição
-multinível <introducao.html#descricao-arquivistica-multinivel>`__ e
-rege-se pela norma internacional
-`ISAD(G) <http://www.ica.org/10207/standards/isadg-general-international-standard-archival-description-second-edition.html>`__
-— *Norma Geral Internacional de Descrição Arquivística*.
+multinível e rege-se pela norma internacional **ISAD(G)** — *Norma Geral Internacional de Descrição Arquivística*.
 
 Antes de se fazer a descrição de uma unidade arquivística, esta tem de
 estar criada e de ser selecionada.
@@ -756,4 +752,4 @@ zonas e campos da descrição de unidades informacionais são:
 .. |image23| image:: _static/images/erro.png
    :width: 200px
 .. |image24| image:: _static/images/descricaoarquivistica.png
-   :width: 500px
+   :width: 650px
