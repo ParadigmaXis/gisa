@@ -708,13 +708,13 @@ zonas e campos da descrição de unidades informacionais são:
 .. |image1| image:: _static/images/criared.png
    :width: 350px
 .. |image2| image:: _static/images/estruturaorganica.png
-   :width: 500px
+   :width: 650px
 .. |image3| image:: _static/images/grafo.jpg
    :width: 300px
 .. |image4| image:: _static/images/criararquivo.png
    :width: 400px
 .. |image5| image:: _static/images/remocaotopo.jpg
-   :width: 500px
+   :width: 650px
 .. |image6| image:: _static/images/atalhoviafiltro1.png
    :width: 400px
 .. |image7| image:: _static/images/atalhoviafiltro2.png
@@ -722,9 +722,9 @@ zonas e campos da descrição de unidades informacionais são:
 .. |image8| image:: _static/images/atalhoviafiltro3.png
    :width: 400px
 .. |image9| image:: _static/images/vistadocumental.jpg
-   :width: 500px
+   :width: 650px
 .. |image10| image:: _static/images/descricaodocumental.png
-   :width: 500px
+   :width: 650px
 .. |image11| image:: _static/images/criaruimenu1.png
    :width: 300px
 .. |image12| image:: _static/images/criardocumentoproc.jpg
@@ -732,7 +732,7 @@ zonas e campos da descrição de unidades informacionais são:
 .. |image13| image:: _static/images/criardocumentoprocuf.png
    :width: 300px
 .. |image14| image:: _static/images/niveldocrelcomvariaseps.png
-   :width: 500px
+   :width: 650px
 .. |image15| image:: _static/images/atalhoviafiltro2.png
    :width: 400px
 .. |image16| image:: _static/images/reldetalhados.png
