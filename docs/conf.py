@@ -49,7 +49,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'GISA'
-copyright = u'2016, ParadigmaXis, S.A.'
+copyright = u'2018, ParadigmaXis, S.A.'
 author = u'ParadigmaXis, S.A.'
 
 # The version info for the project you're documenting, acts as replacement for
